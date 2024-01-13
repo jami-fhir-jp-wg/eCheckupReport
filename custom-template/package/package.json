@@ -1,0 +1,12 @@
+{
+    "name": "eCheckupReport.ig-template",
+    "type": "fhir.template",
+    "license": "CC0-1.0",
+    "description": "jp.fhir.eCheckupReport IG Template",
+    "author": "https://jpfhir.jp",
+    "canonical": "https://jpfhir.jp/fhir/eCheckup/templates/eCheckupReport.ig-template",
+    "base": "fhir.base.template",
+    "dependencies": {
+        "fhir.base.template": "current"
+    }
+}
