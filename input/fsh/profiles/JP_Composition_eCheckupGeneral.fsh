@@ -1,17 +1,17 @@
-Profile:        JP_Composition_eCheckupReport
+Profile:        JP_Composition_eCheckupGeneral
 Parent:         JP_Composition_CUPIX
 Id:             JP-Composition-eCheckupReport
-//Title:          "自治体検診結果報告書　Compositionリソース　文書構成情報"
-Description:    "自治体検診結果報告書　Compositionリソース　文書構成情報"
+//Title:          "健診結果報告書　Compositionリソース　文書構成情報"
+Description:    "健診結果報告書　Compositionリソース　文書構成情報"
 
-* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Composition_eCheckupReport"
+* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Composition_eCheckupGeneral"
 * ^status = #draft
 * type
   * coding
     * code
-      * ^short = "文書区分コード。”xx：自治体検診結果報告書”を指定。固定値。"
+      * ^short = "文書区分コード。”xx：健診結果報告書”を指定。固定値。"
     * code = #xx // TODO: 実際の値に変更する必要がある
-    * display = "自治体検診結果報告書"
+    * display = "健診結果報告書"
 
 * category 1..1 MS
   * ^short = "報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。"
@@ -33,11 +33,11 @@ Description:    "自治体検診結果報告書　Compositionリソース　文�
     * display 0..1 MS
       * ^short = "コードの表示名。"
 
-* subject only Reference(JP_Patient_eCheckupReport)
-* encounter only Reference(JP_Encounter_eCheckupReport)
-* author[practitionerRole] only Reference(JP_PractitionerRole_eCheckupReport)
-* author[organizationProvider] only Reference(JP_Organization_eCheckupReport_Provider)
-* custodian only Reference(JP_Organization_eCheckupReport_Provider)
+* subject only Reference(JP_Patient_eCheckupGeneral)
+* encounter only Reference(JP_Encounter_eCheckupGeneral)
+* author[practitionerRole] only Reference(JP_PractitionerRole_eCheckupGeneral)
+* author[organizationProvider] only Reference(JP_Organization_eCheckupGeneral_Provider)
+* custodian only Reference(JP_Organization_eCheckupGeneral_Provider)
 
 * event
   * code
@@ -49,21 +49,21 @@ Description:    "自治体検診結果報告書　Compositionリソース　文�
       //1：一次検診
       // 2：二次検診
       // 3:一次検診と精密検査の同時実施
-  * detail only Reference(JP_Encounter_eCheckupReport)
+  * detail only Reference(JP_Encounter_eCheckupGeneral)
 
 //検査結果セクション
 * section[OBSERVATION]
-  * entry[COV] only Reference(JP_Coverage_eCheckupReport)
+  * entry[COV] only Reference(JP_Coverage_eCheckupGeneral)
     * ^short = "検査結果セクションに含まれる保険証情報および受診券情報をあらわすCoverageリソースへの参照。"
-  * entry[OBS] only Reference(JP_Observation_eCheckupReport or JP_Observation_eCheckupReport_Group)
+  * entry[OBS] only Reference(JP_Observation_eCheckupGeneral or JP_Observation_eCheckupGeneral_Group)
     * ^short = "検査結果セクションに含まれる検査結果または検査結果グループを示すObservationリソースへの参照。"
 
 //問診結果セクション
 * section[QUESTIONAIRRE]
-  * entry only Reference(JP_Observation_eCheckupReport or JP_Observation_eCheckupReport_Group)
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_Observation_eCheckupGeneral_Group)
     * ^short = "問診結果セクションに含まれる検査結果または検査結果グループを示すObservationリソースへの参照。"
 
 //添付書類セクション
 * section[ATTACHMENT]
-  * entry only Reference(JP_DocumentReference_eCheckupReport or JP_DiagnosticReport_eCheckupReport)
+  * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral)
     * ^short = "添付書類セクションに含まれるドキュメントまたは診断レポートを示すObservationリソースへの参照。"

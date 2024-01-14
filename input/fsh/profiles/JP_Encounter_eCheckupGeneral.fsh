@@ -1,9 +1,9 @@
-Profile:        JP_Encounter_eCheckupReport
+Profile:        JP_Encounter_eCheckupGeneral
 Parent:         JP_Encounter_CUPIX
 Id:             JP-Encounter-eCheckupReport
-//Title:          "自治体検診結果報告書　Encounterリソース  検診実施情報"
-Description:    "自治体検診結果報告書　Encounterリソース  検診実施情報"
-* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Encounter_eCheckupReport"
+//Title:          "健診結果報告書　Encounterリソース  検診実施情報"
+Description:    "健診結果報告書　Encounterリソース  検診実施情報"
+* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Encounter_eCheckupGeneral"
 * ^status = #draft
 
 
@@ -38,7 +38,7 @@ Description:    "自治体検診結果報告書　Encounterリソース  検診�
       * ^short = "自治体検診の受診方法の表示名"
 
 
-* serviceProvider only Reference(JP_Organization_eCheckupReport_Provider)
+* serviceProvider only Reference(JP_Organization_eCheckupGeneral_Provider)
   * ^short = "検診実施機関を表すOrganizationリソースへの参照。"
   * reference 1..1 MS
 

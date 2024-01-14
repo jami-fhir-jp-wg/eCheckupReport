@@ -37,7 +37,7 @@ Description:    "健診・検診結果報告書　Compositionリソース共通�
   * ^short = "この文書のステータス。"
 
 * type 1..1 MS
-  * ^short = "Compositionが表す文書の種類。本規格では、コード体系 文書区分コード（ http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes）より、「自治体検診結果報告書」を指定する。"
+  * ^short = "Compositionが表す文書の種類。本規格では、コード体系 文書区分コード（ http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes）より、「健診結果報告書」を指定する。"
   * coding 1..1 MS
   * coding from http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
     * system 1..1 MS
@@ -48,7 +48,7 @@ Description:    "健診・検診結果報告書　Compositionリソース共通�
     //* code = #xx // TODO: 実際の値に変更する必要がある
     * display 0..1 MS
       * ^short = "文書区分コードの表示名。"
-    //* display = "自治体検診結果報告書"
+    //* display = "健診結果報告書"
 
 * category 1..1 MS
   * ^short = "報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。"

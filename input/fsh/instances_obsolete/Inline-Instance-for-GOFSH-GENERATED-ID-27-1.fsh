@@ -5,11 +5,11 @@ Usage: #inline
 * extension.url = "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
 * extension.valueString = "1.0"
 * text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p>自治体検診結果報告書</p></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p>健診結果報告書</p></div>"
 * identifier.system = "urn:oid:1.2.392.100495.100.1.11311234567"
 * identifier.value = "12345"
 * status = #final
-* type = $doctype_codes_cs#xx "自治体検診結果報告書"
+* type = $doctype_codes_cs#xx "健診結果報告書"
 * category = $report_category_cs#56 "肝炎検診"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * encounter = Reference(urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad)

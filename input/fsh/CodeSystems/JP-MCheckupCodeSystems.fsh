@@ -92,7 +92,7 @@ Description: "受診区分"
 
 //--------------------------------------------------------------------
 // 健診項目コード(JLAC10)	Observation.code
-//	自治体検診結果報告書で使用するJLAC10コードのコードシステム。
+//	健診結果報告書で使用するJLAC10コードのコードシステム。
 //--------------------------------------------------------------------
 CodeSystem: MunicipalCheckup_codeSystem_jlac10
 Id: MunicipalCheckup-codeSystem-jlac10

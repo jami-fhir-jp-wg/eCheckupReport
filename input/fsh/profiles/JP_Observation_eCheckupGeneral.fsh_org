@@ -1,22 +1,22 @@
-Profile:        JP_Observation_eCheckupReport
+Profile:        JP_Observation_eCheckupGeneral
 Parent:         JP_Observation_CUPIX
 Id:             JP-Observation-eCheckupReport
-//Title:          "自治体検診結果報告書　Observationリソース　検査項目情報"
-Description:    "自治体検診結果報告書　Observationリソース　検査項目情報"
-* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Observation_eCheckupReport"
+//Title:          "健診結果報告書　Observationリソース　検査項目情報"
+Description:    "健診結果報告書　Observationリソース　検査項目情報"
+* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Observation_eCheckupGeneral"
 * ^status = #draft
 * obeys emc-obs-1 and emc-obs-2 and emc-obs-3 and emc-obs-4 and emc-obs-5
 
-* subject only Reference(JP_Patient_eCheckupReport)
+* subject only Reference(JP_Patient_eCheckupGeneral)
 
 * code from $EMCUPX_observation_codes_vs (required)
 
-* specimen only Reference(JP_Specimen_eCheckupReport)
+* specimen only Reference(JP_Specimen_eCheckupGeneral)
 
-//* hasMember only Reference(JP_Observation_eCheckupReport)
+//* hasMember only Reference(JP_Observation_eCheckupGeneral)
 * hasMember 0..0
 
-* derivedFrom only Reference(JP_Media_eCheckupReport)
+* derivedFrom only Reference(JP_Media_eCheckupGeneral)
 
 // 各種制約
 Invariant: emc-obs-1

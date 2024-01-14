@@ -87,11 +87,11 @@ table th {
 | 5.1 |  | system |  |  | 1..1 | uri | "urn:oid:1.2.392.100495.100.1.11311234567" | 検診結果報告書IDの名前空間を表すURI。値は例示。 | 
 | 5.2 |  | value |  |  | 1..1 | string | “12345” | 検診結果報告書ID | 
 | 6 | status |  |  |  | 1..1 | code | “final” | この文書のステータス。値は例示。 | 
-| 7 | type |  |  |  | 1..1 | CodeableConcept |  | Compositionが表す文書の種類。本規格では、コード体系 文書区分コード（ http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes）より、「自治体検診結果報告書」を指定する。 | 
+| 7 | type |  |  |  | 1..1 | CodeableConcept |  | Compositionが表す文書の種類。本規格では、コード体系 文書区分コード（ http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes）より、「健診結果報告書」を指定する。 | 
 | 7.1 |  | coding |  |  | 1..1 | Coding |  |  | 
 | 7.1.1 |  |  | system |  | 1..1 | uri | http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes | 文書区分コードのコード体系を識別するURI。固定値。 | 
-| 7.1.2 |  |  | code |  | 1..1 | code | “xx” | 文書区分コード。”xx：自治体検診結果報告書”を指定。固定値。 | 
-| 7.1.3 |  |  | display |  | 0..1 | string | “自治体検診結果報告書” | 文書区分コードの表示名。 | 
+| 7.1.2 |  |  | code |  | 1..1 | code | “xx” | 文書区分コード。”xx：健診結果報告書”を指定。固定値。 | 
+| 7.1.3 |  |  | display |  | 0..1 | string | “健診結果報告書” | 文書区分コードの表示名。 | 
 | 8 | category |  |  |  | 1..1 | CodeableConcept |  | 報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。 | 
 | 8.1 |  | coding |  |  | 1..1 | Coding |  |  | 
 | 8.1.1 |  |  | system |  | 1..1 | uri | http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category | 報告区分コードのコード体系を識別するURI。固定値。 | 
@@ -669,7 +669,7 @@ table th {
 | 被保険者区分コード | Coverage.relationship | urn:oid:1.2.392.100495.20.2.62 | 被保険者区分を表すコードシステム。 | 
 | 受診区分 | Encounter.class | http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category | 受診種別を表すコードシステム。<br>“checkup”	　：健診を表すコード | 
 | 健診機関コード | Orgamization.identifier | urn:oid:1.2.392.200119.6.102 | 保険医療機関番号10桁のコードシステム。 | 
-| 健診項目コード(JLAC10) | Observation.code | http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10 | 自治体検診結果報告書で使用するJLAC10コードのコードシステム。 | 
+| 健診項目コード(JLAC10) | Observation.code | http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10 | 健診結果報告書で使用するJLAC10コードのコードシステム。 | 
 | 検査方法コード | Observation.method.conding.coding.code | http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-examMethod-codes | 健診結果報告書で使用する検査方法コードシステム。 | 
 | 材料コード | Specimen.type | http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-specimen-codes | 検体の材料コードを表すコードシステム。 | 
 | 添付文書フォーマットコード | DocumentReference.format | http://jpfhir.jp/fhir/eCheckup/CodeSystem/attachement-format | 添付文書のフォーマット（例：CDA R2形式）を示すコードシステム | 

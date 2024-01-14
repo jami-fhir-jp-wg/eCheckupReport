@@ -1,8 +1,8 @@
 
-Profile: JP_Bundle_eCheckupReport
+Profile: JP_Bundle_eCheckupGeneral
 Parent: JP-Bundle-CUPIX
 Id: JP-Bundle-eCheckupReport
-Description: "自治体検診結果報告書　Bundleリソース　文書情報"
+Description: "健診結果報告書　Bundleリソース　文書情報"
 /*
 * obeys Bundle-select-patient-check
 * obeys entry-select-patient-check
@@ -15,8 +15,7 @@ Description: "自治体検診結果報告書　Bundleリソース　文書情報
 * obeys entry-where-ispatient-check
 * obeys entry1-where-ispatient-check
 */
-
-
+/*
 * obeys caregory-is-valid-one
 * obeys event-code-is-valid-one
 * obeys category51-event1xor2xor3
@@ -35,7 +34,7 @@ Description: "自治体検診結果報告書　Bundleリソース　文書情報
 * obeys  bundle-entry2-JP-PractitionerRole-eCheckupReport
 * obeys  bundle-entry3-JP-Organization-eCheckupReport-Provider
 * obeys  bundle-entry4-JP-Practitioner-eCheckupReport
-
+*/
 /*
 * obeys entry-where-patient-check
 * obeys entry1-where-patient-check
@@ -67,7 +66,7 @@ Description: "自治体検診結果報告書　Bundleリソース　文書情報
 
 */
 
-* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Bundle_eCheckupReport"
+* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Bundle_eCheckupGeneral"
 * ^status = #draft
 /*
 * meta 1..1 MS
@@ -82,17 +81,17 @@ Description: "自治体検診結果報告書　Bundleリソース　文書情報
     * ^short = "Bundleリソースを一意に特定する識別子。本仕様では、Bundleに対して一意となるように生成されたUUIDを指定する。"
 */
 
-* entry[composition].resource only JP_Composition_eCheckupReport
-* entry[patient].resource only JP_Patient_eCheckupReport
-* entry[practitionerRole].resource only JP_PractitionerRole_eCheckupReport
-* entry[organizationProvider].resource only JP_Organization_eCheckupReport_Provider
-* entry[practitioner].resource only JP_Practitioner_eCheckupReport
-* entry[encounter].resource only JP_Encounter_eCheckupReport
-* entry[coverage].resource only JP_Coverage_eCheckupReport
-* entry[organizationInsurer].resource only JP_Organization_eCheckupReport_Insurer
-* entry[observationGroup].resource only JP_Observation_eCheckupReport_Group
-* entry[observation].resource only JP_Observation_eCheckupReport
-* entry[specimen].resource only JP_Specimen_eCheckupReport
-* entry[diagnosticReport].resource only JP_DiagnosticReport_eCheckupReport
-* entry[media].resource only JP_Media_eCheckupReport
-* entry[documentReference].resource only JP_DocumentReference_eCheckupReport
+* entry[composition].resource only JP_Composition_eCheckupGeneral
+* entry[patient].resource only JP_Patient_eCheckupGeneral
+* entry[practitionerRole].resource only JP_PractitionerRole_eCheckupGeneral
+* entry[organizationProvider].resource only JP_Organization_eCheckupGeneral_Provider
+* entry[practitioner].resource only JP_Practitioner_eCheckupGeneral
+* entry[encounter].resource only JP_Encounter_eCheckupGeneral
+* entry[coverage].resource only JP_Coverage_eCheckupGeneral
+* entry[organizationInsurer].resource only JP_Organization_eCheckupGeneral_Insurer
+* entry[observationGroup].resource only JP_Observation_eCheckupGeneral_Group
+* entry[observation].resource only JP_Observation_eCheckupGeneral
+* entry[specimen].resource only JP_Specimen_eCheckupGeneral
+* entry[diagnosticReport].resource only JP_DiagnosticReport_eCheckupGeneral
+* entry[media].resource only JP_Media_eCheckupGeneral
+* entry[documentReference].resource only JP_DocumentReference_eCheckupGeneral

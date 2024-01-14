@@ -1,10 +1,10 @@
 // Profile 文書構成情報（処方箋・分割処方でないもの）
-Profile:        JP_Patient_eCheckupReport
+Profile:        JP_Patient_eCheckupGeneral
 Parent:         JP_Patient_CUPIX
 Id:             JP-Patient-eCheckupReport
-//Title:          "自治体検診結果報告書　Patientリソース　受診者情報"
-Description:    "自治体検診結果報告書　Patientリソース　受診者情報"
-* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Patient_eCheckupReport"
+//Title:          "健診結果報告書　Patientリソース　受診者情報"
+Description:    "健診結果報告書　Patientリソース　受診者情報"
+* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Patient_eCheckupGeneral"
 * ^status = #draft
 * obeys emc-pat-3
 

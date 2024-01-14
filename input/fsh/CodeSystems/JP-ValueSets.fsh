@@ -6,7 +6,7 @@ ValueSet: MunicipalCheckup_valueSet_documentTypeCode
 Id: MunicipalCheckup-valueSet-documentTypeCode
 Description: "文書区分コード"
 * ^url = $doctype_codes_vs
-* $doctype_codes_cs#xx  "自治体検診結果報告書"
+* $doctype_codes_cs#xx  "健診結果報告書"
 
 //--------------------------------------------------------------------
 // 報告区分コード	Composition.category
