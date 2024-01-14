@@ -4,7 +4,7 @@ Parent:         JP_Patient_CUPIX
 Id:             JP-Patient-eCheckupReport
 //Title:          "健診結果報告書　Patientリソース　受診者情報"
 Description:    "健診結果報告書　Patientリソース　受診者情報"
-* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Patient_eCheckupGeneral"
+* ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral"
 * ^status = #draft
 * obeys emc-pat-3
 

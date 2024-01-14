@@ -3,7 +3,7 @@ Parent:         JP_Coverage_CUPIX
 Id:             JP-Coverage-eCheckupReport
 //Title:          "健診結果報告書　Coverageリソース  保険情報"
 Description:    "健診結果報告書　Coverageリソース  保険情報"
-* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Coverage_eCheckupGeneral"
+* ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Coverage_eCheckupGeneral"
 * ^status = #draft
 
 * beneficiary only Reference(JP_Patient_eCheckupGeneral)

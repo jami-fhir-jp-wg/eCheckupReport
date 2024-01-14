@@ -4,7 +4,7 @@ Id:             JP-Composition-eCheckupReport
 //Title:          "健診結果報告書　Compositionリソース　文書構成情報"
 Description:    "健診結果報告書　Compositionリソース　文書構成情報"
 
-* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Composition_eCheckupGeneral"
+* ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * ^status = #draft
 * type
   * coding

@@ -4,7 +4,7 @@ Parent:         JP_PractitionerRole_CUPIX
 Id:             JP-PractitionerRole-eCheckupReport
 //Title:          "健診結果報告書　PractitionerRoleリソース　文書作成者役割情報"
 Description:    "健診結果報告書　PractitionerRoleリソース　文書作成者役割情報"
-* ^url = "http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_PractitionerRole_eCheckupGeneral"
+* ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerRole_eCheckupGeneral"
 * ^status = #draft
 
 
