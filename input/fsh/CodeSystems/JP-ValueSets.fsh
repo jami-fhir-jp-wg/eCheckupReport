@@ -9,13 +9,13 @@ Description: "文書区分コード"
 * $doctype_codes_cs#xx  "健診結果報告書"
 
 //--------------------------------------------------------------------
-// 報告区分コード	Composition.category
-//	健診結果が、どの健診事業として報告されるかを示す健診報告区分を表す健康診断結果報告の区分
+// （検診）報告区分コード	Composition.category
+//	自治体検診の検診結果報告区分
 //--------------------------------------------------------------------
 ValueSet: MunicipalCheckup_valueSet_reportCategory
-Id: MunicipalCheckup-valueSet-reportCategory
+Id: municipalCheckup-valueSet-reportCategory
 Description: "報告区分コード"
-* ^url = $report_category_vs
+* ^url = $report_category_diseaseKenshin_vs
 * $report_category_cs#51	"肺がん検診"
 * $report_category_cs#52	"乳がん検診"
 * $report_category_cs#53	"胃がん検診"
@@ -24,6 +24,23 @@ Description: "報告区分コード"
 * $report_category_cs#56	"肝炎検診"
 * $report_category_cs#57	"骨粗鬆症検診"
 * $report_category_cs#58	"歯周疾患検診"
+
+//--------------------------------------------------------------------
+// （健診）報告区分コード	Composition.category
+//	健診結果が、どの健診事業として報告されるかを示す健診報告区分を表す健康診断結果報告の区分
+//--------------------------------------------------------------------
+ValueSet: Checkup_valueSet_reportCategory
+Id: checkup-valueSet-reportCategory
+Description: "報告区分コード"
+* ^url = $report_category_vs
+* $report_category_cs#10	"肺がん検診"
+* $report_category_cs#10   "特定健診"
+* $report_category_cs#40   "健診結果報告"
+* $report_category_cs#42   "広域連合健診"
+* $report_category_cs#43   "事業者健診"
+* $report_category_cs#48   "人間ドック健診"
+* $report_category_cs#50   "検診"
+
 
 //--------------------------------------------------------------------
 // 自治体検診検診区分	Composition.event.code

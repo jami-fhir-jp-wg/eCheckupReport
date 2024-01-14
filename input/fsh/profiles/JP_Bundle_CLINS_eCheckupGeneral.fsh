@@ -1,8 +1,8 @@
 
-Profile: JP_Bundle_eCheckupGeneral
+Profile: JP_Bundle_CLINS_eCheckupGeneral
 Parent: Bundle
-Id: JP-Bundle-eCheckupGeneral
-Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信は別プロファイル）"
+Id: JP-Bundle-CLINS-eCheckupGeneral
+Description: "健診結果報告書 Bundleリソース 電子カルテ情報共有サービス送信用"
 
 * obeys bundle-profile-is-JP-Bundle-eCheckupGeneral
 * obeys valid-valuePart0-bundleIdenfifier
@@ -77,10 +77,10 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 
 */
 
-* ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral"
+* ^url = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral"
 * ^status = #active
-* . ^short = "健診結果報告書 Bundleリソース （電子カルテ情報共有サービス送信は別プロファイル）"
-* . ^definition = "健診結果報告のための文書 Bundleリソース　（電子カルテ情報共有サービス送信は別プロファイル）"
+* . ^short = "健診結果報告書 Bundleリソース 電子カルテ情報共有サービス送信用"
+* . ^definition = "健診結果報告のための文書 Bundleリソース　電子カルテ情報共有サービス送信用"
 
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
@@ -89,15 +89,17 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * identifier 1.. MS
 * identifier ^short = "この文書Bundleの固定識別子。Bundle作成時にシステムが設定する。"
 * identifier ^definition = "この文書Bundleの固定識別子を、以下の仕様で設定する。\r\n
-Bundle.identifier.system = ”http://jpfhir.jp/fhir/eCheckup/bundle-identifier”、identifier.value = 以下に記載する[報告単位識別ID]　を設定する。\r\n[報告単位識別ID]： 次の2つの文字列を半角ハット記号（^）で連携した文字列。\r\n
+電子カルテ情報共有サービスに送信される場合には、CLINS用identifierを設定することが必須で、BundleリソースのCLINS用identifier要素は、電子カルテ情報共有サービス側で保存される。送信側は、後続の送信においてこのCLINS用identifierを指定することで、受信側は過去にCLINSが受信したBundleリソースを特定し、その全データについて削除、更新などの処理を行うためにこれを使用する。"
+* identifier ^comment = "CLINS用identifier（電子カルテ情報共有サービスに送信する場合に必須）：Bundle.identifier.system = CLINS用identifierのsystem値として、”http://jpfhir.jp/fhir/clins/bundle-identifier”、identifier.value = CLINS用identifierのvalue値として、以下に記載する[報告単位識別ID]　を設定する。\r\n[報告単位識別ID]： 次の３つの文字列を半角ハット記号（^）で連携した文字列。\r\n
 保険医療機関番号10桁：\r\n
 　（内訳：都道府県番号２桁、点数表コード（医療機関区分）１桁、医療機関番号７桁）\r\n
+被保険者個人識別子：\r\n
+　６情報送信仕様に記載の「6:被保険者個人識別子の格納」の仕様に従う。\r\n
 報告単位のデータを医療機関のシステムとして医療機関内で一意に識別できる粒度の報告ID文字列：\r\n
 　　当該システムが当該患者データの中で一意性を保証できるよう生成した半角文字列（英大文字、数字、ハイフン記号のみ可）\r\n
 　　最大128文字とすること。"
-* identifier ^comment = ""
 
-* identifier.system = "http://jpfhir.jp/fhir/eCheckup/bundle-identifier" (exactly)
+* identifier.system = "http://jpfhir.jp/fhir/clins/bundle-identifier" (exactly)
 * identifier.value 1..1 MS
 
 * type = #document (exactly)
