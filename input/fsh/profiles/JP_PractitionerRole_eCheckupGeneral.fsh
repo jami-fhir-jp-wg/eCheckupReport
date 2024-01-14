@@ -10,4 +10,4 @@ Description:    "健診結果報告書　PractitionerRoleリソース　文書�
 
 * practitioner only Reference(JP_Practitioner_eCheckupGeneral)
 
-* organization only Reference(JP_Organization_eCheckupGeneral_Provider)
+* organization only Reference(JP_OrganizationReporter_eCheckupGeneral)

@@ -120,15 +120,18 @@ and patient 1..1 MS  //  患者情報
 and organizationReporter   1..1 MS
 and practitionerReporter 1..1 MS
 
-// and practitionerRoleTransciptor 1..2 MS
-and organizationTransciptor  0..1 MS
-and practitionerTransciptor 0..1 MS
+// and practitionerRoleTranscriptor 1..2 MS
+and organizationTranscriptor  0..1 MS
+and practitionerTranscriptor 0..1 MS
 
 and organizationCustodian  0..1 MS  // 作成責任機関（文書作成機関と異なる例外的な場合に使用）
+
+and organizationInsurer  0..1 MS  // 保険者組織
 
 and encounter 1..1 MS
 and coverageService 0..1 MS
 and coverageInsurance 0..1 MS
+and observationGroup 0..1 MS
 and observation 0..1 MS
 and specimen 0..1 MS
 and diagnosticReport 0..1 MS
@@ -243,7 +246,31 @@ and documentReference 0..1 MS
 * entry[practitionerTranscriptor].request ..0
 * entry[practitionerTranscriptor].response ..0
 
+* entry[organizationInsurer] ^short = "保険者組織情報"
+* entry[organizationInsurer] ^definition = "保険者組織情報"
+* entry[organizationInsurer].fullUrl 1.. MS
+* entry[organizationInsurer].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
+* entry[organizationInsurer].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
+* entry[organizationInsurer].resource 1.. MS
+* entry[organizationInsurer].resource only  JP_OrganizationInsurer_eCheckupGeneral
+* entry[organizationInsurer].resource ^short = "リソースのインスタンス本体"
+* entry[organizationInsurer].resource ^definition = "リソースのインスタンス本体。"
+* entry[organizationInsurer].search ..0
+* entry[organizationInsurer].request ..0
+* entry[organizationInsurer].response ..0
 
+* entry[organizationCustodian] ^short = "文書管理責任機関情報"
+* entry[organizationCustodian] ^definition = "文書管理責任機関情報"
+* entry[organizationCustodian].fullUrl 1.. MS
+* entry[organizationCustodian].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
+* entry[organizationCustodian].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
+* entry[organizationCustodian].resource 1.. MS
+* entry[organizationCustodian].resource only  JP_OrganizationCustodian_eCheckupGeneral
+* entry[organizationCustodian].resource ^short = "リソースのインスタンス本体"
+* entry[organizationCustodian].resource ^definition = "リソースのインスタンス本体。"
+* entry[organizationCustodian].search ..0
+* entry[organizationCustodian].request ..0
+* entry[organizationCustodian].response ..0
 
 * entry[encounter] ^short = "健診実施情報"
 * entry[encounter] ^definition = "健診実施情報"

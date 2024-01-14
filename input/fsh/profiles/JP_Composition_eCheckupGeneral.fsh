@@ -99,11 +99,11 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
     practitionerReporter 1..1 MS 
 and organizationReporter 1..1 MS
 
-* author[practitionerReporter] only Reference(JP_PractitionerRoleReporter_eCheckupGeneral)
+* author[practitionerReporter] only Reference(JP_PractitionerReporter_eCheckupGeneral)
 * author[organizationReporter] only Reference(JP_OrganizationReporter_eCheckupGeneral)
 
 * custodian 0..1
-* custodian only Reference(JP_Organization_eCheckupGeneral or JP_OrganizationReporter_eCheckupGeneral)
+* custodian only Reference(JP_OrganizationCustodian_eCheckupGeneral)
 
 * event 1..* MS
   * code 1..* MS
@@ -119,9 +119,6 @@ and organizationReporter 1..1 MS
 * section contains
 // 添付書類だけの場合は０もあり
     OBSERVATION 0..1 MS and
-    QUESTIONAIRRE 0..1 MS and
-    ATTACHMENT 0..1 MS
-and        OBSERVATION 0..1 MS and
     QUESTIONAIRRE 0..1 MS and
     ATTACHMENT 0..1 MS
 
@@ -152,11 +149,11 @@ and        OBSERVATION 0..1 MS and
       OBS 0..* MS and 
       COV 0..2 MS
 
-  * entry[OBS] only Reference(JP_Observation or JP_Observation_Group)
+  * entry[OBS] only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
-  * entry[COV] only Reference(JP_Coverage)
+  * entry[COV] only Reference(JP_CoverageService_eCheckupGeneral)
     * ^short = "検査結果セクションに含まれる保険証情報および受診券情報をあらわすCoverageリソースへの参照。"
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
@@ -190,7 +187,7 @@ and        OBSERVATION 0..1 MS and
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
-  * entry only Reference(JP_Observation or JP_Observation_Group)
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
@@ -218,7 +215,7 @@ and        OBSERVATION 0..1 MS and
       * ^short = "本セクションの内容をテキストで表現した文字列を入れてもよい。内容を省略しても構わない。 このデータは人がこのセクションの内容の概略をひと目で把握するためだけに使われるものであり、データ処理対象としてはならない。"
   * entry 1..*
     * ^short = "添付書類セクションに含まれるリソースの参照。添付書類を表す。DocumentReferenceリソースが含まれる。"
-  * entry only Reference(JP_DocumentReference or JP_DiagnosticReport)
+  * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 

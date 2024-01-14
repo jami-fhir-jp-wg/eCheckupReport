@@ -24,5 +24,5 @@ Description: "検診受診時の年齢を表現する拡張"
   * ^short = "検診実施情報"
   * url = "event" (exactly)
   * value[x] only Reference
-  * valueReference only Reference(JP_Encounter_eMunicipalCheckup)
+  * valueReference only Reference(JP_Encounter_eCheckupGeneral)
   * valueReference.reference 1..1 MS

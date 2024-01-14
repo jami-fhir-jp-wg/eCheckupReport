@@ -38,7 +38,7 @@ Description:    "健診結果報告書　Encounterリソース  検診実施情�
       * ^short = "自治体検診の受診方法の表示名"
 
 
-* serviceProvider only Reference(JP_Organization_eCheckupGeneral_Provider)
+* serviceProvider only Reference(JP_OrganizationReporter_eCheckupGeneral)
   * ^short = "検診実施機関を表すOrganizationリソースへの参照。"
   * reference 1..1 MS
 

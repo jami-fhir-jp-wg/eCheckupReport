@@ -1,5 +1,5 @@
 Profile:        JP_DiagnosticReport_eCheckupGeneral
-Parent:         JP_DiagnosticReport
+Parent:         JP_DiagnosticReport_Common
 Id:             JP-DiagnositicReport-eCheckupReport
 //Title:          "健診結果報告書　DiagnosticReportリソース 検査報告書情報"
 Description:    "健診結果報告書　DiagnosticReportリソース 検査報告書情報"

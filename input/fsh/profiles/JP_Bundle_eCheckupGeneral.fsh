@@ -118,15 +118,16 @@ and patient 1..1 MS  //  患者情報
 and organizationReporter   1..1 MS
 and practitionerReporter 1..1 MS
 
-// and practitionerRoleTransciptor 1..2 MS
-and organizationTransciptor  0..1 MS
-and practitionerTransciptor 0..1 MS
+// and practitionerRoleTranscriptor 1..2 MS
+and organizationTranscriptor  0..1 MS
+and practitionerTranscriptor 0..1 MS
 
 and organizationCustodian  0..1 MS  // 作成責任機関（文書作成機関と異なる例外的な場合に使用）
 
 and encounter 1..1 MS
 and coverageService 0..1 MS
 and coverageInsurance 0..1 MS
+and observationGroup 0..1 MS
 and observation 0..1 MS
 and specimen 0..1 MS
 and diagnosticReport 0..1 MS
@@ -159,6 +160,7 @@ and documentReference 0..1 MS
 * entry[composition].request ..0
 * entry[composition].response ..0
 
+/*
 * entry[practitionerRoleReporter] ^short = "健診結果作成者役割情報"
 * entry[practitionerRoleReporter] ^definition = "健診結果作成者役割情報"
 * entry[practitionerRoleReporter].fullUrl 1.. MS
@@ -171,6 +173,7 @@ and documentReference 0..1 MS
 * entry[practitionerRoleReporter].search ..0
 * entry[practitionerRoleReporter].request ..0
 * entry[practitionerRoleReporter].response ..0
+*/
 
 * entry[organizationReporter] ^short = "健診結果作成組織情報"
 * entry[organizationReporter] ^definition = "健診結果作成組織情報"
@@ -198,6 +201,7 @@ and documentReference 0..1 MS
 * entry[practitionerReporter].request ..0
 * entry[practitionerReporter].response ..0
 
+/*
 * entry[practitionerRoleTranscriptor] ^short = "転記者役割情報"
 * entry[practitionerRoleTranscriptor] ^definition = "転記者役割情報"
 * entry[practitionerRoleTranscriptor].fullUrl 1.. MS
@@ -210,6 +214,7 @@ and documentReference 0..1 MS
 * entry[practitionerRoleTranscriptor].search ..0
 * entry[practitionerRoleTranscriptor].request ..0
 * entry[practitionerRoleTranscriptor].response ..0
+*/
 
 * entry[organizationTranscriptor] ^short = "転記者所属組織情報"
 * entry[organizationTranscriptor] ^definition = "転記者所属組織情報"
