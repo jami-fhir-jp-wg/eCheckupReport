@@ -116,7 +116,7 @@ Description: "健診結果報告書 Bundleリソース 電子カルテ情報共�
     composition 1..1 MS  // 文書構成情報
 and patient 1..1 MS  //  患者情報
 
-// and practitionerRoleReporter 1..2 MS
+//and practitionerRoleReporter 1..2 MS
 and organizationReporter   1..1 MS
 and practitionerReporter 1..1 MS
 
@@ -161,6 +161,7 @@ and documentReference 0..1 MS
 * entry[composition].request ..0
 * entry[composition].response ..0
 
+/*
 * entry[practitionerRoleReporter] ^short = "健診結果作成者役割情報"
 * entry[practitionerRoleReporter] ^definition = "健診結果作成者役割情報"
 * entry[practitionerRoleReporter].fullUrl 1.. MS
@@ -173,6 +174,7 @@ and documentReference 0..1 MS
 * entry[practitionerRoleReporter].search ..0
 * entry[practitionerRoleReporter].request ..0
 * entry[practitionerRoleReporter].response ..0
+*/
 
 * entry[organizationReporter] ^short = "健診結果作成組織情報"
 * entry[organizationReporter] ^definition = "健診結果作成組織情報"
@@ -200,6 +202,7 @@ and documentReference 0..1 MS
 * entry[practitionerReporter].request ..0
 * entry[practitionerReporter].response ..0
 
+/*
 * entry[practitionerRoleTranscriptor] ^short = "転記者役割情報"
 * entry[practitionerRoleTranscriptor] ^definition = "転記者役割情報"
 * entry[practitionerRoleTranscriptor].fullUrl 1.. MS
@@ -212,6 +215,7 @@ and documentReference 0..1 MS
 * entry[practitionerRoleTranscriptor].search ..0
 * entry[practitionerRoleTranscriptor].request ..0
 * entry[practitionerRoleTranscriptor].response ..0
+*/
 
 * entry[organizationTranscriptor] ^short = "転記者所属組織情報"
 * entry[organizationTranscriptor] ^definition = "転記者所属組織情報"
