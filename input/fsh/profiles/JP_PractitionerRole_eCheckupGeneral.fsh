@@ -1,6 +1,6 @@
 // Profile
 Profile:        JP_PractitionerRole_eCheckupGeneral
-Parent:         JP_PractitionerRole_CUPIX
+Parent:         JP_PractitionerRole
 Id:             JP-PractitionerRole-eCheckupReport
 //Title:          "健診結果報告書　PractitionerRoleリソース　文書作成者役割情報"
 Description:    "健診結果報告書　PractitionerRoleリソース　文書作成者役割情報"

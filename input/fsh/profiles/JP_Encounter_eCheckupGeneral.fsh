@@ -1,5 +1,5 @@
 Profile:        JP_Encounter_eCheckupGeneral
-Parent:         JP_Encounter_CUPIX
+Parent:         JP_Encounter
 Id:             JP-Encounter-eCheckupReport
 //Title:          "健診結果報告書　Encounterリソース  検診実施情報"
 Description:    "健診結果報告書　Encounterリソース  検診実施情報"

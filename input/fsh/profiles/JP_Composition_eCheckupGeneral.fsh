@@ -152,11 +152,11 @@ and        OBSERVATION 0..1 MS and
       OBS 0..* MS and 
       COV 0..2 MS
 
-  * entry[OBS] only Reference(JP_Observation_CUPIX or JP_Observation_Group_CUPIX)
+  * entry[OBS] only Reference(JP_Observation or JP_Observation_Group)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
-  * entry[COV] only Reference(JP_Coverage_CUPIX)
+  * entry[COV] only Reference(JP_Coverage)
     * ^short = "検査結果セクションに含まれる保険証情報および受診券情報をあらわすCoverageリソースへの参照。"
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
@@ -190,7 +190,7 @@ and        OBSERVATION 0..1 MS and
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
-  * entry only Reference(JP_Observation_CUPIX or JP_Observation_Group_CUPIX)
+  * entry only Reference(JP_Observation or JP_Observation_Group)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
@@ -218,7 +218,7 @@ and        OBSERVATION 0..1 MS and
       * ^short = "本セクションの内容をテキストで表現した文字列を入れてもよい。内容を省略しても構わない。 このデータは人がこのセクションの内容の概略をひと目で把握するためだけに使われるものであり、データ処理対象としてはならない。"
   * entry 1..*
     * ^short = "添付書類セクションに含まれるリソースの参照。添付書類を表す。DocumentReferenceリソースが含まれる。"
-  * entry only Reference(JP_DocumentReference_CUPIX or JP_DiagnosticReport_CUPIX)
+  * entry only Reference(JP_DocumentReference or JP_DiagnosticReport)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 

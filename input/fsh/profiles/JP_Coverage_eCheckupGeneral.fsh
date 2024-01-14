@@ -1,5 +1,5 @@
 Profile:        JP_Coverage_eCheckupGeneral
-Parent:         JP_Coverage_CUPIX
+Parent:         JP_Coverage
 Id:             JP-Coverage-eCheckupReport
 //Title:          "健診結果報告書　Coverageリソース  保険情報"
 Description:    "健診結果報告書　Coverageリソース  保険情報"

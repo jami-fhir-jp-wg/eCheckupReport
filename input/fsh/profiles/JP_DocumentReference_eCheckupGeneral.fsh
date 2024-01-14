@@ -1,5 +1,5 @@
 Profile:        JP_DocumentReference_eCheckupGeneral
-Parent:         JP_DocumentReference_CUPIX
+Parent:         JP_DocumentReference
 Id:             JP-DocumentReference-eCheckupReport
 //Title:          "健診結果報告書　DocumentReferenceリソース 添付文書情報"
 Description:    "健診結果報告書　DocumentReferenceリソース 添付文書情報"
