@@ -1,7 +1,7 @@
 // Profile 文書構成情報（処方箋・分割処方でないもの）
 Profile:        JP_Patient_eCheckupGeneral
 Parent:         JP_Patient
-Id:             JP-Patient-eCheckupReport
+Id:             JP-Patient-eCheckupGeneral
 //Title:          "健診結果報告書　Patientリソース　受診者情報"
 Description:    "健診結果報告書　Patientリソース　受診者情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral"

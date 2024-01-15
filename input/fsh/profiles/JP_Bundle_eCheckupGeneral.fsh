@@ -40,11 +40,11 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * obeys  category51-event1-valid-obs-9P508160800000049
 * obeys  category51-event1-valid-obs-9P509000000000011
 
-* obeys  bundle-entry0-JP-Composition-eCheckupReport
-* obeys  bundle-entry1-JP-Patient-eCheckupReport
-* obeys  bundle-entry2-JP-PractitionerRole-eCheckupReport
-* obeys  bundle-entry3-JP-Organization-eCheckupReport-Provider
-* obeys  bundle-entry4-JP-Practitioner-eCheckupReport
+* obeys  bundle-entry0-JP-Composition-eCheckupGeneral
+* obeys  bundle-entry1-JP-Patient-eCheckupGeneral
+* obeys  bundle-entry2-JP-PractitionerRole-eCheckupGeneral
+* obeys  bundle-entry3-JP-Organization-eCheckupGeneral-Provider
+* obeys  bundle-entry4-JP-Practitioner-eCheckupGeneral
 */
 /*
 * obeys entry-where-patient-check

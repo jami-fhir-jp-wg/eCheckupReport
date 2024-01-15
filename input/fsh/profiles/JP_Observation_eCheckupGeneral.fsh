@@ -1,6 +1,6 @@
 Profile:        JP_Observation_eCheckupGeneral 
 Parent:         JP_Observation_Common
-Id:             JP-Observation-eCheckupReport
+Id:             JP-Observation-eCheckupGeneral
 //Title:          "健診結果報告書　Observationリソース　検査項目情報"
 Description:    "健診結果報告書　Observationリソース　検査項目情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
