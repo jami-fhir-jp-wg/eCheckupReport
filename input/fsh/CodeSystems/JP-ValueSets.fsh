@@ -6,7 +6,7 @@ ValueSet: MunicipalCheckup_valueSet_documentTypeCode
 Id: MunicipalCheckup-valueSet-documentTypeCode
 Description: "文書区分コード"
 * ^url = $doctype_codes_vs
-* $doctype_codes_cs#xx  "健診結果報告書"
+* $doctype_codes_cs#xx  "自治体健診結果報告書"
 
 //--------------------------------------------------------------------
 // （検診）報告区分コード	Composition.category
@@ -16,14 +16,7 @@ ValueSet: MunicipalCheckup_valueSet_reportCategory
 Id: municipalCheckup-valueSet-reportCategory
 Description: "報告区分コード"
 * ^url = $report_category_diseaseKenshin_vs
-* $report_category_cs#51	"肺がん検診"
-* $report_category_cs#52	"乳がん検診"
-* $report_category_cs#53	"胃がん検診"
-* $report_category_cs#54	"子宮頸がん検診"
-* $report_category_cs#55	"大腸がん検診"
-* $report_category_cs#56	"肝炎検診"
-* $report_category_cs#57	"骨粗鬆症検診"
-* $report_category_cs#58	"歯周疾患検診"
+
 
 //--------------------------------------------------------------------
 // （健診）報告区分コード	Composition.category
@@ -33,14 +26,14 @@ ValueSet: Checkup_valueSet_reportCategory
 Id: checkup-valueSet-reportCategory
 Description: "報告区分コード"
 * ^url = $report_category_vs
-* $report_category_cs#10	"肺がん検診"
 * $report_category_cs#10   "特定健診"
 * $report_category_cs#40   "健診結果報告"
-* $report_category_cs#42   "広域連合健診"
-* $report_category_cs#43   "事業者健診"
-* $report_category_cs#48   "人間ドック健診"
-* $report_category_cs#50   "検診"
-
+* $report_category_cs#41   "事業者健診"
+* $report_category_cs#42   "自治体検診"
+* $report_category_cs#43   "乳幼児検診"
+* $report_category_cs#44   "妊婦検診"
+* $report_category_cs#90   "その他検診"
+    
 
 //--------------------------------------------------------------------
 // 自治体検診検診区分	Composition.event.code

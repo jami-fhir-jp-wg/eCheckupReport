@@ -105,10 +105,10 @@ and organizationReporter 1..1 MS
 * custodian 0..1
 * custodian only Reference(JP_OrganizationCustodian_eCheckupGeneral)
 
-* event 1..* MS
-  * code 1..* MS
-  * code[0] from $checkup_programService_vs
-    * coding ^short = "健診プログラムサービスコード. URI。coding.system = 'http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code' "
+* event 1.. MS
+* event ^short = "健診プログラムサービスコード. URI。coding.system = 'http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code' "
+* event.code 1..* MS
+* event.code from $checkup_programService_vs
 
 * section
   //セクションの特性ごとの制約
