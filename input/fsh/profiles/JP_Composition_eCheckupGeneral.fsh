@@ -117,27 +117,32 @@ and organizationReporter 1..1 MS
   * ^slicing.rules = #open
 
 * section contains
-    specialCheckup_observations 0..1 MS and
-    specialCheckup_questionnaire 0..1 MS and
+    specialCheckup_observations 0..1 MS 
+/*  and  specialCheckup_questionnaire 0..1 MS and
      0..1 MS and
     tokuteikenshin_observations 0..1 MS and
     QUESTIONAIRRE 0..1 MS and
     ATTACHMENT 0..1 MS
+*/
 
 //検査結果セクション
 * section[specialCheckup_observations]
   * code 1..1 MS
   * code = $section_code_cs#01011 "特定健診検査結果セクション" (exactly) 
-  * entry[OBS] only Reference(JP_Observation_Common_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
-    * reference 1..1
-
-  * entry[COV] only Reference(JP_CoverageService_eCheckupGeneral)
-    * ^short = "検査結果セクションに含まれる保険証情報および受診券情報をあらわすCoverageリソースへの参照。"
-    * reference 1..1
-      * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
+  * entry   
+    * ^slicing.discriminator.type = #profile
+    * ^slicing.discriminator.path = "resolve()"
+    * ^slicing.rules = #open
+  * entry contains 
+        xxx 1..1 MS 
+    and yyy 1..1 MS
+    and zzz 0..1 MS
+  * entry[xxx] only Reference(JP_Observation_eCheckup_spc_XXXX)
+  * entry[yyy] only Reference(JP_Observation_eCheckup_spc_YYYY)
+  * entry[zzz] only Reference(JP_Observation_eCheckup_spc_ZZZZ)
 
 //TODO Invariantsで Observation 1> Coverage 0..2になっているか確認
-
+/*
 //問診結果セクション
 * section[QUESTIONAIRRE]
   * ^short = "問診結果セクション。健診項目のうち問診項目に関連するリソースが全て本セクションに含まれる。"
@@ -196,7 +201,7 @@ and organizationReporter 1..1 MS
   * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
-
+*/
 // 各種制約
 Invariant: emc-cmp-1
 Description: "language should be 'ja' in case populated.(使用する場合は日本語環境(ja)を規定する)"

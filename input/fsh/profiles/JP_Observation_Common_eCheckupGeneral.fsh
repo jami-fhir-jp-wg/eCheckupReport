@@ -17,9 +17,9 @@ Description:    "健診結果報告書　Observationリソース　検査項目�
 * subject ^definition = "健診／検診対象者情報。必須項目。"
 
 * code ^definition = "検査項目を表す識別IDと検査名称の情報。コード化されていること。必須項目。"
-* code from $observation_codes_vs (required)
 
-* specimen only Reference(JP_Specimen_eCS)
+//==========下記修正ください＝＝＝＝＝＝
+* specimen only Reference(Specimen)
 
 //* hasMember only Reference(JP_Observation_Common_eCheckupGeneral)
 * hasMember 0..0
@@ -85,7 +85,7 @@ Description:    "健診・検診結果報告書　ObservationGroupリソースGr
 
 * code 1..1 MS
   * ^short = "健診項目グループコード。健診項目グループを識別するコードを指定。"
-* code from $EMCUPX_observation_codes_vs (required)
+/** code from $EMCUPX_observation_codes_vs (required)
   * coding 1..1 MS
     * system 1..1 MS
       * ^short = "健診項目グループコードを識別するURI。固定値。"
@@ -93,7 +93,7 @@ Description:    "健診・検診結果報告書　ObservationGroupリソースGr
       * ^short = "健診項目グループコード"
     * display 0..1 MS
       * ^short = "健診項目グループコードの表示名"
-
+*/
 * subject 1..1 MS
 * subject only Reference(JP_Patient_eCheckupGeneral)
   * ^short = "受診者情報を表すPatientリソースへの参照"

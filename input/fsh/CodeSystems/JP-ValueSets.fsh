@@ -74,7 +74,7 @@ Description: "受診区分"
 //	本文書のセクションコードを表すコードシステム。
 // 健診結果報告書内のセクションコード。
 //--------------------------------------------------------------------
-ValueSet: eCheckup_valueSet_sectionCode
+ValueSet: ECheckup_valueSet_sectionCode
 Id: eCheckup-valueSet-sectionCode
 Description: "セクションコード"
 * ^url = $section_code_vs
