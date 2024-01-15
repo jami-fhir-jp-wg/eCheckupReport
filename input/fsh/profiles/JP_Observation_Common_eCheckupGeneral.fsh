@@ -1,9 +1,9 @@
-Profile:        JP_Observation_eCheckupGeneral 
+Profile:        JP_Observation_Common_eCheckupGeneral 
 Parent:         JP_Observation_Common
 Id:             JP-Observation-eCheckupGeneral
 //Title:          "健診結果報告書　Observationリソース　検査項目情報"
 Description:    "健診結果報告書　Observationリソース　検査項目情報"
-* ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
+* ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_Commmon_eCheckupGeneral"
 * ^status = #draft
 * obeys emc-obs-1 and emc-obs-2 and emc-obs-3 and emc-obs-4 and emc-obs-5
 
@@ -13,7 +13,7 @@ Description:    "健診結果報告書　Observationリソース　検査項目�
 
 * specimen only Reference(JP_Specimen_eCheckupGeneral)
 
-//* hasMember only Reference(JP_Observation_eCheckupGeneral)
+//* hasMember only Reference(JP_Observation_Common_eCheckupGeneral)
 * hasMember 0..0
 
 * derivedFrom only Reference(JP_Media_eCheckupGeneral)
@@ -98,7 +98,7 @@ Description:    "健診・検診結果報告書　ObservationGroupリソースGr
 
 //* hasMember 1..* MS
 * hasMember 0..* MS
-* hasMember only Reference(JP_Observation_eCheckupGeneral)
+* hasMember only Reference(JP_Observation_Common_eCheckupGeneral)
   * ^short = "健診項目グループを表現する場合に、グループ内の健診項目に対応するObservationリソースへの参照を表現する。"
   * reference 1..1 MS
     * ^short = "Observationリソースへの参照。"

@@ -149,7 +149,7 @@ and organizationReporter 1..1 MS
       OBS 0..* MS and 
       COV 0..2 MS
 
-  * entry[OBS] only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+  * entry[OBS] only Reference(JP_Observation_Common_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
@@ -187,7 +187,7 @@ and organizationReporter 1..1 MS
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
-  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+  * entry only Reference(JP_Observation_Common_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 

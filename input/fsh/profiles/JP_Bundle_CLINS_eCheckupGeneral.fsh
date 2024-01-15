@@ -333,7 +333,7 @@ and documentReference 0..1 MS
 * entry[observation].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[observation].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[observation].resource 1.. MS
-* entry[observation].resource only JP_Observation_eCheckupGeneral
+* entry[observation].resource only JP_Observation_Common_eCheckupGeneral
 * entry[observation].resource ^short = "リソースのインスタンス本体"
 * entry[observation].resource ^definition = "リソースのインスタンス本体。"
 * entry[observation].search ..0
