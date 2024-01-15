@@ -6,6 +6,8 @@ Alias: $jlac10_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10
 Alias: $jlac10_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/jlac10
 Alias: $jlac10_specimen_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-specimen-codes
 Alias: $jlac10_specimen_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/jlac10-specimen-codes
+Alias: $specialCheckup_observations_cs = urn:oid:1.2.392.200119.6.1005  //特定健診項目コード表
+
 
 Alias: $narrative_cs = http://hl7.org/fhir/narrative-status
 

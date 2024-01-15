@@ -113,45 +113,23 @@ and organizationReporter 1..1 MS
 * section
   //セクションの特性ごとの制約
   * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "code.coding"
+  * ^slicing.discriminator.path = "code"
   * ^slicing.rules = #open
 
 * section contains
-// 添付書類だけの場合は０もあり
-    OBSERVATION 0..1 MS and
+    specialCheckup_observations 0..1 MS and
+    specialCheckup_questionnaire 0..1 MS and
+     0..1 MS and
+    tokuteikenshin_observations 0..1 MS and
     QUESTIONAIRRE 0..1 MS and
     ATTACHMENT 0..1 MS
 
 //検査結果セクション
-* section[OBSERVATION]
-  * ^short = "検査結果セクション。健診項目のうち問診以外の項目に関連するリソースが全て本セクションに含まれる。"
-  * title = "検査結果"
-    * ^short = "セクションタイトル。固定値。"
+* section[specialCheckup_observations]
   * code 1..1 MS
-  * code.coding = $section_code_cs#01910 (exactly)
-    * ^short = "コード体系を表す Coding.system に関しては、'http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code'を使用するが、特定健診報告書制度に従う場合は、「urn:oid:1.2.392.200119.6.1002」を用いる。"
-    * system 1..1 MS
-      * ^short = "セクション区分コードのコード体系を識別するURI。固定値。"
-    * code 1..1 MS
-      * ^short = "検査結果セクションを表すセクション区分のコード値。固定値。"
-    * display 1..1 MS
-    * display = "検査結果セクション"
-      * ^short = "セクション区分コードの表示名。"
-  * entry
-    * ^short = "検査結果セクションに含まれるリソースの参照。検査項目を表すObservationリソースが含まれる。"
-    * reference 1..1
-      * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
-    * ^slicing.discriminator.type = #profile
-    * ^slicing.discriminator.path = "resolve()"
-    * ^slicing.rules = #open
-//  * entry contains OBS 1..* MS and COV 0..2 MS
-  * entry contains 
-      OBS 0..* MS and 
-      COV 0..2 MS
-
+  * code = $section_code_cs#01011 "特定健診検査結果セクション" (exactly) 
   * entry[OBS] only Reference(JP_Observation_Common_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
     * reference 1..1
-      * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
   * entry[COV] only Reference(JP_CoverageService_eCheckupGeneral)
     * ^short = "検査結果セクションに含まれる保険証情報および受診券情報をあらわすCoverageリソースへの参照。"

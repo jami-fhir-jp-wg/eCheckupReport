@@ -1,3 +1,4 @@
+/*
 //--------------------------------------------------------------------
 // 文書区分コード	Composition.type
 // FHIR文書の文書区分（健診結果報告書）。
@@ -57,21 +58,6 @@ Description: "自治体検診受診方法"
 * ^url = $checkup_encounter_type_vs
 * $checkup_encounter_type_cs#1	"個別受診"
 * $checkup_encounter_type_cs#2	"集団受診"
-
-//--------------------------------------------------------------------
-// セクションコード	Composition.section.code
-//	本文書のセクションコードを表すコードシステム。
-// 健診結果報告書内のセクションコード。
-//--------------------------------------------------------------------
-ValueSet: MunicipalCheckup_valueSet_sectionCode
-Id: MunicipalCheckup-valueSet-sectionCode
-Description: "セクションコード"
-* ^url = $section_code_vs
-//* #01910	"健診結果セクション"
-* $section_code_cs#01910	"検査結果セクション"
-* $section_code_cs#01920	"問診結果セクション"
-* $section_code_cs#01995 	"添付書類セクション"
-
 //--------------------------------------------------------------------
 // 受診区分	Encounter.class
 //	受診種別を表すコードシステム。
@@ -81,6 +67,19 @@ Id: MunicipalCheckup-valueSet-encounterCategory
 Description: "受診区分"
 * ^url = $encounter_cateogry_vs
 * $encounter_cateogry_cs#checkup	"健診"
+*/
+
+//--------------------------------------------------------------------
+// セクションコード	Composition.section.code
+//	本文書のセクションコードを表すコードシステム。
+// 健診結果報告書内のセクションコード。
+//--------------------------------------------------------------------
+ValueSet: eCheckup_valueSet_sectionCode
+Id: eCheckup-valueSet-sectionCode
+Description: "セクションコード"
+* ^url = $section_code_vs
+//* #01910	"健診結果セクション"
+* include codes from system $section_code_cs
 
 //--------------------------------------------------------------------
 // 厚労省電子処方CDA規格別表12 被保険者区分コード

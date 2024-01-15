@@ -5,13 +5,21 @@ Id:             JP-Observation-eCheckupGeneral
 Description:    "健診結果報告書　Observationリソース　検査項目情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_Commmon_eCheckupGeneral"
 * ^status = #draft
+* ^date = "2024-01-15"
 * obeys emc-obs-1 and emc-obs-2 and emc-obs-3 and emc-obs-4 and emc-obs-5
 
+* . ^short = "健診・検診検査結果"
+* . ^definition = "健診・検診の検査結果の格納に使用する。"
+* . ^comment = "すべてのObservation（検査測定や観察事実）の制約プロファイル"
+
+* subject 1..
 * subject only Reference(JP_Patient_eCheckupGeneral)
+* subject ^definition = "健診／検診対象者情報。必須項目。"
 
-* code from $EMCUPX_observation_codes_vs (required)
+* code ^definition = "検査項目を表す識別IDと検査名称の情報。コード化されていること。必須項目。"
+* code from $observation_codes_vs (required)
 
-* specimen only Reference(JP_Specimen_eCheckupGeneral)
+* specimen only Reference(JP_Specimen_eCS)
 
 //* hasMember only Reference(JP_Observation_Common_eCheckupGeneral)
 * hasMember 0..0
