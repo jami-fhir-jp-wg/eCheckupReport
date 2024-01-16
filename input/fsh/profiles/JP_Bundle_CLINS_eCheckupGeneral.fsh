@@ -226,7 +226,7 @@ and documentReference 0..1 MS
 * entry[organizationTranscriptor].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[organizationTranscriptor].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[organizationTranscriptor].resource 1.. MS
-* entry[organizationTranscriptor].resource only  JP_OrganizationReporter_eCheckupGeneral
+* entry[organizationTranscriptor].resource only  JP_OrganizationTranscriptor_eCheckupGeneral
 * entry[organizationTranscriptor].resource ^short = "リソースのインスタンス本体"
 * entry[organizationTranscriptor].resource ^definition = "リソースのインスタンス本体。"
 * entry[organizationTranscriptor].search ..0
@@ -239,7 +239,7 @@ and documentReference 0..1 MS
 * entry[practitionerTranscriptor].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[practitionerTranscriptor].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[practitionerTranscriptor].resource 1.. MS
-* entry[practitionerTranscriptor].resource only  JP_PractitionerReporter_eCheckupGeneral
+* entry[practitionerTranscriptor].resource only  JP_PractitionerTranscriptor_eCheckupGeneral
 * entry[practitionerTranscriptor].resource ^short = "リソースのインスタンス本体"
 * entry[practitionerTranscriptor].resource ^definition = "リソースのインスタンス本体。"
 * entry[practitionerTranscriptor].search ..0

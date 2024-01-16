@@ -4,6 +4,7 @@ Parent: Bundle
 Id: JP-Bundle-eCheckupGeneral
 Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信は別プロファイル）"
 
+/*
 * obeys bundle-profile-is-JP-Bundle-eCheckupGeneral
 * obeys valid-valuePart0-bundleIdenfifier
 * obeys valid-valuePart1-bundleIdenfifier
@@ -13,7 +14,7 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * obeys valid-valuePart2-3-bundleIdenfifier
 * obeys valid-valuePart2-4-bundleIdenfifier
 * obeys valid-valuePart3-bundleIdenfifier
-
+*/
 /*
 * obeys Bundle-select-patient-check
 * obeys entry-select-patient-check
@@ -89,7 +90,7 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * identifier 1.. MS
 * identifier ^short = "この文書Bundleの固定識別子。Bundle作成時にシステムが設定する。"
 * identifier ^definition = "この文書Bundleの固定識別子を、以下の仕様で設定する。\r\n
-Bundle.identifier.system = ”http://jpfhir.jp/fhir/eCheckup/bundle-identifier”、identifier.value = 以下に記載する[報告単位識別ID]　を設定する。\r\n[報告単位識別ID]： 次の2つの文字列を半角ハット記号（^）で連携した文字列。\r\n
+Bundle.identifier.system = ”http://jpfhir.jp/fhir/core/IdSystem/documentInstance-identifier”、identifier.value = 以下に記載する[報告単位識別ID]　を設定する。\r\n[報告単位識別ID]： 次の2つの文字列を半角ハット記号（^）で連携した文字列。\r\n
 保険医療機関番号10桁：\r\n
 　（内訳：都道府県番号２桁、点数表コード（医療機関区分）１桁、医療機関番号７桁）\r\n
 報告単位のデータを医療機関のシステムとして医療機関内で一意に識別できる粒度の報告ID文字列：\r\n
@@ -97,7 +98,7 @@ Bundle.identifier.system = ”http://jpfhir.jp/fhir/eCheckup/bundle-identifier�
 　　最大128文字とすること。"
 * identifier ^comment = ""
 
-* identifier.system = "http://jpfhir.jp/fhir/eCheckup/bundle-identifier" (exactly)
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/documentInstance-identifier"
 * identifier.value 1..1 MS
 
 * type = #document (exactly)
@@ -222,7 +223,7 @@ and documentReference 0..1 MS
 * entry[organizationTranscriptor].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[organizationTranscriptor].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[organizationTranscriptor].resource 1.. MS
-* entry[organizationTranscriptor].resource only  JP_OrganizationReporter_eCheckupGeneral
+* entry[organizationTranscriptor].resource only  JP_OrganizationTranscriptor_eCheckupGeneral
 * entry[organizationTranscriptor].resource ^short = "リソースのインスタンス本体"
 * entry[organizationTranscriptor].resource ^definition = "リソースのインスタンス本体。"
 * entry[organizationTranscriptor].search ..0
@@ -235,13 +236,26 @@ and documentReference 0..1 MS
 * entry[practitionerTranscriptor].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[practitionerTranscriptor].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[practitionerTranscriptor].resource 1.. MS
-* entry[practitionerTranscriptor].resource only  JP_PractitionerReporter_eCheckupGeneral
+* entry[practitionerTranscriptor].resource only  JP_PractitionerTranscriptor_eCheckupGeneral
 * entry[practitionerTranscriptor].resource ^short = "リソースのインスタンス本体"
 * entry[practitionerTranscriptor].resource ^definition = "リソースのインスタンス本体。"
 * entry[practitionerTranscriptor].search ..0
 * entry[practitionerTranscriptor].request ..0
 * entry[practitionerTranscriptor].response ..0
 
+
+* entry[practitionerTranscriptor] ^short = "文書管理責任機関情報"
+* entry[practitionerTranscriptor] ^definition = "文書管理責任機関情報"
+* entry[practitionerTranscriptor].fullUrl 1.. MS
+* entry[practitionerTranscriptor].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
+* entry[practitionerTranscriptor].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
+* entry[practitionerTranscriptor].resource 1.. MS
+* entry[practitionerTranscriptor].resource only  JP_PractitionerCUstodian_eCheckupGeneral
+* entry[practitionerTranscriptor].resource ^short = "リソースのインスタンス本体"
+* entry[practitionerTranscriptor].resource ^definition = "リソースのインスタンス本体。"
+* entry[practitionerTranscriptor].search ..0
+* entry[practitionerTranscriptor].request ..0
+* entry[practitionerTranscriptor].response ..0
 
 
 * entry[encounter] ^short = "健診実施情報"

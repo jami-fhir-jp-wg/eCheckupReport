@@ -1,4 +1,3 @@
-
 //--------------------------------------------------------------------
 // 報告区分コード	Composition.category
 //	健診結果が、どの健診事業として報告されるかを示す健診報告区分を表す健康診断結果報告の区分
@@ -7,7 +6,6 @@ CodeSystem: MunicipalCheckup_codeSystem_reportCategory
 Id: MunicipalCheckup-codeSystem-reportCategory
 Description: "報告区分コード"
 * ^url = $report_category_cs
-//* ^valueSet = $report_category_vs
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = false
@@ -17,6 +15,17 @@ Description: "報告区分コード"
 * #42   "自治体検診"
 * #43   "乳幼児検診"
 * #44   "妊婦検診"
+* #90   "その他検診"
+
+CodeSystem: ECheckup_codeSystem_reportCategory
+Id: eCheckup-codeSystem-reportCategory
+Description: "報告区分コード"
+* ^url = $report_speccategory_cs
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = false
+* #10   "特定健診"
+* #40   "健診結果報告"
 * #90   "その他検診"
 
 
@@ -365,6 +374,22 @@ Description: "一連検査グループコード"
 * #9Z541	"骨粗鬆症超音波検査"
 
 
+
+
+//--------------------------------------------------------------------
+// 検査コード（特定検診）
+//	
+//--------------------------------------------------------------------
+CodeSystem: SpecialCheckup_Observations_CS
+Id: specialCheckup-observations-cs
+Description: "検査項目コード"
+* ^url = $specialCheckup_observations_cs
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #9N006000000000001 "体重"
+* #9N001000000000001 "身長"
+* #9N011000000000001 "ＢＭＩ"
 //--------------------------------------------------------------------
 // EOF
 //--------------------------------------------------------------------

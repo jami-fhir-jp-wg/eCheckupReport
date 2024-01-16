@@ -29,8 +29,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * identifier.system ^definition = "文書リソースIDの名前空間を表すURI。固定値。"
 * identifier.value 1.. MS
 * identifier.value ^short = "文書リソースID"
-* identifier.value ^definition = "その医療機関が発行した診療情報提供書をその医療機関内において一意に識別するID（診療情報提供書番号）を設定する。\r\n
-少なくともひとつは、Bundleリソースのidentifierに設定したこの文書Bundleの固定識別子を設定する。"
+* identifier.value ^definition = "その医療機関が発行した退院時サマリーをその医療機関内において一意に識別するID（退院時サマリー番号）を設定する。\r\n施設固有のID設定方式を用いて構わないが、Identifier型のvalue要素に、保険医療機関番号（10桁）、発行年（4桁）、施設内において発行年内で一意となる番号（8桁）をハイフン(“-“：U+002D)で連結した文字列を指定する方法を本仕様では具体的として採用している。\r\n例：”1311234567-2020-00123456”"
 
 * status = #final (exactly)
 * status ^short = "この文書のステータス。"
@@ -46,30 +45,21 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * type.coding.system MS
 * type.coding.version
 * type.coding.code 1.. MS
-* type.coding.code = #57133-1 (exactly)
+* type.coding.code = #53576-5 (exactly)
 * type.coding.code ^definition = "検診・健診報告書\"53576-5\"を指定。固定値。"
 * type.coding.display = "検診・健診報告書" (exactly)
 * type.coding.display ^short = "文書区分コードの表示名。"
 * type.coding.display ^definition = "文書区分コードの表示名。"
 * type.coding.display MS
 
-* category 1..1 MS
-  * ^short = "報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。"
-  * coding 1..1 MS
-    * system 1..1 MS
-      * ^short = "報告区分コードのコード体系を識別するURI。固定値。"
-    * system = $report_category_cs (exactly)
-    * code 1..1 MS
-    * code from $report_category_vs
-      * ^short = "報告区分コード。"
-    * display 0..1 MS
-      * ^short = "コードの表示名。"
 
 * category 1..1 MS
-* category ^short = "報告区分を表すコード"
-* category ^definition = "報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。category.coding.system = 'http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category' を設定する。"
+  * ^short = "報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。"
+  * ^definition = "報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。category.coding.system に 'http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category' を設定する。特定健診の制度で結果報告をする場合には、それに加えて、category.coding.system に urn:oid:2.16.840.1.113883.2.2.1.6.1001を設定し、そのコードも記述すること。"
+
 * category.coding 1..1 MS
 * category from $report_category_vs (required)
+* category from $report_speccategory_vs (required)
 
 * subject 1.. MS
 * subject ^short = "受診者情報を表すPatientリソースへの参照。"
