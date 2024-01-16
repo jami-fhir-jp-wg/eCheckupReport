@@ -6,7 +6,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * ^status = #draft
 
-* obeys emc-cmp-1 and emc-cmp-2
+//* obeys emc-cmp-1 and emc-cmp-2
 
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
@@ -53,11 +53,11 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * type.coding.display MS
 
 
-* category 1..1 MS
+* category 1..* MS
   * ^short = "報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。"
   * ^definition = "報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。category.coding.system に 'http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category' を設定する。特定健診の制度で結果報告をする場合には、それに加えて、category.coding.system に urn:oid:2.16.840.1.113883.2.2.1.6.1001を設定し、そのコードも記述すること。"
 
-* category.coding 1..1 MS
+* category.coding 1..* MS
 * category from $report_category_vs (required)
 * category from $report_speccategory_vs (required)
 
