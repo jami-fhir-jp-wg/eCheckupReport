@@ -246,18 +246,6 @@ and documentReference 0..1 MS
 * entry[practitionerTranscriptor].request ..0
 * entry[practitionerTranscriptor].response ..0
 
-* entry[organizationInsurer] ^short = "保険者組織情報"
-* entry[organizationInsurer] ^definition = "保険者組織情報"
-* entry[organizationInsurer].fullUrl 1.. MS
-* entry[organizationInsurer].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
-* entry[organizationInsurer].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
-* entry[organizationInsurer].resource 1.. MS
-* entry[organizationInsurer].resource only  JP_OrganizationInsurer_eCheckupGeneral
-* entry[organizationInsurer].resource ^short = "リソースのインスタンス本体"
-* entry[organizationInsurer].resource ^definition = "リソースのインスタンス本体。"
-* entry[organizationInsurer].search ..0
-* entry[organizationInsurer].request ..0
-* entry[organizationInsurer].response ..0
 
 * entry[organizationCustodian] ^short = "文書管理責任機関情報"
 * entry[organizationCustodian] ^definition = "文書管理責任機関情報"
@@ -271,6 +259,7 @@ and documentReference 0..1 MS
 * entry[organizationCustodian].search ..0
 * entry[organizationCustodian].request ..0
 * entry[organizationCustodian].response ..0
+
 
 * entry[encounter] ^short = "健診実施情報"
 * entry[encounter] ^definition = "健診実施情報"

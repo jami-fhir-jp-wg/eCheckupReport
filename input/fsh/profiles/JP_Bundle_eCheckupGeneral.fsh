@@ -244,18 +244,18 @@ and documentReference 0..1 MS
 * entry[practitionerTranscriptor].response ..0
 
 
-* entry[practitionerTranscriptor] ^short = "文書管理責任機関情報"
-* entry[practitionerTranscriptor] ^definition = "文書管理責任機関情報"
-* entry[practitionerTranscriptor].fullUrl 1.. MS
-* entry[practitionerTranscriptor].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
-* entry[practitionerTranscriptor].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
-* entry[practitionerTranscriptor].resource 1.. MS
-* entry[practitionerTranscriptor].resource only  JP_OrganizationCustodian_eCheckupGeneral
-* entry[practitionerTranscriptor].resource ^short = "リソースのインスタンス本体"
-* entry[practitionerTranscriptor].resource ^definition = "リソースのインスタンス本体。"
-* entry[practitionerTranscriptor].search ..0
-* entry[practitionerTranscriptor].request ..0
-* entry[practitionerTranscriptor].response ..0
+* entry[organizationCustodian] ^short = "文書管理責任機関情報"
+* entry[organizationCustodian] ^definition = "文書管理責任機関情報"
+* entry[organizationCustodian].fullUrl 1.. MS
+* entry[organizationCustodian].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
+* entry[organizationCustodian].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
+* entry[organizationCustodian].resource 1.. MS
+* entry[organizationCustodian].resource only  JP_OrganizationCustodian_eCheckupGeneral
+* entry[organizationCustodian].resource ^short = "リソースのインスタンス本体"
+* entry[organizationCustodian].resource ^definition = "リソースのインスタンス本体。"
+* entry[organizationCustodian].search ..0
+* entry[organizationCustodian].request ..0
+* entry[organizationCustodian].response ..0
 
 
 * entry[encounter] ^short = "健診実施情報"
