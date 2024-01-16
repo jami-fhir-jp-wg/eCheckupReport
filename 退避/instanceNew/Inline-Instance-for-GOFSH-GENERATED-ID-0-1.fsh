@@ -10,8 +10,7 @@ Usage: #inline
 * identifier.value = "12345"
 * status = #final
 * type = $doc-typecodes#53576-5 "検診・健診報告書"
-* category.coding.version = "1"
-* category.coding = urn:oid:2.16.840.1.113883.2.2.1.6.1001#10 "特定健診"
+* category.coding = $report_speccategory_cs#10 "特定健診"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * encounter = Reference(urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad)
 * date = "2024-04-05T13:28:17+09:00"

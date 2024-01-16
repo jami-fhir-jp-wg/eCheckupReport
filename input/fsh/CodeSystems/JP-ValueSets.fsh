@@ -1,14 +1,26 @@
-/*
+
 //--------------------------------------------------------------------
 // 文書区分コード	Composition.type
 // FHIR文書の文書区分（健診結果報告書）。
 //--------------------------------------------------------------------
-ValueSet: MunicipalCheckup_valueSet_documentTypeCode
-Id: MunicipalCheckup-valueSet-documentTypeCode
-Description: "文書区分コード"
+ValueSet: JP_documentTypeCode_VS
+Id: jp-documenttypecode-vs
+Description: "文書区分コード ValueSet"
 * ^url = $doctype_codes_vs
-* $doctype_codes_cs#xx  "自治体健診結果報告書"
+* include codes from system $doctype_codes_cs
 
+
+//--------------------------------------------------------------------
+// プログラムサービスコード	Composition.event.code
+// 健診プログラムサービスコード
+//--------------------------------------------------------------------
+ValueSet: ECheckup_programService_VS
+Id: echeckup-programService-vs
+Description: "健診プログラムサービスコード ValueSet"
+* ^url = $checkup_programService_vs
+* include codes from system $checkup_programService_cs
+
+/*
 //--------------------------------------------------------------------
 // （検診）報告区分コード	Composition.category
 //	自治体検診の検診結果報告区分
@@ -42,6 +54,13 @@ Description: "報告区分コード(特定健診制度)"
 * $report_speccategory_cs#10   "特定健診"
 * $report_speccategory_cs#40   "健診結果報告"
 * $report_speccategory_cs#90   "その他検診"
+
+ValueSet: MergedCheckup_valueSet_reportCategory
+Id: mergedCheckup-valueSet-reportCategory
+Description: "報告区分コード(特定健診制度とそれ以外)"
+* ^url = $report_mergedcategory_vs
+* include codes from valueset $report_speccategory_vs
+* include codes from valueset $report_category_vs
 
 /*
 //--------------------------------------------------------------------

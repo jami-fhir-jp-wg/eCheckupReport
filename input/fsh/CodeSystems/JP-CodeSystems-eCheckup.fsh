@@ -28,6 +28,23 @@ Description: "報告区分コード"
 * #40   "健診結果報告"
 * #90   "その他検診"
 
+//--------------------------------------------------------------------
+// プログラムサービスコード	Composition.event.code
+// 健診プログラムサービスコード
+//--------------------------------------------------------------------
+CodeSystem: ECheckup_programService_CS
+Id: echeckup-programService-cs
+Description: "健診プログラムサービスコード"
+* ^url = $checkup_programService_vs
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = false
+* #000 "不明"
+* #010 "特定健診"
+* #020 "広域連合の保健事業"
+* #030 "事業者健診"
+* #990 "その他の健診（検診）"
+
 
 //--------------------------------------------------------------------
 // セクションコード	Composition.section.code

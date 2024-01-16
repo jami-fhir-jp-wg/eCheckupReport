@@ -141,7 +141,8 @@ and documentReference 0..* MS
 * entry[composition].fullUrl ^short = "埋め込まれているCompositionリソースを一意に識別するためのUUID"
 * entry[composition].fullUrl ^definition = "埋め込まれているCompositionリソースを一意に識別するためのUUID。"
 * entry[composition].resource 1.. MS
-* entry[composition].resource only  JP_Composition_eCheckupGeneral
+//* entry[composition].resource only  JP_Composition_eCheckupGeneral
+* entry[composition].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral" (exactly)
 * entry[composition].resource ^short = "Compositionリソースのインスタンス本体"
 * entry[composition].resource ^definition = "Compositionリソースのインスタンス本体。"
 * entry[composition].search ..0
@@ -154,7 +155,8 @@ and documentReference 0..* MS
 * entry[patient].fullUrl ^short = "埋め込まれているPatientリソースを一意に識別するためのUUID"
 * entry[patient].fullUrl ^definition = "埋め込まれているPatientリソースを一意に識別するためのUUID。"
 * entry[patient].resource 1.. MS
-* entry[patient].resource only JP_Patient_eCheckupGeneral
+//* entry[patient].resource only JP_Patient_eCheckupGeneral
+* entry[patient].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral" (exactly)
 * entry[patient].resource ^short = "Patientリソースのインスタンス本体"
 * entry[patient].resource ^definition = "Patientリソースのインスタンス本体。"
 * entry[patient].search ..0
@@ -182,7 +184,8 @@ and documentReference 0..* MS
 * entry[organizationReporter].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[organizationReporter].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[organizationReporter].resource 1.. MS
-* entry[organizationReporter].resource only  JP_OrganizationReporter_eCheckupGeneral
+//* entry[organizationReporter].resource only  JP_OrganizationReporter_eCheckupGeneral
+* entry[organizationReporter].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationReporter_eCheckupGeneral" (exactly)
 * entry[organizationReporter].resource ^short = "リソースのインスタンス本体"
 * entry[organizationReporter].resource ^definition = "リソースのインスタンス本体。"
 * entry[organizationReporter].search ..0
@@ -195,7 +198,8 @@ and documentReference 0..* MS
 * entry[practitionerReporter].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[practitionerReporter].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[practitionerReporter].resource 1.. MS
-* entry[practitionerReporter].resource only  JP_PractitionerReporter_eCheckupGeneral
+//* entry[practitionerReporter].resource only  JP_PractitionerReporter_eCheckupGeneral
+* entry[practitionerReporter].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerReporter_eCheckupGeneralr" (exactly)
 * entry[practitionerReporter].resource ^short = "リソースのインスタンス本体"
 * entry[practitionerReporter].resource ^definition = "リソースのインスタンス本体。"
 * entry[practitionerReporter].search ..0
@@ -223,7 +227,9 @@ and documentReference 0..* MS
 * entry[organizationTranscriptor].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[organizationTranscriptor].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[organizationTranscriptor].resource 1.. MS
-* entry[organizationTranscriptor].resource only  JP_OrganizationTranscriptor_eCheckupGeneral
+//* entry[organizationTranscriptor].resource only  JP_OrganizationTranscriptor_eCheckupGeneral
+* entry[organizationTranscriptor].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationTranscriptor_eCheckupGeneral" (exactly)
+
 * entry[organizationTranscriptor].resource ^short = "リソースのインスタンス本体"
 * entry[organizationTranscriptor].resource ^definition = "リソースのインスタンス本体。"
 * entry[organizationTranscriptor].search ..0
@@ -236,7 +242,9 @@ and documentReference 0..* MS
 * entry[practitionerTranscriptor].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[practitionerTranscriptor].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[practitionerTranscriptor].resource 1.. MS
-* entry[practitionerTranscriptor].resource only  JP_PractitionerTranscriptor_eCheckupGeneral
+//* entry[practitionerTranscriptor].resource only  JP_PractitionerTranscriptor_eCheckupGeneral
+* entry[practitionerTranscriptor].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerTranscriptor_eCheckupGeneral" (exactly)
+
 * entry[practitionerTranscriptor].resource ^short = "リソースのインスタンス本体"
 * entry[practitionerTranscriptor].resource ^definition = "リソースのインスタンス本体。"
 * entry[practitionerTranscriptor].search ..0
@@ -250,7 +258,9 @@ and documentReference 0..* MS
 * entry[organizationCustodian].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[organizationCustodian].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[organizationCustodian].resource 1.. MS
-* entry[organizationCustodian].resource only  JP_OrganizationCustodian_eCheckupGeneral
+//* entry[organizationCustodian].resource only  JP_OrganizationCustodian_eCheckupGeneral
+* entry[organizationCustodian].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationCustodian_eCheckupGeneral" (exactly)
+
 * entry[organizationCustodian].resource ^short = "リソースのインスタンス本体"
 * entry[organizationCustodian].resource ^definition = "リソースのインスタンス本体。"
 * entry[organizationCustodian].search ..0
@@ -264,7 +274,9 @@ and documentReference 0..* MS
 * entry[encounter].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[encounter].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[encounter].resource 1.. MS
-* entry[encounter].resource only JP_Encounter_eCheckupGeneral
+//* entry[encounter].resource only JP_Encounter_eCheckupGeneral
+* entry[encounter].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral" (exactly)
+
 * entry[encounter].resource ^short = "リソースのインスタンス本体"
 * entry[encounter].resource ^definition = "リソースのインスタンス本体。"
 * entry[encounter].search ..0
@@ -277,7 +289,9 @@ and documentReference 0..* MS
 * entry[coverageService].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[coverageService].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[coverageService].resource 1.. MS
-* entry[coverageService].resource only JP_CoverageService_eCheckupGeneral
+//* entry[coverageService].resource only JP_CoverageService_eCheckupGeneral
+* entry[coverageService].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageService_eCheckupGeneral" (exactly)
+
 * entry[coverageService].resource ^short = "リソースのインスタンス本体"
 * entry[coverageService].resource ^definition = "リソースのインスタンス本体。"
 * entry[coverageService].search ..0
@@ -290,7 +304,9 @@ and documentReference 0..* MS
 * entry[coverageInsurance].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[coverageInsurance].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[coverageInsurance].resource 1.. MS
-* entry[coverageInsurance].resource only JP_CoverageInsurance_eCheckupGeneral
+//* entry[coverageInsurance].resource only JP_CoverageInsurance_eCheckupGeneral
+* entry[coverageInsurance].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageInsurance_eCheckupGeneral" (exactly)
+
 * entry[coverageInsurance].resource ^short = "リソースのインスタンス本体"
 * entry[coverageInsurance].resource ^definition = "リソースのインスタンス本体。"
 * entry[coverageInsurance].search ..0
@@ -305,7 +321,9 @@ and documentReference 0..* MS
 * entry[observationGroup].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[observationGroup].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[observationGroup].resource 1.. MS
-* entry[observationGroup].resource only JP_ObservationGroup_eCheckupGeneral
+//* entry[observationGroup].resource only JP_ObservationGroup_eCheckupGeneral
+* entry[observationGroup].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral" (exactly)
+
 * entry[observationGroup].resource ^short = "リソースのインスタンス本体"
 * entry[observationGroup].resource ^definition = "リソースのインスタンス本体。"
 * entry[observationGroup].search ..0
@@ -319,7 +337,9 @@ and documentReference 0..* MS
 * entry[observation].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[observation].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[observation].resource 1.. MS
-* entry[observation].resource only JP_Observation_Common_eCheckupGeneral
+//* entry[observation].resource only JP_Observation_Common_eCheckupGeneral
+* entry[observation].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_Common_eCheckupGeneral" (exactly)
+
 * entry[observation].resource ^short = "リソースのインスタンス本体"
 * entry[observation].resource ^definition = "リソースのインスタンス本体。"
 * entry[observation].search ..0
@@ -332,7 +352,9 @@ and documentReference 0..* MS
 * entry[specimen].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[specimen].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[specimen].resource 1.. MS
-* entry[specimen].resource only JP_Specimen_eCheckupGeneral
+//* entry[specimen].resource only JP_Specimen_eCheckupGeneral
+* entry[specimen].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Specimen_eCheckupGeneral" (exactly)
+
 * entry[specimen].resource ^short = "リソースのインスタンス本体"
 * entry[specimen].resource ^definition = "リソースのインスタンス本体。"
 * entry[specimen].search ..0
@@ -345,7 +367,9 @@ and documentReference 0..* MS
 * entry[diagnosticReport].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[diagnosticReport].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[diagnosticReport].resource 1.. MS
-* entry[diagnosticReport].resource only JP_DiagnosticReport_eCheckupGeneral
+//* entry[diagnosticReport].resource only JP_DiagnosticReport_eCheckupGeneral
+* entry[diagnosticReport].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_DiagnosticReport_eCheckupGeneral" (exactly)
+
 * entry[diagnosticReport].resource ^short = "リソースのインスタンス本体"
 * entry[diagnosticReport].resource ^definition = "リソースのインスタンス本体。"
 * entry[diagnosticReport].search ..0
@@ -358,7 +382,9 @@ and documentReference 0..* MS
 * entry[media].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[media].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[media].resource 1.. MS
-* entry[media].resource only JP_Media_eCheckupGeneral
+//* entry[media].resource only JP_Media_eCheckupGeneral
+* entry[media].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Media_eCheckupGeneral" (exactly)
+
 * entry[media].resource ^short = "リソースのインスタンス本体"
 * entry[media].resource ^definition = "リソースのインスタンス本体。"
 * entry[media].search ..0
@@ -371,7 +397,9 @@ and documentReference 0..* MS
 * entry[documentReference].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[documentReference].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[documentReference].resource 1.. MS
-* entry[documentReference].resource only JP_DocumentReference_eCheckupGeneral
+//* entry[documentReference].resource only JP_DocumentReference_eCheckupGeneral
+* entry[documentReference].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_DocumentReference_eCheckupGeneral" (exactly)
+
 * entry[documentReference].resource ^short = "リソースのインスタンス本体"
 * entry[documentReference].resource ^definition = "リソースのインスタンス本体。"
 * entry[documentReference].search ..0

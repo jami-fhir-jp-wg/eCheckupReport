@@ -50,13 +50,8 @@
           {
             "coding": [
               {
-                "code": "10",
                 "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category",
-                "display": "特定健診"
-              },
-              {
                 "code": "10",
-                "system": "urn:oid:2.16.840.1.113883.2.2.1.6.1001",
                 "display": "特定健診"
               }
             ]
