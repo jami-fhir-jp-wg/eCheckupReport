@@ -250,7 +250,7 @@ and documentReference 0..1 MS
 * entry[practitionerTranscriptor].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[practitionerTranscriptor].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[practitionerTranscriptor].resource 1.. MS
-* entry[practitionerTranscriptor].resource only  JP_PractitionerCUstodian_eCheckupGeneral
+* entry[practitionerTranscriptor].resource only  JP_PractitionerCustodian_eCheckupGeneral
 * entry[practitionerTranscriptor].resource ^short = "リソースのインスタンス本体"
 * entry[practitionerTranscriptor].resource ^definition = "リソースのインスタンス本体。"
 * entry[practitionerTranscriptor].search ..0
