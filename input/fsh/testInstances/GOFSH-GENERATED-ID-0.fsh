@@ -7,7 +7,7 @@ Usage: #example
 * identifier.value = "12345"
 * type = #document
 * timestamp = "2024-04-05T13:28:17.239+09:00"
-* entry[0].fullUrl = "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d"
+* entry[+].fullUrl = "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-1
 * entry[+].fullUrl = "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-2

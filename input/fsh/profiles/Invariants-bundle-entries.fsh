@@ -36,47 +36,45 @@ Expression:
     documentReference 0..* MS
 */
 
-//--- bundleリソースを構成するentry[0]がCompositionリソース であり、JP_Composition_eMunicipalCheckup　プロファイルに準拠している。
-Invariant: bundle-entry0-JP-Composition-eMunicipalCheckup
+Invariant: bundle-entry0-JP-Composition-eCheckupGeneral
 Severity: #error
-Description: "bundleリソースを構成するentry[0]がCompositionリソース(JP_Composition_eMunicipalCheckup)である。"
+Description: "bundleリソースを構成するentry[0]にCompositionリソース(JP_Composition_eCheckupGeneral)がなければならない。"
 Expression: 
 " (
-    entry[0].resource.meta.profile[0]='JP_Composition_eMunicipalCheckup'
+    entry[0].resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists()
 )"
 
-//--- bundleリソースを構成するentry[1]がPatientリソース であり、JP_Patient_eMunicipalCheckup　プロファイルに準拠している:
-Invariant: bundle-entry1-JP-Patient-eMunicipalCheckup
+Invariant: bundle-entry-JP-Patient-eCheckupGeneral
 Severity: #error
-Description: "bundleリソースを構成するentry[1]がPatientリソース(JP_Patient_eMunicipalCheckup)である。"
+Description: "bundleリソースを構成するentryにPatientリソース(JP_Patient_eCheckupGeneral)がなければならない。"
 Expression: 
- "(
-    entry[1].resource.meta.profile[0]='JP_Patient_eMunicipalCheckup'
+" (
+    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral').exists()
 )"
 
-//--- bundleリソースを構成するentry[2]がPractitionerRoleリソース であり、JP_PractitionerRole_eMunicipalCheckup　プロファイルに準拠している:
-Invariant: bundle-entry2-JP-PractitionerRole-eMunicipalCheckup
+Invariant: bundle-entry-JP-OrganizationReporter-eCheckupGeneral
 Severity: #error
-Description: "bundleリソースを構成するentry[2]がPractitionerRoleリソース(JP_PractitionerRole_eMunicipalCheckup)である。"
+Description: "bundleリソースを構成するentryにOrganizationリソース(JP_OrganizationReporter_eCheckupGeneral)がなければならない。"
 Expression: 
- "(
-    entry[2].resource.meta.profile[0]='JP_PractitionerRole_eMunicipalCheckup'
+" (
+    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationReporter_eCheckupGeneral').exists()
 )"
 
-//--- bundleリソースを構成するentry[3]がorganization リソース であり、JP_Organization_eMunicipalCheckup_Provider　プロファイルに準拠している:
-Invariant: bundle-entry3-JP-Organization-eMunicipalCheckup-Provider
+Invariant: bundle-entry-JP-PractitionerReporter-eCheckupGeneral
 Severity: #error
-Description: "bundleリソースを構成するentry[3]がorganizationリソース(JP_Organization_eMunicipalCheckup_Provider)である。"
+Description: "bundleリソースを構成するentryにPractitionerリソース(JP_PractitionerReporter_eCheckupGeneral)がなければならない。"
 Expression: 
- "(
-    entry[3].resource.meta.profile[0]='JP_Organization_eMunicipalCheckup_Provider'
+" (
+    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerReporter_eCheckupGeneral').exists()
 )"
 
-//--- bundleリソースを構成するentry[4]がPractitionerリソース であり、JP_Practitioner_eMunicipalCheckup　プロファイルに準拠している:
-Invariant: bundle-entry4-JP-Practitioner-eMunicipalCheckup
+
+Invariant: bundle-entry-JP-PractitionerReporter-eCheckupGeneral
 Severity: #error
-Description: "bundleリソースを構成するentry[4]がPractitionerリソース(JP_PractitionerRole_eMunicipalCheckup)である。"
+Description: "bundleリソースを構成するentryにPractitionerリソース(JP_PractitionerReporter_eCheckupGeneral)がなければならない。"
 Expression: 
- "(
-    entry[4].resource.meta.profile[0]='JP_Practitioner_eMunicipalCheckup'
+" (
+    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerReporter_eCheckupGeneral').exists()
 )"
+
+

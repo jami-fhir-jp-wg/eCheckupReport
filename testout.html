@@ -26,18 +26,10 @@
           </td>
         </tr>
         <tr>
-          <td>ERROR</td>
-          <td/>
-          <td>Validation rule failed</td>
-          <td>ルール bdl-9: 'A document must have an identifier with a system and a value' が失敗しました (inv = (type = 'document') implies (identifier.system.exists() and identifier.value.exists())) (log:  (inv = (type = 'document') implies (identifier.system.exists() and identifier.value.exists())))</td>
-          <td/>
-          <td>No display for Extension</td>
-        </tr>
-        <tr>
           <td>WARNING</td>
           <td/>
-          <td>Invalid Code</td>
-          <td>systemが提供されていないコードは定義された意味がありません。systemを提供する必要があります</td>
+          <td>Structural Issue</td>
+          <td>2の選択肢の中で複数の一致するプロファイルが見つかりました: http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerReporter_eCheckupGeneral, http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerTranscriptor_eCheckupGeneral</td>
           <td/>
           <td>No display for Extension</td>
         </tr>
@@ -45,7 +37,7 @@
           <td>WARNING</td>
           <td/>
           <td>Structural Issue</td>
-          <td>2の選択肢の中で複数の一致するプロファイルが見つかりました: http://PatientA, http://PatientB</td>
+          <td>3の選択肢の中で複数の一致するプロファイルが見つかりました: http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationCustodian_eCheckupGeneral, http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationReporter_eCheckupGeneral, http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationTranscriptor_eCheckupGeneral</td>
           <td/>
           <td>No display for Extension</td>
         </tr>
@@ -53,7 +45,7 @@
           <td>WARNING</td>
           <td/>
           <td>Structural Issue</td>
-          <td>2の選択肢の中で複数の一致するプロファイルが見つかりました: http://PatientA, http://PatientB</td>
+          <td>3の選択肢の中で複数の一致するプロファイルが見つかりました: http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationCustodian_eCheckupGeneral, http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationReporter_eCheckupGeneral, http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationTranscriptor_eCheckupGeneral</td>
           <td/>
           <td>No display for Extension</td>
         </tr>
@@ -61,51 +53,11 @@
     </div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
-    <valueString value="ExampleJson/Bundle-BundleTestInstance.json"/>
+    <valueString value="ExampleJson/Bundle-GOFSH-GENERATED-ID-0.json"/>
   </extension>
   <issue>
     <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
-      <valueInteger value="1"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
-      <valueInteger value="2"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
-      <valueString value="InstanceValidator"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
-      <valueCode value="ルール bdl-9: 'A document must have an identifier with a system and a value' が失敗しました (inv = (type = 'document') implies (identifier.system.exists() and identifier.value.exists())) (log:  (inv = (type = 'document') implies (identifier.system.exists() and identifier.value.exists())))"/>
-    </extension>
-    <severity value="error"/>
-    <code value="invariant"/>
-    <details>
-      <text value="ルール bdl-9: 'A document must have an identifier with a system and a value' が失敗しました (inv = (type = 'document') implies (identifier.system.exists() and identifier.value.exists())) (log:  (inv = (type = 'document') implies (identifier.system.exists() and identifier.value.exists())))"/>
-    </details>
-    <expression value="Bundle"/>
-  </issue>
-  <issue>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
-      <valueInteger value="25"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
-      <valueInteger value="14"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
-      <valueString value="InstanceValidator"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
-      <valueCode value="TERMINOLOGY_TX_SYSTEM_NO_CODE"/>
-    </extension>
-    <severity value="warning"/>
-    <code value="code-invalid"/>
-    <details>
-      <text value="systemが提供されていないコードは定義された意味がありません。systemを提供する必要があります"/>
-    </details>
-    <expression value="Bundle.entry[0].resource/*Composition/CompositionXTest*/.type.coding[0]"/>
-  </issue>
-  <issue>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
-      <valueInteger value="54"/>
+      <valueInteger value="216"/>
     </extension>
     <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
       <valueInteger value="8"/>
@@ -119,28 +71,48 @@
     <severity value="warning"/>
     <code value="structure"/>
     <details>
-      <text value="2の選択肢の中で複数の一致するプロファイルが見つかりました: http://PatientA, http://PatientB"/>
-    </details>
-    <expression value="Bundle.entry[1].resource"/>
-  </issue>
-  <issue>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
-      <valueInteger value="71"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
-      <valueInteger value="8"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
-      <valueString value="InstanceValidator"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
-      <valueCode value="Validation_VAL_Profile_MultipleMatches"/>
-    </extension>
-    <severity value="warning"/>
-    <code value="structure"/>
-    <details>
-      <text value="2の選択肢の中で複数の一致するプロファイルが見つかりました: http://PatientA, http://PatientB"/>
+      <text value="2の選択肢の中で複数の一致するプロファイルが見つかりました: http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerReporter_eCheckupGeneral, http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerTranscriptor_eCheckupGeneral"/>
     </details>
     <expression value="Bundle.entry[2].resource"/>
+  </issue>
+  <issue>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+      <valueInteger value="257"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+      <valueInteger value="8"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+      <valueString value="InstanceValidator"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+      <valueCode value="Validation_VAL_Profile_MultipleMatches"/>
+    </extension>
+    <severity value="warning"/>
+    <code value="structure"/>
+    <details>
+      <text value="3の選択肢の中で複数の一致するプロファイルが見つかりました: http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationCustodian_eCheckupGeneral, http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationReporter_eCheckupGeneral, http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationTranscriptor_eCheckupGeneral"/>
+    </details>
+    <expression value="Bundle.entry[3].resource"/>
+  </issue>
+  <issue>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+      <valueInteger value="326"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+      <valueInteger value="8"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+      <valueString value="InstanceValidator"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+      <valueCode value="Validation_VAL_Profile_MultipleMatches"/>
+    </extension>
+    <severity value="warning"/>
+    <code value="structure"/>
+    <details>
+      <text value="3の選択肢の中で複数の一致するプロファイルが見つかりました: http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationCustodian_eCheckupGeneral, http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationReporter_eCheckupGeneral, http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationTranscriptor_eCheckupGeneral"/>
+    </details>
+    <expression value="Bundle.entry[5].resource"/>
   </issue>
 </OperationOutcome>

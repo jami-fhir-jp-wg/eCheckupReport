@@ -4,79 +4,11 @@ Parent: Bundle
 Id: JP-Bundle-eCheckupGeneral
 Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信は別プロファイル）"
 
-/*
-* obeys bundle-profile-is-JP-Bundle-eCheckupGeneral
-* obeys valid-valuePart0-bundleIdenfifier
-* obeys valid-valuePart1-bundleIdenfifier
-* obeys valid-valuePart2-0-bundleIdenfifier
-* obeys valid-valuePart2-1-bundleIdenfifier
-* obeys valid-valuePart2-2-bundleIdenfifier
-* obeys valid-valuePart2-3-bundleIdenfifier
-* obeys valid-valuePart2-4-bundleIdenfifier
-* obeys valid-valuePart3-bundleIdenfifier
-*/
-/*
-* obeys Bundle-select-patient-check
-* obeys entry-select-patient-check
-* obeys Bundle-select-patient-check1
-* obeys entry-select-patient-check1
-* obeys Bundle-select-patient-check2
-* obeys entry-select-patient-check2
-* obeys Bundle-select-MedicationRequest-check
-* obeys entry-select-MedicationRequest-check
-* obeys entry-where-ispatient-check
-* obeys entry1-where-ispatient-check
-*/
-/*
-* obeys caregory-is-valid-one
-* obeys event-code-is-valid-one
-* obeys category51-event1xor2xor3
-
-* obeys category51-event1-valid-obs
-* obeys category51-event2-valid-obs
-* obeys category51-event3-valid-obs
-
-* obeys  category51-event1-valid-obs-9P504000000000011
-* obeys  category51-event1-valid-obs-9P507000000000011
-* obeys  category51-event1-valid-obs-9P508160800000049
-* obeys  category51-event1-valid-obs-9P509000000000011
-
-* obeys  bundle-entry0-JP-Composition-eCheckupGeneral
-* obeys  bundle-entry1-JP-Patient-eCheckupGeneral
-* obeys  bundle-entry2-JP-PractitionerRole-eCheckupGeneral
-* obeys  bundle-entry3-JP-Organization-eCheckupGeneral-Provider
-* obeys  bundle-entry4-JP-Practitioner-eCheckupGeneral
-*/
-/*
-* obeys entry-where-patient-check
-* obeys entry1-where-patient-check
-* obeys entry-where-dummy-check
-* obeys entry1-where-dummy-check
-* obeys entry-dot-patient-check
-* obeys entry1-dot-patient-check
-* obeys entry-dot-dummy-check
-* obeys entry1-dot-dummy-check
-
-* obeys caregory-eventCode-entry-check
-
-* obeys caregory-check-01-ok
-* obeys caregory-check-02-ok
-* obeys caregory-check-021-ok
-* obeys caregory-check-03-ok
-* obeys caregory-check-04-ok
-
-
-* obeys caregory-check-01-err
-* obeys caregory-check-02-err
-* obeys caregory-check-021-err
-* obeys caregory-check-03-err
-* obeys caregory-check-04-err
-* obeys caregory-check-05-err
-* obeys entry0-exists-check-01
-* obeys entry1-exists-check-01
-* obeys entry31-exists-check-01-err
-
-*/
+* obeys bundle-entry0-JP-Composition-eCheckupGeneral
+* obeys bundle-entry-JP-Patient-eCheckupGeneral
+* obeys bundle-entry-JP-OrganizationReporter-eCheckupGeneral
+* obeys bundle-entry-JP-PractitionerReporter-eCheckupGeneral
+* obeys bundle-entry-JP-Patient-eCheckupGeneral
 
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral"
 * ^status = #active
@@ -116,19 +48,21 @@ Bundle.identifier.system = ”http://jpfhir.jp/fhir/core/IdSystem/documentInstan
 and patient 1..1 MS  //  患者情報
 
 // and practitionerRoleReporter 1..2 MS
-and organizationReporter   1..2 MS  // 文書作成機関と管理責任機関が同一の場合
-and practitionerReporter 1..1 MS
+and organization  1..3 MS
+// and organizationReporter   1..2 MS  // 文書作成機関、管理責任機関、転記機関が同一の場合
+// and organizationTranscriptor  0..1 MS
+// and organizationCustodian  0..1 MS  // 作成責任機関（文書作成機関と異なる例外的な場合に使用）
 
+and practitioner 1..2 MS
+// and practitionerReporter 1..1 MS
+// and practitionerTranscriptor 0..1 MS
 // and practitionerRoleTranscriptor 1..2 MS
-and organizationTranscriptor  0..1 MS
-and practitionerTranscriptor 0..1 MS
-
-and organizationCustodian  0..1 MS  // 作成責任機関（文書作成機関と異なる例外的な場合に使用）
 
 and encounter 1..1 MS
-and coverageService 0..1 MS
-and coverageInsurance 0..1 MS
-and observationGroup 0..* MS
+and coverage  0..2 MS
+// and coverageService 0..1 MS
+// and coverageInsurance 0..1 MS
+// and observationGroup 0..* MS
 and observation 0..* MS
 and specimen 0..* MS
 and diagnosticReport 0..* MS
@@ -176,31 +110,31 @@ and documentReference 0..* MS
 * entry[practitionerRoleReporter].response ..0
 */
 
-* entry[organizationReporter] ^short = "健診結果作成組織情報"
-* entry[organizationReporter] ^definition = "健診結果作成組織情報"
-* entry[organizationReporter].fullUrl 1.. MS
-* entry[organizationReporter].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
-* entry[organizationReporter].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
-* entry[organizationReporter].resource 1.. MS
-* entry[organizationReporter].resource only  JP_OrganizationReporter_eCheckupGeneral
-* entry[organizationReporter].resource ^short = "リソースのインスタンス本体"
-* entry[organizationReporter].resource ^definition = "リソースのインスタンス本体。"
-* entry[organizationReporter].search ..0
-* entry[organizationReporter].request ..0
-* entry[organizationReporter].response ..0
+* entry[organization] ^short = "健診結果作成組織情報"
+* entry[organization] ^definition = "健診結果作成組織情報"
+* entry[organization].fullUrl 1.. MS
+* entry[organization].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
+* entry[organization].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
+* entry[organization].resource 1.. MS
+* entry[organization].resource only  JP_OrganizationReporter_eCheckupGeneral or JP_OrganizationTranscriptor_eCheckupGeneral or JP_OrganizationCustodian_eCheckupGeneral
+* entry[organization].resource ^short = "リソースのインスタンス本体"
+* entry[organization].resource ^definition = "リソースのインスタンス本体。"
+* entry[organization].search ..0
+* entry[organization].request ..0
+* entry[organization].response ..0
 
-* entry[practitionerReporter] ^short = "健診結果作成者情報"
-* entry[practitionerReporter] ^definition = "健診結果作成者情報"
-* entry[practitionerReporter].fullUrl 1.. MS
-* entry[practitionerReporter].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
-* entry[practitionerReporter].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
-* entry[practitionerReporter].resource 1.. MS
-* entry[practitionerReporter].resource only  JP_PractitionerReporter_eCheckupGeneral
-* entry[practitionerReporter].resource ^short = "リソースのインスタンス本体"
-* entry[practitionerReporter].resource ^definition = "リソースのインスタンス本体。"
-* entry[practitionerReporter].search ..0
-* entry[practitionerReporter].request ..0
-* entry[practitionerReporter].response ..0
+* entry[practitioner] ^short = "健診結果作成者情報"
+* entry[practitioner] ^definition = "健診結果作成者情報"
+* entry[practitioner].fullUrl 1.. MS
+* entry[practitioner].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
+* entry[practitioner].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
+* entry[practitioner].resource 1.. MS
+* entry[practitioner].resource only  JP_PractitionerReporter_eCheckupGeneral or JP_PractitionerTranscriptor_eCheckupGeneral
+* entry[practitioner].resource ^short = "リソースのインスタンス本体"
+* entry[practitioner].resource ^definition = "リソースのインスタンス本体。"
+* entry[practitioner].search ..0
+* entry[practitioner].request ..0
+* entry[practitioner].response ..0
 
 /*
 * entry[practitionerRoleTranscriptor] ^short = "転記者役割情報"
@@ -215,7 +149,7 @@ and documentReference 0..* MS
 * entry[practitionerRoleTranscriptor].search ..0
 * entry[practitionerRoleTranscriptor].request ..0
 * entry[practitionerRoleTranscriptor].response ..0
-*/
+
 
 * entry[organizationTranscriptor] ^short = "転記者所属組織情報"
 * entry[organizationTranscriptor] ^definition = "転記者所属組織情報"
@@ -257,7 +191,7 @@ and documentReference 0..* MS
 * entry[organizationCustodian].request ..0
 * entry[organizationCustodian].response ..0
 
-
+*/
 * entry[encounter] ^short = "健診実施情報"
 * entry[encounter] ^definition = "健診実施情報"
 * entry[encounter].fullUrl 1.. MS
@@ -271,19 +205,20 @@ and documentReference 0..* MS
 * entry[encounter].request ..0
 * entry[encounter].response ..0
 
-* entry[coverageService] ^short = "受診券情報"
-* entry[coverageService] ^definition = "受診券情報"
-* entry[coverageService].fullUrl 1.. MS
-* entry[coverageService].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
-* entry[coverageService].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
-* entry[coverageService].resource 1.. MS
-* entry[coverageService].resource only JP_CoverageService_eCheckupGeneral
-* entry[coverageService].resource ^short = "リソースのインスタンス本体"
-* entry[coverageService].resource ^definition = "リソースのインスタンス本体。"
-* entry[coverageService].search ..0
-* entry[coverageService].request ..0
-* entry[coverageService].response ..0
+* entry[coverage] ^short = "受診券情報"
+* entry[coverage] ^definition = "受診券情報"
+* entry[coverage].fullUrl 1.. MS
+* entry[coverage].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
+* entry[coverage].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
+* entry[coverage].resource 1.. MS
+* entry[coverage].resource only JP_CoverageService_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral
+* entry[coverage].resource ^short = "リソースのインスタンス本体"
+* entry[coverage].resource ^definition = "リソースのインスタンス本体。"
+* entry[coverage].search ..0
+* entry[coverage].request ..0
+* entry[coverage].response ..0
 
+/*
 * entry[coverageInsurance] ^short = "保険・自費情報"
 * entry[coverageInsurance] ^definition = "保険・自費情報"
 * entry[coverageInsurance].fullUrl 1.. MS
@@ -297,8 +232,8 @@ and documentReference 0..* MS
 * entry[coverageInsurance].request ..0
 * entry[coverageInsurance].response ..0
 
-
-
+*/
+/*
 * entry[observationGroup] ^short = "健診・問診結果グループ情報"
 * entry[observationGroup] ^definition = "健診・問診結果グループ情報"
 * entry[observationGroup].fullUrl 1.. MS
@@ -312,14 +247,14 @@ and documentReference 0..* MS
 * entry[observationGroup].request ..0
 * entry[observationGroup].response ..0
 
-
+*/
 * entry[observation] ^short = "健診・問診結果情報"
 * entry[observation] ^definition = "健診・問診結果情報"
 * entry[observation].fullUrl 1.. MS
 * entry[observation].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[observation].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[observation].resource 1.. MS
-* entry[observation].resource only JP_Observation_Common_eCheckupGeneral
+* entry[observation].resource only JP_Observation_Common_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral
 * entry[observation].resource ^short = "リソースのインスタンス本体"
 * entry[observation].resource ^definition = "リソースのインスタンス本体。"
 * entry[observation].search ..0

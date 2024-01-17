@@ -22,7 +22,7 @@ Usage: #inline
 * author[+] = Reference(urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407)
 * title = "健康診断結果のお知らせ"
 * custodian = Reference(urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407)
-* event.code = $checkup-programService-code#010 "特定健診"
+* event.code = $checkup_programService_cs#010 "特定健診"
 * event.period.start = "2024-04-05"
 * event.period.end = "2024-04-05"
 * event.detail = Reference(urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad)
@@ -30,7 +30,7 @@ Usage: #inline
 * section[=].code = $section_code_cs#01011 "特定健診検査結果セクション"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>身長 162.3 cm</li><li>体重 65.5 kg</li><li>BMI 24.9 kg/m2</li><li>腹囲 70 cm</li><li>メタボリックシンドローム判定 非該当</li><li>保健指導レベル なし</li></ul></div>"
-//* section[=].entry[0] = Reference(Inline-Instance-for-GOFSH-GENERATED-ID-0-2)
+* section[=].entry[0] = Reference(Inline-Instance-for-GOFSH-GENERATED-ID-0-2)
 * section[=].entry[0].reference = "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
 * section[=].entry[+].reference = "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
 * section[=].entry[+].reference =  "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"

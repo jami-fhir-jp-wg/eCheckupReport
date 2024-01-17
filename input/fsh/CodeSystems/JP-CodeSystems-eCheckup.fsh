@@ -35,7 +35,7 @@ Description: "報告区分コード"
 CodeSystem: ECheckup_programService_CS
 Id: echeckup-programService-cs
 Description: "健診プログラムサービスコード"
-* ^url = $checkup_programService_vs
+* ^url = $checkup_programService_cs
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = false

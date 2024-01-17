@@ -1,5 +1,5 @@
 Alias: $doc-typecodes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
-Alias: $checkup-programService-code = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code
+
 Alias: $section-code = http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code
 Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $encounter-category = http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category
