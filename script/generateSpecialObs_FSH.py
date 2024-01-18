@@ -1,1 +1,0 @@
-# 特定健診項目コード表CSVを読んで、Observation.fshを出力する
