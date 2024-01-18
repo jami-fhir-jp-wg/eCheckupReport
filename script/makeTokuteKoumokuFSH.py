@@ -19,14 +19,23 @@ def headerCommonBlock(itemName,itemCode, itemCodeOID):
     print('* ^status = #draft')
     print('* ^date = "2024-01-15"')
     print('* code ^definition = "検査項目を表す識別IDと検査名称の情報。コード化されていること。必須項目。"')
-    print('* code = $specialCheckup_observations_cs#' + itemCode + '"' + itemName + '"   // urn:oid:1.2.392.200119.6.1005  //特定健診項目コード表')
+    print('* code = ' + itemCodeOID + '#' + itemCode + '"' + itemName + '"   // urn:oid:1.2.392.200119.6.1005  //特定健診項目コード表')
     print('* specimen 0..0')
 
-def valueBlock(dataType, unitName, unitCode, author, groupTag, groupRelCode,methodCode,methocName, valueOID, )
-    print('* valueQuantity.unit = "cm" //表示用単位')
+def valueBlock(dataType, unitName, unitCode, author, groupTag, groupRelCode,methodCode, methodName, valueOID)
+    if (dataType = '数字'):
+        print('* valueQuantity.value 1..1')
+        print('* valueQuantity.unit = "' + unitName + '" //表示用単位')
+        print('* valueQuantity.system = "http://unitsofmeasure.org" //固定値')
+        print('* valueQuantity.code = #' + unitCode + '//XML用単位')
+        print('// 制約　NNN.N')
+
+def performerBlock()
+    print('* valueQuantity.unit = "' + unitName + '" //表示用単位')
     print('* valueQuantity.system = "http://unitsofmeasure.org" //固定値')
-    print('* valueQuantity.code = #cm //XML用単位')
+    print('* valueQuantity.code = #' + unitCode + '//XML用単位')
     print('// 制約　NNN.N')
+
 
 # ヘッダ付csvをDictとして読み込む
 with open(sys.argv[1],encoding='utf8',  newline='') as csvf:
