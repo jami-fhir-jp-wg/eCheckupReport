@@ -22,15 +22,17 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * extension[version].value[x] ^definition = "文書のバージョン番号を表す文字列。\r\n例 : 第１版は  \"1\" とする。"
 * extension[version].value[x] 1..1 MS
 
+//============== 転記者情報のための拡張をここに追加する
+// "http://hl7.org/fhir/us/ccda/StructureDefinition/DataEntererExtension"
 * identifier 1.. MS
 * identifier.system 1.. MS
-* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier" (exactly)
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.system ^short = "文書リソースIDの名前空間を表すURI。固定値。"
 * identifier.system ^definition = "文書リソースIDの名前空間を表すURI。固定値。"
 * identifier.value 1.. MS
 * identifier.value ^short = "文書リソースID"
-* identifier.value ^definition = "その医療機関が発行した退院時サマリーをその医療機関内において一意に識別するID（退院時サマリー番号）を設定する。\r\n施設固有のID設定方式を用いて構わないが、Identifier型のvalue要素に、保険医療機関番号（10桁）、発行年（4桁）、施設内において発行年内で一意となる番号（8桁）をハイフン(“-“：U+002D)で連結した文字列を指定する方法を本仕様では具体的として採用している。\r\n例：”1311234567-2020-00123456”"
-
+* identifier.value ^definition = "その医療機関が作成した結果報告書をその医療機関内において一意に識別するID（報告文書番号）を設定する。\r\n施設固有のID設定方式を用いて構わないが、Identifier型のvalue要素に、保険医療機関番号（10桁）、発行年（4桁）、施設内において発行年内で一意となる番号（8桁）をハイフン(“-“：U+002D)で連結した文字列を指定する方法を本仕様では具体的として採用している。\r\n例：”1311234567-2020-00123456”"
+* identifier.value ^comment = "健康診断結果報告書ID体系OIDとして、施設OIDをルートとする健康診断結果報告書個別ID発行規定OIDを施設ごとに決め、その規定にそった健康診断結果報告書個別IDをvalue要素に記述する方法で行ってもよい。この場合には、Identifier型のsystem要素には、urn:oid:1.2.392.200119.6.102.1[保険医療機関番号、または特定健診医療機関登録番号１０桁] を使用する。"
 * status = #final (exactly)
 * status ^short = "この文書のステータス。"
 * status ^definition = "この文書のステータス。\r\n仕様上は、preliminary | final | amended | entered_in_error　のいずれかを設定できるが、医療機関から登録される段階では、\"final\" でなければならない。"

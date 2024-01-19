@@ -24,7 +24,7 @@ Alias: $report_category_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-r
 Alias: $report_speccategory_cs = urn:oid:2.16.840.1.113883.2.2.1.6.1001
 Alias: $report_category_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
 Alias: $report_speccategory_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
-Alias: $report_mergedcategory_vs = ttp://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
+Alias: $report_mergedcategory_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
 
 Alias: $report_category_diseaseKenshin_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-diseaseKenshin-category
 
