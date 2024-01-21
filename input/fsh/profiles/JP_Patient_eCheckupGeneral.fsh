@@ -5,7 +5,7 @@ Id:             JP-Patient-eCheckupGeneral
 //Title:          "健診結果報告書　Patientリソース　受診者情報"
 Description:    "健診結果報告書　Patientリソース　受診者情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral"
-* ^status = #draft
+* ^status = #active
 * obeys emc-pat-3
 
 * extension contains

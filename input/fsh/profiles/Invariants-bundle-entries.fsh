@@ -69,12 +69,11 @@ Expression:
 )"
 
 
-Invariant: bundle-entry-JP-PractitionerReporter-eCheckupGeneral
+Invariant: bundle-entry-JP-Encounter-eCheckupGeneral
 Severity: #error
-Description: "bundleリソースを構成するentryにPractitionerリソース(JP_PractitionerReporter_eCheckupGeneral)がなければならない。"
+Description: "bundleリソースを構成するentryにEncounterリソース(JP_Encounter_eCheckupGeneral)がなければならない。"
 Expression: 
 " (
-    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerReporter_eCheckupGeneral').exists()
+    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral').exists()
 )"
-
 

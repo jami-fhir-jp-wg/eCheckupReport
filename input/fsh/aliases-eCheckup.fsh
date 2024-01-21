@@ -11,7 +11,8 @@ Alias: $specialCheckup_observations_cs = urn:oid:1.2.392.200119.6.1005  //特定
 
 Alias: $narrative_cs = http://hl7.org/fhir/narrative-status
 
-
+// 検査項目コード
+$JP_ObservationCode_eCheckupGeneral_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
 
 //文書の種類
 Alias: $doctype_codes_cs = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
@@ -22,6 +23,7 @@ Alias: $section_code_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
 
 Alias: $report_category_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
 Alias: $report_speccategory_cs = urn:oid:2.16.840.1.113883.2.2.1.6.1001
+
 Alias: $report_category_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
 Alias: $report_speccategory_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
 Alias: $report_mergedcategory_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
@@ -31,9 +33,8 @@ Alias: $report_category_diseaseKenshin_vs = http://jpfhir.jp/fhir/eCheckup/Value
 Alias: $checkup_type_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-type-code
 Alias: $checkup_type_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-type-code
 
-Alias: $checkup_programService_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code
+Alias: $checkup_programService_cs = urn:oid:1.2.392.200119.6.1002
 Alias: $checkup_programService_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-code
-
 
 Alias: $checkup_encounter_type_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type
 Alias: $checkup_encounter_type_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-encounter-type

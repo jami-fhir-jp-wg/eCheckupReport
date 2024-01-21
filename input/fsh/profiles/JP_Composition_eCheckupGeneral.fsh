@@ -1,12 +1,15 @@
+Invariant: composition-metaprofile
+Description: "meta.profileには、指定したプロファイルのURLの記述が存在しなければならない。"
+Severity: #error
+Expression: "meta.profile.where($this = 'http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists()"
+
 Profile:        JP_Composition_eCheckupGeneral
 Parent:         Composition
 Id:             JP-Composition-eCheckupGeneral
 //Title:          "健診結果報告書　Compositionリソース　文書構成情報"
 Description:    "健診結果報告書　Compositionリソース　文書構成情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
-* ^status = #draft
-
-//* obeys emc-cmp-1 and emc-cmp-2
+* ^status = #active
 
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
@@ -15,6 +18,8 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains $composition-clinicaldocument-versionNumber named version 1..1
+ and http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/composition_dataEnterer named dataEnterer 0..1
+
 * extension[version] ^short = "文書バージョンを表す拡張"
 * extension[version] 1..1 MS
 * extension[version].url 1..1 MS
@@ -22,26 +27,29 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * extension[version].value[x] ^definition = "文書のバージョン番号を表す文字列。\r\n例 : 第１版は  \"1\" とする。"
 * extension[version].value[x] 1..1 MS
 
-//============== 転記者情報のための拡張をここに追加する
-// "http://hl7.org/fhir/us/ccda/StructureDefinition/DataEntererExtension"
+* extension[dataEnterer] ^short = "データ転記者の情報を記述する拡張"
+* extension[dataEnterer] 1..1 MS
+* extension[dataEnterer].url 1..1 MS
+* extension[dataEnterer].value[x] ^short = "データ転記者の情報を記述するPractitionerRoleへの参照"
+* extension[dataEnterer].value[x] ^definition = "データ転記者のPractitionerRoleへの参照。PractitionerRoleに転記者と転記機関への参照を記述する。"
+* extension[dataEnterer].value[x] 1..1 MS
+
 * identifier 1.. MS
 * identifier.system 1.. MS
-* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.system ^short = "文書リソースIDの名前空間を表すURI。固定値。"
 * identifier.system ^definition = "文書リソースIDの名前空間を表すURI。固定値。"
 * identifier.value 1.. MS
 * identifier.value ^short = "文書リソースID"
-* identifier.value ^definition = "その医療機関が作成した結果報告書をその医療機関内において一意に識別するID（報告文書番号）を設定する。\r\n施設固有のID設定方式を用いて構わないが、Identifier型のvalue要素に、保険医療機関番号（10桁）、発行年（4桁）、施設内において発行年内で一意となる番号（8桁）をハイフン(“-“：U+002D)で連結した文字列を指定する方法を本仕様では具体的として採用している。\r\n例：”1311234567-2020-00123456”"
-* identifier.value ^comment = "健康診断結果報告書ID体系OIDとして、施設OIDをルートとする健康診断結果報告書個別ID発行規定OIDを施設ごとに決め、その規定にそった健康診断結果報告書個別IDをvalue要素に記述する方法で行ってもよい。この場合には、Identifier型のsystem要素には、urn:oid:1.2.392.200119.6.102.1[保険医療機関番号、または特定健診医療機関登録番号１０桁] を使用する。"
+* identifier.value ^definition = "仕様書参照のこと。"
+
 * status = #final (exactly)
 * status ^short = "この文書のステータス。"
-* status ^definition = "この文書のステータス。\r\n仕様上は、preliminary | final | amended | entered_in_error　のいずれかを設定できるが、医療機関から登録される段階では、\"final\" でなければならない。"
+* status ^definition = "この文書のステータス。医療機関から登録される段階では、\"final\" でなければならない。"
 
 * type ^short = "文書区分コード"
 * type ^definition = "documentタイプのうち文書種別"
 * type MS
 * type.coding 1..1 MS
-* type from http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes (required)
 * type.coding.system = "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes" (exactly)
 * type.coding.system ^definition = "文書区分コードのコード体系を識別するURI。固定値"
 * type.coding.system MS
@@ -54,27 +62,25 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * type.coding.display ^definition = "文書区分コードの表示名。"
 * type.coding.display MS
 
-
 * category 1..* MS
-  * ^short = "報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。"
-  * ^definition = "報告区分を表すコードを設定する。このファイルが作成された目的や作成タイミングなどの情報を格納するために使用される。category.coding.system に 'http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category' を設定する。特定健診の制度で結果報告をする場合には、それに加えて、category.coding.system に urn:oid:2.16.840.1.113883.2.2.1.6.1001を設定し、そのコードも記述すること。"
-
+  * ^short = "報告区分を表すコードを設定する。"
+  * ^definition = "報告区分コードのコード体系を識別するURI。コード10,40,90 の場合にはurn:oid:1.2.392.200119.6.1001、それ以外のコードの場合にはhttp://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　を使用する。"
 * category.coding 1..* MS
 * category.coding from $report_mergedcategory_vs (required)
 
-* subject 1.. MS
+* subject 1..1 MS
 * subject ^short = "受診者情報を表すPatientリソースへの参照。"
 * subject ^definition = "受診者情報を表すPatientリソースへの参照。"
 * subject.reference 1..1 MS
 * subject.reference ^short = "PatientリソースのfullUrl要素に指定されるUUIDを指定。"
-* subject.reference ^definition = "Bundleリソースに記述されるPatientリソースのfullUrl要素に指定されるUUIDを指定。\r\n例：\"urn:uuid:11f0a9a6_a91d_3aef_fc4e_069995b89c4f\""
+* subject.reference ^definition = "Bundleリソースに記述されるPatientリソースのfullUrl要素に指定されるUUIDを指定。"
 * subject only Reference(JP_Patient_eCheckupGeneral)
 
 * encounter ^short = "健診実施情報を表すEncounterリソースへの参照"
 * encounter ^definition = "健診実施情報を表すEncounterリソースへの参照"
-* encounter 0..1 MS
+* encounter 1..1 MS
 * encounter.reference ^short = "EncounterリソースのfullUrl要素に指定されるUUIDを指定。"
-* encounter.reference ^definition = "Bundleリソースに記述されるEncounterリソースのfullUrl要素に指定されるUUIDを指定。\r\n例：\"urn:uuid:12f0a9a6_a91d_8aef_d14e_069795b89c9f\""
+* encounter.reference ^definition = "Bundleリソースに記述されるEncounterリソースのfullUrl要素に指定されるUUIDを指定。"
 * encounter.reference 1..1 MS
 * encounter only Reference(JP_Encounter_eCheckupGeneral)
 
@@ -83,7 +89,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 
 * author ^slicing.discriminator.type = #profile
 * author ^slicing.discriminator.path = "resolve()"
-* author ^slicing.rules = #open
+* author ^slicing.rules = #closed
 * author ^short = "健診結果作成者である文書作成責任者と文書作成機関とへの参照。"
 * author ^definition = "文書作成責任者を表すPractitionerリソースへの参照、および,文書作成機関を表すOrganizationリソースへの参照の2つのReferenceを繰り返す。"
 * author contains
@@ -94,10 +100,10 @@ and organizationReporter 1..1 MS
 * author[organizationReporter] only Reference(JP_OrganizationReporter_eCheckupGeneral)
 
 * custodian 0..1
-* custodian only Reference(JP_OrganizationCustodian_eCheckupGeneral)
+* custodian only Reference(JP_OrganizationReporter_eCheckupGeneral)
 
 * event 1.. MS
-* event ^short = "健診プログラムサービスコード. URI。coding.system = 'http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code' "
+* event ^short = "健診プログラムサービスコード。coding.systemは 'urn:oid:1.2.392.200119.6.1002'を使用する。"
 * event.code 1..* MS
 * event.code from $checkup_programService_vs
 
@@ -105,18 +111,74 @@ and organizationReporter 1..1 MS
   //セクションの特性ごとの制約
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "code"
-  * ^slicing.rules = #open
+  * ^slicing.rules = #closed
 
 * section contains
-    specialCheckup_observations 0..1 MS 
-/*  and  specialCheckup_questionnaire 0..1 MS and
-     0..1 MS and
-    tokuteikenshin_observations 0..1 MS and
-    QUESTIONAIRRE 0..1 MS and
-    ATTACHMENT 0..1 MS
-*/
+    specialCheckup_observations 0..1 MS // 01011
+    specialCheckup_questionnaire 0..1 MS  // 01012
+    specialCheckup_additional 0..1 MS // 01990
+    regionalUnionCheckup_observations 0..1 MS // 01021
+    regionalUnionCheckup_questionnaire 0..1 MS  // 01022
+    occupationalCheckup_observations 0..1 MS  // 01031
+    occupationalCheckup_questionnaire 0..1 MS // 01032
+    generalCheckup_observations 0..1 MS // 01910
+    generalCheckup_questionnaire 0..1 MS  // 01920
+    attachment 0..1 MS  // 01995
+
+* section[specialCheckup_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#01011 "特定健診検査結果セクション" (exactly) 
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
+* section[specialCheckup_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#01012 "特定健診問診結果セクション" (exactly) 
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+* section[specialCheckup_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#01990 "特定健診任意追加項目セクション" (exactly) 
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+* section[specialCheckup_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#01021 "広域連合保健事業検査結果セクション" (exactly)
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
+* section[specialCheckup_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#01022 "広域連合保健事業問診結果セクション" (exactly)
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+* section[specialCheckup_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#01031 "事業者健診検査結果セクション" (exactly)
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+* section[specialCheckup_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#01032 "事業者健診問診結果セクション" (exactly)
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+* section[specialCheckup_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#01910 "検査結果セクション" (exactly)
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
+* section[specialCheckup_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#01920 "問診結果セクション" (exactly) 
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+* section[specialCheckup_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#01995 "添付書類セクション" (exactly) 
+  * entry 1..*
+  * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral or JP_Medica_eCheckupGeneral)
+
 
 //検査結果セクション
+/*
 * section[specialCheckup_observations]
   * code 1..1 MS
   * code = $section_code_cs#01011 "特定健診検査結果セクション" (exactly) 
@@ -131,7 +193,7 @@ and organizationReporter 1..1 MS
   * entry[xxx] only Reference(JP_Observation_eCheckup_spc_XXXX)
   * entry[yyy] only Reference(JP_Observation_eCheckup_spc_YYYY)
   * entry[zzz] only Reference(JP_Observation_eCheckup_spc_ZZZZ)
-
+*/
 //TODO Invariantsで Observation 1> Coverage 0..2になっているか確認
 /*
 //問診結果セクション

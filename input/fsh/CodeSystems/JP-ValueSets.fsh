@@ -1,4 +1,15 @@
 
+//---------------------
+// 健診項目コード
+//---------------------
+ValueSet: JP_observationCode_VS
+Id: jp-observationcode-vs
+Description: "健診項目コード ValueSet"
+* ^url = $doctype_codes_vs
+* include codes from system urn:oid:1.2.392.200119.4.504  // MEDIS JLAC10
+//* include codes from system urn:oid:1.2.392.200119.6.1005 // 特定健診項目
+// * include codes from system urn:oid:1.2.392.100495.100.1051 // 自治体検診項目コード
+
 //--------------------------------------------------------------------
 // 文書区分コード	Composition.type
 // FHIR文書の文書区分（健診結果報告書）。
@@ -39,13 +50,10 @@ ValueSet: Checkup_valueSet_reportCategory
 Id: checkup-valueSet-reportCategory
 Description: "報告区分コード"
 * ^url = $report_category_vs
-* $report_category_cs#10   "特定健診"
-* $report_category_cs#40   "健診結果報告"
 * $report_category_cs#41   "事業者健診"
 * $report_category_cs#42   "自治体検診"
 * $report_category_cs#43   "乳幼児検診"
 * $report_category_cs#44   "妊婦検診"
-* $report_category_cs#90   "その他検診"
 
 ValueSet: SepecialCheckup_valueSet_reportCategory
 Id: specialCheckup-valueSet-reportCategory
