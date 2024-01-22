@@ -13,7 +13,7 @@ Description: "Compositionリソースのサンプル"
 * status = #final
 * type = $doc-typecodes#53576-5 "検診・健診報告書"
 
-* category[0].coding[+].system = $report_category_cs
+* category[0].coding[+].system = $report_speccategory_cs
 * category[=].coding[=].code = #10
 * category[=].coding[=].display = "特定健診"
 
