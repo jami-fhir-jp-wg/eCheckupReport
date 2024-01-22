@@ -13,7 +13,6 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * obeys bundle-entry-JP-Patient-eCheckupGeneral
 * obeys bundle-entry-JP-OrganizationReporter-eCheckupGeneral
 * obeys bundle-entry-JP-PractitionerReporter-eCheckupGeneral
-* obeys bundle-entry-JP-Patient-eCheckupGeneral
 * obeys bundle-entry-JP-Encounter-eCheckupGeneral
 
 * ^url = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral"

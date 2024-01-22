@@ -5,7 +5,7 @@ Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
 * status = #final
 * category = $JP_SimpleObservationCategory_CS#laboratory
-* code = $jlac10#3B035000002327201 "ＡＳＴ（ＧＯＴ）"
+* code = $specialCheckup_observations_cs#3B035000002327201 "ＡＳＴ（ＧＯＴ）"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * valueQuantity = 32 'U/L' "U/l"
 * interpretation = $v3-ObservationInterpretation#N

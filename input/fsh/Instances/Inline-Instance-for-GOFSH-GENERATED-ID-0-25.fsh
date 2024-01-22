@@ -5,7 +5,7 @@ Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
 * status = #final
 * category = $JP_SimpleObservationCategory_CS#laboratory
-* code = $jlac10#1A020000000191111 "尿糖"
+* code = $specialCheckup_observations_cs#1A020000000191111 "尿糖"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * valueCodeableConcept.coding.extension.url = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
 * valueCodeableConcept.coding.extension.valueDecimal = 1

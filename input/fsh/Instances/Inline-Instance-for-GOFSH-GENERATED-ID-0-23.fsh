@@ -5,7 +5,7 @@ Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
 * status = #final
 * category = $JP_SimpleObservationCategory_CS#laboratory
-* code = $jlac10#3D046000001906202 "ＨｂＡ１ｃ（ＮＧＳＰ）"
+* code = $specialCheckup_observations_cs#3D046000001906202 "ＨｂＡ１ｃ（ＮＧＳＰ）"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * valueQuantity = 7 '%' "%"
 * interpretation = $v3-ObservationInterpretation#H

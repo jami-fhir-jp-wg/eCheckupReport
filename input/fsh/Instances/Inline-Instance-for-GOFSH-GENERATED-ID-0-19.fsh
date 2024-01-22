@@ -5,7 +5,7 @@ Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
 * status = #final
 * category = $JP_SimpleObservationCategory_CS#laboratory
-* code = $jlac10#3F077000002327101 "ＬＤＬコレステロール"
+* code = $specialCheckup_observations_cs#3F077000002327101 "ＬＤＬコレステロール"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * valueQuantity = 88 'mg/dL' "mg/dl"
 * interpretation = $v3-ObservationInterpretation#N
