@@ -28,7 +28,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * extension[version].value[x] 1..1 MS
 
 * extension[dataEnterer] ^short = "データ転記者の情報を記述する拡張"
-* extension[dataEnterer] 1..1 MS
+* extension[dataEnterer] 0..1 MS
 * extension[dataEnterer].url 1..1 MS
 * extension[dataEnterer].value[x] ^short = "データ転記者の情報を記述するPractitionerRoleへの参照"
 * extension[dataEnterer].value[x] ^definition = "データ転記者のPractitionerRoleへの参照。PractitionerRoleに転記者と転記機関への参照を記述する。"
@@ -87,6 +87,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * date ^definition = "このリソースを作成または最後に編集した日時。ISO8601に準拠し、秒の精度まで記録し、タイムゾーンも付記する。\r\n午前0時を\"24:00\"と記録することはできないため\"00:00\"と記録すること。　\r\n例：\"2020_08_21T12:28:21+09:00\""
 * date 1..1 MS
 
+/*
 * author ^slicing.discriminator.type = #profile
 * author ^slicing.discriminator.path = "resolve()"
 * author ^slicing.rules = #closed
@@ -98,6 +99,10 @@ and organization 1..1 MS
 
 * author[practitioner] only Reference(JP_Practitioner_eCheckupGeneral)
 * author[organization] only Reference(JP_Organization_eCheckupGeneral)
+*/
+
+*author[+] only Reference(JP_Practitioner_eCheckupGeneral)
+*author[+] only Reference(JP_Organization_eCheckupGeneral)
 
 * custodian 0..1
 * custodian only Reference(JP_Organization_eCheckupGeneral)
@@ -127,134 +132,56 @@ and    attachment 0..1 MS  // 01995
 
 * section[specialCheckup_observations]
   * code 1..1 MS
-  * code = $section_code_cs#01011 "特定健診検査結果セクション" (exactly) 
+  * code = $section_code_cs#01011 "特定健診検査結果セクション" 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
 * section[specialCheckup_questionnaire]
   * code 1..1 MS
-  * code = $section_code_cs#01012 "特定健診問診結果セクション" (exactly) 
+  * code = $section_code_cs#01012 "特定健診問診結果セクション" 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[specialCheckup_additional]
   * code 1..1 MS
-  * code = $section_code_cs#01990 "特定健診任意追加項目セクション" (exactly) 
+  * code = $section_code_cs#01990 "特定健診任意追加項目セクション" 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[regionalUnionCheckup_observations]
   * code 1..1 MS
-  * code = $section_code_cs#01021 "広域連合保健事業検査結果セクション" (exactly)
+  * code = $section_code_cs#01021 "広域連合保健事業検査結果セクション"
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
 * section[regionalUnionCheckup_questionnaire]
   * code 1..1 MS
-  * code = $section_code_cs#01022 "広域連合保健事業問診結果セクション" (exactly)
+  * code = $section_code_cs#01022 "広域連合保健事業問診結果セクション"
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[occupationalCheckup_observations]
   * code 1..1 MS
-  * code = $section_code_cs#01031 "事業者健診検査結果セクション" (exactly)
+  * code = $section_code_cs#01031 "事業者健診検査結果セクション"
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[occupationalCheckup_questionnaire]
   * code 1..1 MS
-  * code = $section_code_cs#01032 "事業者健診問診結果セクション" (exactly)
+  * code = $section_code_cs#01032 "事業者健診問診結果セクション"
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[generalCheckup_observations]
   * code 1..1 MS
-  * code = $section_code_cs#01910 "検査結果セクション" (exactly)
+  * code = $section_code_cs#01910 "検査結果セクション"
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
 * section[generalCheckup_questionnaire]
   * code 1..1 MS
-  * code = $section_code_cs#01920 "問診結果セクション" (exactly) 
+  * code = $section_code_cs#01920 "問診結果セクション" 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[attachment]
   * code 1..1 MS
-  * code = $section_code_cs#01995 "添付書類セクション" (exactly) 
+  * code = $section_code_cs#01995 "添付書類セクション" 
   * entry 1..*
   * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral or JP_Media_eCheckupGeneral)
 
 
-//検査結果セクション
-/*
-* section[specialCheckup_observations]
-  * code 1..1 MS
-  * code = $section_code_cs#01011 "特定健診検査結果セクション" (exactly) 
-  * entry   
-    * ^slicing.discriminator.type = #profile
-    * ^slicing.discriminator.path = "resolve()"
-    * ^slicing.rules = #open
-  * entry contains 
-        xxx 1..1 MS 
-    and yyy 1..1 MS
-    and zzz 0..1 MS
-  * entry[xxx] only Reference(JP_Observation_eCheckup_spc_XXXX)
-  * entry[yyy] only Reference(JP_Observation_eCheckup_spc_YYYY)
-  * entry[zzz] only Reference(JP_Observation_eCheckup_spc_ZZZZ)
-*/
-//TODO Invariantsで Observation 1> Coverage 0..2になっているか確認
-/*
-//問診結果セクション
-* section[QUESTIONAIRRE]
-  * ^short = "問診結果セクション。健診項目のうち問診項目に関連するリソースが全て本セクションに含まれる。"
-  * title = "問診結果" (exactly)
-    * ^short = "セクションタイトル。固定値。"
-  * code.coding from $section_code_vs
-    * ^short = "コード体系を表す Coding.system に関しては、CodeSystem/section-codeを使用するが、特定健診報告書制度に従う場合は、「urn:oid:1.2.392.200119.6.1002」を用いてもよい。"
-    * system 1..1 MS
-      * ^short = "セクション区分コードのコード体系を識別するURI。固定値。"
-    * system = $section_code_cs (exactly)
-    * code = $section_code_cs#01920 (exactly)
-      * ^short = "問診結果セクションを表すセクション区分のコード値。固定値。"
-    * display 0..1 MS
-    * display = "問診結果セクション" (exactly)
-      * ^short = "セクション区分コードの表示名。"
-  * text 0..1 MS
-    * ^short = "セクションの内容を表す文字列。書式は5.2.2.2「テキスト部（ナラティブ）仕様」の本文を参照。"
-    * status 1..1 MS
-    * status = $narrative_cs#generated
-      * ^short = "固定値。"
-    * div 1..1 MS
-      * ^short = "本セクションの内容をテキストで表現した文字列を入れてもよい。内容を省略しても構わない。 このデータは人がこのセクションの内容の概略をひと目で把握するためだけに使われるものであり、データ処理対象としてはならない。"
-  * entry 0..*
-    * ^short = "問診結果セクションに含まれるリソースの参照。検査項目を表すObservationリソースが含まれる。"
-    * reference 1..1
-      * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
-
-  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
-    * reference 1..1
-      * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
-
-//添付書類セクション
-* section[ATTACHMENT]
-  * ^short = "添付書類セクション。健診結果報告書に関連する添付処理を表すリソースが全て本セクションに含まれる。"
-  * title = "添付書類" (exactly)
-    * ^short = "セクションタイトル。固定値。"
-  * code.coding from $section_code_vs
-    * ^short = "コード体系を表す Coding.system に関しては、CodeSystem/section-codeを使用するが、特定健診報告書制度に従う場合は、「urn:oid:1.2.392.200119.6.1002」を用いてもよい。"
-    * system 1..1 MS
-      * ^short = "セクション区分コードのコード体系を識別するURI。固定値。"
-    * system = $section_code_cs (exactly)
-    * code = $section_code_cs#01995 (exactly)
-      * ^short = "添付書類セクションを表すセクション区分のコード値。固定値。"
-    * display 0..1 MS
-    * display = "添付書類セクション" (exactly)
-      * ^short = "セクション区分コードの表示名。"
-  * text 0..1 MS
-    * ^short = "セクションの内容を表す文字列。書式は5.2.2.2「テキスト部（ナラティブ）仕様」の本文を参照。"
-    * status 1..1 MS
-    * status = $narrative_cs#generated
-      * ^short = "固定値。"
-    * div 1..1 MS
-      * ^short = "本セクションの内容をテキストで表現した文字列を入れてもよい。内容を省略しても構わない。 このデータは人がこのセクションの内容の概略をひと目で把握するためだけに使われるものであり、データ処理対象としてはならない。"
-  * entry 1..*
-    * ^short = "添付書類セクションに含まれるリソースの参照。添付書類を表す。DocumentReferenceリソースが含まれる。"
-  * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral)
-    * reference 1..1
-      * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
-*/
 // 各種制約
 Invariant: emc-cmp-1
 Description: "language should be 'ja' in case populated.(使用する場合は日本語環境(ja)を規定する)"

@@ -40,7 +40,7 @@ Invariant: bundle-entry0-JP-Composition-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentry[0]にCompositionリソース(JP_Composition_eCheckupGeneral)がなければならない。"
 Expression: 
-" (
+"(
     entry[0].resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists()
 )"
 
@@ -48,15 +48,15 @@ Invariant: bundle-entry-JP-Patient-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentryにPatientリソース(JP_Patient_eCS)がなければならない。"
 Expression: 
-" (
-    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCS').exists()
+"(
+    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS').exists()
 )"
 
 Invariant: bundle-entry-JP-OrganizationReporter-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentryにOrganizationリソース(JP_OrganizationReporter_eCheckupGeneral)がなければならない。"
 Expression: 
-" (
+"(
     entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationReporter_eCheckupGeneral').exists()
 )"
 
@@ -64,7 +64,7 @@ Invariant: bundle-entry-JP-PractitionerReporter-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentryにPractitionerリソース(JP_PractitionerReporter_eCheckupGeneral)がなければならない。"
 Expression: 
-" (
+"(
     entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerReporter_eCheckupGeneral').exists()
 )"
 
@@ -73,7 +73,7 @@ Invariant: bundle-entry-JP-Encounter-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentryにEncounterリソース(JP_Encounter_eCheckupGeneral)がなければならない。"
 Expression: 
-" (
+"(
     entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral').exists()
 )"
 

@@ -129,3 +129,13 @@ Description: "厚労省電子処方CDA規格別表12 被保険者区分コード
 // Alias: $subscriber-relationship-cs = urn:oid:1.2.392.100495.20.2.62
 // Alias: $subscriber-relationship-vs = http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
 
+//--------------------------------------------------------------------
+// 特定健診項目コード
+//--------------------------------------------------------------------
+ValueSet: JP_ObservationCode_eCheckupGeneral_vs
+Id: jp-observationCode_eCheckupGeneral_vs
+Description: "健診結果セクションコード ValueSet"
+* ^url = $JP_ObservationCode_eCheckupGeneral_vs
+//* #01910	"健診結果セクション"
+* include codes from system $specialCheckup_observations_cs
+

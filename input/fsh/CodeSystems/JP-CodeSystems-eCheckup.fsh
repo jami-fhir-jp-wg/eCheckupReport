@@ -17,6 +17,23 @@ Description: "健診結果報告区分コード"
 * #44   "妊婦検診"
 * #90   "その他検診"
 
+
+//--------------------------------------------------------------------
+// 特定健診報告区分コード	Composition.category
+//--------------------------------------------------------------------
+CodeSystem: SpecialCheckup_codeSystem_reportCategory
+Id: specCheckup-codeSystem-reportCategory
+Description: "健診結果報告区分コード"
+* ^url = $report_speccategory_cs
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = false
+* #10   "特定健診"
+* #40   "健診結果報告"
+* #90   "その他検診"
+
+
+
 //--------------------------------------------------------------------
 // プログラムサービスコード	Composition.event.code
 // 健診プログラムサービスコード
