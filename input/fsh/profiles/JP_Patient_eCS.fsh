@@ -19,14 +19,6 @@ Description: "健診結果報告書 診療情報・サマリー汎用 Patientリ
 * meta.lastUpdated ^short = "最終更新日"
 * meta.lastUpdated ^definition = "この患者情報の内容がサーバ上で最後に格納または更新された日時、またはこのFHIRリソースが生成された日時"
 
-
-* extension contains
-    JP_Age_At_Event named ageAtEvent 0..1 MS
-
-* extension[ageAtEvent]
-  * ^short = "受診時年齢を表現する拡張「JP_Age_At_Event」を使用し、受診時年齢を記述する。"
-  * url = $age_at_event (exactly)
-    * ^short = "拡張を識別するURL。固定値。"
     
 * name 1.. MS
 * name.family 1.. MS
