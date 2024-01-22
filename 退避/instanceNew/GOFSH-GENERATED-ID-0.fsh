@@ -29,6 +29,7 @@ Usage: #example
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-10
 * entry[+].fullUrl = "urn:uuid:51424f15-c213-00bf-5d31-4770244b4f32"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-11
+
 * entry[+].fullUrl = "urn:uuid:628244db-68cf-abb6-bc9d-2d89bbc2b3ea"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-12
 * entry[+].fullUrl = "urn:uuid:ff4472f4-9e44-6aa3-bcd6-abb0662e4641"

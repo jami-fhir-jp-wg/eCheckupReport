@@ -1,6 +1,8 @@
 Instance: Instance-for-Composition
 InstanceOf: Composition
 Usage: #example
+Description: "Compositionリソースのサンプル"
+
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * language = #ja

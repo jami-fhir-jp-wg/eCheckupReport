@@ -113,5 +113,42 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/composition_dataEnterer
     - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_Department
     - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/attachement-format
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-examMethod-codes
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-specimen-codes
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code
+    - urn:oid:1.2.392.200119.6.1002
+    - http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
+    - urn:oid:1.2.392.100495.20.3.21
+    - urn:oid:1.2.392.100495.20.2.61
+    - urn:oid:1.2.392.100495.20.2.63
+    - urn:oid:1.2.392.100495.20.2.62
+    - urn:oid:1.2.392.200119.6.1005
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-code
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
+    - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
+    - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
+    - http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
+    - urn:oid:1.2.392.200119.6.1002
+    - http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
+    - urn:oid:1.2.392.100495.20.3.21
+    - urn:oid:1.2.392.100495.20.2.61
+    - urn:oid:1.2.392.100495.20.2.63
+    - urn:oid:1.2.392.100495.20.2.62
+    - urn:oid:1.2.392.200119.6.1005
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-code
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
+    - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
+    - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
+    - http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
 
      
