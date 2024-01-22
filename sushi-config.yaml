@@ -95,10 +95,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_DocumentReference_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Media_eCheckupGeneral
-    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_Commmon_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral
-    - http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_Organization_eCS_coveragePayer
-    - http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS_coveragePayer
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eClinicalSummary
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationInsurer_eCheckupGeneral
     - http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCS
@@ -126,29 +126,15 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - urn:oid:1.2.392.100495.20.2.61
     - urn:oid:1.2.392.100495.20.2.63
     - urn:oid:1.2.392.100495.20.2.62
+    - urn:oid:2.16.840.1.113883.2.2.1.6.1001
     - urn:oid:1.2.392.200119.6.1005
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
     - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
     - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
     - http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
-    - urn:oid:1.2.392.200119.6.1002
-    - http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
-    - urn:oid:1.2.392.100495.20.3.21
-    - urn:oid:1.2.392.100495.20.2.61
-    - urn:oid:1.2.392.100495.20.2.63
-    - urn:oid:1.2.392.100495.20.2.62
-    - urn:oid:1.2.392.200119.6.1005
-    - http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
-    - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-code
-    - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
-    - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
-    - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
-    - http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
-    - http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
-    - http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
-
-     
+   
