@@ -38,7 +38,7 @@ Description: "健診結果報告書 診療情報・サマリー汎用 Patientリ
 * address ^definition = "患者の住所。必須。"
 
 * address.text 1.. MS
-* address.city 1.. MS
-* address.state 1.. MS
+* address.city 0.. MS
+* address.state 0.. MS
 
 

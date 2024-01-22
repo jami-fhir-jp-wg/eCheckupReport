@@ -1,4 +1,4 @@
-Profile:        JP_Observation_eCheckupGeneral 
+Profile:        JP_Observation_eCheckupGeneral
 Parent:         JP_Observation_Common
 Id:             JP-Observation-eCheckupGeneral
 //Title:          "健診結果報告書　Observationリソース　検査結果情報"
@@ -33,7 +33,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * subject 1..1 MS
 * subject only Reference(JP_Patient_eCS)
 * subject ^definition = "健診／検診対象者情報。必須項目。"
-* effective[x] 1..1 MS
+* effective[x] 0..1 MS
 * effective[x] ^definition = "検体検査の場合は、検体採取日時。"
 * effective[x] ^comment = "このプロファイルでは、健診実施日時または検体採取日時を設定し、必須とする。"
 * effective[x] only dateTime 
