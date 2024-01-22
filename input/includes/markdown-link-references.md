@@ -64,6 +64,7 @@
 [MHLW_codeSystem_ePreCDA_insuranceCategory_tbl11]: CodeSystem-mhlw-codeSystem-ePreCDA-insuranceCategory-tbl11.html
 [MHLW_codeSystem_ePreCDA_insuredCoPayCategory_tbl13]: CodeSystem-mhlw-codeSystem-ePreCDA-insuredCoPayCategory-tbl13.html
 [MHLW_codeSystem_ePreCDA_insuredRelationship_tbl12]: CodeSystem-mhlw-codeSystem-ePreCDA-insuredRelationship-tbl12.html
+[SpecialCheckup_codeSystem_reportCategory]: CodeSystem-specCheckup-codeSystem-reportCategory.html
 [SpecialCheckup_Observations_CS]: CodeSystem-specialCheckup-observations-cs.html
 
 <!-- ValueSet -->
@@ -71,6 +72,7 @@
 [ECheckup_programService_VS]: ValueSet-echeckup-programService-vs.html
 [ECheckup_valueSet_reportCategory]: ValueSet-echeckup-valueSet-reportCategory.html
 [JP_documentTypeCode_VS]: ValueSet-jp-documenttypecode-vs.html
+[JP_ObservationCode_eCheckupGeneral_vs]: ValueSet-jp-observationCode-eCheckupGeneral-vs.html
 [JP_observationCode_VS]: ValueSet-jp-observationcode-vs.html
 [MergedCheckup_valueSet_reportCategory]: ValueSet-mergedCheckup-valueSet-reportCategory.html
 [MHLW_valueSet_ePreCDA_insuredRelationship_tbl12]: ValueSet-mhlw-valueSet-ePreCDA-insuredRelationship-tbl12.html
