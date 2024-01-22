@@ -101,8 +101,7 @@ and organization 1..1 MS
 * author[organization] only Reference(JP_Organization_eCheckupGeneral)
 */
 
-*author[+] only Reference(JP_Practitioner_eCheckupGeneral)
-*author[+] only Reference(JP_Organization_eCheckupGeneral)
+* author only Reference(JP_Practitioner_eCheckupGeneral or JP_Organization_eCheckupGeneral)
 
 * custodian 0..1
 * custodian only Reference(JP_Organization_eCheckupGeneral)
