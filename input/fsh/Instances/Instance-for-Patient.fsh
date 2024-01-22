@@ -1,6 +1,8 @@
-Instance: Instance-for--Patient
+Instance: Instance-for-Patient
 InstanceOf: JP_Patient_eCS
 Usage: #example
+Description: "Patientリソースのサンプル（受診者情報：電子カルテ共有サービスに送信しない版）"
+
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCS"
 * identifier.system = "urn:oid:1.2.392.200119.6.102.11311234567"

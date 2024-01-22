@@ -94,11 +94,11 @@ Description: "受診区分"
 //--------------------------------------------------------------------
 CodeSystem: MunicipalCheckup_codeSystem_examMethod
 Id: MunicipalCheckup-codeSystem-examMethod
-Description: "JLAC10検査方法コード"
+Description: "JLAC10検査方法コード コード作成中"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-examMethod-codes"
 * ^valueSet = "http://jpfhir.jp/fhir/eCheckup/ValueSet/jlac10-examMethod-codes"
 * ^status = #active
-* ^content = #complete
+* ^content = #fragment
 * ^caseSensitive = true
 
 //--------------------------------------------------------------------
@@ -355,11 +355,11 @@ Description: "添付文書フォーマットコード"
 //--------------------------------------------------------------------
 CodeSystem: MunicipalCheckup_codeSystem_observationGroup
 Id: MunicipalCheckup-codeSystem-observationGroup
-Description: "健診一連検査グループコード"
+Description: "健診一連検査グループコード サンプル一部"
 * ^url = $observationGroup_codes_cs
 // * ^valueSet = $observationGroup_codes_vs
 * ^status = #active
-* ^content = #complete
+* ^content = #fragment
 * ^caseSensitive = true
 * #9P500	"胸部エックス線検査"
 * #7A030	"喀痰検査"
@@ -380,10 +380,10 @@ Description: "健診一連検査グループコード"
 //--------------------------------------------------------------------
 CodeSystem: SpecialCheckup_Observations_CS
 Id: specialCheckup-observations-cs
-Description: "特定健診検査項目コード"
+Description: "特定健診検査項目コード　サンプル一部"
 * ^url = $specialCheckup_observations_cs
 * ^status = #active
-* ^content = #complete
+* ^content = #fragment
 * ^caseSensitive = true
 * #9N006000000000001 "体重"
 * #9N001000000000001 "身長"

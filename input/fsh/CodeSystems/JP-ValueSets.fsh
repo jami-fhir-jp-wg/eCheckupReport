@@ -46,8 +46,8 @@ Description: "報告区分コード"
 // （健診）報告区分コード	Composition.category
 //	健診結果が、どの健診事業として報告されるかを示す健診報告区分を表す健康診断結果報告の区分
 //--------------------------------------------------------------------
-ValueSet: Checkup_valueSet_reportCategory
-Id: checkup-valueSet-reportCategory
+ValueSet: ECheckup_valueSet_reportCategory
+Id: echeckup-valueSet-reportCategory
 Description: "健診結果　報告区分コード ValueSet"
 * ^url = $report_category_vs
 * $report_category_cs#41   "事業者健診"
@@ -55,7 +55,7 @@ Description: "健診結果　報告区分コード ValueSet"
 * $report_category_cs#43   "乳幼児検診"
 * $report_category_cs#44   "妊婦検診"
 
-ValueSet: SepecialCheckup_valueSet_reportCategory
+ValueSet: SpecialCheckup_valueSet_reportCategory
 Id: specialCheckup-valueSet-reportCategory
 Description: "健診結果　報告区分コード(特定健診制度) ValueSet"
 * ^url = $report_speccategory_vs

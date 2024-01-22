@@ -1,6 +1,8 @@
 Instance: Instance-for-Practitioner
 InstanceOf: JP_Practitioner_eCheckupGeneral
 Usage: #example
+Description: "Practitionerリソースのサンプル（健診実施者などの情報）"
+
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral"
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
