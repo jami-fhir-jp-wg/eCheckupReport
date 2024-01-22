@@ -1,8 +1,8 @@
 Profile:        JP_Observation_eCheckupGeneral 
 Parent:         JP_Observation_Common
 Id:             JP-Observation-eCheckupGeneral
-//Title:          "健診結果報告書　Observationリソース　検査項目情報"
-Description:    "健診結果報告書　Observationリソース　検査項目情報"
+//Title:          "健診結果報告書　Observationリソース　検査結果情報"
+Description:    "健診結果報告書　Observationリソース　検査結果情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_Commmon_eCheckupGeneral"
 * ^status = #active
 * ^date = "2024-01-15"
@@ -114,7 +114,7 @@ Severity: #warning
 Profile:        JP_ObservationGroup_eCheckupGeneral
 Parent:         JP_Observation_Common
 Id:             JP-ObservationGroup-eCheckupGeneral
-Description:    "健診・検診結果報告書　ObservationGroupリソースGroup仕様共通定義"
+Description:    "健診結果報告書　ObservationGroupリソースGroup仕様共通定義"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral"
 * ^status = #active
 

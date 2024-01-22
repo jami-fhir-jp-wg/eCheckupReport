@@ -4,7 +4,7 @@
 //---------------------
 ValueSet: JP_observationCode_VS
 Id: jp-observationcode-vs
-Description: "健診項目コード ValueSet"
+Description: "健診結果　健診項目コード ValueSet"
 * ^url = $doctype_codes_vs
 * include codes from system urn:oid:1.2.392.200119.4.504  // MEDIS JLAC10
 //* include codes from system urn:oid:1.2.392.200119.6.1005 // 特定健診項目
@@ -16,7 +16,7 @@ Description: "健診項目コード ValueSet"
 //--------------------------------------------------------------------
 ValueSet: JP_documentTypeCode_VS
 Id: jp-documenttypecode-vs
-Description: "文書区分コード ValueSet"
+Description: "健診結果　文書区分コード ValueSet"
 * ^url = $doctype_codes_vs
 * include codes from system $doctype_codes_cs
 
@@ -48,7 +48,7 @@ Description: "報告区分コード"
 //--------------------------------------------------------------------
 ValueSet: Checkup_valueSet_reportCategory
 Id: checkup-valueSet-reportCategory
-Description: "報告区分コード"
+Description: "健診結果　報告区分コード ValueSet"
 * ^url = $report_category_vs
 * $report_category_cs#41   "事業者健診"
 * $report_category_cs#42   "自治体検診"
@@ -57,7 +57,7 @@ Description: "報告区分コード"
 
 ValueSet: SepecialCheckup_valueSet_reportCategory
 Id: specialCheckup-valueSet-reportCategory
-Description: "報告区分コード(特定健診制度)"
+Description: "健診結果　報告区分コード(特定健診制度) ValueSet"
 * ^url = $report_speccategory_vs
 * $report_speccategory_cs#10   "特定健診"
 * $report_speccategory_cs#40   "健診結果報告"
@@ -65,7 +65,7 @@ Description: "報告区分コード(特定健診制度)"
 
 ValueSet: MergedCheckup_valueSet_reportCategory
 Id: mergedCheckup-valueSet-reportCategory
-Description: "報告区分コード(特定健診制度とそれ以外)"
+Description: "健診結果　報告区分コード(特定健診とそれ以外の統合版) ValueSet"
 * ^url = $report_mergedcategory_vs
 * include codes from valueset $report_speccategory_vs
 * include codes from valueset $report_category_vs
@@ -111,7 +111,7 @@ Description: "受診区分"
 //--------------------------------------------------------------------
 ValueSet: ECheckup_valueSet_sectionCode
 Id: eCheckup-valueSet-sectionCode
-Description: "セクションコード"
+Description: "健診結果セクションコード ValueSet"
 * ^url = $section_code_vs
 //* #01910	"健診結果セクション"
 * include codes from system $section_code_cs
@@ -122,7 +122,7 @@ Description: "セクションコード"
 //--------------------------------------------------------------------
 ValueSet:  MHLW_valueSet_ePreCDA_insuredRelationship_tbl12
 Id:   mhlw-valueSet-ePreCDA-insuredRelationship-tbl12
-Description: "厚労省電子処方CDA規格別表12 被保険者区分コード"
+Description: "厚労省電子処方CDA規格別表12 被保険者区分コード ValueSet"
 * ^url = $subscriber-relationship-vs
 // * include codes from valueset http://hl7.org/fhir/ValueSet/subscriber-relationship
 * include codes from system $subscriber-relationship-cs

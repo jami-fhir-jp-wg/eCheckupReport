@@ -9,8 +9,7 @@
 Profile: JP_Patient_eCS
 Parent: JP_Patient
 Id: JP-Patient-eCS
-Title: "eCS:JP_Patient_eCS"
-Description: "eCS 診療情報・サマリー汎用 Patientリソース（患者情報）プロファイル"
+Description: "健診結果報告書 診療情報・サマリー汎用 Patientリソース（患者情報）プロファイル"
 
 
 * ^url = $JP_Patient_eCS

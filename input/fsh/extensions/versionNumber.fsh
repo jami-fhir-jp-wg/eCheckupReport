@@ -1,6 +1,6 @@
 Extension: Composition_clinicaldocument_versionNumber
 Id: composition-clinicaldocument-versionNumber
-Description: "Version specific identifier for the composition, assigned when each version is created/updated."
+Description: "Compositionリソース　バージョンを記述する拡張"
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #sd
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

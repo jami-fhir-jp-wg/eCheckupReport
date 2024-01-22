@@ -6,7 +6,7 @@ Expression: "meta.profile.where($this = 'http://jpfhir.jp/fhir/clins/StructureDe
 Profile: JP_Bundle_CLINS_eCheckupGeneral
 Parent: Bundle
 Id: JP-Bundle-clins-eCheckupGeneral
-Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信は別プロファイル）"
+Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信用）"
 
 * obeys bundle-clins-metaprofile
 * obeys bundle-entry0-JP-Composition-eCheckupGeneral

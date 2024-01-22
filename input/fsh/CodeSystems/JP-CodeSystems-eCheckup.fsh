@@ -2,9 +2,9 @@
 // 報告区分コード	Composition.category
 //	健診結果が、どの健診事業として報告されるかを示す健診報告区分を表す健康診断結果報告の区分
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_reportCategory
-Id: MunicipalCheckup-codeSystem-reportCategory
-Description: "報告区分コード"
+CodeSystem: ECheckup_codeSystem_reportCategory
+Id: eCheckup-codeSystem-reportCategory
+Description: "健診結果報告区分コード"
 * ^url = $report_category_cs
 * ^status = #active
 * ^content = #complete
@@ -16,8 +16,6 @@ Description: "報告区分コード"
 * #43   "乳幼児検診"
 * #44   "妊婦検診"
 * #90   "その他検診"
-
-
 
 //--------------------------------------------------------------------
 // プログラムサービスコード	Composition.event.code
@@ -39,15 +37,14 @@ Description: "健診プログラムサービスコード"
 * #090 "肝炎検診"
 * #990 "その他の健診（検診）"
 
-
 //--------------------------------------------------------------------
 // セクションコード	Composition.section.code
 //	本文書のセクションコードを表すコードシステム。
 // 健診結果報告書内のセクションコード。
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_sectionCode
-Id: MunicipalCheckup-codeSystem-sectionCode
-Description: "セクションコード"
+CodeSystem: ECheckup_codeSystem_sectionCode
+Id: eCheckup-codeSystem-sectionCode
+Description: "健診結果セクションコード"
 * ^url = $section_code_cs
 //* ^valueSet = $section_code_vs
 * ^status = #active
@@ -80,8 +77,8 @@ Description: "セクションコード"
 // 受診区分	Encounter.class
 //	受診種別を表すコードシステム。
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_encounterCategory
-Id: MunicipalCheckup-codeSystem-encounterCategory
+CodeSystem: ECheckup_codeSystem_encounterCategory
+Id: eCheckup-codeSystem-encounterCategory
 Description: "受診区分"
 * ^url = $encounter_cateogry_cs
 //* ^valueSet = $encounter_cateogry_vs
@@ -90,12 +87,6 @@ Description: "受診区分"
 * ^caseSensitive = true
 * #checkup	"健診"
 
-//--------------------------------------------------------------------
-// 健診機関コード	Orgamization.identifier	urn:oid:1.2.392.200119.6.102
-//	保険医療機関番号10桁のコードシステム。
-//--------------------------------------------------------------------
-// TODO:
-
 
 //--------------------------------------------------------------------
 // 検査方法コード	Observation.method.conding.coding.code
@@ -103,7 +94,7 @@ Description: "受診区分"
 //--------------------------------------------------------------------
 CodeSystem: MunicipalCheckup_codeSystem_examMethod
 Id: MunicipalCheckup-codeSystem-examMethod
-Description: "検査方法コード"
+Description: "JLAC10検査方法コード"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-examMethod-codes"
 * ^valueSet = "http://jpfhir.jp/fhir/eCheckup/ValueSet/jlac10-examMethod-codes"
 * ^status = #active
@@ -114,9 +105,9 @@ Description: "検査方法コード"
 // 材料コード	Specimen.type
 //	検体の材料コードを表すコードシステム。
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_jlac10SpecimenCode
-Id: MunicipalCheckup-codeSystem-jlac10SpecimenCode
-Description: "材料コード"
+CodeSystem: ECheckup_codeSystem_jlac10SpecimenCode
+Id: eCheckup-codeSystem-jlac10SpecimenCode
+Description: "JLAC10材料コード"
 * ^url = $jlac10_specimen_cs
 * ^valueSet = $jlac10_specimen_vs
 * ^status = #active
@@ -359,18 +350,12 @@ Description: "添付文書フォーマットコード"
 * #cdar2_jahis_18007	"JAHIS 健康診断報告書規格"
 
 //--------------------------------------------------------------------
-// 受診者ID	Patient.identifier	urn:oid: 1.2.392.200119.6.102.1[保険医療機関コード(10 桁)]
-//	末尾の1[保険医療機関コード(10 桁)]は、保険医療機関コード(10 桁)の先頭に1をつけた11桁とした文字列。
-//--------------------------------------------------------------------
-// TODO: 
-
-//--------------------------------------------------------------------
 // 一連検査グループコード
 //	複数の検査項目が一連検査としてまとまって結果が得られるグループのコードシステム。
 //--------------------------------------------------------------------
 CodeSystem: MunicipalCheckup_codeSystem_observationGroup
 Id: MunicipalCheckup-codeSystem-observationGroup
-Description: "一連検査グループコード"
+Description: "健診一連検査グループコード"
 * ^url = $observationGroup_codes_cs
 // * ^valueSet = $observationGroup_codes_vs
 * ^status = #active
@@ -389,15 +374,13 @@ Description: "一連検査グループコード"
 * #9Z541	"骨粗鬆症超音波検査"
 
 
-
-
 //--------------------------------------------------------------------
-// 検査コード（特定検診）
+// 検査コード（特定健診）
 //	
 //--------------------------------------------------------------------
 CodeSystem: SpecialCheckup_Observations_CS
 Id: specialCheckup-observations-cs
-Description: "検査項目コード"
+Description: "特定健診検査項目コード"
 * ^url = $specialCheckup_observations_cs
 * ^status = #active
 * ^content = #complete
