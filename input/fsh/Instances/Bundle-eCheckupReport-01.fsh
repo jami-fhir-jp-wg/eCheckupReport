@@ -20,6 +20,10 @@ Description: "Bundle 健診検査結果報告書　サンプル０１"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-4-Organization
 * entry[+].fullUrl = "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-5-Encounter
+* entry[+].fullUrl = "urn:uuid:38f45298-ea42-9f15-7fb2-48ed899d3ab6"
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-6
+* entry[+].fullUrl = "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc"
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-7
 * entry[+].fullUrl = "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-8-Insurer
 * entry[+].fullUrl = "urn:uuid:b41c8c97-f3ad-450a-1738-5f2b4c40c68a"
@@ -65,6 +69,8 @@ Description: "Bundle 健診検査結果報告書　サンプル０１"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-28
 * entry[+].fullUrl = "urn:uuid:54eabf03-1de5-d080-aed6-6b6a2e4da269"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-29
+
+// ここから問診セクション
 * entry[+].fullUrl = "urn:uuid:71fcdecc-1331-9067-f5b2-24d6ba5eecda"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-30
 * entry[+].fullUrl = "urn:uuid:e6bd5094-2641-966f-92cf-04aced8624ac"

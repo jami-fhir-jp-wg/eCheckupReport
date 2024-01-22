@@ -30,21 +30,19 @@ Usage: #inline
 * section[=].code = $section_code_cs#01011 "特定健診検査結果セクション"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>身長 162.3 cm</li><li>体重 65.5 kg</li><li>BMI 24.9 kg/m2</li><li>腹囲 70 cm</li><li>メタボリックシンドローム判定 非該当</li><li>保健指導レベル なし</li></ul></div>"
-* section[=].entry[0] = Reference(Inline-Instance-for-GOFSH-GENERATED-ID-0-2-Patient)
-* section[=].entry[0].reference = "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
-* section[=].entry[+].reference = "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
-* section[=].entry[+].reference =  "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
-* section[=].entry[+].reference =  "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
-* section[=].entry[+].reference =  "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750"
 * section[=].entry[+].reference =  "urn:uuid:b41c8c97-f3ad-450a-1738-5f2b4c40c68a"
 * section[=].entry[+].reference =  "urn:uuid:cde1fec2-f8af-a793-7fe0-c2c417c9c000"
 * section[=].entry[+].reference =  "urn:uuid:51424f15-c213-00bf-5d31-4770244b4f32"
+
 * section[=].entry[+] = Reference(urn:uuid:628244db-68cf-abb6-bc9d-2d89bbc2b3ea)
 * section[=].entry[+] = Reference(urn:uuid:ff4472f4-9e44-6aa3-bcd6-abb0662e4641)
 * section[=].entry[+] = Reference(urn:uuid:38cbf2cf-61b7-6738-9d8c-a7b29016c48f)
 * section[=].entry[+] = Reference(urn:uuid:01b972fc-5183-8fa4-0954-10a7c5f5a36e)
 * section[=].entry[+] = Reference(urn:uuid:785fcd39-8c25-4e6d-53bc-a2f8055fd110)
+* section[=].entry[+] = Reference(urn:uuid:88134c9e-2016-d460-a3c8-417615b0065b)
 * section[=].entry[+] = Reference(urn:uuid:397dd498-07ed-49ce-3e43-2ee1c7db42aa)
+* section[=].entry[+] = Reference(urn:uuid:454c83e8-a534-84b9-f4d6-7257f5dc15de)
+* section[=].entry[+] = Reference(urn:uuid:e0252472-a245-2340-c3a5-a6c30faf7d11)
 * section[=].entry[+] = Reference(urn:uuid:a2cefc2b-95d6-4108-dac5-bee1f991608a)
 * section[=].entry[+] = Reference(urn:uuid:d0d3fb12-eacc-c4a2-1762-130b4a65ead2)
 * section[=].entry[+] = Reference(urn:uuid:22479301-4726-e239-09d6-257429835c67)
@@ -56,6 +54,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:54eabf03-1de5-d080-aed6-6b6a2e4da269)
 * section[=].entry[+] = Reference(urn:uuid:38f45298-ea42-9f15-7fb2-48ed899d3ab6)
 * section[=].entry[+] = Reference(urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc)
+
 * section[+].title = "問診セクション"
 * section[=].code = $section_code_cs#01012 "特定健診問診セクション"
 * section[=].text.status = #generated
