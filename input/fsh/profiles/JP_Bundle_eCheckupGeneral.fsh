@@ -83,7 +83,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[organization].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[organization].resource 1.. MS
-* entry[organization].resource only  JP_OrganizationReporter_eCheckupGeneral or JP_OrganizationInsurer_eCheckupGeneral
+* entry[organization].resource only  JP_Organization_eCheckupGeneral
 * entry[organization].resource ^short = "リソースのインスタンス本体"
 * entry[organization].resource ^definition = "リソースのインスタンス本体。"
 * entry[organization].search ..0
@@ -96,7 +96,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[practitioner].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[practitioner].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[practitioner].resource 1.. MS
-* entry[practitioner].resource only  JP_PractitionerReporter_eCheckupGeneral or JP_PractitionerTranscriptor_eCheckupGeneral
+* entry[practitioner].resource only  JP_Practitioner_eCheckupGeneral
 * entry[practitioner].resource ^short = "リソースのインスタンス本体"
 * entry[practitioner].resource ^definition = "リソースのインスタンス本体。"
 * entry[practitioner].search ..0
@@ -135,7 +135,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[observation].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[observation].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[observation].resource 1.. MS
-* entry[observation].resource only JP_Observation_Common_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral
+* entry[observation].resource only JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral
 * entry[observation].resource ^short = "リソースのインスタンス本体"
 * entry[observation].resource ^definition = "リソースのインスタンス本体。"
 * entry[observation].search ..0

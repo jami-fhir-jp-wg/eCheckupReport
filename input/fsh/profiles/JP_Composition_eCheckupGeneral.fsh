@@ -74,7 +74,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * subject.reference 1..1 MS
 * subject.reference ^short = "PatientリソースのfullUrl要素に指定されるUUIDを指定。"
 * subject.reference ^definition = "Bundleリソースに記述されるPatientリソースのfullUrl要素に指定されるUUIDを指定。"
-* subject only Reference(JP_Patient_eCheckupGeneral)
+* subject only Reference(JP_Patient_eCS or JP_Patient_CLINS_eCS)
 
 * encounter ^short = "健診実施情報を表すEncounterリソースへの参照"
 * encounter ^definition = "健診実施情報を表すEncounterリソースへの参照"
@@ -93,14 +93,14 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * author ^short = "健診結果作成者である文書作成責任者と文書作成機関とへの参照。"
 * author ^definition = "文書作成責任者を表すPractitionerリソースへの参照、および,文書作成機関を表すOrganizationリソースへの参照の2つのReferenceを繰り返す。"
 * author contains
-    practitionerReporter 1..1 MS 
-and organizationReporter 1..1 MS
+    practitioner 1..1 MS 
+and organization 1..1 MS
 
-* author[practitionerReporter] only Reference(JP_PractitionerReporter_eCheckupGeneral)
-* author[organizationReporter] only Reference(JP_OrganizationReporter_eCheckupGeneral)
+* author[practitioner] only Reference(JP_Practitioner_eCheckupGeneral)
+* author[organization] only Reference(JP_Organization_eCheckupGeneral)
 
 * custodian 0..1
-* custodian only Reference(JP_OrganizationReporter_eCheckupGeneral)
+* custodian only Reference(JP_Organization_eCheckupGeneral)
 
 * event 1.. MS
 * event ^short = "健診プログラムサービスコード。coding.systemは 'urn:oid:1.2.392.200119.6.1002'を使用する。"
@@ -115,66 +115,66 @@ and organizationReporter 1..1 MS
 
 * section contains
     specialCheckup_observations 0..1 MS // 01011
-    specialCheckup_questionnaire 0..1 MS  // 01012
-    specialCheckup_additional 0..1 MS // 01990
-    regionalUnionCheckup_observations 0..1 MS // 01021
-    regionalUnionCheckup_questionnaire 0..1 MS  // 01022
-    occupationalCheckup_observations 0..1 MS  // 01031
-    occupationalCheckup_questionnaire 0..1 MS // 01032
-    generalCheckup_observations 0..1 MS // 01910
-    generalCheckup_questionnaire 0..1 MS  // 01920
-    attachment 0..1 MS  // 01995
+and specialCheckup_questionnaire 0..1 MS  // 01012
+and    specialCheckup_additional 0..1 MS // 01990
+and    regionalUnionCheckup_observations 0..1 MS // 01021
+and    regionalUnionCheckup_questionnaire 0..1 MS  // 01022
+and    occupationalCheckup_observations 0..1 MS  // 01031
+and    occupationalCheckup_questionnaire 0..1 MS // 01032
+and    generalCheckup_observations 0..1 MS // 01910
+and    generalCheckup_questionnaire 0..1 MS  // 01920
+and    attachment 0..1 MS  // 01995
 
 * section[specialCheckup_observations]
   * code 1..1 MS
   * code = $section_code_cs#01011 "特定健診検査結果セクション" (exactly) 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
-* section[specialCheckup_observations]
+* section[specialCheckup_questionnaire]
   * code 1..1 MS
   * code = $section_code_cs#01012 "特定健診問診結果セクション" (exactly) 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
-* section[specialCheckup_observations]
+* section[specialCheckup_additional]
   * code 1..1 MS
   * code = $section_code_cs#01990 "特定健診任意追加項目セクション" (exactly) 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
-* section[specialCheckup_observations]
+* section[regionalUnionCheckup_observations]
   * code 1..1 MS
   * code = $section_code_cs#01021 "広域連合保健事業検査結果セクション" (exactly)
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
-* section[specialCheckup_observations]
+* section[regionalUnionCheckup_questionnaire]
   * code 1..1 MS
   * code = $section_code_cs#01022 "広域連合保健事業問診結果セクション" (exactly)
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
-* section[specialCheckup_observations]
+* section[occupationalCheckup_observations]
   * code 1..1 MS
   * code = $section_code_cs#01031 "事業者健診検査結果セクション" (exactly)
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
-* section[specialCheckup_observations]
+* section[occupationalCheckup_questionnaire]
   * code 1..1 MS
   * code = $section_code_cs#01032 "事業者健診問診結果セクション" (exactly)
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
-* section[specialCheckup_observations]
+* section[generalCheckup_observations]
   * code 1..1 MS
   * code = $section_code_cs#01910 "検査結果セクション" (exactly)
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
-* section[specialCheckup_observations]
+* section[generalCheckup_questionnaire]
   * code 1..1 MS
   * code = $section_code_cs#01920 "問診結果セクション" (exactly) 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
-* section[specialCheckup_observations]
+* section[attachment]
   * code 1..1 MS
   * code = $section_code_cs#01995 "添付書類セクション" (exactly) 
   * entry 1..*
-  * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral or JP_Medica_eCheckupGeneral)
+  * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral or JP_Media_eCheckupGeneral)
 
 
 //検査結果セクション
@@ -223,7 +223,7 @@ and organizationReporter 1..1 MS
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
-  * entry only Reference(JP_Observation_Common_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 

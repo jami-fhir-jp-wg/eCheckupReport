@@ -3,9 +3,9 @@ Description: "meta.profileには、指定したプロファイルのURLの記述
 Severity: #error
 Expression: "meta.profile.where($this = 'http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral').exists()"
 
-Profile: JP_Bundle_eCheckupGeneral
+Profile: JP_Bundle_CLINS_eCheckupGeneral
 Parent: Bundle
-Id: JP-Bundle-eCheckupGeneral
+Id: JP-Bundle-clins-eCheckupGeneral
 Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信は別プロファイル）"
 
 * obeys bundle-clins-metaprofile
@@ -150,7 +150,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[observation].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[observation].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[observation].resource 1.. MS
-* entry[observation].resource only JP_Observation_Common_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral
+* entry[observation].resource only JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral
 * entry[observation].resource ^short = "リソースのインスタンス本体"
 * entry[observation].resource ^definition = "リソースのインスタンス本体。"
 * entry[observation].search ..0

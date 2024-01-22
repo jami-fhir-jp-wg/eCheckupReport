@@ -52,7 +52,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * policyHolder ..0
 * subscriber ..0
 * subscriberId 0..1 MS
-  ^short = "被保険者記号と番号を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。ルール：\"{被保険者記号}\",\"{被保険者番号}\""
+  * ^short = "被保険者記号と番号を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。ルール：\"{被保険者記号}\",\"{被保険者番号}\""
 * beneficiary MS
 * beneficiary ^short = "被給付者情報"
 * beneficiary ^definition = "この保険で給付される患者情報（Patientリソース）へのリテラル参照"
@@ -111,7 +111,7 @@ Description:    "健診結果報告書　Coverageリソース  受診券等サ�
 * type = urn:oid:1.2.392.200119.6.208#1
 * subscriberId 1..1 MS  // 受診券番号文字列
 * subscriberId ^short = "受診券番号"
-* beneficiary only Reference(JP_Patient_eCheckupGeneral)
+* beneficiary only Reference(JP_Patient_eCS)
   * ^short = "この保険で給付される受診者情報（Patientリソース）へのリテラル参照。"
   * reference 1..1 MS
     * ^short = "PatientリソースのfullUrl要素に指定されるUUIDを指定。"

@@ -41,7 +41,7 @@ Description:    "健診結果報告書　Encounterリソース  実施情報"
 * status 1..1 MS
 * status = #finished
 
-* class 1..1 must
+* class 1..1 MS
 * class = http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category#checkup "健診"
 
 * serviceType 0..1 MS
@@ -55,7 +55,7 @@ Description:    "健診結果報告書　Encounterリソース  実施情報"
   * start 1..1 MS 
   * end 1..1 MS
 
-* serviceProvider only Reference(JP_OrganizationExcuter_eCheckupGeneral)
+* serviceProvider only Reference(JP_Organization_eCheckupGeneral)
   * ^short = "検診実施機関"
   * ^definition = "検診実施機関を表すOrganizationリソースへの参照。"
   * reference 1..1 MS

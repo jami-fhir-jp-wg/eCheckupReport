@@ -6,9 +6,14 @@ Alias: $jlac10_specimen_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-sp
 Alias: $jlac10_specimen_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/jlac10-specimen-codes
 Alias: $specialCheckup_observations_cs = urn:oid:1.2.392.200119.6.1005  //特定健診項目コード表
 
+Alias: $JP_Patient_CLINS_eCS = http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCS
+Alias: $JP_Patient_eCS = http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS
+Alias: $JP_eCS_Department = http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_Department
+Alias: $JP_eCS_InstitutionNumber = http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber
+Alias: $JP_InstitutionNumber = http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no
 
 // 検査項目コード
-$JP_ObservationCode_eCheckupGeneral_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
+Alias: $JP_ObservationCode_eCheckupGeneral_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
 
 //文書の種類
 Alias: $doctype_codes_cs = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes

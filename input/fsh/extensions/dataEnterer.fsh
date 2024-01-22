@@ -1,4 +1,4 @@
-Extension: composition_dataEnterer
+Extension: Composition_dataEnterer
 Id: composition-dataEnterer
 Description: "データ転記者の情報を記述する拡張"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/composition_dataEnterer"

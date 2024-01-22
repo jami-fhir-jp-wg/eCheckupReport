@@ -12,9 +12,6 @@ Id: JP-Patient-CLINS-eCS
 Title: "CLINS電子カルテ情報共有サービス用:JP_Patient_CLINS_eCS"
 Description: "CLINS 電子カルテ共有サービス用: Patientリソース（患者情報）プロファイル。JP_Patient_eCSからの派生プロファイル。"
 
-* extension contains JP_eCS_InstitutionNumber named eCS_InstitutionNumber ..1 MS
-* extension[eCS_InstitutionNumber] 1..1 MS
-
 * ^url = $JP_Patient_CLINS_eCS
 * ^status = #active
 * ^date = "2023-10-15"
@@ -31,6 +28,9 @@ Description: "CLINS 電子カルテ共有サービス用: Patientリソース（
 * obeys valid-system-insurance-patientIdentifier
 * obeys valid-value-insurance-patientIdentifier
 
+* extension contains JP_eCS_InstitutionNumber named eCS_InstitutionNumber ..1 MS
+* extension[eCS_InstitutionNumber] 1..1 MS
+  * url = $JP_eCS_InstitutionNumber (exactly)
 
 //* obeys institurionNumber
 

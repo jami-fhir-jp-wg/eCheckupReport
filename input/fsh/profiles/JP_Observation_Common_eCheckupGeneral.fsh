@@ -1,4 +1,4 @@
-Profile:        JP_Observation_Common_eCheckupGeneral 
+Profile:        JP_Observation_eCheckupGeneral 
 Parent:         JP_Observation_Common
 Id:             JP-Observation-eCheckupGeneral
 //Title:          "健診結果報告書　Observationリソース　検査項目情報"
@@ -21,19 +21,19 @@ Description:    "健診結果報告書　Observationリソース　検査項目�
 * partOf 0..0
 * status ^definition = "結果値の状態。"
 * status 1..1 MS
-* status = $final
+* status = #final
 * category 0..1 MS
-  * short = "検査項目の区分を表すカテゴリコード"
-  * definition = "コード体系” http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS”から、健診項目にあったカテゴリを指定する。検査項目ごとに適切なカテゴリを設定できないことも多いので、すべて"exam"としておいても差し支えない。category自体の記述を省略してもよい。"
-* category from from JP_SimpleObservationCategory_VS
+  * ^short = "検査項目の区分を表すカテゴリコード"
+  * ^definition = "コード体系\"http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS\"から、健診項目にあったカテゴリを指定する。検査項目ごとに適切なカテゴリを設定できないことも多いので、すべて\"exam\"としておいても差し支えない。category自体の記述を省略してもよい。"
+//* category from from http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS 親プロファイルに記述済み
 * code 1..1 MS
   * ^short = "検査項目を表す識別IDと検査名称の情報。コード化されていること。必須項目。"
   * ^definition = "厚労省標準である臨床検査項目コード（JLAC10準拠）の場合：\"urn:oid:1.2.392.200119.4.504\"、厚労省特定健診項目コードに完全準拠したコードを使用する場合：\"urn:oid:1.2.392.200119.6.1005\"、自治体検診項目コードに完全準拠したコードを使用する場合：\"urn:oid:1.2.392.100495.100.1051\""
 * code from $JP_ObservationCode_eCheckupGeneral_vs
 * subject 1..1 MS
-* subject only Reference(JP_Patient_eCheckupGeneral)
+* subject only Reference(JP_Patient_eCS)
 * subject ^definition = "健診／検診対象者情報。必須項目。"
-* effective[x] 1.1 MS
+* effective[x] 1..1 MS
 * effective[x] ^definition = "検体検査の場合は、検体採取日時。"
 * effective[x] ^comment = "このプロファイルでは、健診実施日時または検体採取日時を設定し、必須とする。"
 * effective[x] only dateTime 
@@ -42,14 +42,14 @@ Description:    "健診結果報告書　Observationリソース　検査項目�
 * performer ^definition = "検査値を確認した責任者。検査を実施者として、医師の診断の診断者を表すために使用する。"
 * performer ^comment = "医師の診断項目の診断者を表すPractitionerリソースへの参照"
 
-* value 0..1 MS 
+* value[x] 0..1 MS 
 * value[x] only Quantity or CodeableConcept or string
 * valueCodeableConcept.coding.extension 0..1
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.type = #value
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.path = "url"
 * valueCodeableConcept.coding.extension  ^slicing.rules = #open
 * valueCodeableConcept.coding.extension  contains http://hl7.org/fhir/StructureDefinition/ordinalValue named ordinalValue 0..1
-* valueCodeableConcept.coding.extension [ordinalValue] ^short = "CO型の順序付きコードを使用する場合に使用する拡張"
+* valueCodeableConcept.coding.extension  ^short = "CO型の順序付きコードを使用する場合に使用する拡張"
 
 * dataAbsentReason 0..1 MS
 * dataAbsentReason ^definition = "検査結果値が欠落している理由。"
@@ -59,12 +59,12 @@ Description:    "健診結果報告書　Observationリソース　検査項目�
 * interpretation ^short = "H:High, L:low, N:normal, LX:入力下限以下、HX:入力上限以上"
 
 * note 0..1 MS 
-  * short = "自由記載のコメント"
+  * ^short = "自由記載のコメント"
 
 * method 0..1
-  * method.coding.system = "urn:oid:1.2.392.200119.6.1007"
+  * coding.system = "urn:oid:1.2.392.200119.6.1007"
 * specimen 0..1
-  * reference.type = "specimen"
+  * type = "specimen"
   * display 1..1
 
 * referenceRange 0..1
@@ -73,10 +73,10 @@ Description:    "健診結果報告書　Observationリソース　検査項目�
 * referenceRange.low 0..1
 * referenceRange.high 0..1
 
-//* hasMember only Reference(JP_Observation_Common_eCheckupGeneral)
+//* hasMember only Reference(JP_Observation_eCheckupGeneral)
 * hasMember 0..0
 * derivedFrom only Reference(JP_Media_eCheckupGeneral)
-* componnt 0..1 MS
+* component 0..1 MS
   * ^short = "対応する所見（解釈など）を記述する項目"
   * ^definition = "所見型の健診項目（「所見の有無」項目）のconponent要素として所見詳細を記述する場合に使用する。" 
   * code 1..1 MS
@@ -127,20 +127,20 @@ Description:    "健診・検診結果報告書　ObservationGroupリソースGr
 * partOf 0..0
 * status ^definition = "結果値の状態。"
 * status 1..1 MS
-* status = $final
+* status = #final
 * category 0..0
 * code 1..1 MS
   * ^short = "検査グループ項目を表す識別IDと検査名称の情報。コード化されていること。必須項目。"
 * subject 1..1 MS
-* subject only Reference(JP_Patient_eCheckupGeneral)
+* subject only Reference(JP_Patient_eCS)
 * subject ^definition = "健診／検診対象者情報。必須項目。"
-* effective[x] 1.1 MS
+* effective[x] 1..1 MS
 * effective[x] ^definition = "検体検査の場合は、検体採取日時。"
 * effective[x] ^comment = "健診実施日時または検体採取日時を設定し、必須とする。"
 * effective[x] only dateTime 
 * performer 0..0 
 
-* value 0..0
+* value[x] 0..0
 * dataAbsentReason 0..0
 * interpretation 0..0
 * note 0..0
@@ -148,7 +148,7 @@ Description:    "健診・検診結果報告書　ObservationGroupリソースGr
 * specimen 0..0
 * referenceRange 0..0
 * hasMember 0..* MS
-* hasMember only Reference(JP_Observation_Common_eCheckupGeneral)
+* hasMember only Reference(JP_Observation_eCheckupGeneral)
   * ^short = "健診項目グループを表現する場合に、グループ内の健診項目に対応するObservationリソースへの参照。"
   * reference 1..1 MS
     * ^short = "Observationリソースへの参照。"
