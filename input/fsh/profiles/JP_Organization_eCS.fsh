@@ -5,7 +5,7 @@ Id: JP-Organization-eCS
 Title: "JP_Organization_eCS"
 Description: "健診結果報告書　診療情報コアサマリー用　Organizationリソース（医療機関等組織情報）プロファイル　（JP_Organizationの派生プロファイル）"
 //* obeys checkPhoneNumberExists
-* ^url = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
+* ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eClinicalSummary"
 * ^status = #active
 * ^date = "2023-03-31"
 * . ^short = "診療情報コアサマリーにおける検体検査結果の格納に使用する"
