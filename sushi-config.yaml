@@ -9,14 +9,14 @@ name: "健診結果報告FHIR実装ガイド ドラフト版"
 title: "健診結果報告FHIR実装ガイド"
 description: "健診結果報告FHIR実装ガイド eCheckupReport Implementation Guide"
 status: draft # draft | active | retired | unknown
-version: 0.9.0
+version: 1.1.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html 
 copyrightYear: 2023+
 releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: 大江和彦（東京大学医学部附属病院企画情報運営部）Kazuhiko Ohe@JAMI/HL7Japan,JAMI NeXEHRS Research Group, and The University of Tokyo
+  name: 大江和彦（東京大学医学部附属病院企画情報運営部）Kazuhiko Ohe@JAMI/HL7Japan, and The University of Tokyo
   url: http://jpfhir.jp
   email: office@hlfhir.jp
 copyright: Copyright JAMI 
@@ -44,6 +44,10 @@ pages:
 menu:
   Home:
     本文: index.html
+    プロファイル: artifacts.html
+    改訂履歴: history.html
+  Artifacts: 
+    Artifacts: artifacts.html
 
 #-----------------------------------------
 # IG 外部パラメータ設定
