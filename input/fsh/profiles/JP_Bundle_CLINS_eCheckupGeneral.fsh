@@ -45,6 +45,7 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 and patient 1..1 MS  //  受診者情報
 and organization  1..4 MS // 必須：作成組織、実施機関（同一のことあり）、任意：管理責任機関、転記機関
 and practitioner 1..2 MS // 必須：作成者、任意：転記者
+and practitionerRole 0..1 MS // 転記者機関
 and encounter 1..1 MS // 実施情報
 and coverage  0..2 MS // 受診券情報、保険・自費情報
 and observation 0..* MS // 検査結果、検査グループ
@@ -71,7 +72,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[patient].fullUrl ^short = "埋め込まれているPatientリソースを一意に識別するためのUUID"
 * entry[patient].fullUrl ^definition = "埋め込まれているPatientリソースを一意に識別するためのUUID。"
 * entry[patient].resource 1.. MS
-* entry[patient].resource only JP_Patient_eCheckupGeneral
+* entry[patient].resource only JP_Patient_CLINS_eCS
 * entry[patient].resource ^short = "Patientリソースのインスタンス本体"
 * entry[patient].resource ^definition = "Patientリソースのインスタンス本体。"
 * entry[patient].search ..0
@@ -84,7 +85,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[organization].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[organization].resource 1.. MS
-* entry[organization].resource only  JP_OrganizationReporter_eCheckupGeneral or JP_OrganizationTranscriptor_eCheckupGeneral or JP_OrganizationCustodian_eCheckupGeneral or JP_OrganizationExcuter_eCheckupGeneral
+* entry[organization].resource only  JP_Organization_eCheckupGeneral
 * entry[organization].resource ^short = "リソースのインスタンス本体"
 * entry[organization].resource ^definition = "リソースのインスタンス本体。"
 * entry[organization].search ..0
@@ -97,12 +98,25 @@ and documentReference 0..* MS // 添付文書情報
 * entry[practitioner].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[practitioner].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[practitioner].resource 1.. MS
-* entry[practitioner].resource only  JP_PractitionerReporter_eCheckupGeneral or JP_PractitionerTranscriptor_eCheckupGeneral
+* entry[practitioner].resource only  JP_Practitioner_eCheckupGeneral
 * entry[practitioner].resource ^short = "リソースのインスタンス本体"
 * entry[practitioner].resource ^definition = "リソースのインスタンス本体。"
 * entry[practitioner].search ..0
 * entry[practitioner].request ..0
 * entry[practitioner].response ..0
+
+* entry[practitionerRole] ^short = "転記機関情報"
+* entry[practitionerRole] ^definition = "転記機関情報"
+* entry[practitionerRole].fullUrl 1.. MS
+* entry[practitionerRole].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
+* entry[practitionerRole].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
+* entry[practitionerRole].resource 1.. MS
+* entry[practitionerRole].resource only  JP_Practitioner_eCheckupGeneral
+* entry[practitionerRole].resource ^short = "リソースのインスタンス本体"
+* entry[practitionerRole].resource ^definition = "リソースのインスタンス本体。"
+* entry[practitionerRole].search ..0
+* entry[practitionerRole].request ..0
+* entry[practitionerRole].response ..0
 
 * entry[encounter] ^short = "健診実施情報"
 * entry[encounter] ^definition = "健診実施情報（実施日時、実施機関、受診形態など）"
