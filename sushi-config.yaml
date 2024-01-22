@@ -86,19 +86,32 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   no-validate:
     - '*/hl7.fhir.jp.core'
   special-url:
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Bundle_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Composition_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Coverage_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_DiagnosticReport_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_DocumentReference_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Encounter_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Media_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Observation_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Observation_eCheckupReport_Group
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Organization_eCheckupReport_Insurer
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Organization_eCheckupReport_Provider
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Patient_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Practitioner_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_PractitionerRole_eCheckupReport
-    - http://jpfhir.jp/fhir/eCheckupReport/StructureDefinition/JP_Specimen_eCheckupReport
+    - http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageInsurance_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageService_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_DiagnosticReport_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_DocumentReference_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Media_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_Commmon_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral
+    - http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_Organization_eCS_coveragePayer
+    - http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationInsurer_eCheckupGeneral
+    - http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCS
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerRole_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Specimen_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event
+    - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Checkup_Fee_Collection_Status
+    - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Fiscal_Year_At_Primary_Checkup
+    - http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
+    - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/composition_dataEnterer
+    - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_Department
+    - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber
+
      
