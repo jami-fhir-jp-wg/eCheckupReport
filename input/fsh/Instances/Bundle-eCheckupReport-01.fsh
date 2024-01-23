@@ -42,7 +42,9 @@ Description: "Bundle 健診検査結果報告書　サンプル０１"
 * entry[+].fullUrl = "urn:uuid:01b972fc-5183-8fa4-0954-10a7c5f5a36e"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-15
 * entry[+].fullUrl = "urn:uuid:785fcd39-8c25-4e6d-53bc-a2f8055fd110"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-16
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-16-1
+* entry[+].fullUrl = "urn:uuid:f8fffea8-5c47-8ab2-b24a-21cd1e929723"
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-16-2
 * entry[+].fullUrl = "urn:uuid:88134c9e-2016-d460-a3c8-417615b0065b"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-17
 * entry[+].fullUrl = "urn:uuid:397dd498-07ed-49ce-3e43-2ee1c7db42aa"
