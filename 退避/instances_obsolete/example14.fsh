@@ -1,5 +1,5 @@
 Instance: example14
-InstanceOf: Observation
+InstanceOf: JP_Observation_eCheckupGeneral
 Usage: #example
 Description: "例14 Mediaリソース_健診項目画像参照 記述例"
 * text.status = #generated

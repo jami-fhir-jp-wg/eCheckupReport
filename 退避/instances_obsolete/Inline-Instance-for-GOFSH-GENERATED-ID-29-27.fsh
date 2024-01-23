@@ -1,5 +1,5 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-29-27
-InstanceOf: Observation
+InstanceOf: JP_Observation_eCheckupGeneral
 Usage: #inline
 * status = #final
 * category = $observation-category#exam

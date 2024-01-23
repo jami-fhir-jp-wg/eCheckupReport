@@ -1,5 +1,5 @@
 Instance: example12
-InstanceOf: Observation
+InstanceOf: JP_Observation_eCheckupGeneral
 Usage: #example
 Description: "例12 Observationリソース_健診項目_未実施記述例"
 * text.status = #generated
