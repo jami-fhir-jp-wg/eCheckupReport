@@ -2,10 +2,10 @@ Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-7
 InstanceOf: JP_CoverageInsurance_eCheckupGeneral
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
-* meta.profile = $JP_Coverage_InsuredPersonSymbol$JP_Coverage_InsuredPersonSymbol
+* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Coverage_eCheckupGeneral_insurance"
 * extension[0].url = $JP_Coverage_InsuredPersonSymbol
 * extension[=].valueString = "１２３４５"
-* extension[+].url = $JP_Coverage_InsuredPersonNumbers
+* extension[+].url = $JP_Coverage_InsuredPersonNumber
 * extension[=].valueString = "６７８９０"
 * extension[+].url = $JP_Coverage_InsuredPersonSubNumber
 * extension[=].valueString = "０１"
