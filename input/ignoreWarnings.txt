@@ -13,6 +13,9 @@
 # Example Existence Warnings
 %The Implementation Guide contains no examples%
 
+# Reference to draft CodeSystem 
+Reference to draft CodeSystem%
+
 # Best Practice  Warnings
 %Best Practice Recommendation%
 

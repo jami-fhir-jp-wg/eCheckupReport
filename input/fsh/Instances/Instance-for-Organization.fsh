@@ -5,7 +5,7 @@ Description: "Organizationリソースのサンプル（健診実施機関など
 
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral"
-* identifier.system = "urn:oid:1.2.392.200119.6.102"
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no"
 * identifier.value = "1311234567"
 * type = $organization-type#prov
 * name = "厚生労働省第一病院"

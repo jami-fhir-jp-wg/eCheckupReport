@@ -6,3 +6,5 @@ Description:    "健診結果報告書　Organizationリソース 保険者組�
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationInsurer_eCheckupGeneral"
 * ^status = #active
 
+
+
