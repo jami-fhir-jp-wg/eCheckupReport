@@ -4,7 +4,7 @@
 CodeSystem: ECheckup_codeSystem_tichetCategory
 Id: eCheckup-codeSystem-rtichetCategory
 Description: "受診券券面種別コード"
-* ^url = "1.2.392.200119.6.208"
+* ^url = "urn:oid:1.2.392.200119.6.208"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = false
@@ -746,7 +746,7 @@ Description: "特定健診検査項目コード"
 CodeSystem: SpecialCheckup_LaboMethod_CS
 Id: specialCheckup-laboMethod-cs
 Description: "特定健診検査方法コード"
-* ^url = "1.2.392.200119.6.1007"
+* ^url = "urn:oid:1.2.392.200119.6.1007"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -840,7 +840,7 @@ Description: "特定健診検査方法コード"
 CodeSystem: SpecialCheckup_choice_1008_CS
 Id: specialCheckup-choice-1008-cs
 Description: "特定健診　メタボリックシンドローム判定コード"
-* ^url = "1.2.392.200119.6.1008"
+* ^url = "urn:oid:1.2.392.200119.6.1008"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -853,7 +853,7 @@ Description: "特定健診　メタボリックシンドローム判定コード
 CodeSystem: SpecialCheckup_choice_18030_CS
 Id: specialCheckup-choice-18030-cs
 Description: "特定健診　咀嚼コード"
-* ^url = "1.2.392.200119.6.10030"
+* ^url = "urn:oid:1.2.392.200119.6.10030"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -866,7 +866,7 @@ Description: "特定健診　咀嚼コード"
 CodeSystem: SpecialCheckup_choice_18040_CS
 Id: specialCheckup-choice-18040-cs
 Description: "特定健診　咀嚼コード"
-* ^url = "1.2.392.200119.6.18040"
+* ^url = "urn:oid:1.2.392.200119.6.18040"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -878,7 +878,7 @@ Description: "特定健診　咀嚼コード"
 CodeSystem: SpecialCheckup_choice_18050_CS
 Id: specialCheckup-choice-18050-cs
 Description: "特定健診　情報提供の方法コード"
-* ^url = "1.2.392.200119.6.18050"
+* ^url = "urn:oid:1.2.392.200119.6.18050"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -890,7 +890,7 @@ Description: "特定健診　情報提供の方法コード"
 CodeSystem: SpecialCheckup_choice_18060_CS
 Id: specialCheckup-choice-18060-cs
 Description: "特定健診　初回面接実施コード"
-* ^url = "1.2.392.200119.6.18060"
+* ^url = "urn:oid:1.2.392.200119.6.18060"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -900,7 +900,7 @@ Description: "特定健診　初回面接実施コード"
 CodeSystem: SpecialCheckup_choice_18080_CS
 Id: specialCheckup-choice-18080-cs
 Description: "特定健診　眼底検査（Wong-Mitchell分類）コード"
-* ^url = "1.2.392.200119.6.18080"
+* ^url = "urn:oid:1.2.392.200119.6.18080"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -913,7 +913,7 @@ Description: "特定健診　眼底検査（Wong-Mitchell分類）コード"
 CodeSystem: SpecialCheckup_choice_18090_CS
 Id: specialCheckup-choice-18090-cs
 Description: "特定健診　眼底検査（改変Davis分類）コード"
-* ^url = "1.2.392.200119.6.10090"
+* ^url = "urn:oid:1.2.392.200119.6.10090"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -926,7 +926,7 @@ Description: "特定健診　眼底検査（改変Davis分類）コード"
 CodeSystem: SpecialCheckup_choice_18100_CS
 Id: specialCheckup-choice-18100-cs
 Description: "特定健診　子宮頸部細胞診 (細胞診婦人科材料)(ベセスダシステム2001)）コード"
-* ^url = "1.2.392.200119.6.10100"
+* ^url = "urn:oid:1.2.392.200119.6.10100"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -945,7 +945,7 @@ Description: "特定健診　子宮頸部細胞診 (細胞診婦人科材料)(�
 CodeSystem: SpecialCheckup_choice_18120_CS
 Id: specialCheckup-choice-18120-cs
 Description: "特定健診　心電図(対象者）コード"
-* ^url = "1.2.392.200119.6.18120"
+* ^url = "urn:oid:1.2.392.200119.6.18120"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -957,7 +957,7 @@ Description: "特定健診　心電図(対象者）コード"
 CodeSystem: SpecialCheckup_choice_18130_CS
 Id: specialCheckup-choice-18130-cs
 Description: "特定健診　眼底検査（対象者）コード"
-* ^url = "1.2.392.200119.6.18130"
+* ^url = "urn:oid:1.2.392.200119.6.18130"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -968,7 +968,7 @@ Description: "特定健診　眼底検査（対象者）コード"
 CodeSystem: SpecialCheckup_choice_2001_CS
 Id: specialCheckup-choice-2001-cs
 Description: "特定健診　特記初見有無コード"
-* ^url = "1.2.392.200119.6.2001"
+* ^url = "urn:oid:1.2.392.200119.6.2001"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -979,7 +979,7 @@ Description: "特定健診　特記初見有無コード"
 CodeSystem: SpecialCheckup_choice_2002_CS
 Id: specialCheckup-choice-2002-cs
 Description: "特定健診　所見有無コード"
-* ^url = "1.2.392.200119.6.2002"
+* ^url = "urn:oid:1.2.392.200119.6.2002"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -992,7 +992,7 @@ Description: "特定健診　所見有無コード"
 CodeSystem: SpecialCheckup_choice_2003_CS
 Id: specialCheckup-choice-2003-cs
 Description: "特定健診　はい・いいえコード"
-* ^url = "1.2.392.200119.6.2003"
+* ^url = "urn:oid:1.2.392.200119.6.2003"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -1004,7 +1004,7 @@ Description: "特定健診　はい・いいえコード"
 CodeSystem: SpecialCheckup_choice_2004_CS
 Id: specialCheckup-choice-2004-cs
 Description: "特定健診　食べ方1(早食い等)コード"
-* ^url = "1.2.392.200119.6.2004"
+* ^url = "urn:oid:1.2.392.200119.6.2004"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -1017,7 +1017,7 @@ Description: "特定健診　食べ方1(早食い等)コード"
 CodeSystem: SpecialCheckup_choice_2007_CS
 Id: specialCheckup-choice-2007-cs
 Description: "特定健診　生活習慣の改善意志　コード"
-* ^url = "1.2.392.200119.6.2007"
+* ^url = "urn:oid:1.2.392.200119.6.2007"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -1032,7 +1032,7 @@ Description: "特定健診　生活習慣の改善意志　コード"
 CodeSystem: SpecialCheckup_choice_24040_CS
 Id: specialCheckup-choice-24040-cs
 Description: "特定健診　飲酒頻度　コード"
-* ^url = "1.2.392.200119.6.24040"
+* ^url = "urn:oid:1.2.392.200119.6.24040"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -1050,7 +1050,7 @@ Description: "特定健診　飲酒頻度　コード"
 CodeSystem: SpecialCheckup_choice_24050_CS
 Id: specialCheckup-choice-24050-cs
 Description: "特定健診　飲酒量　コード"
-* ^url = "1.2.392.200119.6.24050"
+* ^url = "urn:oid:1.2.392.200119.6.24050"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -1064,7 +1064,7 @@ Description: "特定健診　飲酒量　コード"
 CodeSystem: SpecialCheckup_choice_24060_CS
 Id: specialCheckup-choice-24060-cs
 Description: "特定健診　喫煙習慣　コード"
-* ^url = "1.2.392.200119.6.24060"
+* ^url = "urn:oid:1.2.392.200119.6.24060"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
