@@ -45,7 +45,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * value[x] 0..1 MS 
 * value[x] only Quantity or CodeableConcept or string
 * valueQuantity 0..1
-* valueSrting 0..1
+* valueString 0..1
 * valueCodeableConcept.coding.extension 0..1
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.type = #value
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.path = "url"
