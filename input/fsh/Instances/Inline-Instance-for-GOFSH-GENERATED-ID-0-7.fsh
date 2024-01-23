@@ -2,12 +2,12 @@ Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-7
 InstanceOf: JP_CoverageInsurance_eCheckupGeneral
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
-* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageInsurance_eCheckupGeneral"
-* extension[0].url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage_InsuredPersonSymbol"
+* meta.profile = $JP_Coverage_InsuredPersonSymbol$JP_Coverage_InsuredPersonSymbol
+* extension[0].url = $JP_Coverage_InsuredPersonSymbol
 * extension[=].valueString = "１２３４５"
-* extension[+].url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage_InsuredPersonNumber"
+* extension[+].url = $JP_Coverage_InsuredPersonNumbers
 * extension[=].valueString = "６７８９０"
-* extension[+].url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage_InsuredPersonSubNumber"
+* extension[+].url = $JP_Coverage_InsuredPersonSubNumber
 * extension[=].valueString = "０１"
 * identifier.value = "\"１２３４５\",\"６７８９０\",\"０１\""
 * status = #active
@@ -19,3 +19,4 @@ Usage: #inline
 * period.start = "2018-04-01"
 * period.end = "2025-03-31"
 * payor = Reference(urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750)
+

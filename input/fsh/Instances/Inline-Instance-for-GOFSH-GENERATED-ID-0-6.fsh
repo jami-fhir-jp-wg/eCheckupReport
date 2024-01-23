@@ -9,4 +9,4 @@ Usage: #inline
 * beneficiary = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * period.start = "2024-04-01"
 * period.end = "2025-03-31"
-* payor = Reference(7c9f9f7f-e546-0ac2-6828-a9e0b24e5750)
+* payor = Reference(urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750)
