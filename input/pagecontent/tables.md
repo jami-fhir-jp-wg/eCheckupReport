@@ -81,7 +81,7 @@ table th {
 | 3.1 |  | status |  |  | 1..1 | code | “generated” | 固定値。テキスト内容の全てがリソースのコンテンツから生成されたことを示す。 | 
 | 3.2 |  | div |  |  | 1..1 | xhtml | <div xmlns="http://www.w3.org/1999/xhtml">xxx</div> | 値は例示。 | 
 | 4 | extension |  |  |  | 0..1 | Extension |  | 健診結果報告書の文書バージョンを表す拡張「composition-clinicaldocument-versionNumber」。 | 
-| 4.1 |  | url |  |  | 1..1 | uri | “http:// hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber” | 拡張を識別するURL。固定値。 | 
+| 4.1 |  | url |  |  | 1..1 | uri | “http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/composition-clinicaldocument-versionNumber” | 拡張を識別するURL。固定値。 | 
 | 4.2 |  | valueString |  |  | 1..1 | string | “1.0” | 文書のバージョン番号を表す文字列。値は例示。 | 
 | 5 | identifier |  |  |  | 0..1 | Identifier |  | このリソースの識別ID。実装に応じた検診結果報告書IDを記述する。 | 
 | 5.1 |  | system |  |  | 1..1 | uri | "urn:oid:1.2.392.100495.100.1.11311234567" | 検診結果報告書IDの名前空間を表すURI。値は例示。 | 

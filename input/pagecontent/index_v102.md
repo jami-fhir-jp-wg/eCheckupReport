@@ -291,7 +291,7 @@ FHIR健診結果報告書規格に従い、実装に応じた検診結果報告�
 ```JSON
 "extension": [
   {
-    "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+    "url": "http://hl7.org/fhir/Common/StructureDefinition/composition-clinicaldocument-versionNumber",
     "valueString": "1.0"
   }
 ],
@@ -301,7 +301,7 @@ FHIR健診結果報告書規格に従い、実装に応じた検診結果報告�
 ```JSON
 "extension": [
   {
-    "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+    "url": "http://hl7.org/fhir/Common/StructureDefinition/composition-clinicaldocument-versionNumber",
     "valueString": "2.0"
   }
 ],

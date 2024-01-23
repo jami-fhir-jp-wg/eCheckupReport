@@ -375,7 +375,7 @@ coding.code要素には　"53576-5"　を用いる。coding.system要素は"http
 ```
 "extension": [
     {
-        "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+        "url": "http://hl7.org/fhir/Common/StructureDefinition/composition-clinicaldocument-versionNumber",
         "valueString": "1.10"
     }
 ]
@@ -386,7 +386,7 @@ coding.code要素には　"53576-5"　を用いる。coding.system要素は"http
 ```
 "extension": [
     {
-        "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+        "url": "http://hl7.org/fhir/Common/StructureDefinition/composition-clinicaldocument-versionNumber",
         "valueString": "2.0"
     }
 ]
