@@ -8,7 +8,7 @@ Description:    "健診結果報告書　Encounterリソース  実施情報"
 
 * status 1..1 MS
 * status = #finished
-
+/*
 * class 1..1 MS
 * class = http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category#checkup "健診"
 
@@ -27,4 +27,4 @@ Description:    "健診結果報告書　Encounterリソース  実施情報"
   * ^short = "検診実施機関"
   * ^definition = "検診実施機関を表すOrganizationリソースへの参照。"
   * reference 1..1 MS
-
+*/

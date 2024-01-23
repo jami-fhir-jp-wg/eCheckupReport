@@ -16,7 +16,7 @@ releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | relea
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: 大江和彦（東京大学医学部附属病院企画情報運営部）Kazuhiko Ohe@JAMI/HL7Japan, and The University of Tokyo, HL7
+  name: Kazuhiko Ohe@JAMI/HL7Japan, and The University of Tokyo, and HL7 International
   url: http://jpfhir.jp
   email: office@hlfhir.jp
 copyright: Copyright JAMI 
