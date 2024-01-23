@@ -13,7 +13,7 @@ Usage: #inline
 * status = #active
 * type = urn:oid:1.2.392.100495.20.2.61#1
 * subscriberId = "\"１２３４５\",\"６７８９０\""
-* beneficiary = Reference(urn:uuid:1af0a9a6-a91d-3aef-fc4e-069995b89c4f)
+* beneficiary = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * dependent = "０１"
 * relationship = urn:oid:1.2.392.100495.20.2.62#1 "被保険者"
 * period.start = "2018-04-01"
