@@ -78,7 +78,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 //* hasMember only Reference(JP_Observation_eCheckupGeneral)
 * hasMember 0..0
 * derivedFrom only Reference(JP_Media_eCheckupGeneral)
-* component 0..1 MS
+* component 0..* MS
   * ^short = "対応する所見（解釈など）を記述する項目"
   * ^definition = "所見型の健診項目（「所見の有無」項目）のconponent要素として所見詳細を記述する場合に使用する。" 
   * code 1..1 MS
