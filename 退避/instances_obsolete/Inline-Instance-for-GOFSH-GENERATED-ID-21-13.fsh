@@ -1,5 +1,5 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-21-13
-InstanceOf: Observation
+InstanceOf: JP_Observation_eCheckupGeneral
 Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup"
 * status = #final
