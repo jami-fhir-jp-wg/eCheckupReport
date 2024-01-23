@@ -109,7 +109,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Checkup_Fee_Collection_Status
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Fiscal_Year_At_Primary_Checkup
-    - http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
+    - http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/composition-clinicaldocument-versionNumber
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/composition_dataEnterer
     - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_Department
     - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber
