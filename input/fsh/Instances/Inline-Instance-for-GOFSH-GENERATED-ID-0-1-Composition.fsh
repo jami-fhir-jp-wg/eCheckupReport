@@ -57,8 +57,8 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:38f45298-ea42-9f15-7fb2-48ed899d3ab6)
 * section[=].entry[+] = Reference(urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc)
 
-* section[+].title = "問診セクション"
-* section[=].code = $section_code_cs#01012 "特定健診問診セクション"
+* section[+].title = "問診結果セクション"
+* section[=].code = $section_code_cs#01012 "特定健診問診結果セクション"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>問診結果</p></div>"
 * section[=].entry[0] = Reference(urn:uuid:71fcdecc-1331-9067-f5b2-24d6ba5eecda)
