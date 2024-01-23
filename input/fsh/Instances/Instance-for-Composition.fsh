@@ -6,8 +6,9 @@ Description: "Compositionリソースのサンプル"
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * language = #ja
-* extension.url = "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/composition-clinicaldocument-versionNumber"
-* extension.valueString = "1.0"
+* extension[0].url = "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/composition-clinicaldocument-versionNumber"
+* extension[=].valueString = "1.0"
+
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "12345"
 * status = #final

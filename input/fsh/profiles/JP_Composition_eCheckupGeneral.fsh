@@ -17,8 +17,8 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension contains $composition-clinicaldocument-versionNumber named version 1..1
- and http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/composition_dataEnterer named dataEnterer 0..1
+* extension contains Composition_clinicaldocument_versionNumber named version 1..1
+ and Composition_dataEnterer named dataEnterer 0..1
 
 * extension[version] ^short = "文書バージョンを表す拡張"
 * extension[version] 1..1 MS
