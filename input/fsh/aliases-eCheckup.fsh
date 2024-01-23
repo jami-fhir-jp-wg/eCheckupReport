@@ -1,6 +1,7 @@
 Alias: $narrative_cs = http://hl7.org/fhir/narrative-status
-Alias: $composition-clinicaldocument-versionNumber = http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/composition-clinicaldocument-versionNumber
-
+//Alias: $composition-clinicaldocument-versionNumber = http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/composition-clinicaldocument-versionNumber
+Alias: $composition-clinicaldocument-versionNumber = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
+Alias: $composition-clinicaldocument-dataEnterer = http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/composition_dataEnterer
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $jlac10_specimen_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-specimen-codes
 Alias: $jlac10_specimen_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/jlac10-specimen-codes
