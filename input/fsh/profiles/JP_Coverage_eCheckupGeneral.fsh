@@ -63,7 +63,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * dependent ^definition = "被保険者証記号・番号に対する個人単位被保険者番号（枝番）。桁数が2桁に満たない場合は、先頭に"0"を記録し2桁で記録する。\r\n被保険者番号の枝番を記述する拡張要素と同一の値を記述すること。"
 * dependent MS
 * relationship 1.. MS
-* relationship.coding 1..1 MS
+* relationship.coding 1.. MS
 * relationship.coding.system = "urn:oid:1.2.392.100495.20.2.62" (exactly)
 * relationship.coding.system ^short = "コード体系を識別するURI"
 * relationship.coding.system ^definition = "被保険者区分コードのコード体系を識別するURI。厚生労働省電子処方箋 CDA 記述仕様第１版　別表１２のOID"
