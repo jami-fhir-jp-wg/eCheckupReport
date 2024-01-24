@@ -2,7 +2,7 @@
 
 ### 健診結果報告書Bundleリソースデータとその構成リソースデータのValidation方法について
 
-ここでの Validationとは、本仕様(JP eChekcupReport IG)にもとづいて作成されたデータファイル（JSON形式）が、仕様の各Profile に準拠しているかをFHIR公式Validatorを使用して検証することである。健診結果報告書Bundleリソースデータ全体の１ファイルを検証することもできるが、Bundleリソースに埋め込まれるこ個々の構成リソースデータ（たとえば、ひとつのObservationリソースデータ）のファイルだけを検証することもできる。
+ここでの Validationとは、本仕様(JP eCheckcupReport IG)にもとづいて作成されたデータファイル（JSON形式）が、仕様の各Profile に準拠しているかをFHIR公式Validatorを使用して検証することである。健診結果報告書Bundleリソースデータ全体の１ファイルを検証することもできるが、Bundleリソースに埋め込まれるこ個々の構成リソースデータ（たとえば、ひとつのObservationリソースデータ）のファイルだけを検証することもできる。
 
 Validationの具体的手順と、出力の解釈方法について説明する。ただし、対象となるデータにあるさまざまなエラーや多様な記述方法によって、出力されるメッセージは多岐にわたるため、ここではその一部の例を示すに過ぎない。
 
@@ -16,7 +16,7 @@ Validationの具体的手順と、出力の解釈方法について説明する�
     - zip形式 : https://jpfhir.jp/fhir/clins/pkgValidation/fhir-core-pkg.zip （42MB）
     - tgz形式 : https://jpfhir.jp/fhir/clins/pkgValidation/fhir-core-pkg.tgz （28MB）
 
-#####  ダウンロードしたCLINS検証用FHIRコアパッケージを、適当なフォルダ内で解凍する。
+#####  ダウンロードした検証用FHIRコアパッケージを、適当なフォルダ内で解凍する。
 
 
   　 - fhir-core-pkgs-<span style="color: blue;">20231111-forV6.1.8-20230921</span> のような名前のフォルダが作成される。青字の部分はダウンロード時期により異なる。その中にpackagesフォルダが作成され、packagesフォルダ配下は以下のようなフォルダ構成になっていることを確認する。各フォルダ内にはさらにフォルダやファイルが存在するがここでは省略する。packageフォルダ内のフォルダ名や数は、ダウンロード時期による異なることがあるので、下図は一例である。
@@ -56,12 +56,12 @@ Validationの具体的手順と、出力の解釈方法について説明する�
 #####  Validation作業を行う起点となる作業フォルダを用意する。
 ここでは [vwork] と書く。次に [vwork] 直下に、以下の３つのフォルダを作成する。フォルダ名は自由だが、ここでは以下のように　 [xxxx] 　と記載する。
 
-  -  CLINS検証用パッケージを配置するフォルダ [pkgClins]
+  -  jp検証パッケージを配置するフォルダ [pkgJp]
   -  検証対象となるJONSファイルを配置するフォルダ [targets]
   -  公式validatorのjarファイルを配置するフォルダ [prog]
 
 
-#####  CLINS検証用パッケージ群を [pkgClins] 直下にダウンロードする。
+#####  jp検証パッケージを [pkgJp] 直下にダウンロードする。
 
 以下の３つのパッケージをOS種別にかかわらずダウンロードしする。(Windowsの場合も拡張子tgzのファイル）。ダウンロード後の解凍はしない。なお、ファイル名中のr4-x.x.xのバージョン番号部分はダウンロード時期により異なる。
 
@@ -73,9 +73,9 @@ Validationの具体的手順と、出力の解釈方法について説明する�
       
     - tgz形式 : [https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.1.1.tgz](https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.1.1.tgz)
  　 
-  - jp-clins.r4　パッケージ
+  - jp-eCheckupReport.r4　パッケージ
       
-    - tgz形式 : [https://jpfhir.jp/fhir/clins/jp-clins.r4-0.9.7.tgz](https://jpfhir.jp/fhir/clins/jp-clins.r4-0.9.7.tgz)
+    - tgz形式 : [https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.1.1.tgz](https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.1.1.tgz)
 
 #####  検証対象となる json形式のファイルをひとつ以上、[targets] 直下に配置する。
 
@@ -129,9 +129,9 @@ Validation の実行
       -level warnings   \
       -best-practice ignore \
       -tx n/a  \
-      -ig [pkgClins]/jp-core.r4-1.1.2.tgz  \
-      -ig [pkgClins]/jpfhir-terminology.r4-1.1.1.tgz  \
-      -ig [pkgClins]/jp-clins.r4-0.9.7.tgz  
+      -ig [pkgJp]/jp-core.r4-1.1.2.tgz  \
+      -ig [pkgJp]/jpfhir-terminology.r4-1.1.1.tgz  \
+      -ig [pkgJp]/jp-eCheckupReport.r4-1.1.1.tgz  
         
 ```
 
@@ -154,155 +154,11 @@ Validationコマンドのパラメータ説明
   - -display-issues-are-warnings : 標準コードに対応する表示文字列がCodeSystemに登録されているdisplayと違っている場合に、Errorにせず、警告にする設定オプション。さまざまな理由で表示の不一致はやむを得ないことが多いため、エラーにせず注意にとどめることにする。
   - -level warnings : 警告とErrorだけ出力し、参考情報は出力しない設定オプション。
   - -best-practice ignore : FHIR基底仕様においてベストプラクティスとされる推奨事項に違反している場合の警告を出さないオプション。
-  - -tx n/a ：　外部のTerminologyServer を参照しないよう設定するオプション。ここでの手順では、パッケージ [jpfhir-terminology-1.1.1]をロードしてローカルに配置しているので、外部のTerminologyServerへの参照は必要がない。
-  - -ig [pkgClins]/jp-core.r4-1.1.2.tgz : jp-core.r4 v1.1.2 のパッケージ。必須。これがないとjp-coreを参照する際にエラーになる。
-  - -ig [pkgClins]/jpfhir-terminology-1.1.1.tgz ： jp-core.r4、jp-clinsから参照されるterminologyのパッケージ。必須。これがないと日本版CodeSystemやValueSetを参照する際にエラーになる。このパッケージには、JLAC10、医薬品マスター、標準病名マスター、ICD10分類コード表なども含まれるので、定期的に適切なバージョンへのアプデートが必要である。
-  - -ig [pkgClins]/jp-clins.r4-0.9.7.tgz : 電子カルテ情報共有サービスで送信される６情報と、BundleリソースのValidationのためのプロファイル等を格納したパッケージ。必須。なお、３文書のパッケージは別にある。
+  - -tx n/a ：　外部のTerminologyServer を参照しないよう設定するオプション。ここでの手順では、パッケージ [jpfhir-terminology-1.1.1]をロードしてローカルに配置しているので、外部のTerminologyServerへの参照は必要がない。また異なるバージョンのものが自動的に利用されないようにこのオプションは必須。
+  - -ig [pkgJp]/jp-core.r4-1.1.2.tgz : jp-core.r4 v1.1.2 のパッケージ。必須。これがないとjp-coreを参照する際にエラーになる。
+  - -ig [pkgJp]/jpfhir-terminology-1.1.1.tgz ： jp-core.r4、jp-clinsから参照されるterminologyのパッケージ。必須。これがないと日本版CodeSystemやValueSetを参照する際にエラーになる。このパッケージには、JLAC10、医薬品マスター、標準病名マスター、ICD10分類コード表なども含まれるので、定期的に適切なバージョンへのアプデートが必要である。
+  - -ig [pkgJp]/jp-eCheckup.r4-1.1.1.tgz : ３文書のひとつである、健診結果報告書仕様に従ったBundleリソースのValidationのためのプロファイル等を格納したパッケージ。必須。
 
 ####  Validationの出力例の解説
 
-以下では、本IGに含まれる以下のサンプルファイルを対象に一括Validationを行った例を示す。
-  - JP-Condition-CLINS-eCS-01
-  - JP-Condition-CLINS-eCS-02
-  - JP-MedReq-ExtAnus-AsNeeded-Total1
-  - JP-MedReq-ExtSkin-Total2
-  - JP-MedReq-PO-BID-10days-AsNeeded
-  - Observation-ErrorExample-ObsLabo-eGFR
-  - Observation-Example-ObsLabo-Alb
-  - Observation-Example-ObsLabo-K
-  - Patient-standard-ErrorInsuranceNo
-  - Patient-standard
-
-これらのJSONファイルと [targets]フォルダ内に配置して　*.jsonを指定することにより実行する。
-
-実行コマンド例：
-
-``` {.copy} 
-java -jar ../work/validator_cli_6.1.8.jar ExampleJson/*.json -version 4.0.1  -language ja  \
- -ig pkgValidation/jp-core.r4#1.1.2.tgz -ig pkgValidation/jpfhir-terminology#1.1.1.tgz \
- -ig pkgValidation/jp-clins.r4-0.9.7-diff.tgz -locale ja-JP -tx n/a  -want-invariants-in-messages  \
- -no-extensible-binding-warnings  -display-issues-are-warnings   -level warnings  \
- -best-practice ignore
-```
-
-出力結果を、説明の便宜上、[環境準備フェーズ]、[対象ファイルValidation途中フェーズ]、[結果報告フェーズ]の３つのブロックに分けて示す。
-
-
-#####  環境準備フェーズ
-
-説明作成中
-
-
-```
-
-FHIR Validation tool Version 6.1.8 (Git# 8413995d8bcf). Built 2023-09-21T19:52:22.833Z (54 days old)
-  Java:   17.0.5 from /Library/Java/JavaVirtualMachines/jdk-17.0.5.jdk/Contents/Home on aarch64 (64bit). 4096MB available
-  Paths:  Current = /Users/kohe/clinsVTest, Package Cache = /Users/kohe/.fhir/packages
-  Params: Targets/Condition-Example-JP-Condition-CLINS-eCS-01.json Targets/Condition-Example-JP-Condition-CLINS-eCS-02.json Targets/MedicationRequest-Example-JP-MedReq-ExtAnus-AsNeeded-Total1.json Targets/MedicationRequest-Example-JP-MedReq-ExtSkin-Total2.json Targets/MedicationRequest-Example-JP-MedReq-PO-BID-10days-AsNeeded.json Targets/Observation-ErrorExample-ObsLabo-eGFR.json Targets/Observation-Example-ObsLabo-Alb.json Targets/Observation-Example-ObsLabo-K.json Targets/Patient-Example-Patient-standard-ErrorInsuranceNo.json Targets/Patient-Example-Patient-standard.json -version 4.0.1 -language ja -locale ja-JP -want-invariants-in-messages -no-extensible-binding-warnings -display-issues-are-warnings -level warnings -best-practice ignore -tx n/a -ig pkgClins/jp-core.r4-1.1.2.tgz -ig pkgClins/jpfhir-terminology.r4-1.1.1.tgz -ig pkgClins/jp-clins.r4-0.9.7.tgz
-  Locale: 日本/JP
-  Jurisdiction: Japan
-Loading
-  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1 - 4576 resources (00:03.302)
-  Load hl7.fhir.uv.extensions.r4#1.0.0 - 1328 resources (00:01.331)
-  Load hl7.terminology#5.3.0 - 4201 resources (00:00.704)
-  Load hl7.terminology.r5#5.0.0 - 4174 resources (00:00.566)
-  Load hl7.fhir.uv.extensions#1.0.0 - 1328 resources (00:00.840)
-  Terminology server null - Version n/a: No Terminology Server (00:00.000)
-  Load pkgClins/jp-core.r4-1.1.2.tgz - 159 resources (00:00.197)
-  Load pkgClins/jpfhir-terminology.r4-1.1.1.tgz - 175 resources (00:03.988)
-  Load pkgClins/jp-clins.r4-0.9.7.tgz - 148 resources (00:00.081)
-  Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.0.12, hl7.fhir.uv.extensions.r4#1.0.0, hl7.terminology#5.3.0, hl7.terminology.r5#5.0.0, hl7.fhir.uv.extensions#1.0.0]
-  Get set...  go (00:01.131)
-```
-
-#####  対象ファイルValidation途中フェーズ　
-
-
-説明作成中
-
-```
-
-Validating
-  Validate Targets/Condition-Example-JP-Condition-CLINS-eCS-01.json
-Validate Condition against http://hl7.org/fhir/StructureDefinition/Condition|4.0.1..........20..........40..........60..........80.........|
-Validate Condition against http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Condition_eCS..........20..........40..........60..........80..........100|
- 00:00.791
-   :
-  中略
-   :
-  Validate Targets/Patient-Example-Patient-standard.json
-Validate Patient against http://hl7.org/fhir/StructureDefinition/Patient|4.0.1..........20..........40..........60..........80.........|
-Validate Patient against http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCS..........20..........40..........60..........80..........100|
- 00:00.016
-Done. Times: Loading: 00:12.264, validation: 00:01.189 (#10). Memory = 1Gb
-
-```
-
-#####  結果報告フェーズ
-
-説明作成中
-
-
-```
-
--- ExampleJson/Condition-Example-JP-Condition-CLINS-eCS-01.json --------------------------------------------------------------------
-Success: 0 errors, 0 warnings, 1 notes
-  Information: すべてOK
-------------------------------------------------------------------------------------------------------------------------------------
-
--- ExampleJson/Condition-Example-JP-Condition-CLINS-eCS-02.json --------------------------------------------------------------------
-Success: 0 errors, 2 warnings, 0 notes
-  Warning @ Condition.code.coding[0] (line 104, col8): http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full#C169 の誤ったdisplay '胃の悪性新生物＜腫瘍＞，胃，部位不明' - 1 の選択肢のうちの一つであるべきです: '胃，部位不明' (言語 'ja' のため) for 'http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full#C169'
-  Warning @ Condition.code.coding[0] (line 104, col8): http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full#C169 の誤ったdisplay '胃の悪性新生物＜腫瘍＞，胃，部位不明' - 1 の選択肢のうちの一つであるべきです: '胃，部位不明' (言語 'ja' のため)
-------------------------------------------------------------------------------------------------------------------------------------
-
--- ExampleJson/MedicationRequest-Example-JP-MedReq-ExtAnus-AsNeeded-Total1.json ------------------------------------------------------------------------------------
-Success: 0 errors, 4 warnings, 0 notes
-  Warning @ MedicationRequest.medication.ofType(CodeableConcept).coding[0] (line 158, col8): urn:oid:1.2.392.200119.4.403.1#104937401 の誤ったdisplay '新レシカルボン坐剤' - 1 の選択肢のうちの一つであるべきです: '新レシカルボン坐剤・ゼリア新薬' (ja) (言語 'ja' のため) for 'urn:oid:1.2.392.200119.4.403.1#104937401'
-  Warning @ MedicationRequest.medication.ofType(CodeableConcept) (line 156, col4): urn:oid:1.2.392.200119.4.403.1#104937401 の誤ったdisplay '新レシカルボン坐剤' - 1 の選択肢のうちの一つであるべきです: '新レシカルボン坐剤・ゼリア新薬' (ja) (言語 'ja' のため)
-  Warning @ MedicationRequest.medication.ofType(CodeableConcept).coding[0] (line 158, col8): urn:oid:1.2.392.200119.4.403.1#104937401 の誤ったdisplay '新レシカルボン坐剤' - 1 の選択肢のうちの一つであるべきです: '新レシカルボン坐剤・ゼリア新薬' (ja) (言語 'ja' のため)
-  Warning @ MedicationRequest.medication.ofType(CodeableConcept).coding[1].system (line 165, col80): URL値 'http://jpfhir.jp/fhir/eCS/CodeSystem/DrugCode/19911234567' は解決できません
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
--- ExampleJson/MedicationRequest-Example-JP-MedReq-ExtSkin-Total2.json ---------------------------------------------------------------------------
-Success: 0 errors, 1 warnings, 0 notes
-  Warning @ MedicationRequest.medication.ofType(CodeableConcept).coding[0].system (line 131, col80): URL値 'http://jpfhir.jp/fhir/eCS/CodeSystem/DrugCode/19911234567' は解決できません
---------------------------------------------------------------------------------------------------------------------------------------------------
-
--- ExampleJson/MedicationRequest-Example-JP-MedReq-PO-BID-10days-AsNeeded.json -----------------------------------------------------------------------------------
-Success: 0 errors, 1 warnings, 0 notes
-  Warning @ MedicationRequest.medication.ofType(CodeableConcept).coding[0].system (line 163, col80): URL値 'http://jpfhir.jp/fhir/eCS/CodeSystem/DrugCode/19911234567' は解決できません
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
--- ExampleJson/Observation-ErrorExample-ObsLabo-eGFR.json --------------------------------------------------------------
-*FAILURE*: 1 errors, 0 warnings, 0 notes
-  Error @ Observation.code (line 35, col4): Observation.code.coding:localLaboCode: 最小必要値 = 1、見つかった値 = 0 (from http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Observation_LabResult_eCS)
-------------------------------------------------------------------------------------------------------------------------
-
--- ExampleJson/Observation-Example-ObsLabo-Alb.json --------------------------------------------------------
-Success: 0 errors, 1 warnings, 0 notes
-  Warning @ Observation.code.coding[0].system (line 51, col94): URL値 'http://jpfhir.jp/fhir/clins/CodeSystem/JP_CLINS_ObsLabResult_LocalCode_CS' は解決できません
-------------------------------------------------------------------------------------------------------------
-
--- ExampleJson/Observation-Example-ObsLabo-K.json ------------------------------------------------------
-Success: 0 errors, 4 warnings, 0 notes
-  Warning @ Observation.code.coding[2] (line 60, col8): urn:oid:1.2.392.200119.4.504#3H015000002326101 の誤ったdisplay 'K' - 1 の選択肢のうちの一つであるべきです: 'カリウム_血清_電位差測定_定量値' (言語 'ja' のため) for 'urn:oid:1.2.392.200119.4.504#3H015000002326101'
-  Warning @ Observation.code (line 48, col4): urn:oid:1.2.392.200119.4.504#3H015000002326101 の誤ったdisplay 'K' - 1 の選択肢のうちの一つであるべきです: 'カリウム_血清_電位差測定_定量値' (言語 'ja' のため)
-  Warning @ Observation.code.coding[0].system (line 51, col94): URL値 'http://jpfhir.jp/fhir/clins/CodeSystem/JP_CLINS_ObsLabResult_LocalCode_CS' は解決できません
-  Warning @ Observation.code.coding[2] (line 60, col8): urn:oid:1.2.392.200119.4.504#3H015000002326101 の誤ったdisplay 'K' - 1 の選択肢のうちの一つであるべきです: 'カリウム_血清_電位差測定_定量値' (言語 'ja' のため)
---------------------------------------------------------------------------------------------------------
-
--- ExampleJson/Patient-Example-Patient-standard-ErrorInsuranceNo.json --------------------------------------------------------------------------
-*FAILURE*: 1 errors, 0 warnings, 0 notes
-  Error @ Patient (line 1, col2): Rule valid-value-insurance-patientIdentifier: 'identifier.value 被保険者識別子情報の形式は、"保険者等番号:被保険者記号:被保険者番号:被保険者証等枝番"で、それぞれ半角英数字8桁固定、半角または全角文字列(空白を含まない)、半角または全角文字列(同)、半角数字2桁固定(1文字目は0)であり、それぞれ存在しない場合には、空文字列とする。' Failed (defined in http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCS) (inv = ((identifier.where(system = 'http://jpfhir.jp/fhir/eCS/Idsysmem/JP_Insurance_memberID').count() = 1) and identifier.where(system = 'http://jpfhir.jp/fhir/eCS/Idsysmem/JP_Insurance_memberID').value.matches('^[0-9]{8}:[^:^\\s^\u3000]*:[^:^\\s^\u3000]*:0[0-9]$'))) (log:  (inv = ((identifier.where(system = 'http://jpfhir.jp/fhir/eCS/Idsysmem/JP_Insurance_memberID').count() = 1) and identifier.where(system = 'http://jpfhir.jp/fhir/eCS/Idsysmem/JP_Insurance_memberID').value.matches('^[0-9]{8}:[^:^\\s^\u3000]*:[^:^\\s^\u3000]*:0[0-9]$'))))
-------------------------------------------------------------------------------------------------------------------------------------------------
-
--- ExampleJson/Patient-Example-Patient-standard.json ---------------------------------------------------------
-Success: 0 errors, 0 warnings, 1 notes
-  Information: すべてOK
---------------------------------------------------------------------------------------------------------------
-
-Done. Times: Loading: 00:17.636, validation: 00:18.173 (#10). Max Memory = 4Gb
-
-```
-
+　省略（作成中）
