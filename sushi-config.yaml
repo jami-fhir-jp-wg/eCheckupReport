@@ -52,7 +52,7 @@ menu:
     Artifacts: artifacts.html
   パッケージDownload:
     標準(diff)版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.1.1.tgz 
-    snapshot版: https://jpfhir.jp/fhir/eCheckup/jp-eChekupReport.r4-1.1.1-snap.tgz
+    snapshot版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.1.1-snap.tgz
 #-----------------------------------------
 # IG 外部パラメータ設定
 #-----------------------------------------
