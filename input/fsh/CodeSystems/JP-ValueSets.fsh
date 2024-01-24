@@ -1,6 +1,6 @@
 
 //---------------------
-// 健診項目コード
+// 健診項目コードValueSet
 //---------------------
 ValueSet: JP_observationCode_VS
 Id: jp-observationcode-vs
@@ -9,8 +9,10 @@ Title: "健診結果　健診項目コード ValueSet"
 * ^url = $JP_ObservationCode_eCheckupGeneral_vs
 * ^experimental = false
 * include codes from system urn:oid:1.2.392.200119.4.504  // MEDIS JLAC10
+* include codes from system $specialCheckup_observations_cs // 特定健診項目
 //* include codes from system urn:oid:1.2.392.200119.6.1005 // 特定健診項目
 // * include codes from system urn:oid:1.2.392.100495.100.1051 // 自治体検診項目コード
+
 
 //--------------------------------------------------------------------
 // 文書区分コード	Composition.type
@@ -144,15 +146,5 @@ Title: "厚労省電子処方CDA規格別表12 被保険者区分コード Value
 // Alias: $subscriber-relationship-cs = urn:oid:1.2.392.100495.20.2.62
 // Alias: $subscriber-relationship-vs = http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
 
-//--------------------------------------------------------------------
-// 特定健診項目コード
-//--------------------------------------------------------------------
-ValueSet: JP_ObservationCode_eCheckupGeneral_vs
-Id: jp-observationCode-eCheckupGeneral-vs
-Description: "健診結果セクションコード ValueSet"
-Title: "健診結果セクションコード ValueSet"
-* ^url = $JP_ObservationCode_eCheckupGeneral_vs
-* ^experimental = false
-//* #01910	"健診結果セクション"
-* include codes from system $specialCheckup_observations_cs
+
 
