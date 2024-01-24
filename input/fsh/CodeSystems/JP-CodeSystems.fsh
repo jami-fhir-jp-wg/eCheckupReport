@@ -7,6 +7,7 @@ Title: "厚労省電子処方CDA規格別表11 保険種別コード"
 * ^url = "urn:oid:1.2.392.100495.20.2.61"
 // * ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuranceCategory"
 * ^status = #active
+* ^experimental = false
 * ^content = #complete
 * ^caseSensitive = false
 * #1	"医保"	
@@ -26,6 +27,7 @@ Title: "厚労省電子処方CDA規格別表12 被保険者区分コード"
 * ^url = "urn:oid:1.2.392.100495.20.2.62"
 // * ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship"
 * ^status = #active
+* ^experimental = false
 * ^content = #complete
 * ^caseSensitive = false
 * #1	"被保険者"	
@@ -40,6 +42,7 @@ Title: "厚労省電子処方CDA規格別表13 患者一部負担コード"
 * ^url = "urn:oid:1.2.392.100495.20.2.63"
 // * ^valueSet = "http://jpfhir.jp/fhir/ePrescription/ValueSet/mhlw-ePreCDA-insuredCoPayCategory"
 * ^status = #active
+* ^experimental = false
 * ^content = #complete
 * ^caseSensitive = false
 * #1	"高齢者一般（高一）"	
@@ -55,6 +58,7 @@ Title: "都道府県番号"
 * ^url = "urn:oid:1.2.392.100495.20.3.21"
 // * ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/prefectureNumber"
 * ^status = #active
+* ^experimental = false
 * ^content = #complete
 * ^caseSensitive = false
 * #01	"北海道"
@@ -114,7 +118,9 @@ Title: "FHIR文書の文書区分（医療文書全般）"
 * ^url = "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes"
 // * ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes"
 * ^status = #active
+* ^experimental = false
 * ^content = #complete
+* ^experimental = false
 * ^caseSensitive = false
 * #53576-5 "検診・健診報告書"
 * #18842-5 "退院時サマリー"
