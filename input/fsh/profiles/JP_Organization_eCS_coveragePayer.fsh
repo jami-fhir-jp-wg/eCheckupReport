@@ -47,6 +47,7 @@ Description: "健診結果報告書　医療サービスでの保険者または
 * type.coding.system MS
 * type.coding.code ^short = "施設種別コード"
 * type.coding.code ^definition = "費用負担者が保険者の場合は\"ins\"。それ以外の場合は、公費負担者の場合には、その他を意味する \"other\"を指定。"
+* type.coding.code = #ins (exactly)
 * name ^short = "保険者、公費受給者の名称文字列"
 * name ^definition = "保険者、公費受給者の名称文字列。"
 * name MS

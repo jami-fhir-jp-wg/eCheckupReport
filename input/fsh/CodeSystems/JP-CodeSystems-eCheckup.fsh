@@ -8,7 +8,7 @@ Description: "受診券券面種別コード"
 * ^url = "urn:oid:1.2.392.200119.6.208"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = false
 * #1   "受診券"
@@ -26,7 +26,7 @@ Title: "健診結果報告区分コード"
 * ^url = $report_category_cs
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = false
 * #10   "特定健診"
@@ -48,7 +48,7 @@ Title: "健診結果報告区分コード"
 * ^url = $report_speccategory_cs
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = false
 * #10   "特定健診"
@@ -68,7 +68,7 @@ Title: "健診プログラムサービスコード"
 * ^url = $checkup_programService_cs
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = false
 * #000 "不明"
@@ -93,7 +93,7 @@ Title: "健診結果セクションコード"
 //* ^valueSet = $section_code_vs
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = false
 * #01010    "特定健診・問診結果セクション"
@@ -131,7 +131,7 @@ Title: "受診区分"
 //* ^valueSet = $encounter_cateogry_vs
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #checkup	"健診"
@@ -149,7 +149,7 @@ Title: "JLAC10材料コード"
 * ^valueSet = $jlac10_specimen_vs
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = false
 //	 ○尿・便
@@ -385,7 +385,6 @@ Title: "添付文書フォーマットコード"
 * ^valueSet = "http://jpfhir.jp/fhir/eCheckup/ValueSet/attachement-format"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
 * ^content = #complete
 * ^caseSensitive = false
 * #cdar2_hc08_v08	"CDA R2形式特定健診"
@@ -402,6 +401,7 @@ Title: "健診一連検査グループコード サンプル一部"
 * ^url = $observationGroup_codes_cs
 // * ^valueSet = $observationGroup_codes_vs
 * ^status = #active
+* ^experimental = false
 * ^content = #fragment
 * ^caseSensitive = true
 * #2A000   "貧血検査"
@@ -438,7 +438,6 @@ Description: "特定健診検査項目コード第４期"
 Title: "特定健診検査項目コード第４期"
 * ^url = $specialCheckup_observations_cs
 * ^status = #active
-* ^experimental = false
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -776,7 +775,7 @@ Title: "特定健診検査方法コード　一部仮修正コード"
 * ^url = "urn:oid:1.2.392.200119.6.1007"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1A01010000    "1：試験紙法(機械読み取り)"
@@ -872,7 +871,7 @@ Description: "特定健診　メタボリックシンドローム判定コード
 Title: "特定健診　メタボリックシンドローム判定コード"
 * ^url = "urn:oid:1.2.392.200119.6.1008"
 * ^status = #active
-* ^experimental = false
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -888,7 +887,7 @@ Description: "特定健診　咀嚼結果コード"
 Title: "特定健診　咀嚼結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.18030"
 * ^status = #active
-* ^experimental = false
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -904,7 +903,7 @@ Description: "特定健診　食べ方3(間食)結果コード"
 Title: "特定健診　食べ方3(間食)結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.18040"
 * ^status = #active
-* ^experimental = false
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -919,7 +918,7 @@ Description: "特定健診　情報提供の方法コード"
 Title: "特定健診　情報提供の方法コード"
 * ^url = "urn:oid:1.2.392.200119.6.18050"
 * ^status = #active
-* ^experimental = false
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -935,7 +934,7 @@ Title: "特定健診　初回面接実施結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.18060"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "健診1週間以内に初回面接実施"
@@ -947,7 +946,7 @@ Description: "特定健診　眼底検査（Wong-Mitchell分類）結果コー�
 Title: "特定健診　眼底検査（Wong-Mitchell分類）結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.18080"
 * ^status = #active
-* ^experimental = false
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -964,7 +963,7 @@ Title: "特定健診　眼底検査（改変Davis分類）結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.18090"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "網膜症なし"
@@ -980,7 +979,7 @@ Title: "特定健診　子宮頸部細胞診 (細胞診婦人科材料)(ベセ�
 * ^url = "urn:oid:1.2.392.200119.6.18100"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "NILM"
@@ -1002,7 +1001,7 @@ Title: "特定健診　心電図(対象者）コード"
 * ^url = "urn:oid:1.2.392.200119.6.18120"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #0 "詳細健診以外で実施"
@@ -1017,7 +1016,7 @@ Title: "特定健診　眼底検査（対象者）コード"
 * ^url = "urn:oid:1.2.392.200119.6.18130"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #0 "詳細な健診の項目として実施しない"
@@ -1031,7 +1030,7 @@ Title: "健診　質問項目　健康状態（後期）結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.19010"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "よい"
@@ -1048,7 +1047,7 @@ Title: "健診　質問項目　生活満足感の有無（後期）結果コー
 * ^url = "urn:oid:1.2.392.200119.6.19020"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "満足"
@@ -1065,7 +1064,7 @@ Title: "健診　質問項目　１日３食習慣の有無（後期）結果コ
 * ^url = "urn:oid:1.2.392.200119.6.19030"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "はい"
@@ -1092,7 +1091,7 @@ Title: "健診　質問項目　むせることの有無（後期）結果コー
 * ^url = "urn:oid:1.2.392.200119.6.19050"
 * ^status = #active
 * ^experimental = false
-* ^experimental = false
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "はい"
