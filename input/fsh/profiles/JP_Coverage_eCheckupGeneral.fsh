@@ -64,7 +64,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * dependent MS
 * relationship 1.. MS
 * relationship.coding 1.. MS
-* relationship.coding.system = "urn:oid:1.2.392.100495.20.2.62" (exactly)
+* relationship.coding.system = "urn:oid:1.2.392.100495.20.2.62"
 * relationship.coding.system ^short = "コード体系を識別するURI"
 * relationship.coding.system ^definition = "被保険者区分コードのコード体系を識別するURI。厚生労働省電子処方箋 CDA 記述仕様第１版　別表１２のOID"
 * relationship.coding.system MS

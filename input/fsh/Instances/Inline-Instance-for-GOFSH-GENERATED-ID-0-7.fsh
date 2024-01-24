@@ -15,8 +15,7 @@ Usage: #inline
 * subscriberId = "\"１２３４５\",\"６７８９０\""
 * beneficiary = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * dependent = "０１"
-* relationship.coding[+] = urn:oid:1.2.392.100495.20.2.62#1 "被保険者"
-* relationship.coding[+] = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self "Self"
+* relationship = urn:oid:1.2.392.100495.20.2.62#1 "被保険者"
 * period.start = "2018-04-01"
 * period.end = "2025-03-31"
 * payor = Reference(urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750)
