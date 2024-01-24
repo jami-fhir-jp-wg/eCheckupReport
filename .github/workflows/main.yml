@@ -155,7 +155,7 @@ jobs:
 
     - name: rsync remote-site-deploy
       run: |
-        rsync -auzrv -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }}" --delete output.tgz  forPackageRelease/jp-eCheckupReport.r4-${{ env.release_version }}.tgz forPackageRelease/jp-eCheckupReport.r4-${{ env.release_version }}-snap.tgz ${{ secrets.JAMIWG_USERID_AT_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/eCheckup/ --exclude .htaccess
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_USERID_AT_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/eCheckup/ ; tar xzf output.tgz'
+        rsync -auzrv -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }}" --delete output.tgz  forPackageRelease/jp-eCheckupReport.r4-${{ env.release_version }}.tgz forPackageRelease/jp-eCheckupReport.r4-${{ env.release_version }}-snap.tgz ${{ secrets.JAMIWG_USERID_AT_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/eCheckupReport/ --exclude .htaccess
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_USERID_AT_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/eCheckupReport/ ; tar xzf output.tgz'
 
 
