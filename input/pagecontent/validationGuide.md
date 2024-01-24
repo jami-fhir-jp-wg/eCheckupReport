@@ -1,3 +1,5 @@
+
+
 ### 健診結果報告書Bundleリソースデータとその構成リソースデータのValidation方法について
 
 ここでの Validationとは、本仕様(JP eCheckcupReport IG)にもとづいて作成されたデータファイル（JSON形式）が、仕様の各Profile に準拠しているかをFHIR公式Validatorを使用して検証することである。健診結果報告書Bundleリソースデータ全体の１ファイルを検証することもできるが、Bundleリソースに埋め込まれるこ個々の構成リソースデータ（たとえば、ひとつのObservationリソースデータ）のファイルだけを検証することもできる。

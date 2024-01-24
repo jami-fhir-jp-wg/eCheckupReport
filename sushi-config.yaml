@@ -50,7 +50,7 @@ menu:
     改訂履歴: history.html
   Artifacts: 
     Artifacts: artifacts.html
-  Validation方法:
+  Validationガイド:
     Validationガイド: validationGuide.html
   パッケージDownload:
     標準(diff)版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.1.1.tgz 
