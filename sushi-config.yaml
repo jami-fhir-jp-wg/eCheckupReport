@@ -115,7 +115,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/attachement-format
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category
-    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-examMethod-codes
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-specimen-codes
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
@@ -129,23 +128,63 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - urn:oid:1.2.392.100495.20.2.62
     - urn:oid:2.16.840.1.113883.2.2.1.6.1001
     - urn:oid:1.2.392.200119.6.1008
-    - urn:oid:1.2.392.200119.6.10030
+    - urn:oid:1.2.392.200119.6.18030
     - urn:oid:1.2.392.200119.6.18040
     - urn:oid:1.2.392.200119.6.18050
     - urn:oid:1.2.392.200119.6.18060
     - urn:oid:1.2.392.200119.6.18080
-    - urn:oid:1.2.392.200119.6.10090
-    - urn:oid:1.2.392.200119.6.10100
+    - urn:oid:1.2.392.200119.6.18090
+    - urn:oid:1.2.392.200119.6.18100
     - urn:oid:1.2.392.200119.6.18120
     - urn:oid:1.2.392.200119.6.18130
+    - urn:oid:1.2.392.200119.6.19010
+    - urn:oid:1.2.392.200119.6.19020
+    - urn:oid:1.2.392.200119.6.19030
+    - urn:oid:1.2.392.200119.6.19040
+    - urn:oid:1.2.392.200119.6.19050
+    - urn:oid:1.2.392.200119.6.19060
+    - urn:oid:1.2.392.200119.6.19070
+    - urn:oid:1.2.392.200119.6.19080
+    - urn:oid:1.2.392.200119.6.19090
+    - urn:oid:1.2.392.200119.6.19100
+    - urn:oid:1.2.392.200119.6.19110
+    - urn:oid:1.2.392.200119.6.19120
+    - urn:oid:1.2.392.200119.6.19130
+    - urn:oid:1.2.392.200119.6.19140
+    - urn:oid:1.2.392.200119.6.19150
     - urn:oid:1.2.392.200119.6.2001
     - urn:oid:1.2.392.200119.6.2002
     - urn:oid:1.2.392.200119.6.2003
     - urn:oid:1.2.392.200119.6.2004
     - urn:oid:1.2.392.200119.6.2007
+    - urn:oid:1.2.392.200119.6.2008
+    - urn:oid:1.2.392.200119.6.2009
+    - urn:oid:1.2.392.200119.6.2100
+    - urn:oid:1.2.392.200119.6.2102
+    - urn:oid:1.2.392.200119.6.2103
+    - urn:oid:1.2.392.200119.6.2110
+    - urn:oid:1.2.392.200119.6.2111
+    - urn:oid:1.2.392.200119.6.2112
+    - urn:oid:1.2.392.200119.6.2113
+    - urn:oid:1.2.392.200119.6.2115
+    - urn:oid:1.2.392.200119.6.2116
+    - urn:oid:1.2.392.200119.6.2120
+    - urn:oid:1.2.392.200119.6.2122
+    - urn:oid:1.2.392.200119.6.2130
+    - urn:oid:1.2.392.200119.6.2131
+    - urn:oid:1.2.392.200119.6.2140
+    - urn:oid:1.2.392.200119.6.2141
+    - urn:oid:1.2.392.200119.6.2150
+    - urn:oid:1.2.392.200119.6.2202
+    - urn:oid:1.2.392.200119.6.2301
+    - urn:oid:1.2.392.200119.6.24020
     - urn:oid:1.2.392.200119.6.24040
     - urn:oid:1.2.392.200119.6.24050
     - urn:oid:1.2.392.200119.6.24060
+    - urn:oid:1.2.392.200119.6.24080
+    - urn:oid:1.2.392.200119.6.2501
+    - urn:oid:1.2.392.200119.6.2502
+    - urn:oid:1.2.392.200119.6.3001
     - urn:oid:1.2.392.200119.6.1007
     - urn:oid:1.2.392.200119.6.1005
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
