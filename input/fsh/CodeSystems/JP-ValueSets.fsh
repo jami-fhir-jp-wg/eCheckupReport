@@ -6,7 +6,8 @@ ValueSet: JP_observationCode_VS
 Id: jp-observationcode-vs
 Description: "健診結果　健診項目コード ValueSet"
 Title: "健診結果　健診項目コード ValueSet"
-* ^url = $doctype_codes_vs
+* ^url = $JP_ObservationCode_eCheckupGeneral_vs
+* ^experimental = false
 * include codes from system urn:oid:1.2.392.200119.4.504  // MEDIS JLAC10
 //* include codes from system urn:oid:1.2.392.200119.6.1005 // 特定健診項目
 // * include codes from system urn:oid:1.2.392.100495.100.1051 // 自治体検診項目コード
@@ -20,6 +21,7 @@ Id: jp-documenttypecode-vs
 Description: "健診結果　文書区分コード ValueSet"
 Title: "健診結果　文書区分コード ValueSet"
 * ^url = $doctype_codes_vs
+* ^experimental = false
 * include codes from system $doctype_codes_cs
 
 
@@ -32,6 +34,7 @@ Id: echeckup-programService-vs
 Description: "健診プログラムサービスコード ValueSet"
 Title: "健診プログラムサービスコード ValueSet"
 * ^url = $checkup_programService_vs
+* ^experimental = false
 * include codes from system $checkup_programService_cs
 
 /*
@@ -53,6 +56,7 @@ ValueSet: ECheckup_valueSet_reportCategory
 Id: echeckup-valueSet-reportCategory
 Description: "健診結果　報告区分コード ValueSet"
 Title: "健診結果　報告区分コード ValueSet"
+* ^experimental = false
 * ^url = $report_category_vs
 * $report_category_cs#41   "事業者健診"
 * $report_category_cs#42   "自治体検診"
@@ -73,6 +77,7 @@ Id: mergedCheckup-valueSet-reportCategory
 Description: "健診結果　報告区分コード(特定健診とそれ以外の統合版) ValueSet"
 Title: "健診結果　報告区分コード(特定健診とそれ以外の統合版) ValueSet"
 * ^url = $report_mergedcategory_vs
+* ^experimental = false
 * include codes from valueset $report_speccategory_vs
 * include codes from valueset $report_category_vs
 
@@ -120,6 +125,7 @@ Id: eCheckup-valueSet-sectionCode
 Description: "健診結果セクションコード ValueSet"
 Title: "健診結果セクションコード ValueSet"
 * ^url = $section_code_vs
+* ^experimental = false
 //* #01910	"健診結果セクション"
 * include codes from system $section_code_cs
 
@@ -132,6 +138,7 @@ Id:   mhlw-valueSet-ePreCDA-insuredRelationship-tbl12
 Description: "厚労省電子処方CDA規格別表12 被保険者区分コード ValueSet"
 Title: "厚労省電子処方CDA規格別表12 被保険者区分コード ValueSet"
 * ^url = $subscriber-relationship-vs
+* ^experimental = false
 // * include codes from valueset http://hl7.org/fhir/ValueSet/subscriber-relationship
 * include codes from system $subscriber-relationship-cs
 // Alias: $subscriber-relationship-cs = urn:oid:1.2.392.100495.20.2.62
@@ -145,6 +152,7 @@ Id: jp-observationCode-eCheckupGeneral-vs
 Description: "健診結果セクションコード ValueSet"
 Title: "健診結果セクションコード ValueSet"
 * ^url = $JP_ObservationCode_eCheckupGeneral_vs
+* ^experimental = false
 //* #01910	"健診結果セクション"
 * include codes from system $specialCheckup_observations_cs
 

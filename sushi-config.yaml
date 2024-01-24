@@ -51,7 +51,7 @@ menu:
   Artifacts: 
     Artifacts: artifacts.html
   Validation方法:
-    Validationガイド: validationGuide.md
+    Validationガイド: validationGuide.html
   パッケージDownload:
     標準(diff)版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.1.1.tgz 
     snapshot版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.1.1-snap.tgz
