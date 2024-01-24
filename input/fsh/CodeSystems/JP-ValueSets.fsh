@@ -70,6 +70,7 @@ Id: specialCheckup-valueSet-reportCategory
 Description: "健診結果　報告区分コード(特定健診制度) ValueSet"
 Title: "健診結果　報告区分コード(特定健診制度) ValueSet"
 * ^url = $report_speccategory_vs
+* ^experimental = false
 * $report_speccategory_cs#10   "特定健診"
 * $report_speccategory_cs#40   "健診結果報告"
 * $report_speccategory_cs#90   "その他検診"
