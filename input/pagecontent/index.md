@@ -281,7 +281,7 @@ FHIR において、診療文書は、**Bundle**リソースを使用したFHIR 
 #### FHIR Documentの構成
 FHIR Documentでは、entry要素内に resource要素を繰り返す基本構造をとり、最初のresourceは、**Composition**リソースであることとなっている。**Composition**リソースは、診療文書のヘッダ情報の位置付けとなり、この文書に含まれるリソース（情報単位）への参照を列挙し、いわば構成リソースの目次のような役割を果たす。
 
-本仕様書で＜表 *1* Bundleリソースの記述仕様＞のような基本構造をとる。
+本仕様書で＜表1 Bundleリソースの記述仕様＞のような基本構造をとる。
 
 Bundlleリソースのインスタンスデータを識別するためのIDとして、identifier要素に次の仕様でsystem とvalueを記述する。
 
@@ -494,12 +494,12 @@ Identifier {
 
 **Organization**リソースの記述仕様を示す。
 
-> [表4 Organizationリソースの記述仕様]　　PDF仕様書参照のこと。<br>
+> [表8 Organizationリソースの記述仕様]　　PDF仕様書参照のこと。<br>
 > [例2 Organizationリソース記述例]　　PDF仕様書参照のこと。<br>
 
 **Practitioner**リソースの記述仕様を示す。
 
-> [表5 Practitionerリソースの記述仕様]　PDF仕様書参照のこと。<br>
+> [表9 Practitionerリソースの記述仕様]　PDF仕様書参照のこと。<br>
 > [例3 Practitionerリソース記述例]　PDF仕様書参照のこと。<br>
 
 
@@ -519,22 +519,22 @@ Component.custodian要素に、文書管理責任組織を表す**Organization**
 
 受診券情報と保険者情報の両方があるケース、受診券はなく保険者情報があるケース、共にないケースの3通りがありうる。
 
-受診券情報の記述仕様を＜表 6  Coverageリソース（受診券）の記述仕様＞に示す。受診券が健診事業実施者により発行されないケースでは、本リソースの記述は出現しない。
+受診券情報の記述仕様を＜表10  Coverageリソース（受診券）の記述仕様＞に示す。受診券が健診事業実施者により発行されないケースでは、本リソースの記述は出現しない。
 
 
-> [表6 Coverageリソース（保険証情報）の記述仕様]　　PDF仕様書参照のこと。<br>
+> [表10 Coverageリソース（受診券情報）の記述仕様]　　PDF仕様書参照のこと。<br>
 > [例4 Coverageリソース（保険者情報）記述例]　　PDF仕様書参照のこと。<br>
 
-次に保険証情報の記述仕様を＜表 7  Coverageリソース（保険証情報）の記述仕様に示す。CDA健診結果報告書規格では、受診者を表すPatient.id に被保険者証記号・番号、及び、保険者番号を記述するが、本仕様書では、CoverageリソースとOrganizationリソースにより記述することに注意する。
+次に保険証情報の記述仕様を＜表11  Coverageリソース（保険証情報）の記述仕様に示す。CDA健診結果報告書規格では、受診者を表すPatient.id に被保険者証記号・番号、及び、保険者番号を記述するが、本仕様書では、CoverageリソースとOrganizationリソースにより記述することに注意する。
 
-> [表7 Coverageリソース（保険証情報）の記述仕様]　　PDF仕様書参照のこと。<br>
+> [表11 Coverageリソース（保険証情報）の記述仕様]　　PDF仕様書参照のこと。<br>
 > [例5 Coverageリソース（保険証情報）記述例]　　PDF仕様書参照のこと。<br>
 
 
 保険者は、Coverageリソースのpayorから参照されるOrganizationリソースとして記録する。保険者情報のOrganizationリソースの記述仕様を示す。
 
 
-> [表8 Organizationリソース（保険者情報）の記述仕様]　PDF仕様書参照のこと。<br>
+> [表12 Organizationリソース（保険者情報）の記述仕様]　PDF仕様書参照のこと。<br>
 > [例6 Organizationリソース（保険者情報）記述例]  PDF仕様書参照のこと。<br>
 
 
@@ -542,9 +542,9 @@ Component.custodian要素に、文書管理責任組織を表す**Organization**
 #### 健診実施情報
 健診実施情報として、実施した検診の種別や検診実施機関の情報を記録する。同一受診日に数の検診種類を受診した場合には、それぞれ別々の報告書（Bundleリソース）とするものとし、ひとつの報告書にまとめることは本仕様では行わない。
 
-表 9  Encounterリソースの記述仕様に、Encounterリソースの記述仕様を示す。Component.event要素については、「3.1.3　Compositionリソース」を参照。
+表13 Encounterリソースの記述仕様に、Encounterリソースの記述仕様を示す。Component.event要素については、「3.1.3　Compositionリソース」を参照。
 
-> [表9  Encounterリソースの記述仕様]　　PDF仕様書参照のこと。<br>
+> [表13  Encounterリソースの記述仕様]　　PDF仕様書参照のこと。<br>
 > [例7 Encounterリソース（健診実施情報）記述例]　　PDF仕様書参照のこと。<br>
 
 
@@ -552,7 +552,7 @@ Component.custodian要素に、文書管理責任組織を表す**Organization**
 ##### 転記者
 作成者以外の者が転記した場合は、HL7 FHIR C-CDA DataEnterer 拡張（http://hl7.org/fhir/us/ccda/StructureDefinition/DataEntererExtension ）を使用する。
 
-具体的には、Compositionリソースの記述に、＜表 2 Compositionリソースの記述仕様＞のNo.5 にあるExtensionを追加し、転記者役割情報を記述したPrctitionerRoleへの参照を記述する。さらに、転記者役割情報を記述したPrctitionerRoleには、転記者の所属機関(Organizationリソース)と転記者（Practitionerリソース）への参照を記述する。
+具体的には、Compositionリソースの記述に、＜表2 Compositionリソースの記述仕様＞のNo.5 にあるExtensionを追加し、転記者役割情報を記述したPrctitionerRoleへの参照を記述する。さらに、転記者役割情報を記述したPrctitionerRoleには、転記者の所属機関(Organizationリソース)と転記者（Practitionerリソース）への参照を記述する。
 
 
 ##### 認証者
@@ -689,9 +689,9 @@ entry要素内に列挙される3つの"reference"要素は、それぞれ、Obs
 | (15) | 検査基準値上限単位コード<br>Observaiton.referenceRange.high.code、<br>Observaiton.referenceRange.high.unit | 定量数値結果であって、検査基準値が設定される項目のみ出現し、（7）と同一の単位コードを設定。 | 検査基準値が設定される項目のみ出現。未実施の場合は出現しない。 | 
 | (16) | 結果解釈コード<br>Observation.interpretation | 結果値の解釈を表現する。OIDには"http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"を使用し、coding.code に"H"、"L"を設定するが、人間ドックなどで別の解釈コード体系を設定してもよい（3.2.5.1）。 |  | 
 
-Observationリソースによりこれらを記述する全体仕様を＜表14 Observationリソース　検査項目情報＞に示す。
+Observationリソースによりこれらを記述する全体仕様を＜表18 Observationリソース　検査項目情報＞に示す。
 
-> [表14 Observationリソース　検査項目情報] PDF仕様書参照のこと。<br>
+> [表18 Observationリソース　検査項目情報] PDF仕様書参照のこと。<br>
 
 
 ###### (b) 一連検査グループの考え方
@@ -702,11 +702,11 @@ Observationリソースによりこれらを記述する全体仕様を＜表14 
 各 hasMember 同士の関係は、CDA健診結果報告書規格では 包含関係や他の項目への理由関係を行為間関係種別コードで識別できるようにしていたが、本仕様書ではすべて hasMember で関連付けることとする。また、CDA健診結果報告書規格では、グループヘッダに相当するObservation.code要素にはコードは指定しなかったが、本仕様書文書では、以下に示すコードをObservation.code要素に設定する。コード体系を表す system要素には、「http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes」を指定する。 
 
 
-> [表15 一連検査グループコード]   PDF仕様書参照のこと。<br>
+> [表19 一連検査グループコード]   PDF仕様書参照のこと。<br>
 
-検診項目が検体検査項目の場合、検体情報をSpecimenリソースで表現する。検体情報のtype要素には、検査項目コードから材料コードを指定する。Specimenリソースの記述仕様を＜表 *18* Specimenリソースの記述仕様＞に示す。
+検診項目が検体検査項目の場合、検体情報をSpecimenリソースで表現する。検体情報のtype要素には、検査項目コードから材料コードを指定する。Specimenリソースの記述仕様を＜表20 Specimenリソースの記述仕様＞に示す。
 
-> [表18 Specimenリソースの記述仕様]  PDF仕様書参照のこと。<br>
+> [表20 Specimenリソースの記述仕様]  PDF仕様書参照のこと。<br>
 
 以上について、サンプルインスタンスを示す。
 
@@ -753,20 +753,20 @@ ii) 検査項目ごとにシェーマや画像を直接リンクさせ報告す�
 X線の画像等をまとめて健康診断結果報告書に添付させる場合は添付書類セクションを用いるが、各検査項目にリンクして、特に超音波検査等でシェーマを添付させたい場合がある。この場合は、対象の健診項目を表すObservationリソースのderivedFrom要素で参照されるMediaリソースに、外部添付ファイルと同様にGIF画像、JPEG画像やPNG画像等の形式でデジタル化された画像を添付することができる。Mediaリソースの使用はできる限り控え、Mediaリソースでも、次項のDocumentReferenceリソースでも記述できる場合には、DocumentReferenceリソースを使用すること。
 
 
-> [表16 Mediaリソースの記述仕様]  PDF仕様書参照のこと。<br>
+> [表21 Mediaリソースの記述仕様]  PDF仕様書参照のこと。<br>
 > [例17 Mediaリソース 記述例]  PDF仕様書参照のこと。<br>
 
 #### 画像等を添付書類セクションを利用して一括提供する場合
 健診結果に加えてまとめて画像等の関連書類を提供する場合に、添付書類セクションを用いる。添付書類は、DocumentReferenceリソースのattachment要素に、URI参照で関連付ける。外部文書の参照に際しては、真正性を担保する為にハッシュコードを用いる。
 添付書類ごとにDocumentReferenceリソースを繰り返す。
  
-> [表 17 DocumentReferenceリソースの記述仕様]   PDF仕様書参照のこと。<br>
+> [表22 DocumentReferenceリソースの記述仕様]   PDF仕様書参照のこと。<br>
 > [例18 DocumentReferenceリソース 記述例]   PDF仕様書参照のこと。<br>
 
 添付書類として、検査結果レポートを表現する、DiagnosticReportリソースを直接添付することも可能とする。
 
 
-> [表18 DiagnosticReportリソースの記述仕様]   PDF仕様書参照のこと。<br>
+> [表23 DiagnosticReportリソースの記述仕様]   PDF仕様書参照のこと。<br>
 > [例19 DiagnosticReportリソース 記述例]   PDF仕様書参照のこと。<br>
 
 #### 人間ドックおよび労安法等に基づく健康診断結果の記述
@@ -781,12 +781,12 @@ X線の画像等をまとめて健康診断結果報告書に添付させる場�
 検査区分別判定コードは以下に従う。
 
 ａ）人間ドック学会・協会けんぽ等の公開された判定基準（指導区分）の記述
-> [表 19 公開された判定基準]   PDF仕様書参照のこと。<br>
+> [表24 公開された判定基準]   PDF仕様書参照のこと。<br>
 
 この値は、検査区分ごとの判定のみならず、各検査項目ごとの判定にも用いることが出来る。
 
 b) その他の判定区分例
-> [表 20 その他の判定区分]   PDF仕様書参照のこと。<br>
+> [表25 その他の判定区分]   PDF仕様書参照のこと。<br>
 
 上記に含まれない検査判定コード体系の場合で、OIDを所有する団体は、その付番規定に沿って定義しても良い。本仕様管理団体に新たなsystem値の設定を依頼することができる。
 
@@ -802,7 +802,7 @@ b) その他の判定区分例
 •	連絡先<br>
 <br>
 
-受診者の勤務先の情報は、受診者を表すPatientリソースに対してcontact要素で関連するOrganizationリソースで表現する。勤務先を表すOrganizationは、勤務先の所属を表すOrganizationと partOf 要素で関連する。受診者の役職は、PatientリソースとOrganizationリソースの関係性を表す情報であり、Patient.contact要素の拡張として定義する。記述仕様は、＜表 3 Patientリソースの記述仕様＞に示す。
+受診者の勤務先の情報は、受診者を表すPatientリソースに対してcontact要素で関連するOrganizationリソースで表現する。勤務先を表すOrganizationは、勤務先の所属を表すOrganizationと partOf 要素で関連する。受診者の役職は、PatientリソースとOrganizationリソースの関係性を表す情報であり、Patient.contact要素の拡張として定義する。記述仕様は、＜表3 Patientリソースの記述仕様＞に示す。
 
 > [例20 Patientリソース 受診者追加情報記述例]   PDF仕様書参照のこと。<br>
 
@@ -810,7 +810,7 @@ b) その他の判定区分例
 
 項目コードおよび結果コードは、特定健診項目コード表 1.2.392.200119.6.1005に関連する項目が記載されているのでそれを利用すること。但し、現在の特定健診の電子化の仕様ではAST（GOT）、ALT（GPT）、γ-GTの単位は「U/L」で、様式5号では「IU/L」（国際単位）となっているので、労働安全衛生法に基づく場合は単位を「IU/L」（国際単位）とし、以下のように項目コードは1.2.392.200119.6.1005と同じにして項目コードOIDは2.16.840.1.113883.2.2.1.6.5005を用いる。
 
-> [表 21 国際単位の項目コード]   PDF仕様書参照のこと。<br>
+> [表26 国際単位の項目コード]   PDF仕様書参照のこと。<br>
 
 
 3.2.5.2.3   定期健康診断

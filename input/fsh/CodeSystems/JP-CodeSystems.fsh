@@ -2,6 +2,8 @@
 CodeSystem:  MHLW_codeSystem_ePreCDA_insuranceCategory_tbl11
 Id:   mhlw-codeSystem-ePreCDA-insuranceCategory-tbl11
 Description: "厚労省電子処方CDA規格別表11 保険種別コード"
+Title: "厚労省電子処方CDA規格別表11 保険種別コード"
+
 * ^url = "urn:oid:1.2.392.100495.20.2.61"
 // * ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuranceCategory"
 * ^status = #active
@@ -20,6 +22,7 @@ Description: "厚労省電子処方CDA規格別表11 保険種別コード"
 CodeSystem:  MHLW_codeSystem_ePreCDA_insuredRelationship_tbl12
 Id:   mhlw-codeSystem-ePreCDA-insuredRelationship-tbl12
 Description: "厚労省電子処方CDA規格別表12 被保険者区分コード"
+Title: "厚労省電子処方CDA規格別表12 被保険者区分コード"
 * ^url = "urn:oid:1.2.392.100495.20.2.62"
 // * ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship"
 * ^status = #active
@@ -33,6 +36,7 @@ Description: "厚労省電子処方CDA規格別表12 被保険者区分コード
 CodeSystem:  MHLW_codeSystem_ePreCDA_insuredCoPayCategory_tbl13
 Id:   mhlw-codeSystem-ePreCDA-insuredCoPayCategory-tbl13
 Description: "厚労省電子処方CDA規格別表13 患者一部負担コード"
+Title: "厚労省電子処方CDA規格別表13 患者一部負担コード"
 * ^url = "urn:oid:1.2.392.100495.20.2.63"
 // * ^valueSet = "http://jpfhir.jp/fhir/ePrescription/ValueSet/mhlw-ePreCDA-insuredCoPayCategory"
 * ^status = #active
@@ -47,6 +51,7 @@ Description: "厚労省電子処方CDA規格別表13 患者一部負担コード
 CodeSystem:  JP_codeSystem_prefectureNumber
 Id:   jp-codeSystem-prefectureNumber
 Description: "都道府県番号"
+Title: "都道府県番号"
 * ^url = "urn:oid:1.2.392.100495.20.3.21"
 // * ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/prefectureNumber"
 * ^status = #active
@@ -105,6 +110,7 @@ Description: "都道府県番号"
 CodeSystem:  JP_codeSystem_documentTypeCode
 Id:   jp-codeSystem-documentTypeCode
 Description: "FHIR文書の文書区分（医療文書全般）"
+Title: "FHIR文書の文書区分（医療文書全般）"
 * ^url = "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes"
 // * ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes"
 * ^status = #active
