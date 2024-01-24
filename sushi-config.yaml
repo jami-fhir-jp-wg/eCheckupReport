@@ -50,7 +50,9 @@ menu:
     改訂履歴: history.html
   Artifacts: 
     Artifacts: artifacts.html
-
+  パッケージDownload:
+    標準(diff)版: https://jpfhir.jp/fhir/eChekup/jp-eCheckupReport.r4-1.1.1.tgz 
+    snapshot版: https://jpfhir.jp/fhir/eChekup/jp-eChekupReport.r4-1.1.1-snap.tgz
 #-----------------------------------------
 # IG 外部パラメータ設定
 #-----------------------------------------
