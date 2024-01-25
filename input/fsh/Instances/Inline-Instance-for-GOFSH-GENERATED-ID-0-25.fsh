@@ -7,6 +7,7 @@ Usage: #inline
 * category = $JP_SimpleObservationCategory_CS#laboratory
 * code = $specialCheckup_observations_cs#1A020000000191111 "尿糖"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+* effectiveDateTime = "2020-04-04"
 * valueCodeableConcept.coding.extension.url = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
 * valueCodeableConcept.coding.extension.valueDecimal = 1
 * valueCodeableConcept.coding = urn:oid:1.2.392.200119.6.2102#1 "－"

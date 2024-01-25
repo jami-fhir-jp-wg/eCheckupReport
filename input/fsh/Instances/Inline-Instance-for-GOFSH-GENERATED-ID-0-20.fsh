@@ -7,6 +7,7 @@ Usage: #inline
 * category = $JP_SimpleObservationCategory_CS#laboratory
 * code = $specialCheckup_observations_cs#3B035000002327201 "ＡＳＴ（ＧＯＴ）"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+* effectiveDateTime = "2020-04-04"
 * valueQuantity = 32 'U/L' "U/l"
 * interpretation = $v3-ObservationInterpretation#N
 * method = urn:oid:1.2.392.200119.6.1007#3B03510000 "紫外吸光光度法（JSCC標準化対応法）"

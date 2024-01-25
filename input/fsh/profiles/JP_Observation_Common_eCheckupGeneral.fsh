@@ -33,9 +33,10 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * subject 1..1 MS
 * subject only Reference(JP_Patient_eCS)
 * subject ^definition = "健診／検診対象者情報。必須項目。"
-* effective[x] 0..1 MS
-* effective[x] ^definition = "検体検査の場合は、検体採取日時。"
-* effective[x] ^comment = "このプロファイルでは、健診実施日時または検体採取日時を設定し、必須とする。"
+* effective[x] 1..1 MS
+* effective[x] ^short = "検体検査の場合は、検体採取日時。すべて健診実地日で代用してもよい。yyyy-mm-dd"
+* effective[x] ^definition = "検体検査の場合は、検体採取日時。すべて健診実地日で代用してもよい。yyyy-mm-dd"
+* effective[x] ^comment = "健診実施日時または検体採取日時を設定し、必須とする。"
 * effective[x] only dateTime 
 * performer 0..1 MS 
 * performer ^short = "検査値を確認した責任者。診断者"
@@ -137,7 +138,8 @@ Description:    "健診結果報告書　ObservationGroupリソースGroup仕様
 * subject only Reference(JP_Patient_eCS)
 * subject ^definition = "健診／検診対象者情報。必須項目。"
 * effective[x] 1..1 MS
-* effective[x] ^definition = "検体検査の場合は、検体採取日時。"
+* effective[x] ^short = "検体検査の場合は、検体採取日時。すべて健診実地日で代用してもよい。yyyy-mm-dd"
+* effective[x] ^definition = "検体検査の場合は、検体採取日時。すべて健診実地日で代用してもよい。yyyy-mm-dd"
 * effective[x] ^comment = "健診実施日時または検体採取日時を設定し、必須とする。"
 * effective[x] only dateTime 
 * performer 0..0 
