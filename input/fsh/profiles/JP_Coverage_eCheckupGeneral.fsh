@@ -5,6 +5,10 @@ Id:             JP-CoverageInsurance-eCheckupGeneral
 Description:    "健診結果報告書　Coverageリソース  保険情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageInsurance_eCheckupGeneral"
 * ^status = #active
+
+* meta.lastUpdated 1.. MS
+* meta.profile 1.. MS
+
 * contained ..0
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"

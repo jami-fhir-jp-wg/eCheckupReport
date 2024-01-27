@@ -11,7 +11,8 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * . ^short = "健診・検診検査結果"
 * . ^definition = "健診・検診の検査結果の格納に使用する。"
 * . ^comment = "健診結果として報告する検査結果、問診結果、すべての特定健診項目の毛かを格納するObservationの制約プロファイル"
-
+* meta.lastUpdated 1.. MS
+* meta.profile 1.. MS
 * identifier ^short = "当該検査結果に対して、施設内で割り振られる一意の識別子"
 * identifier ^definition = "この検査項目に割り当てられた一意の識別子。リソースの識別子やシステム的なシーケンスではなく、ビジネスID。"
 * identifier 0..* MS

@@ -15,7 +15,7 @@ Description: "健診結果報告書 診療情報・サマリー汎用 Patientリ
 * ^url = $JP_Patient_eCS
 * ^status = #active
 
-* meta.lastUpdated 0.. MS
+* meta.lastUpdated 1.. MS
 * meta.lastUpdated ^short = "最終更新日"
 * meta.lastUpdated ^definition = "この患者情報の内容がサーバ上で最後に格納または更新された日時、またはこのFHIRリソースが生成された日時"
 

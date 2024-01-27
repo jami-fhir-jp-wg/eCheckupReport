@@ -8,6 +8,8 @@ Description:    "健診結果報告書　Encounterリソース  実施情報"
 
 * status 1..1 MS
 * status = #finished
+* meta.lastUpdated 1.. MS
+* meta.profile 1.. MS
 /*
 * class 1..1 MS
 * class = http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category#checkup "健診"

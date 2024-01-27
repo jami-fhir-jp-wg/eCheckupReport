@@ -13,6 +13,7 @@
 * JP_Observation_eCheckupReport プロファイルで、identifier を0..1から0..*　に変更。<br>
 * JP_ObservationGroup_eCheckupReport プロファイルで、identifier を0..0から0..*　に変更。<br>
 * JP_ObservationGroup_eCheckupReport プロファイルで、note を0..0から0..*　に変更。<br>
+* すべてのリソースProfileでmeta.lastUpdated要素を必須（1..1）に修正。<br>
 <br>
 
 ## Ver1.1.1 (2024-01-21) <br>

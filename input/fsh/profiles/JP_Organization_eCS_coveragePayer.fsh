@@ -4,6 +4,8 @@ Id: JP-Organization-eCS-coveragePayer
 Description: "健診結果報告書　医療サービスでの保険者または公費の公費受給者　JP_Organizationの派生プロファイル"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS_coveragePayer"
 * ^status = #draft
+* meta.lastUpdated 1.. MS
+* meta.profile 1.. MS
 * text ^short = "本リソースをテキストで表現したものを入れてもよい。"
 * text.status ^definition = "固定値.テキスト内容の全てがリソースのコンテンツから生成されたことを示す。"
 * text.div ^definition = "本リソースの構造化情報から生成したテキスト表現をいれてもよい。\\\\r\\\\nXHTML形式。"

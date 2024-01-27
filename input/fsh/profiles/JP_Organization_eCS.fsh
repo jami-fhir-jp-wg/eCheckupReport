@@ -11,6 +11,9 @@ Description: "健診結果報告書　診療情報コアサマリー用　Organi
 * . ^short = "診療情報コアサマリーにおける検体検査結果の格納に使用する"
 * . ^definition = "診療情報コアサマリー・厚労省6情報などにおける検体検査結果の格納に使用する"
 
+* meta.lastUpdated 1.. MS
+* meta.profile 1.. MS
+
 * text ^short = "本リソースをテキストで表現したものを入れてもよい。"
 * text.status ^short = "generated| extensions | additional | empty"
 * text.status ^definition = "固定値。テキスト内容の全てがリソースのコンテンツから生成されたことを示す。"
