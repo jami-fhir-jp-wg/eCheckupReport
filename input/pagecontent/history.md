@@ -8,8 +8,13 @@
     
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。<br>
 
-
-## Ver1.1.1 (2024-01-24) <br>
+## Ver1.1.2 (2024-01-25) <br>
+<br>
+* JP_Observation_eCheckupReport プロファイルで、identifier を0..1から0..*　に変更。<br>
+* JP_ObservationGroup_eCheckupReport プロファイルで、identifier を0..0から0..*　に変更。<br>
+* JP_ObservationGroup_eCheckupReport プロファイルで、note を0..0から0..*　に変更。<br>
+<br>
+## Ver1.1.1 (2024-01-21) <br>
 <br>
 * p5 「CDA添付パターン」による記述はFHIRによる記述としてみなされないことがあることを記載。<br>
 * 2.2.1 報告区分コード　特定健診制度以外のコードを追加した上で、コードシステムの値を使い分ける仕様とする。<br>

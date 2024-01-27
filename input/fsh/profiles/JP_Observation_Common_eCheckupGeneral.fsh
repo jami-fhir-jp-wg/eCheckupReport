@@ -14,7 +14,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 
 * identifier ^short = "当該検査結果に対して、施設内で割り振られる一意の識別子"
 * identifier ^definition = "この検査項目に割り当てられた一意の識別子。リソースの識別子やシステム的なシーケンスではなく、ビジネスID。"
-* identifier 0..1 MS
+* identifier 0..* MS
   * system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
   * value 1..1 MS
 * basedOn 0..0
@@ -125,7 +125,12 @@ Description:    "健診結果報告書　ObservationGroupリソースGroup仕様
 * . ^definition = "健診・検診の検査結果の格納に使用する。"
 * . ^comment = "健診結果として報告する検査結果、問診結果、すべての特定健診項目の毛かを格納するObservationの制約プロファイル"
 
-* identifier 0..0
+* identifier ^short = "当該検査結果に対して、施設内で割り振られる一意の識別子"
+* identifier ^definition = "この検査項目に割り当てられた一意の識別子。リソースの識別子やシステム的なシーケンスではなく、ビジネスID。"
+* identifier 0..* MS
+  * system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+  * value 1..1 MS
+
 * basedOn 0..0
 * partOf 0..0
 * status ^definition = "結果値の状態。"
@@ -147,7 +152,7 @@ Description:    "健診結果報告書　ObservationGroupリソースGroup仕様
 * value[x] 0..0
 * dataAbsentReason 0..0
 * interpretation 0..0
-* note 0..0
+* note 0..*
 * method 0..0
 * specimen 0..0
 * referenceRange 0..0
