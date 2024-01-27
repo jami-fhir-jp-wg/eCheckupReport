@@ -14,6 +14,7 @@
 * JP_ObservationGroup_eCheckupReport プロファイルで、identifier を0..0から0..*　に変更。<br>
 * JP_ObservationGroup_eCheckupReport プロファイルで、note を0..0から0..*　に変更。<br>
 <br>
+
 ## Ver1.1.1 (2024-01-21) <br>
 <br>
 * p5 「CDA添付パターン」による記述はFHIRによる記述としてみなされないことがあることを記載。<br>
