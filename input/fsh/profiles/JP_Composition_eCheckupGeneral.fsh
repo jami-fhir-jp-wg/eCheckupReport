@@ -38,10 +38,11 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * identifier 1..1 MS
 * identifier.system 1.. MS
 * identifier.system ^short = "文書リソースIDの名前空間を表すURI。固定値。"
-* identifier.system ^definition = "文書リソースIDの名前空間を表すURI。固定値。"
+* identifier.system ^definition = "文書リソースIDの名前空間を表すURI。http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier 固定値。"
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value 1.. MS
 * identifier.value ^short = "文書リソースID"
-* identifier.value ^definition = "仕様書参照のこと。"
+* identifier.value ^definition = "保険医療機関番号（10桁）、発行年（4桁）、施設内において発行年内で一意となる番号（8桁）をハイフン(\“-\”：U+002D)で連結した文字列を指定する。詳細は、PDF仕様書参照のこと。"
 
 * status = #final (exactly)
 * status ^short = "この文書のステータス。"

@@ -26,10 +26,10 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 
 * identifier 1.. MS
 * identifier ^short = "この文書Bundleの固定識別子。Bundle作成時にシステムが設定する。"
-* identifier ^definition = "この文書Bundleの固定識別子を設定する。仕様書参照のこと。"
+* identifier ^definition = "この文書Bundleの固定識別子を設定する。\"保険医療機関番号10桁＾被保険者個人識別子＾医療機関内で一意に識別できる粒度の報告ID文字列\" このうち３つ目要素である「医療機関内で一意に識別できる粒度の報告ID文字列」は、発行年（4桁）、施設内において発行年内で一意となる番号（8桁）をハイフン(\“-\”：U+002D)で連結した文字列とする。詳細は仕様書参照のこと。"
 * identifier ^comment = ""
 
-* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/documentInstance-identifier"
+* identifier.system = "http://jpfhir.jp/fhir/clins/bundle-identifier"
 * identifier.value 1..1 MS
 
 * type = #document (exactly)
