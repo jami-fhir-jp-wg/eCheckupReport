@@ -35,7 +35,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * extension[dataEnterer].value[x] ^definition = "データ転記者のPractitionerRoleへの参照。PractitionerRoleに転記者と転記機関への参照を記述する。"
 * extension[dataEnterer].value[x] 1..1 MS
 
-* identifier 1.. MS
+* identifier 1..1 MS
 * identifier.system 1.. MS
 * identifier.system ^short = "文書リソースIDの名前空間を表すURI。固定値。"
 * identifier.system ^definition = "文書リソースIDの名前空間を表すURI。固定値。"
