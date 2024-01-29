@@ -202,3 +202,5 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
     - http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-encounter-type
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/encounter-category
