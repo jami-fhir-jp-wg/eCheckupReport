@@ -14,7 +14,7 @@ Description:    "健診結果報告書　Encounterリソース  実施情報"
 * class 1..1 MS
 * class = http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category#checkup "健診"
 
-serviceType 0..1 MS
+  * serviceType 0..1 MS
   * ^short = "受診形態"
   * ^definition = "受診形態：個別受診か集合受診かの形態区別を記述したい場合に使用する。（1：個別受診、2：集団受診）"
   * coding from http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-encounter-type  // 1：個別受診、2：集団受診
