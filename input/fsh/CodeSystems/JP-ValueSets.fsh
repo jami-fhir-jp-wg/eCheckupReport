@@ -96,27 +96,28 @@ Description: "自治体検診検診区分"
 * $checkup_type_cs#1	"一次検診"
 * $checkup_type_cs#2	"精密検査"
 * $checkup_type_cs#3	"一次検診と精密検査"
+*/
 
 //--------------------------------------------------------------------
-// 自治体検診受診方法	Encounter.serviceType
-//	自治体検診の受診方法を識別するコード。
+// 受診形態区分	Encounter.serviceType
+//	受診形態区分を識別するコード。
 //--------------------------------------------------------------------
-ValueSet: MunicipalCheckup_valueSet_encounterType
-Id: MunicipalCheckup-valueSet-encounterType
-Description: "自治体検診受診方法"
+ValueSet: ECheckup_valueSet_encounterType
+Id: ECheckup-valueSet-encounterType
+Description: "受診形態区分"
 * ^url = $checkup_encounter_type_vs
-* $checkup_encounter_type_cs#1	"個別受診"
-* $checkup_encounter_type_cs#2	"集団受診"
+* include codes from system $checkup_encounter_type_cs
+
 //--------------------------------------------------------------------
 // 受診区分	Encounter.class
 //	受診種別を表すコードシステム。
 //--------------------------------------------------------------------
-ValueSet: MunicipalCheckup_valueSet_encounterCategory
-Id: MunicipalCheckup-valueSet-encounterCategory
+ValueSet: ECheckup_valueSet_encounterCategory
+Id: ECheckup-valueSet-encounterCategory
 Description: "受診区分"
 * ^url = $encounter_cateogry_vs
-* $encounter_cateogry_cs#checkup	"健診"
-*/
+* include codes from system $encounter_cateogry_cs
+
 
 //--------------------------------------------------------------------
 // セクションコード	Composition.section.code

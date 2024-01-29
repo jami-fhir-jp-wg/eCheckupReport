@@ -131,10 +131,24 @@ Title: "受診区分"
 //* ^valueSet = $encounter_cateogry_vs
 * ^status = #active
 * ^experimental = false
-
 * ^content = #complete
 * ^caseSensitive = true
 * #checkup	"健診"
+
+//--------------------------------------------------------------------
+// 受診形態区分	Encounter.serviceType
+//	受診形態を表すコードシステム。
+//--------------------------------------------------------------------
+CodeSystem: ECheckup_codeSystem_encounterType
+Id: eCheckup-codeSystem-encounterType
+Description: "受診形態区分（個別受診・集合受診）"
+Title: "受診形態区分（個別受診・集合受診）分"
+* ^url = $checkup_encounter_type_cs
+* ^experimental = false
+* ^content = #complete
+* ^caseSensitive = true
+* #1	"個別受診"
+* #2	"集団受診"
 
 
 //--------------------------------------------------------------------
