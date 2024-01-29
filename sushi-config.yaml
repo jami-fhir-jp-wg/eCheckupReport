@@ -121,6 +121,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/attachement-format
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-specimen-codes
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
@@ -193,14 +194,14 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - urn:oid:1.2.392.200119.6.3001
     - urn:oid:1.2.392.200119.6.1007
     - urn:oid:1.2.392.200119.6.1005
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/encounter-category
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-encounter-type
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
     - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
-    - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
     - http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
-    - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-encounter-type
-    - http://jpfhir.jp/fhir/eCheckup/ValueSet/encounter-category
+  
