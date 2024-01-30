@@ -822,7 +822,7 @@ b) その他の判定区分例
 
 > [例21　特定健診「FHIR構造パターン」記述例]   PDF仕様書参照のこと。<br>
 > [例22　特定健診「CDA添付パターン」記述例]　　   PDF仕様書参照のこと。<br>
-> [例23 Patientリソース 受診者追加情報記述例](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-23) PDF仕様書参照のこと。<br>
+> [[例23 Patientリソース 受診者追加情報記述例](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-23) ] PDF仕様書参照のこと。<br>
 
 がん検診結果報告に関する記述例は、別途、自治体検診用追補仕様に掲載する。
 
