@@ -120,16 +120,16 @@ table th {
 * 日本医療情報学会　健康診断結果報告書FHIR記述仕様 第1版
 [[https://std.jpfhir.jp/wp-content/uploads/std/eCheckup.pdf](https://std.jpfhir.jp/wp-content/uploads/std/eCheckup.pdf)]<br>本仕様書では、FHIR健診結果報告書規格と呼ぶ。
 * 特定健診・特定保健指導の電子的なデータ標準様式 3-1A 特定健診情報ファイル（健診・保健指導機関等→医療保険者）仕様説明書 Version4
-[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/xml_30799.html]
+[[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/xml_30799.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/xml_30799.html)]
 
 * 特定健康診査・特定保健指導の電子的な標準様式の仕様に関する資料より
 	付属1　「OID(オブジェクトＩＤ）表」
 	付属2　「XML用特定健診項目情報」
-　　[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/xml_30799.html]
+　　[[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/xml_30799.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/xml_30799.html)]
 * JAHIS 18-007 健康診断結果報告書規格 Ver.2.0
-[https://www.jahis.jp/standard/detail/id=659]
+[[https://www.jahis.jp/standard/detail/id=659](https://www.jahis.jp/standard/detail/id=659)]
 * 厚生労働省　健（検）診結果の利活用に向けた情報標準化整備事業について 自治体検診結果用フォーマット（令和４年２月17日更新）
-[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/seikatsu/index.html]
+[[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/seikatsu/index.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/seikatsu/index.html)]
 
 
 ### 用語と定義
@@ -822,7 +822,7 @@ b) その他の判定区分例
 
 > [例21　特定健診「FHIR構造パターン」記述例]   PDF仕様書参照のこと。<br>
 > [例22　特定健診「CDA添付パターン」記述例]　　   PDF仕様書参照のこと。<br>
-> [例23 Patientリソース 受診者追加情報記述例]　　   PDF仕様書参照のこと。<br>
+> [例23 Patientリソース 受診者追加情報記述例](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-23) PDF仕様書参照のこと。<br>
 
 がん検診結果報告に関する記述例は、別途、自治体検診用追補仕様に掲載する。
 
@@ -842,9 +842,10 @@ PDF版仕様書を参照されたい。
 
 ## 仕様策定
 令和２年度厚生労働科学特別研究事業「診療情報提供書, 電子処方箋等の電子化医療文書の相互運用性確保のための標準規格の開発研究」研究班 (研究代表：大江和彦（東京大学）)<br>
-令和３年(2021)度厚生労働科学研究費補助金事業「検診情報と栄養情報の標準的なデータ項目・様式・交換方式をFHIR準拠仕様として開発する研究」研究班（研究代表：大江和彦（東京大学）<br>
+令和３年(2021)度厚生労働科学研究費補助金事業「検診情報と栄養情報の標準的なデータ項目・様式・交換方式をFHIR準拠仕様として開発する研究」研究班 (研究代表：大江和彦（東京大学）)<br>
 日本医療情報学会NeXEHRS課題研究会、HL7FHIR 日本実装検討WGでの検討結果を反映している。
 https://std.jpfhir.jp/
+Authorized by （一社）日本HL7協会 for Ver.1.0
 
 *以下余白*
 
