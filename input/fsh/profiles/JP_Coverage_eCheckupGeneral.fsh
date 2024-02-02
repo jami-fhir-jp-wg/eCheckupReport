@@ -47,7 +47,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * type.coding.system 1.. MS
 * type.coding.system = "urn:oid:1.2.392.100495.20.2.61" (exactly)
 * type.coding.system ^short = "保険種別コード体系を識別するURI"
-* type.coding.system ^definition = "保険種別コード　厚生労働省電子処方箋 CDA 記述仕様第１版　別表１１のOID"
+* type.coding.system ^definition = "保険種別コード　厚生労働省電子処方箋 CDA 記述仕様第１版　別表１１のOIDを使用する。"
 * type.coding.code ^short = "保険種別コード"
 * type.coding.code ^definition = "保険種別コード　厚生労働省電子処方箋 CDA 記述仕様第１版　別表１１のコード表に従う。8以外を使用する。\r\n1 医保\r2 国保\r3 労災\r4 自賠責\r5 公害\r6 自費\r7 後期高齢者\r8 公費"
 * type.coding.code 1.. MS
@@ -70,7 +70,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * relationship.coding 1.. MS
 * relationship.coding.system = "urn:oid:1.2.392.100495.20.2.62"
 * relationship.coding.system ^short = "コード体系を識別するURI"
-* relationship.coding.system ^definition = "被保険者区分コードのコード体系を識別するURI。厚生労働省電子処方箋 CDA 記述仕様第１版　別表１２のOID"
+* relationship.coding.system ^definition = "被保険者区分コードのコード体系を識別するURI。厚生労働省電子処方箋 CDA 記述仕様第１版　別表１２のOIDを使用する。"
 * relationship.coding.system MS
 * relationship.coding.code ^short = "被保険者区分コード"
 * relationship.coding.code ^definition = "被保険者区分コード。厚生労働省電子処方箋 CDA 記述仕様第１版　別表１２に従う。\r\n1 被保険者\r2 被扶養者"

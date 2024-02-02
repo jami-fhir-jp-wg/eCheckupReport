@@ -343,7 +343,7 @@ table th {
 | 5 | extension |  |  | 0..1 | Extension |  | 被保険者証番号の枝番を表す拡張「InsuredPersonSubNumber」。 | 
 | 5.1 |  | url |  | 1..1 | uri | "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber" | 拡張を識別するURL。固定値。 | 
 | 5.2 |  | valueString |  | 1.1 | string | "01" | 被保険者証記号・番号に対する個人単位被保険者番号（枝番）。「オンライン又は光ディスク等による請求に係る記録条件仕様（医科用）」に従い、桁数が2桁に満たない場合は、先頭に"0"を記録し2桁で記録する。値は例示。後続のdependent要素にも同一の情報を記述すること。 | 
-| 6 | status |  |  | 1..1 | code | “active” | 固定値。処方箋発行時に真に有効な保険かどうかは意味しない。 | 
+| 6 | status |  |  | 1..1 | code | “active” | 固定値。文書作成・発行時に真に有効な保険かどうかは意味しない。 | 
 | 7 | type |  |  | 1..1 | CodeableConcept |  | 保険種別コード。 | 
 | 7.1 |  | coding |  | 1..1 | Coding |  |  | 
 | 7.1.1 |  |  | system | 1..1 | uri | "urn:oid:1.2.392.100495.20.2.61" | 保険種別コード体系を識別するURI。 | 

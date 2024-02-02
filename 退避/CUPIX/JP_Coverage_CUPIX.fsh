@@ -37,7 +37,7 @@ Description: "健診・検診結果報告書　Coverageリソース共通定義"
 
 * status 1..1 MS
 * status = #active
-  * ^short = "固定値。処方箋発行時に真に有効な保険かどうかは意味しない。"
+  * ^short = "固定値。文書作成・発行時に真に有効な保険かどうかは意味しない。"
 
 * type 1..1 MS
   * ^short = "保険種別コード"
