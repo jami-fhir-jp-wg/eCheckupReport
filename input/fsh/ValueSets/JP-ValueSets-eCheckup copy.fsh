@@ -84,14 +84,18 @@ Description: "自治体検診検診区分"
 * $checkup_type_cs#3	"一次検診と精密検査"
 */
 
+
 //--------------------------------------------------------------------
 // 受診形態区分	Encounter.serviceType
 //	受診形態区分を識別するコード。
 //--------------------------------------------------------------------
 ValueSet: ECheckup_valueSet_encounterType
 Id: ECheckup-valueSet-encounterType
+Title: "受診形態区分"
 Description: "受診形態区分"
 * ^url = $checkup_encounter_type_vs
+* ^status = #active
+* ^experimental = false
 * include codes from system $checkup_encounter_type_cs
 
 //--------------------------------------------------------------------
@@ -100,9 +104,13 @@ Description: "受診形態区分"
 //--------------------------------------------------------------------
 ValueSet: ECheckup_valueSet_encounterCategory
 Id: ECheckup-valueSet-encounterCategory
+Title: "受診区分"
 Description: "受診区分"
 * ^url = $encounter_cateogry_vs
+* ^status = #active
+* ^experimental = false
 * include codes from system $encounter_cateogry_cs
+
 
 
 //--------------------------------------------------------------------
