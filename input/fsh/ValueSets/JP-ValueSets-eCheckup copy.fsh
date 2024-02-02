@@ -13,20 +13,6 @@ Title: "健診結果　健診項目コード ValueSet"
 //* include codes from system urn:oid:1.2.392.200119.6.1005 // 特定健診項目
 // * include codes from system urn:oid:1.2.392.100495.100.1051 // 自治体検診項目コード
 
-
-//--------------------------------------------------------------------
-// 文書区分コード	Composition.type
-// FHIR文書の文書区分（健診結果報告書）。
-//--------------------------------------------------------------------
-ValueSet: JP_documentTypeCode_VS
-Id: jp-documenttypecode-vs
-Description: "健診結果　文書区分コード ValueSet"
-Title: "健診結果　文書区分コード ValueSet"
-* ^url = $doctype_codes_vs
-* ^experimental = false
-* include codes from system $doctype_codes_cs
-
-
 //--------------------------------------------------------------------
 // プログラムサービスコード	Composition.event.code
 // 健診プログラムサービスコード
@@ -133,6 +119,7 @@ Title: "健診結果セクションコード ValueSet"
 //* #01910	"健診結果セクション"
 * include codes from system $section_code_cs
 
+/*
 //--------------------------------------------------------------------
 // 厚労省電子処方CDA規格別表12 被保険者区分コード
 // 別表１２	被保険者区分コード	OID: 1.2.392.100495.20.2.62
@@ -148,5 +135,5 @@ Title: "厚労省電子処方CDA規格別表12 被保険者区分コード Value
 // Alias: $subscriber-relationship-cs = urn:oid:1.2.392.100495.20.2.62
 // Alias: $subscriber-relationship-vs = http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
 
-
+*/
 
