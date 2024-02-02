@@ -42,8 +42,8 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * entry contains
     composition 1..1 MS  // 文書構成情報
 and patient 1..1 MS  //  受診者情報
-and organization  1..4 MS // 必須：作成組織、実施機関（同一のことあり）、任意：管理責任機関、転記機関
-and organizationIns  0..* MS // 必須：作成組織、実施機関（同一のことあり）、任意：管理責任機関、転記機関
+and organization  1..4 MS // 必須：作成組織、実施機関（同一のことあり）、任意：管理責任機関、転記機関、保険者組織情報
+and organizationIns  0..* MS // 
 and practitioner 1..2 MS // 必須：作成者、任意：転記者
 and encounter 1..1 MS // 実施情報
 and coverage  0..2 MS // 受診券情報、保険・自費情報
@@ -78,19 +78,19 @@ and documentReference 0..* MS // 添付文書情報
 * entry[patient].request ..0
 * entry[patient].response ..0
 
-* entry[organization] ^short = "機関情報"
-* entry[organization] ^definition = "必須：作成機関、実施機関（作成機関と同一のことあり）、任意：管理責任機関、転記機関"
+* entry[organization] ^short = "機関情報、保険者組織情報"
+* entry[organization] ^definition = "必須：作成機関、実施機関（作成機関と同一のことあり）、任意：管理責任機関、転記機関、および保険者組織情報"
 * entry[organization].fullUrl 1.. MS
 * entry[organization].fullUrl ^short = "埋め込まれているリソースを一意に識別するためのUUID"
 * entry[organization].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[organization].resource 1.. MS
-* entry[organization].resource only  JP_Organization_eCheckupGeneral
+* entry[organization].resource only  JP_Organization_eCheckupGeneral or JP_OrganizationInsurer_eCheckupGeneral
 * entry[organization].resource ^short = "リソースのインスタンス本体"
 * entry[organization].resource ^definition = "リソースのインスタンス本体。"
 * entry[organization].search ..0
 * entry[organization].request ..0
 * entry[organization].response ..0
-
+/*
 * entry[organizationIns] ^short = "保険者組織情報"
 * entry[organizationIns] ^definition = "保険者組織情報"
 * entry[organizationIns].fullUrl 1.. MS
@@ -103,7 +103,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organizationIns].search ..0
 * entry[organizationIns].request ..0
 * entry[organizationIns].response ..0
-
+*/
 * entry[practitioner] ^short = "作成者・転記者情報"
 * entry[practitioner] ^definition = "健診結果作成者情報（必須）または転記者情報"
 * entry[practitioner].fullUrl 1.. MS
