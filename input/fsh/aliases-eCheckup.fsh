@@ -7,11 +7,6 @@ Alias: $jlac10_specimen_cs = http://jpfhir.jp/fhir/core/CodeSystem/JP_Observatio
 Alias: $jlac10_specimen_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/jlac10-specimen-codes
 Alias: $specialCheckup_observations_cs = urn:oid:1.2.392.200119.6.1005  //特定健診項目コード表
 
-Alias: $JP_Patient_CLINS_eCS = http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCS
-Alias: $JP_Patient_eCS = http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS
-Alias: $JP_eCS_Department = http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department
-Alias: $JP_eCS_InstitutionNumber = http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber
-Alias: $JP_InstitutionNumber = http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no
 
 // 検査項目コード
 Alias: $JP_ObservationCode_eCheckupGeneral_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
@@ -48,7 +43,7 @@ Alias: $observationGroup_codes_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/ob
 Alias: $observationGroup_codes_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/observationGroup-codes
 
 Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
-Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+
 Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $attachement-format = http://jpfhir.jp/fhir/eCheckup/CodeSystem/attachement-format
