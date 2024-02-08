@@ -302,7 +302,7 @@ value = "保険医療機関番号10桁＾医療機関内で一意に識別でき
 
 上記のうち２つ目要素である「医療機関内で一意に識別できる粒度の報告ID文字列」は、発行年（4桁）、施設内において発行年内で一意となる番号（8桁）をハイフン(“-”：U+002D)で連結した文字列とする。
 
-> [[表1 Bundleリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-01) ] PDF仕様書参照のこと。
+> [[表1 Bundleリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表1) ] PDF仕様書参照のこと。
 
 
 
@@ -311,7 +311,7 @@ value = "保険医療機関番号10桁＾医療機関内で一意に識別でき
 
 検診結果報告書は、2.1「文書構造」で述べるように、検診項目、及び、問診項目を格納するセクション、及び、添付文書を格納する添付文書セクションから構成される。
 
-> [[表2 Compositionリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-02) ] PDF仕様書参照のこと。
+> [[表2 Compositionリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表2) ] PDF仕様書参照のこと。
 
 
 ##### identifier：任意項目（0..1）
@@ -394,7 +394,7 @@ coding.code要素には　"53576-5"　を用いる。coding.system要素は"http
 #### 受診者情報
 受診者情報は**Patient**リソースで記述する。必須（1..1）項目である。１つの検診結果報告書に対して関連する受診者は1名と限定する。
 
-> [[表3 Patientリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-03) ]　PDF仕様書参照のこと。　<br>
+> [[表3 Patientリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表3) ]　PDF仕様書参照のこと。　<br>
 > [例1  Patientリソース記述例]]　PDF仕様書参照のこと。
 
 ##### 受診者ID（identifier）
@@ -492,12 +492,12 @@ Identifier {
 
 **Organization**リソースの記述仕様を示す。
 
-> [[表8 Organizationリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-08) ]　　PDF仕様書参照のこと。<br>
+> [[表8 Organizationリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表8) ]　　PDF仕様書参照のこと。<br>
 > [例2 Organizationリソース記述例]　　PDF仕様書参照のこと。<br>
 
 **Practitioner**リソースの記述仕様を示す。
 
-> [[表9 Practitionerリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-09) ]　PDF仕様書参照のこと。<br>
+> [[表9 Practitionerリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表9) ]　PDF仕様書参照のこと。<br>
 > [例3 Practitionerリソース記述例]　PDF仕様書参照のこと。<br>
 
 
@@ -520,19 +520,19 @@ Component.custodian要素に、文書管理責任組織を表す**Organization**
 受診券情報の記述仕様を＜表10  Coverageリソース（受診券）の記述仕様＞に示す。受診券が健診事業実施者により発行されないケースでは、本リソースの記述は出現しない。
 
 
-> [[表10 Coverageリソース（受診券情報）の記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-10) ]　　PDF仕様書参照のこと。<br>
+> [[表10 Coverageリソース（受診券情報）の記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表10) ]　　PDF仕様書参照のこと。<br>
 > [例4 Coverageリソース（保険者情報）記述例]　　PDF仕様書参照のこと。<br>
 
 次に保険証情報の記述仕様を＜表11  Coverageリソース（保険証情報）の記述仕様に示す。CDA健診結果報告書規格では、受診者を表すPatient.id に被保険者証記号・番号、及び、保険者番号を記述するが、本仕様書では、CoverageリソースとOrganizationリソースにより記述することに注意する。
 
-> [[表11 Coverageリソース（保険証情報）の記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-11) ]　　PDF仕様書参照のこと。<br>
+> [[表11 Coverageリソース（保険証情報）の記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表11) ]　　PDF仕様書参照のこと。<br>
 > [例5 Coverageリソース（保険証情報）記述例]　　PDF仕様書参照のこと。<br>
 
 
 保険者は、Coverageリソースのpayorから参照されるOrganizationリソースとして記録する。保険者情報のOrganizationリソースの記述仕様を示す。
 
 
-> [[表12 Organizationリソース（保険者情報）の記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-12) ]　PDF仕様書参照のこと。<br>
+> [[表12 Organizationリソース（保険者情報）の記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表12) ]　PDF仕様書参照のこと。<br>
 > [例6 Organizationリソース（保険者情報）記述例]  PDF仕様書参照のこと。<br>
 
 
@@ -542,7 +542,7 @@ Component.custodian要素に、文書管理責任組織を表す**Organization**
 
 表13 Encounterリソースの記述仕様に、Encounterリソースの記述仕様を示す。Component.event要素については、「3.1.3　Compositionリソース」を参照。
 
-> [[表13  Encounterリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-13) ]　　PDF仕様書参照のこと。<br>
+> [[表13  Encounterリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表13) ]　　PDF仕様書参照のこと。<br>
 > [例7 Encounterリソース（健診実施情報）記述例]　　PDF仕様書参照のこと。<br>
 
 
@@ -689,7 +689,7 @@ entry要素内に列挙される3つの"reference"要素は、それぞれ、Obs
 
 Observationリソースによりこれらを記述する全体仕様を＜表18 Observationリソース　検査項目情報＞に示す。
 
-> [[表18 Observationリソース　検査項目情報](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-18) ] PDF仕様書参照のこと。<br>
+> [[表18 Observationリソース　検査項目情報](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表18) ] PDF仕様書参照のこと。<br>
 
 
 ###### (b) 一連検査グループの考え方
@@ -700,7 +700,7 @@ Observationリソースによりこれらを記述する全体仕様を＜表18 
 各 hasMember 同士の関係は、CDA健診結果報告書規格では 包含関係や他の項目への理由関係を行為間関係種別コードで識別できるようにしていたが、本仕様書ではすべて hasMember で関連付けることとする。また、CDA健診結果報告書規格では、グループヘッダに相当するObservation.code要素にはコードは指定しなかったが、本仕様書文書では、以下に示すコードをObservation.code要素に設定する。コード体系を表す system要素には、「http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes」を指定する。 
 
 
-> [[表19 一連検査グループコード](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-19) ]   PDF仕様書参照のこと。<br>
+> [[表19 一連検査グループコード](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表19) ]   PDF仕様書参照のこと。<br>
 
 検診項目が検体検査項目の場合、検体情報をSpecimenリソースで表現する。検体情報のtype要素には、検査項目コードから材料コードを指定する。Specimenリソースの記述仕様を＜表20 Specimenリソースの記述仕様＞に示す。
 
@@ -751,20 +751,20 @@ ii) 検査項目ごとにシェーマや画像を直接リンクさせ報告す�
 X線の画像等をまとめて健康診断結果報告書に添付させる場合は添付書類セクションを用いるが、各検査項目にリンクして、特に超音波検査等でシェーマを添付させたい場合がある。この場合は、対象の健診項目を表すObservationリソースのderivedFrom要素で参照されるMediaリソースに、外部添付ファイルと同様にGIF画像、JPEG画像やPNG画像等の形式でデジタル化された画像を添付することができる。Mediaリソースの使用はできる限り控え、Mediaリソースでも、次項のDocumentReferenceリソースでも記述できる場合には、DocumentReferenceリソースを使用すること。
 
 
-> [[表21 Mediaリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-21) ]  PDF仕様書参照のこと。<br>
+> [[表21 Mediaリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表21) ]  PDF仕様書参照のこと。<br>
 > [例17 Mediaリソース 記述例]  PDF仕様書参照のこと。<br>
 
 #### 画像等を添付書類セクションを利用して一括提供する場合
 健診結果に加えてまとめて画像等の関連書類を提供する場合に、添付書類セクションを用いる。添付書類は、DocumentReferenceリソースのattachment要素に、URI参照で関連付ける。外部文書の参照に際しては、真正性を担保する為にハッシュコードを用いる。
 添付書類ごとにDocumentReferenceリソースを繰り返す。
  
-> [[表22 DocumentReferenceリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-22) ]  PDF仕様書参照のこと。<br>
+> [[表22 DocumentReferenceリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表22) ]  PDF仕様書参照のこと。<br>
 > [例18 DocumentReferenceリソース 記述例]   PDF仕様書参照のこと。<br>
 
 添付書類として、検査結果レポートを表現する、DiagnosticReportリソースを直接添付することも可能とする。
 
 
-> [[表23 DiagnosticReportリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf#tbl-23) ]   PDF仕様書参照のこと。<br>
+> [[表23 DiagnosticReportリソースの記述仕様](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表23) ]   PDF仕様書参照のこと。<br>
 > [例19 DiagnosticReportリソース 記述例]   PDF仕様書参照のこと。<br>
 
 #### 人間ドックおよび労安法等に基づく健康診断結果の記述
