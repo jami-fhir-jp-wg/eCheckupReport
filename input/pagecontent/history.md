@@ -8,6 +8,24 @@
     
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。<br>
 
+## Ver1.1.4 (2024-02-08) <br>
+<br>
+仕様はPDF版またはHTML版を参照するように記載方法を変更した。<br>
+
+## Ver1.1.4 (2024-02-04) <br>
+<br>
+  - 検体材料コードを示す system 値をhttp://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-specimen-codes<br>
+からhttp://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSampleMaterialCode_CS に変更。<br>
+  - 表８ 項番７ Organization に拡張で診療科情報を記述できるように追加。<br>
+  - 以下の 2 件の v1.1.1 での変更からさらに変更。<br>
+    - Organization リソース_作成組織情報の meta.profile<br>
+    - Practitioner リソース_作成者情報の meta.profile<br>
+  - それぞれ<br>
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral<br>
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral<br>
+とする。<br>
+
+
 ## Ver1.1.3 (2024-01-28) <br>
 <br>
 ３．１．２および３．１．３で、Bundle リソースと Composition リソースの identifier の設定ルールを明確にし、曖昧さを排除。<br>

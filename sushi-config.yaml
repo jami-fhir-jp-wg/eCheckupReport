@@ -5,22 +5,22 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: eCheckupReport
 canonical: http://jpfhir.jp/fhir/eCheckupReport
-name: "健診結果報告FHIR実装ガイド"
-title: "健診結果報告FHIR実装ガイド"
-description: "健診結果報告FHIR実装ガイド eCheckupReport Implementation Guide"
+name: "健診結果報告FHIR記述仕様　実装ガイド"
+title: "健診結果報告FHIR記述仕様　実装ガイド"
+description: "健診結果報告FHIR記述仕様　実装ガイド eCheckupReport Implementation Guide"
 status: active # draft | active | retired | unknown
 version: 1.1.4
 date: 2024-02-04
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html 
 copyrightYear: 2023+
-releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: 管理団体：（一社）日本HL7協会、（一社）日本医療情報学会.
   url: http://jpfhir.jp
   email: office@hlfhir.jp
-copyright:  （一社）日本HL7協会、（一社）日本医療情報学会.
+copyright:  （一社）日本HL7協会、（一社）日本医療情報学会.　CC(Creative Commons) BY-ND 4.0
 jurisdiction: 'urn:iso:std:iso:3166-2#JP'
 dependencies:
   jp-core.r4:
@@ -35,7 +35,7 @@ dependencies:
 #----------------------------------------
 pages:
   index.md:
-    title: 健診結果報告書HL7&reg; FHIR&reg;記述仕様書 第1.1版
+    title: 健診結果報告書HL7&reg; FHIR&reg;記述仕様第1.1版　実装ガイド
   tables.md:
     title: 各表一覧
   validationGuide.md:
