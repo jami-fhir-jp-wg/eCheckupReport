@@ -86,7 +86,7 @@ table th {
   - [診療情報提供書 HL7FHIR 記述仕様(PDF版)](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf)
   - [診療情報提供書 HL7FHIR 記述仕様(HTML版)](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.html)
   - [診療情報提供書 記述例(HTML版)](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html)
-  - [診療情報提供書 リソース表(HTML版)](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html##表1%20BUNDLEリソース%E3%80%80文書情報)
+  - [診療情報提供書 リソース表(HTML版)](https://std.jpfhir.jp/stddoc/eCheckupFHIR_Examples_Tables_v1x.html#表1)
  
 
 ## 仕様・実装ガイド策定
