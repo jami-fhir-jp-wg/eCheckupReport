@@ -8,6 +8,10 @@ Alias: $jlac10_specimen_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/jlac10-spec
 Alias: $specialCheckup_observations_cs = urn:oid:1.2.392.200119.6.1005  //特定健診項目コード表
 
 
+// 検診実施機関種別コード
+Alias: $JP_OrganizationCategory_CS = http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code
+Alias: $JP_OrganizationCategory_VS = http://jpfhir.jp/fhir/eCheckup/ValueSet/report-organization-code
+
 // 検査項目コード
 Alias: $JP_ObservationCode_eCheckupGeneral_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
 
@@ -27,6 +31,7 @@ Alias: $report_mergedcategory_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/merge
 
 Alias: $report_category_diseaseKenshin_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-diseaseKenshin-category
 
+Alias: $organizationCategory_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/organizationCategory-CS
 Alias: $checkup_type_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-type-code
 Alias: $checkup_type_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-type-code
 

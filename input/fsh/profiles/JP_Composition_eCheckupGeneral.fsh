@@ -7,9 +7,11 @@ Profile:        JP_Composition_eCheckupGeneral
 Parent:         Composition
 Id:             JP-Composition-eCheckupGeneral
 //Title:          "健診結果報告書　Compositionリソース　文書構成情報"
-Description:    "健診結果報告書　Compositionリソース　文書構成情報"
+Description:    "健診結果報告書　Compositionリソース　文書構成情報 v1.2"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * ^status = #active
+* ^version = "1"
+* ^date = "2024-09-20"
 
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
@@ -64,7 +66,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * type.coding.display ^definition = "文書区分コードの表示名。"
 * type.coding.display MS
 
-* category 1..* MS
+* category 1..1 MS
   * ^short = "報告区分を表すコードを設定する。"
   * ^definition = "報告区分コードのコード体系を識別するURI。コード10,40,90 の場合にはurn:oid:1.2.392.200119.6.1001、それ以外のコードの場合にはhttp://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　を使用する。"
 * category.coding 1..* MS

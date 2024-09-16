@@ -162,4 +162,13 @@ Description:    "健診結果報告書　ObservationGroupリソースGroup仕様
   * ^short = "健診項目グループを表現する場合に、グループ内の健診項目に対応するObservationリソースへの参照。"
   * reference 1..1 MS
     * ^short = "Observationリソースへの参照。"
+
+  * extension ^slicing.discriminator.type = #value
+  * extension ^slicing.discriminator.path = "url"
+  * extension ^slicing.rules = #open
+  * extension contains
+    relationship 1..1 MS
+  * extension[relationship] 1..1 MS
+  * extension[relationship].system = "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observation-hasmember-relationship"
+
 * component 0..0 MS

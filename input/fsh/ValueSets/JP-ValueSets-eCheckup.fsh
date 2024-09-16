@@ -1,4 +1,22 @@
 
+//--------------------------------------------------------------------
+// 結果報告実施機関種別コードValueSet
+// $JP_OrganizationCategory_VS = http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
+//--------------------------------------------------------------------
+CodeSystem: ECheckup_codeSystem_organizationCategory_VS
+Id: eCheckup-codeSystem-organizationCategory-vs
+Title: "結果報告実施機関種別コード ValueSet"
+Description: "結果報告実施機関コード ValueSet"
+* ^url = $JP_OrganizationCategory_VS // http://jpfhir.jp/fhir/eCheckup/ValueSet/report-organization-code
+* ^date = "2024-09-20"
+* ^version = "1"
+* ^status = #active
+* ^experimental = false
+* ^content = #complete
+* ^caseSensitive = false
+* include codes from system $JP_OrganizationCategory_CS 
+
+
 //---------------------
 // 健診項目コードValueSet
 //---------------------
@@ -8,6 +26,8 @@ Description: "健診結果　健診項目コード ValueSet"
 Title: "健診結果　健診項目コード ValueSet"
 * ^url = $JP_ObservationCode_eCheckupGeneral_vs
 * ^experimental = false
+* ^date = "2024-09-20"
+* ^version = "1"
 * include codes from system urn:oid:1.2.392.200119.4.504  // MEDIS JLAC10
 * include codes from system $specialCheckup_observations_cs // 特定健診項目
 //* include codes from system urn:oid:1.2.392.200119.6.1005 // 特定健診項目
@@ -23,6 +43,8 @@ Description: "健診プログラムサービスコード ValueSet"
 Title: "健診プログラムサービスコード ValueSet"
 * ^url = $checkup_programService_vs
 * ^experimental = false
+* ^date = "2024-09-20"
+* ^version = "1"
 * include codes from system $checkup_programService_cs
 
 /*
@@ -46,6 +68,8 @@ Description: "健診結果　報告区分コード ValueSet"
 Title: "健診結果　報告区分コード ValueSet"
 * ^experimental = false
 * ^url = $report_category_vs
+* ^date = "2024-09-20"
+* ^version = "1"
 * $report_category_cs#41   "事業者健診"
 * $report_category_cs#42   "自治体検診"
 * $report_category_cs#43   "乳幼児検診"
@@ -57,6 +81,8 @@ Description: "健診結果　報告区分コード(特定健診制度) ValueSet"
 Title: "健診結果　報告区分コード(特定健診制度) ValueSet"
 * ^url = $report_speccategory_vs
 * ^experimental = false
+* ^date = "2024-09-20"
+* ^version = "1"
 * $report_speccategory_cs#10   "特定健診"
 * $report_speccategory_cs#40   "健診結果報告"
 * $report_speccategory_cs#90   "その他検診"
@@ -67,6 +93,10 @@ Description: "健診結果　報告区分コード(特定健診とそれ以外�
 Title: "健診結果　報告区分コード(特定健診とそれ以外の統合版) ValueSet"
 * ^url = $report_mergedcategory_vs
 * ^experimental = false
+* ^date = "2024-09-20"
+* ^version = "1"
+* ^date = "2024-09-20"
+* ^version = "1"
 * include codes from valueset $report_speccategory_vs
 * include codes from valueset $report_category_vs
 
@@ -96,6 +126,8 @@ Description: "受診形態区分"
 * ^url = $checkup_encounter_type_vs
 * ^status = #active
 * ^experimental = false
+* ^date = "2024-09-20"
+* ^version = "1"
 * include codes from system $checkup_encounter_type_cs
 
 //--------------------------------------------------------------------
@@ -109,6 +141,8 @@ Description: "受診区分"
 * ^url = $encounter_cateogry_vs
 * ^status = #active
 * ^experimental = false
+* ^date = "2024-09-20"
+* ^version = "1"
 * include codes from system $encounter_cateogry_cs
 
 
