@@ -1,12 +1,14 @@
-Extension: Observation-hasMember-Relationship
-Id: observation-hasmember-relationship
-Description: "ObservationリソースのhasMemnerの対象検査との関係をコードで表す拡張"
+Extension: ObservationGroupRelationship
+Id: observationGroupRelationship
+Description: "ObservationリソースのhasMemnerの対象項目との関係をコードで表す拡張"
 
-* ^url = "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observation-hasmember-relationship"
+* ^url = "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0"
 * ^context.type = #element
 * ^context.expression = "Observation.hasMember"
-* url = "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observation-hasmember-relationship" (exactly)
-* valueCodeableConcept only CodeableConcept
+* url = "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observationGroupRelationship" (exactly)
+* valueCode only code
+* valueCode 1..1 MS 
+* valueCode from $observationGroupRelationship_codes_cs

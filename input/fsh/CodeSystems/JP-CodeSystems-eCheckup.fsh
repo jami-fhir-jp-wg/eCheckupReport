@@ -1,3 +1,4 @@
+/
 //--------------------------------------------------------------------
 // 結果報告実施機関種別コード
 //--------------------------------------------------------------------
@@ -14,6 +15,7 @@ Description: "結果報告実施機関コード"
 * ^caseSensitive = false
 * #exec-org   "実施機関"
 * #doc-org  "報告作成機関"
+
 
 //--------------------------------------------------------------------
 // 受診券券面種別コード
@@ -192,6 +194,23 @@ Title: "添付文書フォーマットコード"
 * #cdar2_hc08_v08	"CDA R2形式特定健診"
 * #cdar2_jahis_18007	"JAHIS 健康診断報告書規格"
 
+/--------------------------------------------------------------------
+// 一連検査グループ関連コード
+//--------------------------------------------------------------------
+CodeSystem: ECheckup_codeSystem_observationGroupRelationship
+Id: eCheckup-codeSystem-observationGroupRelationship
+Title: "健診一連検査グループコードの関連コード"
+Description: "健診一連検査グループコードの関連コード"
+* ^url = $observationGroupRelationship_codes_cs //http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroupRelationship-codes
+* ^date = "2024-09-20"
+* ^version = "1"
+* ^status = #active
+* ^experimental = false
+* ^content = #complete
+* ^caseSensitive = true
+* #COMP
+* #RSON
+
 //--------------------------------------------------------------------
 // 一連検査グループコード
 //	複数の検査項目が一連検査としてまとまって結果が得られるグループのコードシステム。
@@ -206,7 +225,7 @@ Title: "健診一連検査グループコード サンプル一部"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1"
-* ^content = #fragment
+* ^content = #complete
 * ^caseSensitive = true 
 * #2A020   "貧血検査"   //2024-09-20 2A000から修正
 * #9A110   "心電図検査"

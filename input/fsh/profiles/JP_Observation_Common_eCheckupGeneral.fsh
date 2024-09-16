@@ -169,6 +169,6 @@ Description:    "健診結果報告書　ObservationGroupリソースGroup仕様
   * extension contains
     relationship 1..1 MS
   * extension[relationship] 1..1 MS
-  * extension[relationship].system = "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observation-hasmember-relationship"
-
+  * extension[relationship].system = $observationGroupRelationship_extension (exactly)
+  * extension[relationship].valueCode from $observationGroupRelationship_codes_cs
 * component 0..0 MS

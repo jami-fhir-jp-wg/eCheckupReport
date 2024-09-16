@@ -47,6 +47,11 @@ Alias: $encounter_cateogry_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/encounte
 Alias: $observationGroup_codes_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes
 Alias: $observationGroup_codes_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/observationGroup-codes
 
+Alias: $observationGroupRelationship_codes_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroupRelationship-codes
+Alias: $observationGroupRelationship_codes_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/observationGroupRelationship-codes
+
+Alias: $observationGroupRelationship_extension = http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship
+
 Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 
 Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
