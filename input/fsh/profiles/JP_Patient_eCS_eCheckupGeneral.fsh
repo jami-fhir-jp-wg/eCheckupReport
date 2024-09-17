@@ -5,10 +5,11 @@
 //   
 // ==================================================
 
-Profile: JP_Patient_eCS_eCheckupGeneral
+Profile: JP_Patient_CLINS_eCheckupGeneral
 Parent: JP_Patient
-Id: JP-Patient-eCS-eCheckupGeneral
-Title: "eCS/CLINS:JP_Patient_eCS_eCheckupGeneral"
+// JP_Patient_eCSから派生すると患者姓と名が必須になってしまう。
+Id: jp-Patient-CLINS-eCheckupGeneral
+Title: "eCS/CLINS:JP_Patient_CLINS_eCheckupGeneral"
 Description: "eCS/CLINS Patientリソース（患者情報）健診結果報告書用プロファイル"
 
 * obeys valid-system-local-patientID
@@ -23,7 +24,7 @@ Description: "eCS/CLINS Patientリソース（患者情報）健診結果報告�
 * extension[eCS_InstitutionNumber] 0..1 MS
 */
 
-* ^url = $JP_Patient_eCS_eCheckupGeneral
+* ^url = $JP_Patient_CLINS_eCheckupGeneral
 
 * ^version = "1"
 * ^status = #active
@@ -44,8 +45,7 @@ Description: "eCS/CLINS Patientリソース（患者情報）健診結果報告�
 * meta.lastUpdated ^short = "最終更新日"
 * meta.lastUpdated ^definition = "この患者情報の内容がサーバ上で最後に格納または更新された日時、またはこのFHIRリソースが生成された日時"
 * meta.profile 1..1 MS
-  * insert relative_short_definition("準拠しているプロファイルとして次のURLを指定する。http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS")
-//* meta.profile = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS"
+  * insert relative_short_definition("準拠しているプロファイルとして次のURLを指定する。http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCS")
 
 
 * identifier ^short = "保険者・被保険者番号情報、自施設の患者番号など。"
