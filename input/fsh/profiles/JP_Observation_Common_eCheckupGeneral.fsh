@@ -32,7 +32,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
   * ^definition = "厚労省標準である臨床検査項目コード（JLAC10準拠）の場合：\"urn:oid:1.2.392.200119.4.504\"、厚労省特定健診項目コードに完全準拠したコードを使用する場合：\"urn:oid:1.2.392.200119.6.1005\"、自治体検診項目コードに完全準拠したコードを使用する場合：\"urn:oid:1.2.392.100495.100.1051\""
 * code from $JP_ObservationCode_eCheckupGeneral_vs
 * subject 1..1 MS
-* subject only Reference(JP_Patient_eCS)
+* subject only Reference(JP_Patient_eCS_eCheckupGeneral)
 * subject ^definition = "健診／検診対象者情報。必須項目。"
 * effective[x] 1..1 MS
 * effective[x] ^short = "検体検査の場合は、検体採取日時。すべて健診実地日で代用してもよい。yyyy-mm-dd"
@@ -141,7 +141,7 @@ Description:    "健診結果報告書　ObservationGroupリソースGroup仕様
 * code 1..1 MS
   * ^short = "検査グループ項目を表す識別IDと検査名称の情報。コード化されていること。必須項目。"
 * subject 1..1 MS
-* subject only Reference(JP_Patient_eCS)
+* subject only Reference(JP_Patient_eCS_eCheckupGeneral)
 * subject ^definition = "健診／検診対象者情報。必須項目。"
 * effective[x] 1..1 MS
 * effective[x] ^short = "検体検査の場合は、検体採取日時。すべて健診実地日で代用してもよい。yyyy-mm-dd"
@@ -162,13 +162,5 @@ Description:    "健診結果報告書　ObservationGroupリソースGroup仕様
   * ^short = "健診項目グループを表現する場合に、グループ内の健診項目に対応するObservationリソースへの参照。"
   * reference 1..1 MS
     * ^short = "Observationリソースへの参照。"
-
-  * extension ^slicing.discriminator.type = #value
-  * extension ^slicing.discriminator.path = "url"
-  * extension ^slicing.rules = #open
-  * extension contains
-    relationship 1..1 MS
-  * extension[relationship] 1..1 MS
-  * extension[relationship].system = $observationGroupRelationship_extension (exactly)
-  * extension[relationship].valueCode from $observationGroupRelationship_codes_cs
+* hasMember.extension contains ObservationGroupRelationship named obsGroupRelationship 1..1
 * component 0..0 MS

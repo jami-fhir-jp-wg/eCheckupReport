@@ -90,47 +90,60 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   no-validate:
     - '*/hl7.fhir.jp.core'
   special-url:
-    - http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Consent_eCS
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageInsurance_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageService_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Device_eCS
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DeviceUseStatement_eCS
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DeviceUseStatement
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_DiagnosticReport_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DocumentReference_CDAdocument
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DocumentReference_eCS
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_DocumentReference_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Immunization_eCS
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Media_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Media
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Observation_Common_eCS
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS_coveragePayer
-    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eClinicalSummary
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationInsurer_eCheckupGeneral
-    - http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCS
-    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerRole_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Procedure_eCS
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_RelatedPerson_eCS
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_ResearchStudy_eCS
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy
+    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_ResearchSubject_eCS
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Specimen_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Checkup_Fee_Collection_Status
-    - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Fiscal_Year_At_Primary_Checkup
     - http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/composition-clinicaldocument-versionNumber
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/composition_dataEnterer
-    - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_Department
+    - http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department
     - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber
+    - http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/attachement-format
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type
-    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-specimen-codes
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroupRelationship-codes
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code
     - urn:oid:1.2.392.200119.6.208
     - urn:oid:1.2.392.200119.6.1002
     - http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
-    - urn:oid:1.2.392.100495.20.3.21
-    - urn:oid:1.2.392.100495.20.2.61
-    - urn:oid:1.2.392.100495.20.2.63
-    - urn:oid:1.2.392.100495.20.2.62
     - urn:oid:2.16.840.1.113883.2.2.1.6.1001
     - urn:oid:1.2.392.200119.6.1008
     - urn:oid:1.2.392.200119.6.18030
@@ -194,14 +207,11 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - urn:oid:1.2.392.200119.6.1005
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/encounter-category
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-encounter-type
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/report-organization-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
     - http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
-    - http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSampleMaterialCode_CS
-    - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS
-    - http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department

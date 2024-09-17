@@ -67,3 +67,4 @@ Alias: $age_at_event = http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinit
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $patient-religion = http://hl7.org/fhir/StructureDefinition/patient-religion
 
+Alias: $JP_Patient_eCS_eCheckupGeneral = http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS_eCheckupGeneral

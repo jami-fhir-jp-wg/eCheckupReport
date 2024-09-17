@@ -78,7 +78,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * subject.reference 1..1 MS
 * subject.reference ^short = "PatientリソースのfullUrl要素に指定されるUUIDを指定。"
 * subject.reference ^definition = "Bundleリソースに記述されるPatientリソースのfullUrl要素に指定されるUUIDを指定。"
-* subject only Reference(JP_Patient_eCS or JP_Patient_CLINS_eCS)
+* subject only Reference(JP_Patient_eCS_eCheckupGeneral)
 
 * encounter ^short = "健診実施情報を表すEncounterリソースへの参照"
 * encounter ^definition = "健診実施情報を表すEncounterリソースへの参照"

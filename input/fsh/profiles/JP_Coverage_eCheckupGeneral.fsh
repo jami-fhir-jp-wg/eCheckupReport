@@ -115,7 +115,7 @@ Description:    "健診結果報告書　Coverageリソース  受診券等サ�
 * type = urn:oid:1.2.392.200119.6.208#1
 * subscriberId 1..1 MS  // 受診券番号文字列
 * subscriberId ^short = "受診券番号"
-* beneficiary only Reference(JP_Patient_eCS)
+* beneficiary only Reference(JP_Patient_eCS_eCheckupGeneral)
   * ^short = "この保険で給付される受診者情報（Patientリソース）へのリテラル参照。"
   * reference 1..1 MS
     * ^short = "PatientリソースのfullUrl要素に指定されるUUIDを指定。"

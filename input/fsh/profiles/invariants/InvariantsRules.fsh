@@ -1,8 +1,3 @@
-/*
-実装必要な未実装チェック
-1）　CLINSでは、MedicationRequest.dosageInstruction.timing.code.coding は、処方箋用法コードによりコード化することが必須。
-2）　その他、CLINSでは必須という要素のチェックを別ファイルに定義して、それをすべて行うこと。
-*/
 
 // R1012- 患者氏名に漢字、カナのどちらかが存在している
 Invariant: either-KanjiName-KanaName-exist
@@ -17,7 +12,6 @@ Severity: #error
 Expression: "name.where(extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation').exists()).where(text.contains('　')).exists().not()"
 
 // R1010-  患者IDチェック
-
 Invariant: valid-system-local-patientID
 Description: "R1010:施設患者IDを記述する場合には、identifier.systemは、'urn:oid:1.2.392.100495.20.3.51.[1+施設番号10桁]'でなければならない。"
 Severity: #error
@@ -93,7 +87,7 @@ Expression: "entry.first().resource.is(Patient)"
 
 // バージョン指定部分を除くURLを一致チェック
 Invariant: patients-profile-is-JP-Patient-CLINS-eCS
-Description: "R0212:最初のentryであるPatientは、JP_Patient_eCSプロファイルに準拠していなければならない。"
+Description: "R0212:最初のentryであるPatientは、JP_Patient_eCS_eCheckupGeneralプロファイルに準拠していなければならない。"
 Severity: #error
 Expression: "entry.first().resource.meta.where(profile.substring(0,60)='http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS').exists()"
 
@@ -266,7 +260,7 @@ Description: "R0211:最初のentryはPatientでなければならない。"
 
 //
 Invariant: patients-profile-is-JP-Patient-CLINS-eCS
-Description: "R0212:最初のentryであるPatientは、JP_Patient_eCSプロファイルに準拠していなければならない。" d
+Description: "R0212:最初のentryであるPatientは、JP_Patient_eCS_eCheckupGeneralプロファイルに準拠していなければならない。" d
 
 ## ひとつのBundleリソースには、ひとりの患者の、同時に１回で報告される一連のデータ（１報告単位のデータ）だけを、すべて漏れなく格納する。
 必須ルール

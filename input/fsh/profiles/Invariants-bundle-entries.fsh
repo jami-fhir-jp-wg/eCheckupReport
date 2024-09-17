@@ -46,10 +46,10 @@ Expression:
 
 Invariant: bundle-entry-JP-Patient-eCheckupGeneral
 Severity: #error
-Description: "bundleリソースを構成するentryにPatientリソース(JP_Patient_eCS)がなければならない。"
+Description: "bundleリソースを構成するentryにPatientリソース(JP_Patient_eCS_eCheckupGeneral)がなければならない。"
 Expression: 
 "(
-    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS').exists()
+    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS_eCheckupGeneral').exists()
 )"
 
 Invariant: bundle-entry-JP-OrganizationReporter-eCheckupGeneral

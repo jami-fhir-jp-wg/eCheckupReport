@@ -1,21 +1,16 @@
-
 //--------------------------------------------------------------------
 // 結果報告実施機関種別コードValueSet
 // $JP_OrganizationCategory_VS = http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
 //--------------------------------------------------------------------
-CodeSystem: ECheckup_codeSystem_organizationCategory_VS
+ValueSet: ECheckup_codeSystem_organizationCategory_VS
 Id: eCheckup-codeSystem-organizationCategory-vs
 Title: "結果報告実施機関種別コード ValueSet"
 Description: "結果報告実施機関コード ValueSet"
-* ^url = $JP_OrganizationCategory_VS // http://jpfhir.jp/fhir/eCheckup/ValueSet/report-organization-code
+* ^url = $JP_OrganizationCategory_VS
 * ^date = "2024-09-20"
 * ^version = "1"
-* ^status = #active
 * ^experimental = false
-* ^content = #complete
-* ^caseSensitive = false
-* include codes from system $JP_OrganizationCategory_CS 
-
+* include codes from system $JP_OrganizationCategory_CS
 
 //---------------------
 // 健診項目コードValueSet

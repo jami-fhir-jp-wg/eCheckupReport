@@ -5,7 +5,8 @@ Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral"
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no"
 * identifier.value = "1311234567"
-* type = $organization-type#prov
+* type[+] = $JP_OrganizationCategory_CS#exec-org
+* type[+] = $JP_OrganizationCategory_CS#doc-org
 * name = "厚生労働省第一病院"
 * telecom.system = #phone
 * telecom.value = "0123-456-7890"
