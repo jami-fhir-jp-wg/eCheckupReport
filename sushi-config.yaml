@@ -92,7 +92,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - '*/hl7.fhir.jp.core'
   special-url:
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary
-    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral
+    - http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral
     - http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Consent_eCS

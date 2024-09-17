@@ -1,5 +1,5 @@
 Instance: Bundle-eCheckupReport-Sample-01
-InstanceOf: Bundle
+InstanceOf: JP_Bundle_eCheckupGeneral
 Usage: #example
 Description: "Bundle 健診検査結果報告書　サンプル０１"
 

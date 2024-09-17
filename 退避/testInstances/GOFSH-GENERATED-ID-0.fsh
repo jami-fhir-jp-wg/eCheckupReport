@@ -2,7 +2,7 @@ Instance: GOFSH-GENERATED-ID-0
 InstanceOf: Bundle
 Usage: #example
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
-* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral"
+* meta.profile = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral"
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/documentInstance-identifier"
 * identifier.value = "12345"
 * type = #document

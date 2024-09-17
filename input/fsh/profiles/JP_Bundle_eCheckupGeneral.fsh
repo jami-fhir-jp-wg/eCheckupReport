@@ -17,6 +17,7 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * obeys bundle-entry-JP-Encounter-eCheckupGeneral
 
 * ^url = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral"
+
 * ^version = "1"
 * ^status = #active
 * . ^short = "健診結果報告書 Bundleリソース （電子カルテ情報共有サービス送信は別プロファイル）"
