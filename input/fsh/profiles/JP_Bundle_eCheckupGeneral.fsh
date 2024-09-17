@@ -1,7 +1,7 @@
 Invariant: bundle-metaprofile
 Description: "meta.profileには、指定したプロファイルのURLの記述が存在しなければならない。"
 Severity: #error
-Expression: "meta.profile.where($this.substring(0,76) ='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral|1').exists()"
+Expression: "meta.profile.where($this.substring(0,76) ='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral').exists()"
 
 Profile: JP_Bundle_eCheckupGeneral
 Parent: Bundle
@@ -16,6 +16,7 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * obeys bundle-entry-JP-Encounter-eCheckupGeneral
 
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral"
+* ^version = "1"
 * ^status = #active
 * . ^short = "健診結果報告書 Bundleリソース （電子カルテ情報共有サービス送信は別プロファイル）"
 * . ^definition = "健診結果報告のための文書 Bundleリソース　（電子カルテ情報共有サービス送信は別プロファイル）"
