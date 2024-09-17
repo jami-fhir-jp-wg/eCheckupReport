@@ -11,4 +11,4 @@ Description: "ObservationリソースのhasMemnerの対象項目との関係を�
 * url = $observationGroupRelationship_extension (exactly)
 * value[x] only code
 * value[x] 1..1 MS 
-* value[x] from $observationGroupRelationship_codes_cs
+* value[x] from $observationGroupRelationship_codes_vs
