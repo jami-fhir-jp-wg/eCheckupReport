@@ -156,10 +156,10 @@ Title: "健診結果セクションコード ValueSet"
 //* #01910	"健診結果セクション"
 * include codes from system $section_code_cs
 
-/--------------------------------------------------------------------
+//--------------------------------------------------------------------
 // 一連検査グループ関連コードValueSet
 //--------------------------------------------------------------------
-CodeSystem: ECheckup_valueSet_observationGroupRelationship
+ValueSet: ECheckup_valueSet_observationGroupRelationship
 Id: eCheckup-valueSet-observationGroupRelationship
 Title: "健診一連検査グループコードの関連コードValueSet"
 Description: "健診一連検査グループコードの関連コードValueSet"
