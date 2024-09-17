@@ -1,13 +1,13 @@
 
 // R1012- 患者氏名に漢字、カナのどちらかが存在している
 Invariant: either-KanjiName-KanaName-exist
-Description: "R1012- 患者氏名に漢字、カナのどちらかが存在している。"
+Description: "R1112- 患者氏名に漢字、カナのどちらかが存在している。"
 Severity: #error
-Expression: "name.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and value.ofType(Code).value='IDE').exists() or name.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and value.ofType(Code).value='SYL').exists()"
+Expression: "name.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and value.ofType(Code)='IDE').exists() or name.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and value.ofType(Code)='SYL').exists()"
 
 // R1013- 患者氏名テキストに全角空白が含まれるのはエラーとする。（半角空白はOK）
 Invariant: kanjiName-kanaName-donot-contain-ZenkakuKuuhaku
-Description: "R1013- 患者氏名に漢字、カナにおいては姓と名を区切らないか、または半角空白で区切る。全角空白は含まれてはならない。"
+Description: "R1113- 患者氏名に漢字、カナにおいては姓と名を区切らないか、または半角空白で区切る。全角空白は含まれてはならない。"
 Severity: #error
 Expression: "name.where(extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation').exists()).where(text.contains('　')).exists().not()"
 

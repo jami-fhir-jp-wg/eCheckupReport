@@ -156,6 +156,21 @@ Title: "健診結果セクションコード ValueSet"
 //* #01910	"健診結果セクション"
 * include codes from system $section_code_cs
 
+/--------------------------------------------------------------------
+// 一連検査グループ関連コードValueSet
+//--------------------------------------------------------------------
+CodeSystem: ECheckup_valueSet_observationGroupRelationship
+Id: eCheckup-valueSet-observationGroupRelationship
+Title: "健診一連検査グループコードの関連コードValueSet"
+Description: "健診一連検査グループコードの関連コードValueSet"
+* ^url = $observationGroupRelationship_codes_vs //http://jpfhir.jp/fhir/eCheckup/ValueSet/observationGroupRelationship-codes
+* ^date = "2024-09-20"
+* ^version = "1"
+* ^status = #active
+* ^experimental = false
+* include codes from system $observationGroupRelationship_codes_cs
+
+
 /*
 //--------------------------------------------------------------------
 // 厚労省電子処方CDA規格別表12 被保険者区分コード

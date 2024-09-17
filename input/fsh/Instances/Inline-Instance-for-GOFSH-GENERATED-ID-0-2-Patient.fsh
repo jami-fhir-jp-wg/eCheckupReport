@@ -5,7 +5,7 @@ Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS"
 * identifier[+].system = "urn:oid:1.2.392.200119.6.102.11311234567"
 * identifier[=].value = "34567"
-* identifier[+].system = "http://jpfhir.jp/fhir/clins/Idsysmem/JP_Insurance_memberID"
+* identifier[+].system = "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID"
 * identifier[=].value = "00012345:あいう:３８７４７６:01"
 
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
