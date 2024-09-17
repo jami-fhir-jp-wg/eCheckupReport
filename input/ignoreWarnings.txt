@@ -69,3 +69,6 @@ The string value contains text that looks like embedded HTML tags%
 
 #Unknown local code system
 Code System URI 'http://jpfhir.jp/fhir/eCS/CodeSystem/DrugCode/%
+
+# labo categpry category code
+None of the codings provided are in the value set 'Observation Category Codes'%
