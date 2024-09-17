@@ -92,7 +92,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization].fullUrl ^short = "Organizationリソースを一意に識別するためのUUID。"
 * entry[organization].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
 * entry[organization].resource 1.. MS
-* entry[organization].resource only  JP_Organization_eCheckupGeneral (exactly)
+* entry[organization].resource only  JP_Organization_eCheckupGeneral
 * entry[organization].resource ^definition = "リソースのインスタンス本体。"
 * entry[organization].search ..0
 * entry[organization].request ..0
@@ -104,7 +104,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organizationIns].fullUrl ^short = "Organizationリソースを一意に識別するためのUUID。"
 * entry[organizationIns].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
 * entry[organizationIns].resource 1.. MS
-* entry[organizationIns].resource only  JP_OrganizationInsurer_eCheckupGeneral (exactly)
+* entry[organizationIns].resource only  JP_OrganizationInsurer_eCheckupGeneral
 * entry[organizationIns].resource ^short = "リソースのインスタンス本体"
 * entry[organizationIns].resource ^definition = "リソースのインスタンス本体。"
 * entry[organizationIns].search ..0
