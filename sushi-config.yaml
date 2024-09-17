@@ -28,7 +28,7 @@ dependencies:
     version: 1.1.2
   jpfhir-terminology.r4:
     uri: http://jpfhir.jp/fhir//jpfhir-terminology.r4/ImplementationGuide/
-    version: 1.1.1
+    version: 1.2.1
 #
 #----------------------------------------
 # ページタイトル名称設定
@@ -53,8 +53,8 @@ menu:
   Validationガイド:
     Validationガイド: validationGuide.html
   パッケージDownload:
-    標準(diff)版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.1.2.tgz 
-    snapshot版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.1.2-snap.tgz
+    標準(diff)版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.2.0.tgz 
+    snapshot版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.2.0-snap.tgz
 #-----------------------------------------
 # IG 外部パラメータ設定
 #-----------------------------------------
