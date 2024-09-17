@@ -209,6 +209,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/encounter-category
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-encounter-type
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/report-organization-code
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/observationGroup-codes
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/observationGroupRelationship-codes
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
