@@ -23,7 +23,7 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
-  * insert relative_short_definition("準拠しているプロファイルとして次のURLとバージョンを指定する。\"http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral|1\" を使用する。")
+  * insert relative_short_definition("準拠しているプロファイルとして次のURLとバージョンを指定する。\"http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral|1\" を使用する。")
 
 * identifier 1..1 MS
 * identifier ^short = "この文書Bundleの固定識別子。"
