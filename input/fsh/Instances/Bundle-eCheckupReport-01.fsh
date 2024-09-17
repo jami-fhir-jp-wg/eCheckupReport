@@ -10,7 +10,6 @@ Description: "Bundle 健診検査結果報告書　サンプル０１"
 * identifier.system = $JP_BundleIdentifier
 * identifier.value = "1318814790^2024^0123-Referral-203949583949"    //正しい例
 
-
 * type = #document
 * timestamp = "2024-04-05T13:28:17.239+09:00"
 * entry[+].fullUrl = "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d"
