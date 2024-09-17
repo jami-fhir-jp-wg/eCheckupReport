@@ -36,7 +36,7 @@ dependencies:
 #----------------------------------------
 pages:
   index.md:
-    title: 健診結果報告書HL7&reg; FHIR&reg;記述仕様第1.1版　実装ガイド
+    title: 健診結果報告書HL7&reg; FHIR&reg;記述仕様第1.2版　実装ガイド
   validationGuide.md:
     title: Validationガイド
   history.md:
