@@ -50,7 +50,7 @@ Bundle.identifier.value : 実装ガイド本文 5情報送信仕様--Bundleリ�
     composition 1..1 MS  // 文書構成情報
 and patient 1..1 MS  //  受診者情報
 and organization  1..4 MS // 必須：作成組織、実施機関（同一のことあり）、任意：管理責任機関、転記機関、保険者組織情報
-and organizationIns  0..* MS */
+and organizationIns  0..* MS 
 and practitioner 1..2 MS // 必須：作成者、任意：転記者
 and practitionerRole 0..1 MS // 転記者機関
 and encounter 1..1 MS // 実施情報
