@@ -6,7 +6,7 @@ Description: "Bundle 健診検査結果報告書　サンプル０１"
 
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral"
-* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/documentInstance-identifier"
+* identifier.system = "http://jpfhir.jp/fhir/clins/bundle-identifier"
 * identifier.value = "12345"
 * type = #document
 * timestamp = "2024-04-05T13:28:17.239+09:00"

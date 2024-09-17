@@ -1,7 +1,7 @@
 Invariant: bundle-metaprofile
 Description: "meta.profileには、指定したプロファイルのURLの記述が存在しなければならない。"
 Severity: #error
-Expression: "meta.profile.where($this = 'http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral|1').exists()"
+Expression: "meta.profile.where($this.substring(0,76) ='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral|1').exists()"
 
 Profile: JP_Bundle_eCheckupGeneral
 Parent: Bundle
