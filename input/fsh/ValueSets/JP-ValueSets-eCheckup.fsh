@@ -170,6 +170,20 @@ Description: "健診一連検査グループコードの関連コードValueSet"
 * ^experimental = false
 * include codes from system $observationGroupRelationship_codes_cs
 
+//--------------------------------------------------------------------
+// 一連検査グループコード
+//	複数の検査項目が一連検査としてまとまって結果が得られるグループのコードシステム。
+//--------------------------------------------------------------------
+ValueSet: ECheckup_valueSet_observationGroup
+Id: eCheckup-valueSet-observationGroup
+Description: "健診一連検査グループコード ValueSet"
+Title: "健診一連検査グループコード ValueSet"
+* ^url = $observationGroup_codes_vs
+* ^status = #active
+* ^experimental = false
+* ^date = "2024-09-20"
+* ^version = "1"
+* include codes from system $observationGroup_codes_cs
 
 /*
 //--------------------------------------------------------------------

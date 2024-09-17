@@ -5,6 +5,6 @@ Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_Common_eCheckupGeneral"
 * status = #final
 * category = $JP_SimpleObservationCategory_CS#procedure
-* code = $ObservationGroupCode#9A110 "心電図検査"
+* code = $observationGroup_codes_cs#9A110 "心電図検査"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * hasMember = Reference(urn:uuid:2313d7a5-6d29-90f9-ef77-e79ed7b0ca20)

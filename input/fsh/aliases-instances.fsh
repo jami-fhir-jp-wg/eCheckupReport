@@ -11,5 +11,5 @@ Alias: $jlac10-specimen-codes = http://jpfhir.jp/fhir/core/CodeSystem/JP_Observa
 Alias: $encounterCategory = http://jpfhir.jp/fhir/eCheckup/encounterCategory
 Alias: $attachementFormat = http://jpfhir.jp/eCheckup/CodeSysem/attachementFormat
 Alias: $JLAC10 = http://jpfhir.jp/fhir/eCheckup/CodeSystem/JLAC10
-Alias: $ObservationGroupCode = http://jpfhir.jp/fhir/eCheckup/CodeSystem/ObservationGroupCode
+//Alias: $observationGroup_codes_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/ObservationGroupCode
 Alias: $JLAC10-Specimen = http://jpfhir.jp/eCheckup/CodeSystem/JLAC10-Specimen

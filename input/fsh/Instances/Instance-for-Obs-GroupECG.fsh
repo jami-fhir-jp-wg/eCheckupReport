@@ -9,7 +9,7 @@ Description: "健診検査結果　心電図グループ 　　JLAC10=9A110"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral"
 * status = #final
 
-* code = http://jpfhir.jp/fhir/eCheckup/CodeSystem/ObservationGroupCode#9A110 "心電図検査"
+* code = $observationGroup_codes_cs#9A110 "心電図検査"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * effectiveDateTime = "2020-04-04"
 * hasMember[+].extension[obsGroupRelationship].url = $observationGroupRelationship_extension
