@@ -23,12 +23,16 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
   * insert relative_short_definition("準拠しているプロファイルとして次のURLとバージョンを指定する。\"http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Bundle_eCheckupGeneral|1\" を使用する。")
-* identifier 1.. MS
-* identifier ^short = "この文書Bundleの固定識別番号。Bundle作成時にシステムが設定し、サーバ間で移動、コピーされても変更されないID。"
-* identifier ^definition = "この文書Bundleの固定識別番号。identifierがグローバルに一意になるように生成される必要がある。"
-* identifier.system 1.. MS
+
+* identifier 1..1 MS
+* identifier ^short = "この文書Bundleの固定識別子。"
+* identifier ^definition = "Bundleリソースのidentifier要素は、一般に受信システム側で保存される。送信側は、後続の送信においてこのidentifierを指定することで、受信側は過去に受信したBundleリソースを特定し、それに含まれていた全データについて削除、更新などの処理を行うためにこれを使用することができる。"
+* identifier ^comment = "Bundleリソースのidentifier要素は、電子カルテ情報共有サービスへの送信の有無にかかわらず以下の通りとする。\r\n
+Bundle.identifier.system : system値として、”http://jpfhir.jp/fhir/clins/bundle-identifier” を設定する。\r\n
+Bundle.identifier.value : 実装ガイド本文 5情報送信仕様--Bundleリソースを識別するIdentifier要素-- に記載の[Bundle-ID]の仕様とする。"
+* identifier.system 1..1 MS
 * identifier.system = "http://jpfhir.jp/fhir/clins/bundle-identifier" (exactly)
-* identifier.value 1.. MS
+* identifier.value 1..1 MS
 
 
 * type = #document (exactly)
