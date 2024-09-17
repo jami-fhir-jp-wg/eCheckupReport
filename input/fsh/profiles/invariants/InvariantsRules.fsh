@@ -89,7 +89,7 @@ Expression: "entry.first().resource.is(Patient)"
 Invariant: patients-profile-is-JP-Patient-CLINS-eCS
 Description: "R0212:最初のentryであるPatientは、JP_Patient_eCS_eCheckupGeneralプロファイルに準拠していなければならない。"
 Severity: #error
-Expression: "entry.first().resource.meta.where(profile.substring(0,60)='http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS').exists()"
+Expression: "entry.first().resource.meta.where(profile.substring(0,60)='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_').exists()"
 
 Invariant: bundle-profile-is-JP-Bundle-CLINS
 Description: "R0213:BundleはJP-Bundle-CLINSプロファイルに準拠していなければならない。"
