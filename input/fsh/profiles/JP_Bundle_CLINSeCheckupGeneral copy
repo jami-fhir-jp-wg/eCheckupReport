@@ -46,15 +46,13 @@ Bundle.identifier.value : 実装ガイド本文 5情報送信仕様--Bundleリ�
 * timestamp ^definition = "このリソースを生成した日時。時刻の精度はミリ秒とし、タイムゾーンを含めること。　例：\"2021-02-01T13:28:17.239+09:00\""
 
 * entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.discriminator.type = #value
-* entry ^slicing.discriminator.path = "resource.meta.profile[0]"
+* entry ^slicing.discriminator.path = "resource.resolve()"
 * entry ^slicing.rules = #open
 * entry contains
     composition 1..1 MS  // 文書構成情報
 and patient 1..1 MS  //  受診者情報
-and organization/org  1..4 MS
-and organization/ins 0..* MS
+and organization  1..4 MS // 必須：作成組織、実施機関（同一のことあり）、任意：管理責任機関、転記機関、保険者組織情報
+and organizationIns  0..* MS 
 and practitioner 1..2 MS // 必須：作成者、任意：転記者
 and practitionerRole 0..1 MS // 転記者機関
 and encounter 1..1 MS // 実施情報
@@ -90,31 +88,30 @@ and documentReference 0..* MS // 添付文書情報
 * entry[patient].request ..0
 * entry[patient].response ..0
 
-* entry[organization/org] ^short = "機関情報"
-* entry[organization/org] ^definition = "必須：作成機関、実施機関（作成機関と同一のことあり）、任意：管理責任機関、転記機関、および保険者組織情報"
-* entry[organization/org].fullUrl 1.. MS
-* entry[organization/org].fullUrl ^short = "Organizationリソースを一意に識別するためのUUID。"
-* entry[organization/org].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
-* entry[organization/org].resource 1.. MS
-* entry[organization/org].resource only  Organization
-* entry[organization/org].resource.meta.profile[0] = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral" (exactly)
-* entry[organization/org].resource ^definition = "リソースのインスタンス本体。"
-* entry[organization/org].search ..0
-* entry[organization/org].request ..0
-* entry[organization/org].response ..0
+* entry[organization] ^short = "機関情報、保険者組織情報"
+* entry[organization] ^definition = "必須：作成機関、実施機関（作成機関と同一のことあり）、任意：管理責任機関、転記機関、および保険者組織情報"
+* entry[organization].fullUrl 1.. MS
+* entry[organization].fullUrl ^short = "Organizationリソースを一意に識別するためのUUID。"
+* entry[organization].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
+* entry[organization].resource 1.. MS
+* entry[organization].resource only  JP_Organization_eCheckupGeneral
+* entry[organization].resource ^definition = "リソースのインスタンス本体。"
+* entry[organization].search ..0
+* entry[organization].request ..0
+* entry[organization].response ..0
 
-* entry[organization/ins] ^short = "保険者組織情報"
-* entry[organization/ins] ^definition = "必須：作成機関、実施機関（作成機関と同一のことあり）、任意：管理責任機関、転記機関、および保険者組織情報"
-* entry[organization/ins].fullUrl 1.. MS
-* entry[organization/ins].fullUrl ^short = "Organizationリソースを一意に識別するためのUUID。"
-* entry[organization/ins].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
-* entry[organization/ins].resource 1.. MS
-* entry[organization/ins].resource only  Organization
-* entry[organization/ins].resource.meta.profile[0] = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationInsurer_eCheckupGeneral" (exactly)
-* entry[organization/ins].resource ^definition = "リソースのインスタンス本体。"
-* entry[organization/ins].search ..0
-* entry[organization/ins].request ..0
-* entry[organization/ins].response ..0
+* entry[organizationIns] ^short = "機関情報、保険者組織情報"
+* entry[organizationIns] ^definition = "必須：作成機関、実施機関（作成機関と同一のことあり）、任意：管理責任機関、転記機関、および保険者組織情報"
+* entry[organizationIns].fullUrl 1.. MS
+* entry[organizationIns].fullUrl ^short = "Organizationリソースを一意に識別するためのUUID。"
+* entry[organizationIns].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
+* entry[organizationIns].resource 1.. MS
+* entry[organizationIns].resource only  JP_OrganizationInsurer_eCheckupGeneral
+* entry[organizationIns].resource ^short = "リソースのインスタンス本体"
+* entry[organizationIns].resource ^definition = "リソースのインスタンス本体。"
+* entry[organizationIns].search ..0
+* entry[organizationIns].request ..0
+* entry[organizationIns].response ..0
 
 * entry[practitioner] ^short = "作成者・転記者情報"
 * entry[practitioner] ^definition = "健診結果作成者情報（必須）または転記者情報"
