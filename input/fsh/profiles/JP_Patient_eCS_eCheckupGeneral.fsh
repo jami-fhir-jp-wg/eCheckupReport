@@ -22,7 +22,7 @@ Description: "eCS Patientリソース（患者情報）健診結果報告用プ�
 * extension[eCS_InstitutionNumber] 0..1 MS
 */
 
-* ^url = $JP_Patient_CLINS_eCheckupGeneral
+* ^url = $JP_Patient_eCheckupGeneral
 
 * ^version = "1"
 * ^status = #active

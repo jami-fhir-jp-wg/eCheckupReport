@@ -6,6 +6,7 @@ Id:             JP-PractitionerRole-eCheckupGeneral
 Description:    "健診結果報告書　PractitionerRoleリソース　文書作成者役割情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerRole_eCheckupGeneral"
 * ^status = #active
+* ^version = "1"
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
 * practitioner only Reference(JP_Practitioner_eCheckupGeneral)

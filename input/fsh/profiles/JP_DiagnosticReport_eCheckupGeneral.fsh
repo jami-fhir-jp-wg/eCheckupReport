@@ -5,6 +5,8 @@ Id:             JP-DiagnositicReport-eCheckupGeneral
 Description:    "健診結果報告書　DiagnosticReportリソース 検査報告書情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_DiagnosticReport_eCheckupGeneral"
 * ^status = #active
+* ^version = "1"
+
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
 

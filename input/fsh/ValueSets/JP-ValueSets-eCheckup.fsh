@@ -153,6 +153,7 @@ Description: "健診結果セクションコード ValueSet"
 Title: "健診結果セクションコード ValueSet"
 * ^url = $section_code_vs
 * ^experimental = false
+* ^version = "1"
 //* #01910	"健診結果セクション"
 * include codes from system $section_code_cs
 
