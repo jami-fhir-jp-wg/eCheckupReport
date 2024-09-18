@@ -46,7 +46,7 @@ Bundle.identifier.value : 実装ガイド本文 5情報送信仕様--Bundleリ�
 * timestamp ^definition = "このリソースを生成した日時。時刻の精度はミリ秒とし、タイムゾーンを含めること。　例：\"2021-02-01T13:28:17.239+09:00\""
 
 * entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.discriminator.path = "$this.resolve()"
 * entry ^slicing.rules = #open
 * entry contains
     composition 1..1 MS  // 文書構成情報
@@ -132,7 +132,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[practitionerRole].fullUrl ^short = "PractitionerRoleリソースを一意に識別するためのUUID"
 * entry[practitionerRole].fullUrl ^definition = "PractitionerRoleリソースを一意に識別するためのUUID"
 * entry[practitionerRole].resource 1.. MS
-* entry[practitionerRole].resource only  JP_Practitioner_eCheckupGeneral
+* entry[practitionerRole].resource only  JP_PractitionerRole_eCheckupGeneral
 * entry[practitionerRole].resource ^short = "リソースのインスタンス本体"
 * entry[practitionerRole].resource ^definition = "リソースのインスタンス本体。"
 * entry[practitionerRole].search ..0
