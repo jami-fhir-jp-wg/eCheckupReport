@@ -47,14 +47,14 @@ Bundle.identifier.value : 実装ガイド本文 5情報送信仕様--Bundleリ�
 
 * entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
+//* entry ^slicing.discriminator.type = #profile
+//* entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry contains
     composition 1..1 MS  // 文書構成情報
 and patient 1..1 MS  //  受診者情報
-and organization/org  1..4 MS
-and organization/ins 0..* MS
+and organization  1..4 MS
+//and organization/ins 0..* MS
 and practitioner 1..2 MS // 必須：作成者、任意：転記者
 and practitionerRole 0..1 MS // 転記者機関
 and encounter 1..1 MS // 実施情報
@@ -90,6 +90,19 @@ and documentReference 0..* MS // 添付文書情報
 * entry[patient].request ..0
 * entry[patient].response ..0
 
+* entry[organization] ^short = "機関情報"
+* entry[organization] ^definition = "必須：作成機関、実施機関（作成機関と同一のことあり）、任意：管理責任機関、転記機関、および保険者組織情報"
+* entry[organization].fullUrl 1.. MS
+* entry[organization].fullUrl ^short = "Organizationリソースを一意に識別するためのUUID。"
+* entry[organization].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
+* entry[organization].resource 1.. MS
+* entry[organization].resource only  Organization
+* entry[organization].resource ^definition = "リソースのインスタンス本体。"
+* entry[organization].search ..0
+* entry[organization].request ..0
+* entry[organization].response ..0
+
+/*
 * entry[organization/org] ^short = "機関情報"
 * entry[organization/org] ^definition = "必須：作成機関、実施機関（作成機関と同一のことあり）、任意：管理責任機関、転記機関、および保険者組織情報"
 * entry[organization/org].fullUrl 1.. MS
@@ -103,6 +116,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization/org].search ..0
 * entry[organization/org].request ..0
 * entry[organization/org].response ..0
+
 
 * entry[organization/ins] ^short = "保険者組織情報"
 * entry[organization/ins] ^definition = "必須：作成機関、実施機関（作成機関と同一のことあり）、任意：管理責任機関、転記機関、および保険者組織情報"
@@ -118,6 +132,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization/ins].search ..0
 * entry[organization/ins].request ..0
 * entry[organization/ins].response ..0
+*/
 
 * entry[practitioner] ^short = "作成者・転記者情報"
 * entry[practitioner] ^definition = "健診結果作成者情報（必須）または転記者情報"
