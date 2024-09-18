@@ -81,7 +81,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[patient].fullUrl ^short = "Patientリソースを一意に識別するためのUUID"
 * entry[patient].fullUrl ^definition = "Patientリソースを一意に識別するためのUUID。"
 * entry[patient].resource 1.. MS
-* entry[patient].resource only JP_Patient_eCS_eCheckupGeneral
+* entry[patient].resource only JP_Patient_CLINS_eCheckupGeneral
 * entry[patient].resource ^short = "Patientリソースのインスタンス本体"
 * entry[patient].resource ^definition = "Patientリソースのインスタンス本体。"
 * entry[patient].search ..0
