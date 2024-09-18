@@ -32,7 +32,7 @@ Description: "eCS/CLINS Patientリソース（患者情報）健診結果報告�
 * ^publisher = "（一社）日本医療情報学会"
 * ^copyright = "（一社）日本医療情報学会. CC BY-ND 4.0"
 * ^fhirVersion = #4.0.1
-* ^language = #ja
+//* ^language = #ja
 
 
 * . ^short = "患者情報の記述に使用する。健診結果報告用としては、JP-Patient-eCSと異なり、name.given の多重度を1..*ではなく0..*としている。また漢字かカナ氏名のどちらかを必須としている。"

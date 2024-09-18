@@ -9,6 +9,7 @@ Title: "FHIR文書の文書区分（医療文書全般）"
 * ^url = "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes"
 // * ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes"
 * ^status = #active
+* ^version = "1"
 * ^experimental = false
 * ^content = #complete
 * ^experimental = false
