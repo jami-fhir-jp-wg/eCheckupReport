@@ -163,7 +163,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[coverage].fullUrl ^short = "Coverageリソースを一意に識別するためのUUID"
 * entry[coverage].fullUrl ^definition = "Coverageリソースを一意に識別するためのUUID"
 * entry[coverage].resource 1.. MS
-* entry[coverage].resource only CoverageService or CoverageInsurance
+* entry[coverage].resource only Coverage
 * entry[coverage].resource ^short = "リソースのインスタンス本体"
 * entry[coverage].resource ^definition = "リソースのインスタンス本体。"
 * entry[coverage].search ..0
