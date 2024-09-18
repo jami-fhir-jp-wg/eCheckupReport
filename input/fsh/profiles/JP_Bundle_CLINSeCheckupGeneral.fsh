@@ -46,7 +46,7 @@ Bundle.identifier.value : 実装ガイド本文 5情報送信仕様--Bundleリ�
 * timestamp ^definition = "このリソースを生成した日時。時刻の精度はミリ秒とし、タイムゾーンを含めること。　例：\"2021-02-01T13:28:17.239+09:00\""
 
 * entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "$this.resolve()"
+* entry ^slicing.discriminator.path = "resource.resolve()"
 * entry ^slicing.rules = #open
 * entry contains
     composition 1..1 MS  // 文書構成情報
