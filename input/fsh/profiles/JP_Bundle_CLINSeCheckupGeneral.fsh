@@ -97,7 +97,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization/org].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
 * entry[organization/org].resource 1.. MS
 * entry[organization/org].resource only  Organization
-* entry[organization/org].resource only  JP_Organization_eCheckupGeneral (exactly)
+* entry[organization/org].resource only  JP_Organization_eCheckupGeneral
 //* entry[organization/org].resource.type.coding = http://terminology.hl7.org/CodeSystem/organization-type#prov (exactly)
 * entry[organization/org].resource ^definition = "リソースのインスタンス本体。"
 * entry[organization/org].search ..0
@@ -111,7 +111,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization/ins].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
 * entry[organization/ins].resource 1.. MS
 * entry[organization/ins].resource only  Organization
-* entry[organization/ins].resource only  JP_OrganizationInsurer_eCheckupGeneral (exactly)
+* entry[organization/ins].resource only  JP_OrganizationInsurer_eCheckupGeneral
 //* entry[organization/ins].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationInsurer_eCheckupGeneral" (exactly)
 //* entry[organization/ins].resource.type.coding = http://terminology.hl7.org/CodeSystem/organization-type#ins (exactly)
 * entry[organization/ins].resource ^definition = "リソースのインスタンス本体。"
