@@ -47,8 +47,8 @@ Bundle.identifier.value : 実装ガイド本文 5情報送信仕様--Bundleリ�
 
 * entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.discriminator.type = #pattern
-* entry ^slicing.discriminator.path = "resource.type.coding"
+* entry ^slicing.discriminator.type = #value
+* entry ^slicing.discriminator.path = "resource.meta.profile"
 * entry ^slicing.rules = #open
 * entry contains
     composition 1..1 MS  // 文書構成情報
@@ -97,8 +97,8 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization/org].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
 * entry[organization/org].resource 1.. MS
 * entry[organization/org].resource only  Organization
-//* entry[organization/org].resource.meta.profile[0] = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral" (exactly)
-* entry[organization/org].resource.type.coding = http://terminology.hl7.org/CodeSystem/organization-type#prov (exactly)
+* entry[organization/org].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral" (exactly)
+//* entry[organization/org].resource.type.coding = http://terminology.hl7.org/CodeSystem/organization-type#prov (exactly)
 * entry[organization/org].resource ^definition = "リソースのインスタンス本体。"
 * entry[organization/org].search ..0
 * entry[organization/org].request ..0
@@ -111,8 +111,8 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization/ins].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
 * entry[organization/ins].resource 1.. MS
 * entry[organization/ins].resource only  Organization
-//* entry[organization/ins].resource.meta.profile[0] = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationInsurer_eCheckupGeneral" (exactly)
-* entry[organization/ins].resource.type.coding = http://terminology.hl7.org/CodeSystem/organization-type#ins (exactly)
+* entry[organization/ins].resource.meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationInsurer_eCheckupGeneral" (exactly)
+//* entry[organization/ins].resource.type.coding = http://terminology.hl7.org/CodeSystem/organization-type#ins (exactly)
 * entry[organization/ins].resource ^definition = "リソースのインスタンス本体。"
 * entry[organization/ins].search ..0
 * entry[organization/ins].request ..0
