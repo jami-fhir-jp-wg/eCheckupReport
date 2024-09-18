@@ -45,7 +45,7 @@ Bundle.identifier.value : 実装ガイド本文 5情報送信仕様--Bundleリ�
 * timestamp ^short = "このバンドルリソースのインスタンスが作成された日時。"
 * timestamp ^definition = "このリソースを生成した日時。時刻の精度はミリ秒とし、タイムゾーンを含めること。　例：\"2021-02-01T13:28:17.239+09:00\""
 
-* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.discriminator.type = #pattern
 * entry ^slicing.discriminator.path = "resource.type.coding"
@@ -70,7 +70,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[composition].fullUrl ^short = "埋め込まれているCompositionリソースを一意に識別するためのUUID"
 * entry[composition].fullUrl ^definition = "埋め込まれているCompositionリソースを一意に識別するためのUUID。"
 * entry[composition].resource 1.. MS
-* entry[composition].resource only  JP_Composition_eCheckupGeneral
+* entry[composition].resource only  Composition
 * entry[composition].resource ^short = "Compositionリソースのインスタンス本体"
 * entry[composition].resource ^definition = "Compositionリソースのインスタンス本体。"
 * entry[composition].search ..0
@@ -83,7 +83,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[patient].fullUrl ^short = "Patientリソースを一意に識別するためのUUID"
 * entry[patient].fullUrl ^definition = "Patientリソースを一意に識別するためのUUID。"
 * entry[patient].resource 1.. MS
-* entry[patient].resource only JP_Patient_CLINS_eCheckupGeneral
+* entry[patient].resource only Patient
 * entry[patient].resource ^short = "Patientリソースのインスタンス本体"
 * entry[patient].resource ^definition = "Patientリソースのインスタンス本体。"
 * entry[patient].search ..0
@@ -124,7 +124,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[practitioner].fullUrl ^short = "Practitionerリソースを一意に識別するためのUUID"
 * entry[practitioner].fullUrl ^definition = "Practitionerリソースを一意に識別するためのUUID。"
 * entry[practitioner].resource 1.. MS
-* entry[practitioner].resource only  JP_Practitioner_eCheckupGeneral
+* entry[practitioner].resource only  Practitioner
 * entry[practitioner].resource ^short = "リソースのインスタンス本体"
 * entry[practitioner].resource ^definition = "リソースのインスタンス本体。"
 * entry[practitioner].search ..0
@@ -137,7 +137,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[practitionerRole].fullUrl ^short = "PractitionerRoleリソースを一意に識別するためのUUID"
 * entry[practitionerRole].fullUrl ^definition = "PractitionerRoleリソースを一意に識別するためのUUID"
 * entry[practitionerRole].resource 1.. MS
-* entry[practitionerRole].resource only  JP_PractitionerRole_eCheckupGeneral
+* entry[practitionerRole].resource only  PractitionerRole
 * entry[practitionerRole].resource ^short = "リソースのインスタンス本体"
 * entry[practitionerRole].resource ^definition = "リソースのインスタンス本体。"
 * entry[practitionerRole].search ..0
@@ -150,7 +150,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[encounter].fullUrl ^short = "Encounterリソースを一意に識別するためのUUID"
 * entry[encounter].fullUrl ^definition = "Encounterリソースを一意に識別するためのUUID"
 * entry[encounter].resource 1.. MS
-* entry[encounter].resource only JP_Encounter_eCheckupGeneral
+* entry[encounter].resource only Encounter
 * entry[encounter].resource ^short = "リソースのインスタンス本体"
 * entry[encounter].resource ^definition = "リソースのインスタンス本体。"
 * entry[encounter].search ..0
@@ -163,7 +163,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[coverage].fullUrl ^short = "Coverageリソースを一意に識別するためのUUID"
 * entry[coverage].fullUrl ^definition = "Coverageリソースを一意に識別するためのUUID"
 * entry[coverage].resource 1.. MS
-* entry[coverage].resource only JP_CoverageService_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral
+* entry[coverage].resource only CoverageService or CoverageInsurance
 * entry[coverage].resource ^short = "リソースのインスタンス本体"
 * entry[coverage].resource ^definition = "リソースのインスタンス本体。"
 * entry[coverage].search ..0
@@ -176,7 +176,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[observation].fullUrl ^short = "Observationリソースを一意に識別するためのUUID"
 * entry[observation].fullUrl ^definition = "埋め込まれているリソースを一意に識別するためのUUID。"
 * entry[observation].resource 1.. MS
-* entry[observation].resource only JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral
+* entry[observation].resource only Observation
 * entry[observation].resource ^short = "リソースのインスタンス本体"
 * entry[observation].resource ^definition = "リソースのインスタンス本体。"
 * entry[observation].search ..0
@@ -189,7 +189,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[diagnosticReport].fullUrl ^short = "DiagnosticReportリソースを一意に識別するためのUUID"
 * entry[diagnosticReport].fullUrl ^definition = "DiagnosticReportリソースを一意に識別するためのUUID"
 * entry[diagnosticReport].resource 1.. MS
-* entry[diagnosticReport].resource only JP_DiagnosticReport_Common
+* entry[diagnosticReport].resource only DiagnosticReport
 * entry[diagnosticReport].resource ^short = "リソースのインスタンス本体"
 * entry[diagnosticReport].resource ^definition = "リソースのインスタンス本体。"
 * entry[diagnosticReport].search ..0
@@ -202,7 +202,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[media].fullUrl ^short = "Mediaリソースを一意に識別するためのUUID"
 * entry[media].fullUrl ^definition = "Mediaリソースを一意に識別するためのUUID"
 * entry[media].resource 1.. MS
-* entry[media].resource only JP_Media
+* entry[media].resource only Media
 * entry[media].resource ^short = "リソースのインスタンス本体"
 * entry[media].resource ^definition = "リソースのインスタンス本体。"
 * entry[media].search ..0
@@ -215,7 +215,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[documentReference].fullUrl ^short = "DocumentReferenceリソースを一意に識別するためのUUID"
 * entry[documentReference].fullUrl ^definition = "DocumentReferenceリソースを一意に識別するためのUUID"
 * entry[documentReference].resource 1.. MS
-* entry[documentReference].resource only JP_DocumentReference_eCS
+* entry[documentReference].resource only DocumentReference
 * entry[documentReference].resource ^short = "リソースのインスタンス本体"
 * entry[documentReference].resource ^definition = "リソースのインスタンス本体。"
 * entry[documentReference].search ..0
