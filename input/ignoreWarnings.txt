@@ -11,7 +11,7 @@
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # Example Existence Warnings
-#%The Implementation Guide contains no examples%
+%The Implementation Guide contains no examples%
 
 # Reference to draft CodeSystem 
 Reference to draft CodeSystem%
