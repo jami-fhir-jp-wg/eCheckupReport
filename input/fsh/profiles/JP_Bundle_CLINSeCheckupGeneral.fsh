@@ -95,12 +95,12 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization].fullUrl 1.. MS
 * entry[organization].fullUrl ^short = "Organizationリソースを一意に識別するためのUUID。"
 * entry[organization].fullUrl ^definition = "Organizationリソースを一意に識別するためのUUID。"
-* entry[organization].resource 1.. MS
+* entry[organization].resource 0.. MS
 * entry[organization].resource only  Organization
 * entry[organization] ^slicing.discriminator.type = #profile
 * entry[organization] ^slicing.discriminator.path = "resource"
 * entry[organization] ^slicing.rules = #closed
-* entry[organization] contains org 1.. MS and ins 0.. MS
+* entry[organization] contains org 0.. MS and ins 0.. MS
 * entry[organization][org].resource only JP_Organization_eCheckupGeneral
 * entry[organization][ins].resource only JP_OrganizationInsurer_eCheckupGeneral
 * entry[organization].resource ^definition = "リソースのインスタンス本体。"
