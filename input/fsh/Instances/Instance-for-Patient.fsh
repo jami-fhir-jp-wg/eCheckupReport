@@ -1,5 +1,5 @@
 Instance: Instance-for-Patient
-InstanceOf: JP_Patient_eCheckupGeneral
+InstanceOf: JP_Patient_CLINS_eCheckupGeneral
 Usage: #example
 Description: "Patientリソースのサンプル（受診者情報：電子カルテ共有サービスに送信しない版）"
 

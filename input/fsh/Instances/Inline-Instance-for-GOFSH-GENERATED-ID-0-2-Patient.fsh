@@ -1,5 +1,5 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-2-Patient
-InstanceOf: JP_Patient_eCheckupGeneral
+InstanceOf: JP_Patient_CLINS_eCheckupGeneral
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = $JP_Patient_CLINS_eCheckupGeneral
