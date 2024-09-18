@@ -72,3 +72,6 @@ The string value contains text that looks like embedded HTML tags%
 
 # labo categpry category code
 #None of the codings provided are in the value set 'Observation Category Codes'%
+
+# ValueSet language experimental Warnings
+%binds to the value set 'http://hl7.org/fhir/ValueSet/languages'%
