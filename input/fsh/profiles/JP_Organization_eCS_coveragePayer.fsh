@@ -22,7 +22,7 @@ Description: "健診結果報告書　医療サービスでの保険者または
 * identifier[insurerNumber].system ^short = "保険者番号の名前空間を示すURIを指定"
 * identifier[insurerNumber].system ^definition = "保険者番号の名前空間を示すURIを指定。固定値"
 * identifier[insurerNumber].system MS
-* identifier[insurerNumber].system = "urn:oid:1.2.392.100495.20.3.61" (exactly)
+* identifier[insurerNumber].system = "http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber" (exactly)
 * identifier[insurerNumber].value ^short = "保険者番号"
 * identifier[insurerNumber].value ^definition = "保険者番号を半角数字で８ケタ以内の文字列で記述する。"
 * identifier[insurerNumber].value MS
