@@ -25,7 +25,7 @@ jurisdiction: 'urn:iso:std:iso:3166-2#JP'
 dependencies:
   jp-core.r4:
     uri: http://jpfhir.jp/fhir/core/1.1.2-url/ImplementationGuide/
-    version: 1.1.2-url-url
+    version: 1.1.2-url
   jpfhir-terminology.r4:
     uri: http://jpfhir.jp/fhir//jpfhir-terminology.r4/ImplementationGuide/
     version: 1.2.3-url
