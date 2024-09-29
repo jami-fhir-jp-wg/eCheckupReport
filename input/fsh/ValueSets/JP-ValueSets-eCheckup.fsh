@@ -204,9 +204,28 @@ Title: "厚労省電子処方CDA規格別表12 被保険者区分コード Value
 * ^url = $subscriber-relationship-vs
 * ^experimental = false
 // * include codes from valueset http://hl7.org/fhir/ValueSet/subscriber-relationship
-* include codes from system $subscriber-relationship-cs
-// Alias: $subscriber-relationship-cs = urn:oid:1.2.392.100495.20.2.62
+* include codes from system $JAMI_InsuredPersonCategory_CS
+// Alias: $JAMI_InsuredPersonCategory_CS = urn:oid:1.2.392.100495.20.2.62
 // Alias: $subscriber-relationship-vs = http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
 
 */
 
+ValueSet: MHLW_valueSet_ePreCDA_insuranceCategory_tbl11
+Id: mhlw-valueSet-eprecda-insurancecategory-tbl11
+Title: "MHLW 厚労省電子処方CDA規格別表11 保険種別コード ValueSet"
+Description: "厚労省電子処方CDA規格別表11 保険種別コード ValueSet"
+* ^url = $JAMI_InsuranceMajorCategory_VS
+* ^status = #active
+* ^experimental = false
+* ^date = "2024-09-20"
+* ^version = "1"
+* include codes from system $JAMI_InsuranceMajorCategory_CS
+
+//* #1 "医保"
+//* #2 "国保"
+//* #3 "労災"
+//* #4 "自賠責"
+//* #5 "公害"
+//* #6 "自費"
+//* #7 "後期高齢者"
+//* #8 "公費"

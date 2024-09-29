@@ -14,7 +14,7 @@ Description: "健診結果報告書　医療サービスでの保険者または
 * extension[organizationCategory] ..0
 * extension[organizationNo] ..0
 * identifier[medicalInstitutionCode] ..0
-* identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no" (exactly)
+* identifier[medicalInstitutionCode].system = $JP_InstitutionNumber (exactly)
 * identifier[insurerNumber] 0..1 MS
 * identifier[insurerNumber].id ..0
 * identifier[insurerNumber].use ..0
@@ -22,7 +22,7 @@ Description: "健診結果報告書　医療サービスでの保険者または
 * identifier[insurerNumber].system ^short = "保険者番号の名前空間を示すURIを指定"
 * identifier[insurerNumber].system ^definition = "保険者番号の名前空間を示すURIを指定。固定値"
 * identifier[insurerNumber].system MS
-* identifier[insurerNumber].system = "http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber" (exactly)
+* identifier[insurerNumber].system = $JP_IdSystemInsurerNumber (exactly)
 * identifier[insurerNumber].value ^short = "保険者番号"
 * identifier[insurerNumber].value ^definition = "保険者番号を半角数字で８ケタ以内の文字列で記述する。"
 * identifier[insurerNumber].value MS
@@ -44,7 +44,7 @@ Description: "健診結果報告書　医療サービスでの保険者または
 * active ..0
 * type 1..1 MS
 * type.coding 1..1 MS
-* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type" (exactly)
+* type.coding.system = $organization-type (exactly)
 * type.coding.system ^short = "施設種別コードのコード体系を識別するURI"
 * type.coding.system ^definition = "施設種別コードのコード体系を識別するURI。固定値。"
 * type.coding.system MS

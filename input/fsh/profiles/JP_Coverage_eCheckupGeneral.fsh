@@ -43,10 +43,10 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * status ^definition = "リソースインスタンスのステータス。固定値active。真に有効な保険かどうかは意味しない。"
 * type ^short = "保険種別コード"
 * type 1.. MS
-* type from http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuranceCategory
+* type from $JAMI_InsuranceMajorCategory_VS
 * type.coding 1..1 MS
 * type.coding.system 1.. MS
-* type.coding.system = "urn:oid:1.2.392.100495.20.2.61" (exactly)
+* type.coding.system = $JAMI_InsuranceMajorCategory_CS (exactly)
 * type.coding.system ^short = "保険種別コード体系を識別するURI"
 * type.coding.system ^definition = "保険種別コード　厚生労働省電子処方箋 CDA 記述仕様第１版　別表１１のOIDを使用する。"
 * type.coding.code ^short = "保険種別コード"
@@ -69,7 +69,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * dependent MS
 * relationship 1.. MS
 * relationship.coding 1.. MS
-* relationship.coding.system = "urn:oid:1.2.392.100495.20.2.62"
+* relationship.coding.system = $JAMI_InsuredPersonCategory_CS
 * relationship.coding.system ^short = "コード体系を識別するURI"
 * relationship.coding.system ^definition = "被保険者区分コードのコード体系を識別するURI。厚生労働省電子処方箋 CDA 記述仕様第１版　別表１２のOIDを使用する。"
 * relationship.coding.system MS

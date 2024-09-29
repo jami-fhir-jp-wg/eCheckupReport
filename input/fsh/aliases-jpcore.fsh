@@ -158,7 +158,7 @@ Alias: $JP_ObservationVitalSignsCategory_CS = http://jpfhir.jp/fhir/core/CodeSys
 Alias: $JP_ObservationVitalSignsCode_CS = urn:oid:1.2.392.200119.4.804
 Alias: $JP_PhysicalExamCode_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_PhysicalExamCode_CS
 Alias: $JP_PractitionerRole_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_PractitionerRole_CS
-Alias: $JP_PrefectureNumber_CS = urn:oid:1.2.392.100495.20.3.21
+Alias: $JP_PrefectureNumber_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/PrefectureNo-2digits // urn:oid:1.2.392.100495.20.3.21
 Alias: $JP_ProcedureBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureBodySite_CS
 Alias: $JP_ProcedureCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCategory_CS
 Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesDental_CS
@@ -259,3 +259,11 @@ Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP
 Alias: $JP_RadiologyModality_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_RadiologyModality_VS
 Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
+
+Alias: $JAMI_InsuranceMajorCategory_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuranceMajorCategory   // urn:oid:1.2.392.100495.20.2.61
+Alias: $JAMI_InsuredPersonCategory_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuredPersonCategory    //　urn:oid:1.2.392.100495.20.2.62
+Alias: $JAMI_InsuranceMajorCategory_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/InsuranceMajorCategory   // urn:oid:1.2.392.100495.20.2.61
+Alias: $JAMI_InsuredPersonCategory_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/InsuredPersonCategory    //　urn:oid:1.2.392.100495.20.2.62
+
+Alias: $JP_IdSystemInsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber // urn:oid:1.2.392.100495.20.3.61
+Alias: $JP_IdSystemMedicalOrganizationID  = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID // urn:oid:1.2.392.100495.20.3.23
