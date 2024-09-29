@@ -5,7 +5,7 @@ Description: "ObservationリソースのhasMemnerの対象項目との関係を�
 * ^url = $observationGroupRelationship_extension
 * ^status = #active
 * ^date = "2024-09-20"
-* ^version = "1.0"
+* ^version = "1"
 * ^context.type = #element
 * ^context.expression = "Observation.hasMember"
 * url = $observationGroupRelationship_extension (exactly)

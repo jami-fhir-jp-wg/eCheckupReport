@@ -118,6 +118,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationInsurer_eCheckupGeneral
     - http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCheckupGeneral
+    - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_PractitionerRole_eCheckupGeneral
     - http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Procedure_eCS
@@ -142,8 +143,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroupRelationship-codes
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
-    - h）
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code
+    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code
     - urn:oid:1.2.392.200119.6.208
     - urn:oid:1.2.392.200119.6.1002
     - http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes

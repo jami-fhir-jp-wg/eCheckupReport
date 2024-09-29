@@ -79,7 +79,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * subject.reference 1..1 MS
 * subject.reference ^short = "PatientリソースのfullUrl要素に指定されるUUIDを指定。"
 * subject.reference ^definition = "Bundleリソースに記述されるPatientリソースのfullUrl要素に指定されるUUIDを指定。"
-* subject only Reference(JP_Patient_CLINS_eCheckupGeneral)
+* subject only Reference(JP_Patient_eCheckupGeneral)
 
 * encounter ^short = "健診実施情報を表すEncounterリソースへの参照"
 * encounter ^definition = "健診実施情報を表すEncounterリソースへの参照"
@@ -146,7 +146,7 @@ and    attachment 0..1 MS  // 01995
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[specialCheckup_additional]
   * code 1..1 MS
-  * code = $section_code_cs#01990 "特定健診任意追加項目セクション" 
+  * code = $section_code_cs#01990 "任意追加項目セクション" 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[regionalUnionCheckup_observations]

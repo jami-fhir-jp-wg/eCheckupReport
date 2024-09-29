@@ -16,5 +16,6 @@ Id:             JP-Media
 Description:    "報告書　Mediaリソース 画像情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Media"
 * ^status = #active
+* ^version = "1"
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS

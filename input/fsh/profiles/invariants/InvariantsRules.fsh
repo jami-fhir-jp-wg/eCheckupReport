@@ -86,10 +86,10 @@ Severity: #error
 Expression: "entry.first().resource.is(Patient)"
 
 // バージョン指定部分を除くURLを一致チェック
-Invariant: patients-profile-is-JP-Patient-CLINS-eCS
-Description: "R0212:最初のentryであるPatientは、JP_Patient_CLINS_eCheckupGeneralプロファイルに準拠していなければならない。"
+Invariant: patients-profile-is-JP-Patient-eCheckupGeneral
+Description: "R0212:最初のentryであるPatientは、JP_Patient_eCheckupGeneralプロファイルに準拠していなければならない。"
 Severity: #error
-Expression: "entry.first().resource.meta.where(profile.substring(0,60)='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_').exists()"
+Expression: "entry.first().resource.meta.where(profile.substring(0,77)='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral').exists()"
 
 Invariant: bundle-profile-is-JP-Bundle-CLINS
 Description: "R0213:BundleはJP-Bundle-CLINSプロファイルに準拠していなければならない。"
@@ -260,7 +260,7 @@ Description: "R0211:最初のentryはPatientでなければならない。"
 
 //
 Invariant: patients-profile-is-JP-Patient-CLINS-eCS
-Description: "R0212:最初のentryであるPatientは、JP_Patient_CLINS_eCheckupGeneralプロファイルに準拠していなければならない。" d
+Description: "R0212:最初のentryであるPatientは、JP_Patient_eCheckupGeneralプロファイルに準拠していなければならない。" d
 
 ## ひとつのBundleリソースには、ひとりの患者の、同時に１回で報告される一連のデータ（１報告単位のデータ）だけを、すべて漏れなく格納する。
 必須ルール
