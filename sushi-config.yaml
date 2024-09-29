@@ -148,6 +148,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - urn:oid:1.2.392.200119.6.208
     - urn:oid:1.2.392.200119.6.1002
     - http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
+    - http://jpfhir.jp/fhir/eCheckupReport/CodeSystem/jp-observationLabResultCode-cs 
     - urn:oid:2.16.840.1.113883.2.2.1.6.1001
     - urn:oid:1.2.392.200119.6.1008
     - urn:oid:1.2.392.200119.6.18030
@@ -222,3 +223,4 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
     - http://jpfhir.jp/fhir/core/mhlw/ValueSet/InsuranceMajorCategory
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
