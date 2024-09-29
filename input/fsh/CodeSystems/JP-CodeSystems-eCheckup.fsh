@@ -619,7 +619,7 @@ Title: "特定健診検査項目コード第４期"
 //	
 //--------------------------------------------------------------------
 CodeSystem: JP_ObservationLabResultCode_CS
-Id: jp_observationLabResultCode-cs
+Id: jp-observationLabResultCode-cs
 Description: "健診検査項目コードJLAC10ベース"
 Title: "健診検査項目コードJLAC10ベース"
 * ^url = $JP_ObservationLabResultCode_CS

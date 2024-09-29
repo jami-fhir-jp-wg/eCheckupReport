@@ -109,7 +109,7 @@ Alias: $observation-labo_subcategory-cs = http://jpfhir.jp/fhir/eCS/ValueSet/JP_
 // リソースを識別するidentifierのsystem
 Alias: $systemTypeOfIdentifier = http://terminology.hl7.org/CodeSystem/v2-0203
 
-// from jp-core v1.1.2
+// from jp-core v1.1.2-url
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $observation-category = $JP_SimpleObservationCategory_VS
 

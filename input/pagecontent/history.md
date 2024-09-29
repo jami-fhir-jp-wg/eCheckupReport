@@ -39,7 +39,7 @@
 ３．１．２および３．１．３で、Bundle リソースと Composition リソースの identifier の設定ルールを明確にし、曖昧さを排除。<br>
 これに合わせて例２１、２２、２３を修正。<br>
 
-## Ver1.1.2 (2024-01-25) <br>
+## Ver1.1.2-url (2024-01-25) <br>
 <br>
 * JP_Observation_eCheckupReport プロファイルで、identifier を0..1から0..*　に変更。<br>
 * JP_ObservationGroup_eCheckupReport プロファイルで、identifier を0..0から0..*　に変更。<br>
