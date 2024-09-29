@@ -10,6 +10,6 @@ Usage: #inline
 * effectiveDateTime = "2020-04-04"
 * valueQuantity = 60 'mg/dL' "mg/dl"
 * interpretation = $v3-ObservationInterpretation#N
-* method = urn:oid:1.2.392.200119.6.1007#3F01510000 "可視吸光光度法（酵素比色法・グリセロール消去）"
+* method = urn:oid:1.2.392.200119.6.1007#3F01510000 "可視吸光光度法(酵素比色法・グリセロール消去)"
 * referenceRange.low = 50 'mg/dL' "mg/dl"
 * referenceRange.high = 149 'mg/dL' "mg/dl"

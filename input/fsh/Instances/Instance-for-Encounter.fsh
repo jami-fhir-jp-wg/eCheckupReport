@@ -1,7 +1,7 @@
 Instance: Instance-for-Encounter
 InstanceOf: JP_Encounter_eCheckupGeneral
 Usage: #example
-Description: "Encounterリソースのサンプル（健診実施情報）"
+Description: "Encounterリソースのサンプル(健診実施情報)"
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral"
 * status = #finished

@@ -142,7 +142,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroupRelationship-codes
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
-    - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code
+    - h）
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code
     - urn:oid:1.2.392.200119.6.208
     - urn:oid:1.2.392.200119.6.1002

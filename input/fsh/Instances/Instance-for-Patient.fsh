@@ -1,7 +1,7 @@
 Instance: Instance-for-Patient
 InstanceOf: JP_Patient_CLINS_eCheckupGeneral
 Usage: #example
-Description: "Patientリソースのサンプル（受診者情報：電子カルテ共有サービスに送信しない版）"
+Description: "Patientリソースのサンプル(受診者情報：電子カルテ共有サービスに送信しない版)"
 
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = $JP_Patient_CLINS_eCheckupGeneral

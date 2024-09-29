@@ -5,7 +5,7 @@ Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
 * status = #final
 * category = $JP_SimpleObservationCategory_CS#body-measurement
-* code = $specialCheckup_observations_cs#9N016160100000001 "腹囲"
+* code = $specialCheckup_observations_cs#9N016160100000001 "腹囲(実測)"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * effectiveDateTime = "2020-04-04"
 * valueQuantity = 70 'cm' "cm"

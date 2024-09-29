@@ -7,7 +7,7 @@ Expression: "meta.profile.where($this.substring(0,$this.indexOf('|')) ='http://j
 Profile: JP_Bundle_eCheckupGeneral
 Parent: Bundle
 Id: JP-Bundle-eCheckupGeneral
-Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信と共用）"
+Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信と共用)"
 
 * obeys bundle-metaprofile
 * obeys bundle-entry0-JP-Composition-eCheckupGeneral
@@ -20,8 +20,8 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 
 * ^version = "1"
 * ^status = #active
-* . ^short = "健診結果報告書 Bundleリソース （電子カルテ情報共有サービス送信は別プロファイル）"
-* . ^definition = "健診結果報告のための文書 Bundleリソース　（電子カルテ情報共有サービス送信は別プロファイル）"
+* . ^short = "健診結果報告書 Bundleリソース （電子カルテ情報共有サービス送信は別プロファイル)"
+* . ^definition = "健診結果報告のための文書 Bundleリソース　（電子カルテ情報共有サービス送信は別プロファイル)"
 
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
@@ -140,7 +140,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[practitionerRole].response ..0
 
 * entry[encounter] ^short = "健診実施情報"
-* entry[encounter] ^definition = "健診実施情報（実施日時、実施機関、受診形態など）"
+* entry[encounter] ^definition = "健診実施情報（実施日時、実施機関、受診形態など)"
 * entry[encounter].fullUrl 1.. MS
 * entry[encounter].fullUrl ^short = "Encounterリソースを一意に識別するためのUUID"
 * entry[encounter].fullUrl ^definition = "Encounterリソースを一意に識別するためのUUID"

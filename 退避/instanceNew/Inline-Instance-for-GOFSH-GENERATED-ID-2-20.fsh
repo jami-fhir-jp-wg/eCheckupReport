@@ -9,7 +9,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * valueQuantity = 32 '[IU]/L' "IU/l"
 * interpretation = $v3-ObservationInterpretation#N
-* method = urn:oid:1.2.392.200119.6.1007#3B03510000 "紫外吸光光度法（JSCC標準化対応法）"
+* method = urn:oid:1.2.392.200119.6.1007#3B03510000 "1：紫外吸光光度法(JSCC標準化対応法)"
 * specimen = Reference(urn:oid:d669559e-2e5a-c271-c1ff-cde1228d4077)
 * referenceRange.low = 10 '[IU]/L' "IU/l"
 * referenceRange.high = 40 '[IU]/L' "IU/l"

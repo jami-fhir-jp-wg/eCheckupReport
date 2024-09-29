@@ -14,7 +14,7 @@ Usage: #inline
 
 * category[0].coding[+].system = $report_category_cs
 * category[=].coding[=].code = #10
-* category[=].coding[=].display = "特定健診"
+* category[=].coding[=].display = "特定健康診査"
 
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * encounter = Reference(urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad)
@@ -23,7 +23,7 @@ Usage: #inline
 * author[+] = Reference(urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407)
 * title = "健康診断結果のお知らせ"
 * custodian = Reference(urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407)
-* event.code = $checkup_programService_cs#010 "特定健診"
+* event.code = $checkup_programService_cs#010 "特定健康診査"
 * event.period.start = "2024-04-05"
 * event.period.end = "2024-04-05"
 * event.detail = Reference(urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad)

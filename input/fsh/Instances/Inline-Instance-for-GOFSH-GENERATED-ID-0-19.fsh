@@ -10,6 +10,6 @@ Usage: #inline
 * effectiveDateTime = "2020-04-04"
 * valueQuantity = 88 'mg/dL' "mg/dl"
 * interpretation = $v3-ObservationInterpretation#N
-* method = urn:oid:1.2.392.200119.6.1007#3F07710000 "可視吸光光度法（直接法（非沈殿法））"
+* method = urn:oid:1.2.392.200119.6.1007#3F07710000 "可視吸光光度法(直接法(非沈殿法）)"
 * referenceRange.low = 70 'mg/dL' "mg/dl"
 * referenceRange.high = 140 'mg/dL' "mg/dl"

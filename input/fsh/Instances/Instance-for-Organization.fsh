@@ -1,7 +1,7 @@
 Instance: Instance-for-Organization
 InstanceOf: JP_Organization_eCheckupGeneral
 Usage: #example
-Description: "Organizationリソースのサンプル（健診実施機関などの情報）"
+Description: "Organizationリソースのサンプル(健診実施機関などの情報)"
 
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral"

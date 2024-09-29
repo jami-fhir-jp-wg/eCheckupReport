@@ -33,7 +33,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * extension[insuredPersonSubNumber] ^definition = "被保険者証等に「枝番」が記載されていない場合は、記録を省略しても差し支えない。保険者が後期高齢者医療である場合又は負担者種別が公費負担医療であ場合は、記録を省略する。"
 * extension[insuredPersonSubNumber].url MS
 * extension[insuredPersonSubNumber].value[x] 1.. MS
-* extension[insuredPersonSubNumber].value[x] ^short = "個人単位被保険者番号（枝番）"
+* extension[insuredPersonSubNumber].value[x] ^short = "個人単位被保険者番号（枝番)"
 * extension[insuredPersonSubNumber].value[x] ^definition = "被保険者証記号・番号に対する個人単位被保険者番号（枝番）。「オンライン又は光ディスク等による請求に係る記録条件仕様（医科用）」に従い、桁数が2桁に満たない場合は、先頭に\"0\"を記録し2桁で記録する。\r\n最大２バイトで数字半角文字。\r\n電子資格確認を行った場合は、資格確認時にオンライン資格確認等システムから通知した枝番を記録する。健康保険被保険者証、受給資格者票及び国民健康保険被保険者証等による資格確認を行った場合は、当該証の「枝番」欄の番号を記録する。\r\n 「枝番」が２桁に満たない場合は、先頭に“0”を記録し、２桁で記録する。\r\n被保険者証等に「枝番」が記載されていない場合は、記録を省略しても差し支えない。保険者が後期高齢者医療である場合又は負担者種別が公費負担医療であ場合は、記録を省略する。"
 * identifier 0..1 MS
   * value 1..1 MS
@@ -64,7 +64,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * beneficiary.reference ^short = "PatientリソースのfullUrl要素に指定されるUUIDを指定"
 * beneficiary.reference ^definition = "Budleリソースに記述されるPatientリソースのfullUrl要素に指定されるUUIDを指定"
 * beneficiary.reference MS
-* dependent ^short = "被保険者番号（枝番）"
+* dependent ^short = "被保険者番号（枝番)"
 * dependent ^definition = "被保険者証記号・番号に対する個人単位被保険者番号（枝番）。桁数が2桁に満たない場合は、先頭に"0"を記録し2桁で記録する。\r\n被保険者番号の枝番を記述する拡張要素と同一の値を記述すること。"
 * dependent MS
 * relationship 1.. MS
