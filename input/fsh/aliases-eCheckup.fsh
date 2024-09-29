@@ -35,7 +35,7 @@ Alias: $organizationCategory_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/orga
 Alias: $checkup_type_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-type-code
 Alias: $checkup_type_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-type-code
 
-Alias: $checkup_programService_cs = urn:oid:1.2.392.200119.6.1002
+Alias: $checkup_programService_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code //urn:oid:1.2.392.200119.6.1002
 Alias: $checkup_programService_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-code
 
 Alias: $checkup_encounter_type_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type

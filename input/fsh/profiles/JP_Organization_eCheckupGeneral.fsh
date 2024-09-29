@@ -18,7 +18,7 @@ Description:    "健診結果報告書　Organizationリソース　検診結果
 * type.coding.system ^definition = "健診・検診機関種別を区別するすコード体系を識別するURI。http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code　固定値。"
 * type.coding.code MS
 * type.coding.code ^short = "健診・検診機関種別コード"
-* type.coding.code ^definition = "実施機関の場合\"exec-org\"、 検診結果報告作成機関の場合\"doc-org\" を指定する。"
+* type.coding.code ^definition = "実施機関の場合\"exec-org\"、 検診結果報告作成機関の場合\"doc-org\"、これらと異なる文書管理責任機関である場合には \"admin-org\"を指定する。"
 
 
 * address 0..1 MS

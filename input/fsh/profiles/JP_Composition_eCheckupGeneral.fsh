@@ -68,9 +68,10 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 
 * category 1..1 MS
   * ^short = "報告区分を表すコードを設定する。"
-  * ^definition = "報告区分コードのコード体系を識別するURI。コード10,40,90 の場合にはurn:oid:1.2.392.200119.6.1001、それ以外のコードの場合にはhttp://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　を使用する。"
+  * ^definition = "報告区分コードのコード体系を識別するURI。http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　を使用する。"
 * category.coding 1..* MS
-* category.coding from $report_mergedcategory_vs (required)
+//* category.coding from $report_mergedcategory_vs (required)
+* category.coding from $report_category_vs
 
 * subject 1..1 MS
 * subject ^short = "受診者情報を表すPatientリソースへの参照。"
@@ -111,7 +112,7 @@ and organization 1..1 MS
 * custodian only Reference(JP_Organization_eCheckupGeneral)
 
 * event 1.. MS
-* event ^short = "健診プログラムサービスコード。coding.systemは 'urn:oid:1.2.392.200119.6.1002'を使用する。"
+* event ^short = "健診プログラムサービスコード。coding.systemは 'http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code'を使用する。"  // urn:oid:1.2.392.200119.6.1002
 * event.code 1..* MS
 * event.code from $checkup_programService_vs
 

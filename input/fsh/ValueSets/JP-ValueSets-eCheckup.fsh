@@ -65,10 +65,16 @@ Title: "健診結果　報告区分コード ValueSet"
 * ^url = $report_category_vs
 * ^date = "2024-09-20"
 * ^version = "1"
-* $report_category_cs#41   "事業者健診"
-* $report_category_cs#42   "自治体検診"
-* $report_category_cs#43   "乳幼児検診"
-* $report_category_cs#44   "妊婦検診"
+* $report_category_cs#10   //"特定健診"
+* $report_category_cs#41   //"事業者健診"
+* $report_category_cs#42   //"自治体検診"
+* $report_category_cs#43   //"乳幼児検診"
+* $report_category_cs#44   //"妊婦検診"
+* $report_category_cs#60 //"被保護者の健診情報"
+* $report_category_cs#60 //"被保護者の健診情報"
+* $report_category_cs#70 //"保険者以外が行う特定健診に相当する健診"
+* $report_category_cs#80 //"保険者が実施する特定健診以外の健診"
+* $report_category_cs#99 //"そのほか"
 
 ValueSet: SpecialCheckup_valueSet_reportCategory
 Id: specialCheckup-valueSet-reportCategory
@@ -78,9 +84,9 @@ Title: "健診結果　報告区分コード(特定健診制度) ValueSet"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1"
-* $report_speccategory_cs#10   "特定健診"
-* $report_speccategory_cs#40   "健診結果報告"
-* $report_speccategory_cs#90   "その他検診"
+* $report_speccategory_cs#10   //"特定健診"
+* $report_speccategory_cs#40   //"健診結果報告"
+* $report_speccategory_cs#90   //"その他検診"
 
 ValueSet: MergedCheckup_valueSet_reportCategory
 Id: mergedCheckup-valueSet-reportCategory
@@ -92,7 +98,7 @@ Title: "健診結果　報告区分コード(特定健診とそれ以外の統�
 * ^version = "1"
 * ^date = "2024-09-20"
 * ^version = "1"
-* include codes from valueset $report_speccategory_vs
+//* include codes from valueset $report_speccategory_vs
 * include codes from valueset $report_category_vs
 
 /*

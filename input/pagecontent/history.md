@@ -8,6 +8,14 @@
     
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。<br>
 
+## Ver1.2.0 (2024-09-29) <br>
+  - Composition.category 報告区分コード :コード表を差し替え。特定健診の報告区分コードで使用するOID（1.2.392.200119.6.1001）に代わり、http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　を使用する。
+  - Composition.event 健診プログラムサービスコード :コード表を差し替え。特定健診の健診プログラムサービスコードで使用するOID（1.2.392.200119.6.1002）に代わり、http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-codeを使用する。
+  - JP_Patient_eCheckupGeneral 受診者情報：作例データ　"system" : "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID"　末尾のmemberIDとすべきところ、memberとなっていたので修正。
+  - 同　受診者名：姓と名を分離して記述しなくてもよいことを明記した。
+  -  Organization : 健診実施機関と区別するためOrganizationリソースのtype要素にcoding.system = "http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code"、coding.code = "doc-org"を記述することを追加。
+  - Observation.hasMemberに拡張を追加し、一連検査グループ関係コードが記述できるように拡張を使用するよう追加。
+
 ## Ver1.1.4 (2024-02-08) <br>
 <br>
 仕様はPDF版またはHTML版を参照するように記載方法を変更した。<br>
