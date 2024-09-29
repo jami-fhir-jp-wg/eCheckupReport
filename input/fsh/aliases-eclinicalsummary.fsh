@@ -66,7 +66,6 @@ Alias: $observation-subcategory-vs = http://jpfhir.jp/fhir/eCS/ValueSet/observat
 
 Alias: $JP_ObservationLabResultCode_InfectionRelated_VS = http://jpfhir.jp/fhir/eCS/ValueSet/JP_ObservationLabResultCode_InfectionRelated_VS
 Alias: $JP_CLINS_ObsLabResult_JLAC10Unmethod_InfectionRelated_VS = http://jpfhir.jp/fhir/eCS/ValueSet/JP_CLINS_ObsLabResult_JLAC10Unmethod_InfectionRelated_VS
-Alias: $JP_ObservationLabResultCode_CS = urn:oid:1.2.392.200119.4.504
 
 Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 

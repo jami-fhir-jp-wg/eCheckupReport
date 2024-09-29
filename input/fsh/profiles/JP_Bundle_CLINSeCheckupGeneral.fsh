@@ -1,4 +1,4 @@
-Invariant: bundle-metaprofile
+Invariant: bundle-CLINS-metaprofile
 Description: "meta.profileには、指定したプロファイルのURLの記述が存在しなければならない。"
 Severity: #error
 // バージョン記述記号の'|'の位置までの部分文字列、またはmeta.profile全体が指定したURLであるかを調べる。
@@ -9,9 +9,11 @@ Parent: Bundle
 Id: JP-Bundle-eCheckupGeneral
 Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信と共用)"
 
-* obeys bundle-metaprofile
+* obeys bundle-CLINS-metaprofile
+//* obeys bundle-entry-JP-Patient-eCheckupGeneral
+* obeys bundle-entry-JP-Patient-CLINS-eCheckupGeneral
+
 * obeys bundle-entry0-JP-Composition-eCheckupGeneral
-* obeys bundle-entry-JP-Patient-eCheckupGeneral
 * obeys bundle-entry-JP-OrganizationReporter-eCheckupGeneral
 * obeys bundle-entry-JP-PractitionerReporter-eCheckupGeneral
 * obeys bundle-entry-JP-Encounter-eCheckupGeneral

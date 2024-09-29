@@ -23,7 +23,7 @@ Title: "健診結果　健診項目コード ValueSet"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1"
-* include codes from system urn:oid:1.2.392.200119.4.504  // MEDIS JLAC10
+* include codes from system $JP_ObservationLabResultCode_CS  // JLAC10
 * include codes from system $specialCheckup_observations_cs // 特定健診項目
 //* include codes from system urn:oid:1.2.392.200119.6.1005 // 特定健診項目
 // * include codes from system urn:oid:1.2.392.100495.100.1051 // 自治体検診項目コード

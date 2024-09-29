@@ -8,4 +8,4 @@ Usage: #inline
 * code = $specialCheckup_observations_cs#9N791000000000011 "飲酒量"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * effectiveDateTime = "2020-04-04"
-* valueCodeableConcept = urn:oid:1.2.392.200119.6.24050#2 "１～2合未満"
+* valueCodeableConcept = urn:oid:1.2.392.200119.6.24050#2 "1～2合未満"

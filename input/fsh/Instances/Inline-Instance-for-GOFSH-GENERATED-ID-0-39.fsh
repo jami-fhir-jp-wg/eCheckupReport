@@ -5,7 +5,7 @@ Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
 * status = #final
 * category = $JP_SimpleObservationCategory_CS#social-history
-* code = $specialCheckup_observations_cs#9N746000000000011 "３０分以上の運動習慣"
+* code = $specialCheckup_observations_cs#9N746000000000011 "30分以上の運動習慣"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * effectiveDateTime = "2020-04-04"
 * valueCodeableConcept = urn:oid:1.2.392.200119.6.2003#2 "いいえ"

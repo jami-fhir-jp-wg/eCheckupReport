@@ -221,3 +221,4 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/mergedCheckup-report-category
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category
+    - http://jpfhir.jp/fhir/core/mhlw/ValueSet/InsuranceMajorCategory
