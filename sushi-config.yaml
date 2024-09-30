@@ -150,6 +150,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
     - http://jpfhir.jp/fhir/eCheckupReport/CodeSystem/jp-observationLabResultCode-cs 
     - urn:oid:2.16.840.1.113883.2.2.1.6.1001
+    - urn:oid:1.2.392.200119.4.504
     - urn:oid:1.2.392.200119.6.1008
     - urn:oid:1.2.392.200119.6.18030
     - urn:oid:1.2.392.200119.6.18040
