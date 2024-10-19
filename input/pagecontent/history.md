@@ -8,6 +8,9 @@
     
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。<br>
 
+## Ver1.2.1 (2024-10-19) <br>
+  - Composition.category 報告区分コード : coding の多重度を1..*から1..1に修正（仕様の表に合わせた）。
+
 ## Ver1.2.0 (2024-09-29) <br>
   - Composition.category 報告区分コード :コード表を差し替え。特定健診の報告区分コードで使用するOID（1.2.392.200119.6.1001）に代わり、http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　を使用する。
   - Composition.event 健診プログラムサービスコード :コード表を差し替え。特定健診の健診プログラムサービスコードで使用するOID（1.2.392.200119.6.1002）に代わり、http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-codeを使用する。

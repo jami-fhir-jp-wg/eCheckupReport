@@ -1,7 +1,7 @@
 {
   "name": "jp-eCheckupReport.r4",
-  "version": "1.0.0-temp",
-  "description": "jp-eCheckupReport 1.0.0-temp",
+  "version": "1.x.x-temp",
+  "description": "jp-eCheckupReport 1.x.x-temp",
   "author": "Kazuhiko Ohe",
   "fhirVersions": [
     "4.0.1"

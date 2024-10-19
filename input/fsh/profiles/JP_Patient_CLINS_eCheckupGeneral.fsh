@@ -24,7 +24,7 @@ Description: "eCS/CLINS Patientリソース（患者情報）健診結果報告�
 * extension[eCS_InstitutionNumber] 0..1 MS
 */
 
-* ^url = $JP_Patient_CLINS_eCheckupGeneral
+* ^url = $JP_Patient_CLINS_eCheckupGeneral  //http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCheckupGeneral
 
 * ^version = "1"
 * ^status = #active

@@ -11,7 +11,7 @@ on:
   pull_request:
     branches: [ develop1.0 ]
 env:
-  release_version : 1.2.0
+  release_version : 1.2.1
 jobs:
   turn1:
     runs-on: ubuntu-latest
@@ -93,11 +93,18 @@ jobs:
 
     - name: apply the version of sushi-config.yaml
       run: |
-        sed 's/version: 1.0.0-temp/version: ${{ env.release_version }}/g' sushi-config.yaml > sushi-config-temp.yaml
+        sed 's/1.x.x-temp/${{ env.release_version }}/g' sushi-config.yaml > sushi-config-temp.yaml
         mv sushi-config-temp.yaml sushi-config.yaml
+
+        sed 's/.r4-1.x.x-temp/.r4-${{ env.release_version }}/g' input/pagecontent/validationGuide.md > input/pagecontent/validationGuide-temp.md
+        mv input/pagecontent/validationGuide-temp.md input/pagecontent/validationGuide.md
+
+        sed 's/.r4-1.x.x-temp/.r4-${{ env.release_version }}/g' input/pagecontent/index.md > input/pagecontent/index-temp.md
+        mv input/pagecontent/index-temp.md input/pagecontent/index.md
+
         cd forPackageRelease
-        sed 's/1.0.0-temp/${{ env.release_version }}/g' package-diff.json >package-diff-temp.json
-        sed 's/1.0.0-temp/${{ env.release_version }}/g' package-snap.json >package-snap-temp.json
+        sed 's/1.x.x-temp/${{ env.release_version }}/g' package-diff.json >package-diff-temp.json
+        sed 's/1.x.x-temp/${{ env.release_version }}/g' package-snap.json >package-snap-temp.json
         mv package-diff-temp.json package-diff.json
         mv package-snap-temp.json package-snap.json
         cd ..

@@ -74,7 +74,7 @@ Validationの具体的手順と、出力の解釈方法について説明する�
  　 
   - jp-eCheckupReport.r4　パッケージ
       
-    - tgz形式 : [https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.2.0.tgz](https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.2.0.tgz)
+    - tgz形式 : [https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.x.x-temp.tgz](https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.x.x-temp.tgz)
 
 #####  検証対象となる json形式のファイルをひとつ以上、[targets] 直下に配置する。
 
@@ -130,7 +130,7 @@ Validation の実行
       -tx n/a  \
       -ig [pkgJp]/jp-core.r4-1.1.2-url.tgz  \
       -ig [pkgJp]/jpfhir-terminology.r4-1.2.3-url.tgz  \
-      -ig [pkgJp]/jp-eCheckupReport.r4-1.2.0.tgz  
+      -ig [pkgJp]/jp-eCheckupReport.r4-1.x.x-temp.tgz  
         
 ```
 

@@ -9,8 +9,8 @@ name: "健診結果報告FHIR記述仕様　実装ガイド"
 title: "健診結果報告FHIR記述仕様　実装ガイド"
 description: "健診結果報告FHIR記述仕様　実装ガイド eCheckupReport Implementation Guide"
 status: active # draft | active | retired | unknown
-version: 1.2.0
-date: 2024-09-20
+version: 1.x.x-temp
+date: 2024-10-19
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html 
 copyrightYear: 2023+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -54,8 +54,8 @@ menu:
   Validationガイド:
     Validationガイド: validationGuide.html
   パッケージDownload:
-    標準(diff)版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.2.0.tgz 
-    snapshot版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.2.0-snap.tgz
+    標準(diff)版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.x.x-temp.tgz 
+    snapshot版: https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.x.x-temp-snap.tgz
 #-----------------------------------------
 # IG 外部パラメータ設定
 #-----------------------------------------

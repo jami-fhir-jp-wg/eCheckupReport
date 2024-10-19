@@ -11,7 +11,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * ^status = #active
 * ^version = "1"
-* ^date = "2024-09-20"
+* ^date = "2024-10-19"
 
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
@@ -69,7 +69,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * category 1..1 MS
   * ^short = "報告区分を表すコードを設定する。"
   * ^definition = "報告区分コードのコード体系を識別するURI。http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　を使用する。"
-* category.coding 1..* MS
+* category.coding 1..1 MS
 //* category.coding from $report_mergedcategory_vs (required)
 * category.coding from $report_category_vs
 
