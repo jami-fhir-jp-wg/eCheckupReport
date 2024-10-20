@@ -14,8 +14,8 @@ Description: "eCS/CLINS Patientリソース（患者情報）健診結果報告�
 
 // 派生済み　* obeys valid-system-local-patientID
 // 派生済み　* obeys either-KanjiName-KanaName-exist
-* obeys valid-system-insurance-patientIdentifier
-* obeys valid-value-insurance-patientIdentifier
+* obeys valid-system-insurance-patientIdentifier   // 2024.10.19　制約チェックを修正（CLINSと一致させた）
+* obeys valid-value-insurance-patientIdentifier  // 2024.10.19　制約チェックを修正（CLINSと一致させた）
 
 //* obeys institurionNumber
 
@@ -28,7 +28,7 @@ Description: "eCS/CLINS Patientリソース（患者情報）健診結果報告�
 
 * ^version = "1"
 * ^status = #active
-* ^date = "2024-09-20"
+* ^date = "2024-10-19"
 * ^publisher = "（一社）日本医療情報学会"
 * ^copyright = "（一社）日本医療情報学会. CC BY-ND 4.0"
 * ^fhirVersion = #4.0.1

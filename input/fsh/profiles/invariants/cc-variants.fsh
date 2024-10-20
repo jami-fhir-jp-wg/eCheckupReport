@@ -69,13 +69,47 @@ Expression: "(category.where($this='medication').exists() and criticality='high'
 Invariant: valid-contraIndication-code
 Description: "R2012:薬剤アレルギー等情報としてcategory要素は\"medication\"で、criticality要素は\"high\"の場合には、code要素はYJまたは一般名医薬品コードでなければならない。それ以外の（薬剤アレルギー等でない）場合にはJFAGYコードを使用すること。"
 Severity: #error
-Expression: "(category.where($this='medication').exists() and criticality='high' and (code.coding.where(system = 'urn:oid:1.2.392.100495.20.1.73').count()=1 or code.coding.where(system = 'urn:oid:1.2.392.100495.20.1.81').count()=1)) or (category.where($this='medication').count()=0 or criticality!='high')"
+Expression: "(category.where($this='medication').exists() and criticality='high' and (code.coding.where(system = 'http://tandard.jp/CodeSystem/YJ-code').count()=1 or code.coding.where(system = 'urn:oid:1.2.392.100495.20.1.81').count()=1)) or (category.where($this='medication').count()=0 or criticality!='high')"
 
 // R2013  アレルギーではJFAGYを使用すること（電子カルテ情報交換サービスの場合）
 Invariant: valid-allergy-code
 Description: "R2013:薬剤アレルギー等でないアレルギーの場合にはJFAGYコードを使用すること。"
 Severity: #error
-Expression: "(category.where($this='medication').count()=1 and criticality='high') or ((category.where($this='medication').count()=0 or criticality!='high') and (code.coding.where(system = 'http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS').count()=1 or  code.coding.where(system = 'http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyNonFoodNonMedicationAllergen_CS').count()=1 or code.coding.where(system = 'http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyMedicationAllergen_CS').count()=1 ))"
+Expression: "(category.where($this='medication').count()=1 and criticality='high') or ((category.where($this='medication').count()=0 or criticality!='high') and (code.coding.where(system = 'http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS').count()=1 or  code.coding.where(system = 'http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyNonFoodNonMedicationAllergen_CS').count()=1 or code.coding.where(system = 'http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyMedicationAllergen_CS').count()=1))"
+
+// 
+Invariant: validUsage-MedicationUsage-codesystem
+Description: "R5020:厚労省用法コード（電子処方箋）かまたはダミー用法コードのどちらか一方だけが必ず使われている。"
+Severity: #error
+Expression: "timing.code.coding.where(system='http://jpfhir.jp/fhir/clins/CodeSystem/JP_CLINS_MedicationUsage_Uncoded_CS').where(code='0X0XXXXXXXXX0000').exists() xor timing.code.coding.where(system='http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUsage_ePrescription').exists()"
+
+Invariant: invalidUsage-MedicationUsage-codesystem
+Description: "R5021:厚労省用法コード（電子処方箋）とダミー用法コードの両方が同時に使用されていることはない。"
+Severity: #error
+Expression: "(timing.code.coding.where(system='http://jpfhir.jp/fhir/clins/CodeSystem/JP_CLINS_MedicationUsage_Uncoded_CS').where(code='0X0XXXXXXXXX0000').exists() and timing.code.coding.where(system='http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUsage_ePrescription').exists()).not()"
+
+
+Invariant: mhlw-check
+Description: "厚労省用法コード（電子処方箋）がつかわれている"
+Severity: #error
+Expression: "timing.code.coding.where(system='http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUsage_ePrescription').exists()"
+
+Invariant: mhlw-not-check
+Description: "厚労省用法コード（電子処方箋）がつかわれていない"
+Severity: #error
+Expression: "timing.code.coding.where(system='http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUsage_ePrescription').exists().not()"
+
+Invariant: dummy-check
+Description: "ダミー用用コードがつかわれている"
+Severity: #error
+Expression: "timing.code.coding.where(system='http://jpfhir.jp/fhir/clins/CodeSystem/JP_CLINS_MedicationUsage_Uncoded_CS').where(code='0X0XXXXXXXXX0000').exists()"
+
+Invariant: dummy-not-check
+Description: "ダミー用用コードがつかわれていない"
+Severity: #error
+Expression: "timing.code.coding.where(system='http://jpfhir.jp/fhir/clins/CodeSystem/JP_CLINS_MedicationUsage_Uncoded_CS').where(code='0X0XXXXXXXXX0000').exists().not()"
+
+
 
 // 医療機関番号１０桁：[0-4][0-9][1-3][0-9]{7}
 // 保険者番号８桁：[0-9]{8}
@@ -92,10 +126,10 @@ Severity: #error
 Expression: "entry.first().resource.is(Patient)"
 
 // バージョン指定部分を除くURLを一致チェック
-Invariant: patients-profile-is-JP-Patient-eCheckupGeneral
-Description: "R0212:最初のentryであるPatientは、JP_Patient_eCheckupGeneralプロファイルに準拠していなければならない。"
+Invariant: patients-profile-is-JP-Patient-CLINS-eCS
+Description: "R0212:最初のentryであるPatientは、JP_Patient_eCSプロファイルに準拠していなければならない。"
 Severity: #error
-Expression: "entry.first().resource.meta.where(profile.substring(0,77)='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral').exists()"
+Expression: "entry.first().resource.meta.where(profile.substring(0,60)='http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS').exists()"
 
 Invariant: bundle-profile-is-JP-Bundle-CLINS
 Description: "R0213:BundleはJP-Bundle-CLINSプロファイルに準拠していなければならない。"
@@ -246,16 +280,16 @@ Bundle.meta.tag  ^slicing.discriminator.type = #value
 Bundle.meta.tag  ^slicing.discriminator.path = "system"
 Bundle.meta.tag  ^slicing.rules = #open
 Bundle.meta.tag contains resourceType 1..1
-meta.tag[resourceType].system = $JP_CLINS_BundleResourceType_CS
+meta.tag[resourceType].system = _CLINS_BundleResourceType_CS
 meta.tag[resourceType].code from $JP_CLINS_BundleResourceType_VS
 
 //
 Invariant: first-bundle-entry-is-Patient
 Description: "R0211:最初のentryはPatientでなければならない。"
 
-//Invariant: patients-profile-is-JP-Patient-CLINS-eCS
-Invariant: patients-profile-is-JP_Patient_eCheckupGeneral
-Description: "R0212:最初のentryであるPatientは、JP_Patient_eCheckupGeneralプロファイルに準拠していなければならない。" d
+//
+Invariant: patients-profile-is-JP-Patient-CLINS-eCS
+Description: "R0212:最初のentryであるPatientは、JP_Patient_eCSプロファイルに準拠していなければならない。" d
 
 ## ひとつのBundleリソースには、ひとりの患者の、同時に１回で報告される一連のデータ（１報告単位のデータ）だけを、すべて漏れなく格納する。
 必須ルール

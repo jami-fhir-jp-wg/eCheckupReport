@@ -14,6 +14,7 @@ Description: "eCS Patientリソース（患者情報）健診結果報告用プ�
 
 * obeys valid-system-local-patientID
 * obeys either-KanjiName-KanaName-exist
+* obeys kanjiName-kanaName-donot-contain-ZenkakuKuuhaku // 2024.10.19追加
 
 //* obeys institurionNumber
 
@@ -26,7 +27,7 @@ Description: "eCS Patientリソース（患者情報）健診結果報告用プ�
 
 * ^version = "1"
 * ^status = #active
-* ^date = "2024-09-20"
+* ^date = "2024-10-19"
 * ^publisher = "（一社）日本医療情報学会"
 * ^copyright = "（一社）日本医療情報学会. CC BY-ND 4.0"
 * ^fhirVersion = #4.0.1

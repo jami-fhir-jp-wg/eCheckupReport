@@ -9,7 +9,9 @@
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。<br>
 
 ## Ver1.2.1 (2024-10-19) <br>
-  - Composition.category 報告区分コード : coding の多重度を1..*から1..1に修正（仕様の表に合わせた）。
+  - Composition.category 報告区分コード : coding の多重度を1..*から1..1に修正（V1.2.0での修正漏れ。PDF版仕様の表2との不整合の解消。）。
+  - プロファイル　JP_Patient_eCheckupGeneral: kanjiName-kanaName-donot-contain-ZenkakuKuuhaku制約適用を追加。
+  - プロファイル　JP_Patient_CLINS_eCheckupGeneral: 設定されているvalid-system-insurance-patientIdentifier、valid-value-insurance-patientIdentifierをCLINS仕様と一致させた。
 
 ## Ver1.2.0 (2024-09-29) <br>
   - Composition.category 報告区分コード :コード表を差し替え。特定健診の報告区分コードで使用するOID（1.2.392.200119.6.1001）に代わり、http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　を使用する。
