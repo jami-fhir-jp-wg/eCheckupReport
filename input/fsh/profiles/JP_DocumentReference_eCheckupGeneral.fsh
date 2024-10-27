@@ -5,6 +5,6 @@ Id:             JP-DocumentReference-eCheckupGeneral
 Description:    "健診結果報告書　DocumentReferenceリソース 添付文書情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_DocumentReference_eCheckupGeneral"
 * ^status = #active
-* ^version = "1"
+* ^version = "x.x.x-profile"
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS

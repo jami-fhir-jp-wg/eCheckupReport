@@ -22,7 +22,7 @@ Alias: $doctype_codes_vs = http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
 Alias: $section_code_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code
 Alias: $section_code_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
 
-Alias: $report_category_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
+Alias: $report_category_cs = urn:oid:2.16.840.1.113883.2.2.1.6.1001 //http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
 Alias: $report_speccategory_cs = urn:oid:2.16.840.1.113883.2.2.1.6.1001
 
 Alias: $report_category_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
@@ -35,7 +35,7 @@ Alias: $organizationCategory_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/orga
 Alias: $checkup_type_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-type-code
 Alias: $checkup_type_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-type-code
 
-Alias: $checkup_programService_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code //urn:oid:1.2.392.200119.6.1002
+Alias: $checkup_programService_cs = urn:oid:1.2.392.200119.6.1002 // http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code //
 Alias: $checkup_programService_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-code
 
 Alias: $checkup_encounter_type_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type

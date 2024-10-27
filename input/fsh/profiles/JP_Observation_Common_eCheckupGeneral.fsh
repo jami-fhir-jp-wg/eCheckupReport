@@ -5,7 +5,7 @@ Id:             JP-Observation-eCheckupGeneral
 Description:    "健診結果報告書　Observationリソース　検査結果情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
 * ^status = #active
-* ^version = "1"
+* ^version = "x.x.x-profile"
 * ^date = "2024-01-15"
 //* obeys emc-obs-1 and emc-obs-2 and emc-obs-3 and emc-obs-4 and emc-obs-5
 
@@ -122,7 +122,7 @@ Id:             JP-ObservationGroup-eCheckupGeneral
 Description:    "健診結果報告書　ObservationGroupリソースGroup仕様共通定義"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral"
 * ^status = #active
-* ^version = "1"
+* ^version = "x.x.x-profile"
 
 * . ^short = "健診・検診検査結果"
 * . ^definition = "健診・検診の検査結果の格納に使用する。"

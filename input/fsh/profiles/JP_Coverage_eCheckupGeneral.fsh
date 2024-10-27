@@ -5,7 +5,7 @@ Id:             JP-CoverageInsurance-eCheckupGeneral
 Description:    "健診結果報告書　Coverageリソース  保険情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageInsurance_eCheckupGeneral"
 * ^status = #active
-* ^version = "1"
+* ^version = "x.x.x-profile"
 
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
@@ -111,7 +111,7 @@ Id:             JP-CoverageService-eCheckupGeneral
 Description:    "健診結果報告書　Coverageリソース  受診券等サービス情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageService_eCheckupGeneral"
 * ^status = #active
-* ^version = "1"
+* ^version = "x.x.x-profile"
 * status = #active
 * type ^short = "受診券情報を表す固定ID system='urn:oid:1.2.392.200119.6.208' code='1'"
 * type = urn:oid:1.2.392.200119.6.208#1

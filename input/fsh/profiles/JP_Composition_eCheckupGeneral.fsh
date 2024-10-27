@@ -10,7 +10,7 @@ Id:             JP-Composition-eCheckupGeneral
 Description:    "健診結果報告書　Compositionリソース　文書構成情報 v1.2"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * ^status = #active
-* ^version = "1"
+* ^version = "x.x.x-profile"
 * ^date = "2024-10-19"
 
 * meta.lastUpdated 1.. MS

@@ -6,7 +6,7 @@ Description:    "健診結果報告書　Encounterリソース  実施情報 v1.
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral"
 * ^status = #active
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "x.x.x-profile"
 
 * status 1..1 MS
 * status = #finished
