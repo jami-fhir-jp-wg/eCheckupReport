@@ -93,7 +93,7 @@ jobs:
 
     - name: apply the version of sushi-config.yaml
       run: |
-        find input/fsh/profile -type f -name "*.fsh" | grep -rl 'x.x.x-profile' | xargs sed -i 's/x.x.x-profile/${{ env.release_version }}/g'
+        find input/fsh/profiles -type f -name "*.fsh" | grep -rl 'x.x.x-profile' | xargs sed -i 's/x.x.x-profile/${{ env.release_version }}/g'
         find input/fsh/instances -type f -name "*.fsh" | grep -rl 'x.x.x-instance' | xargs sed -i 's/x.x.x-instance/${{ env.release_version }}/g'
 
         sed 's/1.x.x-temp/${{ env.release_version }}/g' sushi-config.yaml > sushi-config-temp.yaml
