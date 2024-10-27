@@ -10,7 +10,7 @@ title: "健診結果報告FHIR記述仕様　実装ガイド"
 description: "健診結果報告FHIR記述仕様　実装ガイド eCheckupReport Implementation Guide"
 status: active # draft | active | retired | unknown
 version: 1.x.x-temp
-date: 2024-10-19
+date: 2024-10-27
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html 
 copyrightYear: 2023+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -24,11 +24,11 @@ copyright:  （一社）日本HL7協会、（一社）日本医療情報学会.�
 jurisdiction: 'urn:iso:std:iso:3166-2#JP'
 dependencies:
   jp-core.r4:
-    uri: http://jpfhir.jp/fhir/core/1.1.2-url/ImplementationGuide/
-    version: 1.1.2-url
+    uri: http://jpfhir.jp/fhir/core/1.1.2-clins/ImplementationGuide/
+    version: 1.1.2-clins
   jpfhir-terminology.r4:
     uri: http://jpfhir.jp/fhir//jpfhir-terminology.r4/ImplementationGuide/
-    version: 1.2.3-url
+    version: 1.2.4-url
 
 
 #----------------------------------------
