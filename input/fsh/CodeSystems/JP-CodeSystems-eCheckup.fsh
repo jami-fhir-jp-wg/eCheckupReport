@@ -76,7 +76,7 @@ Title: "健診結果報告区分コード"
 //--------------------------------------------------------------------
 // 特定健診報告区分コード	Composition.category
 //--------------------------------------------------------------------
-CodeSystem: SpecialCheckup_codeSystem_reportCategory
+/*CodeSystem: SpecialCheckup_codeSystem_reportCategory
 Id: specCheckup-codeSystem-reportCategory
 Description: "健診結果報告区分コード"
 Title: "健診結果報告区分コード"
@@ -91,7 +91,7 @@ Title: "健診結果報告区分コード"
 * #40   "健診結果報告"
 * #90   "その他検診"
 
-
+*/
 
 //--------------------------------------------------------------------
 // プログラムサービスコード	Composition.event.code
