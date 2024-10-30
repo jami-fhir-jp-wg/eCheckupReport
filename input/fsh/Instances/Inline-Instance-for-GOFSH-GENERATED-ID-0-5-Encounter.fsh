@@ -2,7 +2,7 @@ Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-5-Encounter
 InstanceOf: JP_Encounter_eCheckupGeneral
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
-* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral"
+* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral|x.x.x-instance"
 * status = #finished
 * class = $encounter-category#checkup "健診"
 * period.start = "2020-04-04"

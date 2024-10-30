@@ -2,7 +2,7 @@ Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-3-Practitioner
 InstanceOf: JP_Practitioner_eCheckupGeneral
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
-* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral"
+* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral|x.x.x-instance"
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #IDE
 * name[=].text = "東京 太郎"
