@@ -72,10 +72,11 @@ Title: "健診結果　報告区分コード ValueSet"
 * $report_category_cs#44   //"妊婦検診"
 * $report_category_cs#60 //"被保護者の健診情報"
 * $report_category_cs#60 //"被保護者の健診情報"
-* $report_category_cs#70 //"保険者以外が行う特定健診に相当する健診"
-* $report_category_cs#80 //"保険者が実施する特定健診以外の健診"
+* $report_category_cs#70 //"保険者以外が行う特定健診等に相当する健診"
+* $report_category_cs#80 //"保険者が実施する特定健診等以外の健診"
 * $report_category_cs#99 //"そのほか"
 
+/*
 ValueSet: SpecialCheckup_valueSet_reportCategory
 Id: specialCheckup-valueSet-reportCategory
 Description: "健診結果　報告区分コード(特定健診制度) ValueSet"
@@ -87,6 +88,7 @@ Title: "健診結果　報告区分コード(特定健診制度) ValueSet"
 * $report_speccategory_cs#10   //"特定健診"
 * $report_speccategory_cs#40   //"健診結果報告"
 * $report_speccategory_cs#90   //"その他検診"
+*/
 
 ValueSet: MergedCheckup_valueSet_reportCategory
 Id: mergedCheckup-valueSet-reportCategory
