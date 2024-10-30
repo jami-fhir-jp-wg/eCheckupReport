@@ -94,7 +94,7 @@ jobs:
     - name: apply the version of sushi-config.yaml
       run: |
         find input/fsh/profiles -type f -name '*.fsh' -exec sed -ibak "s/x.x.x-profile/${{ env.release_version }}/g" {} \;
-        find input/fsh/instances -type f -name '*.fsh' -exec sed -ibak "s/x.x.x-instance/${{ env.release_version }}/g" {} \;
+        find input/fsh/Instances -type f -name '*.fsh' -exec sed -ibak "s/x.x.x-instance/${{ env.release_version }}/g" {} \;
 
         sed 's/1.x.x-temp/${{ env.release_version }}/g' sushi-config.yaml > sushi-config-temp.yaml
         mv sushi-config-temp.yaml sushi-config.yaml
