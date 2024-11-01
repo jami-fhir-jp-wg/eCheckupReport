@@ -1,14 +1,12 @@
 
 
-## 履歴について掲載している。
-
-
-    掲載にあたっては、内容の変更に関わらない修正（リンク切れの修正、表示体裁、表現修正、レイアウト変更、小さな説明追加、<br>
-    少数の事例追加など）の履歴は含まない。また、より正確なValidationを可能とするためのProfile記述方法の変更履歴も含まない。<br>
+### 履歴の記載方針
+    掲載にあたっては、内容の変更に関わらない修正（リンク切れの修正、表示体裁、表現修正、レイアウト変更、小さな説明追加、
+    少数の事例追加など）の履歴は含まない。また、より正確なValidationを可能とするためのProfile記述方法の変更履歴も含まない。
     
-    トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。<br>
+    トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。
 
-## Ver1.2.1 (2024-10-27) <br>
+### Ver1.2.1 (2024-10-27) <br>
   - Composition.category 報告区分コード : coding の多重度を1..*から1..1に修正（V1.2.0での修正漏れ。PDF版仕様の表2との不整合の解消。）。
   - プロファイル　JP_Patient_eCheckupGeneral: kanjiName-kanaName-donot-contain-ZenkakuKuuhaku制約適用を追加。
   - プロファイル　JP_Patient_CLINS_eCheckupGeneral: 設定されているvalid-system-insurance-patientIdentifier、valid-value-insurance-patientIdentifierをCLINS仕様と一致させた。
@@ -18,7 +16,7 @@
   - 健診プログラムサービスコード: 特定健診→特定健診等　に修正。
   - セクションコード：特定健診→特定健診等　に修正
 
-## Ver1.2.0 (2024-09-29) <br>
+### Ver1.2.0 (2024-09-29) <br>
   - Composition.category 報告区分コード :コード表を差し替え。特定健診の報告区分コードで使用するOID（1.2.392.200119.6.1001）に代わり、http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　を使用する。
   - Composition.event 健診プログラムサービスコード :コード表を差し替え。特定健診の健診プログラムサービスコードで使用するOID（1.2.392.200119.6.1002）に代わり、http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-programService-codeを使用する。
   - JP_Patient_eCheckupGeneral 受診者情報：作例データ　"system" : "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID"　末尾のmemberIDとすべきところ、memberとなっていたので修正。
@@ -26,11 +24,11 @@
   -  Organization : 健診実施機関と区別するためOrganizationリソースのtype要素にcoding.system = "http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code"、coding.code = "doc-org"を記述することを追加。
   - Observation.hasMemberに拡張を追加し、一連検査グループ関係コードが記述できるように拡張を使用するよう追加。
 
-## Ver1.1.4 (2024-02-08) <br>
+### Ver1.1.4 (2024-02-08) <br>
 <br>
 仕様はPDF版またはHTML版を参照するように記載方法を変更した。<br>
 
-## Ver1.1.4 (2024-02-04) <br>
+### Ver1.1.4 (2024-02-04) <br>
 <br>
   - 検体材料コードを示す system 値をhttp://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-specimen-codes<br>
 からhttp://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSampleMaterialCode_CS に変更。<br>
@@ -44,12 +42,12 @@
 とする。<br>
 
 
-## Ver1.1.3 (2024-01-28) <br>
+### Ver1.1.3 (2024-01-28) <br>
 <br>
 ３．１．２および３．１．３で、Bundle リソースと Composition リソースの identifier の設定ルールを明確にし、曖昧さを排除。<br>
 これに合わせて例２１、２２、２３を修正。<br>
 
-## Ver1.1.2-url (2024-01-25) <br>
+### Ver1.1.2-url (2024-01-25) <br>
 <br>
 * JP_Observation_eCheckupReport プロファイルで、identifier を0..1から0..*　に変更。<br>
 * JP_ObservationGroup_eCheckupReport プロファイルで、identifier を0..0から0..*　に変更。<br>
@@ -57,7 +55,7 @@
 * すべてのリソースProfileでmeta.lastUpdated要素を必須（1..1）に修正。<br>
 <br>
 
-## Ver1.1.1 (2024-01-21) <br>
+### Ver1.1.1 (2024-01-21) <br>
 <br>
 * p5 「CDA添付パターン」による記述はFHIRによる記述としてみなされないことがあることを記載。<br>
 * 2.2.1 報告区分コード　特定健診制度以外のコードを追加した上で、コードシステムの値を使い分ける仕様とする。<br>
