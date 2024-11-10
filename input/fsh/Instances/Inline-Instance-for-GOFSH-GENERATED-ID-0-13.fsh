@@ -21,9 +21,9 @@ Usage: #inline
 * category = $JP_SimpleObservationCategory_CS#exam
 * code = $specialCheckup_observations_cs#9A110160700000011   "心電図(所見の有無)"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
-* performer = "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
+* performer = Reference(urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba)
 * effectiveDateTime = "2020-11-10"
-* valueCodeableConcept = 1.2.392.200119.6.2002#1 "所見あり"
+* valueCodeableConcept = urn:uuid:1.2.392.200119.6.2002#1 "所見あり"
 * component.code = $specialCheckup_observations_cs#9A110160800000049 "心電図(所見)"
 * component.valueString = "2度AVブロック、PVC散発"
 * component.extension.url = $JP_eCS_ObsComponenrPerformer
