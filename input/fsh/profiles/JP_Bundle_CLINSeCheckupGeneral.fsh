@@ -21,6 +21,7 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * ^url = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral"
 
 * ^version = "x.x.x-profile"
+* ^date = "2024-11-10"
 * ^status = #active
 * . ^short = "健診結果報告書 Bundleリソース （電子カルテ情報共有サービス送信は別プロファイル)"
 * . ^definition = "健診結果報告のための文書 Bundleリソース　（電子カルテ情報共有サービス送信は別プロファイル)"
@@ -57,7 +58,7 @@ Bundle.identifier.value : 実装ガイド本文 5情報送信仕様--Bundleリ�
 and patient 1..1 MS  //  受診者情報
 and organization  1.. MS
 //and organization/ins 0..* MS
-and practitioner 1..2 MS // 必須：作成者、任意：転記者
+and practitioner 1..* MS // 必須：作成者、任意：転記者、任意：検査実施者（ObservationやDiagnosticReportのperformer要素から参照される）
 and practitionerRole 0..1 MS // 転記者機関
 and encounter 1..1 MS // 実施情報
 and coverage  0..2 MS // 受診券情報、保険・自費情報

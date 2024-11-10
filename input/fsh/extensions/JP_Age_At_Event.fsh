@@ -2,7 +2,8 @@ Extension: JP_Age_At_Event
 Id: JP-Age-At-Event
 Description: "検診受診時の年齢を表現する拡張"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event"
-* ^version = "1.0.0"
+* ^version = "x.x.x-profile"
+* ^date = "2024-11-10"
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Patient"

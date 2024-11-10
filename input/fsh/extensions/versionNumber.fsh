@@ -4,7 +4,7 @@ Description: "Compositionリソース　バージョンを記述する拡張"
 
 * ^url = "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/composition-clinicaldocument-versionNumber"
 * ^status = #active
-* ^version = "1"
+* ^version = "x.x.x-profile"
 * ^date = "2024-01-24"
 * ^context.type = #element
 * ^context.expression = "Composition"

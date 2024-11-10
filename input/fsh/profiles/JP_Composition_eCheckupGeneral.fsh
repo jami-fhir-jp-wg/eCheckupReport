@@ -11,7 +11,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * ^status = #active
 * ^version = "x.x.x-profile"
-* ^date = "2024-10-19"
+* ^date = "2024-11-10"
 
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
@@ -23,7 +23,6 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
  and $composition-clinicaldocument-dataEnterer named dataEnterer 0..1
 
 * extension[version] ^short = "文書バージョンを表す拡張"
-* extension[version] ^min = 0
 * extension[version] 1..1 MS
 * extension[version].url 1..1 MS
 * extension[version].value[x] ^short = "文書のバージョン番号を表す文字列。"
@@ -136,52 +135,62 @@ and    attachment 0..1 MS  // 01995
 
 * section[specialCheckup_observations]
   * code 1..1 MS
-  * code = $section_code_cs#01011 "特定健診検査結果セクション" 
+  * code = $section_code_cs#01011 "特定健診検査結果セクション" (exactly)
+  * code.coding 1..1 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
 * section[specialCheckup_questionnaire]
   * code 1..1 MS
-  * code = $section_code_cs#01012 "特定健診問診結果セクション" 
+  * code = $section_code_cs#01012 "特定健診問診結果セクション" (exactly)
+  * code.coding 1..1 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[specialCheckup_additional]
   * code 1..1 MS
-  * code = $section_code_cs#01990 "任意追加項目セクション" 
+  * code = $section_code_cs#01990 "任意追加項目セクション" (exactly)
+  * code.coding 1..1  
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[regionalUnionCheckup_observations]
   * code 1..1 MS
-  * code = $section_code_cs#01021 "広域連合保健事業検査結果セクション"
+  * code = $section_code_cs#01021 "広域連合保健事業検査結果セクション" (exactly)
+  * code.coding 1..1 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
 * section[regionalUnionCheckup_questionnaire]
   * code 1..1 MS
-  * code = $section_code_cs#01022 "広域連合保健事業問診結果セクション"
+  * code = $section_code_cs#01022 "広域連合保健事業問診結果セクション" (exactly)
+  * code.coding 1..1 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[occupationalCheckup_observations]
   * code 1..1 MS
-  * code = $section_code_cs#01031 "事業者健診検査結果セクション"
+  * code = $section_code_cs#01031 "事業者健診検査結果セクション" (exactly)
+  * code.coding 1..1 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[occupationalCheckup_questionnaire]
   * code 1..1 MS
-  * code = $section_code_cs#01032 "事業者健診問診結果セクション"
+  * code = $section_code_cs#01032 "事業者健診問診結果セクション" (exactly)
+  * code.coding 1..1 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[generalCheckup_observations]
   * code 1..1 MS
-  * code = $section_code_cs#01910 "検査結果セクション"
+  * code = $section_code_cs#01910 "検査結果セクション" (exactly)
+  * code.coding 1..1 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
 * section[generalCheckup_questionnaire]
   * code 1..1 MS
-  * code = $section_code_cs#01920 "問診結果セクション" 
+  * code = $section_code_cs#01920 "問診結果セクション" (exactly)
+  * code.coding 1..1  
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[attachment]
   * code 1..1 MS
-  * code = $section_code_cs#01995 "添付書類セクション" 
+  * code = $section_code_cs#01995 "添付書類セクション" (exactly)
+  * code.coding 1..1  
   * entry 1..*
   * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral or JP_Media_eCheckupGeneral)
 

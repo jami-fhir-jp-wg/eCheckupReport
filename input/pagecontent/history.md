@@ -6,6 +6,19 @@
     
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。
 
+### Ver1.3.0 (2024-11-10) <br>
+  - JP_Observation_eCheckupGeneral : 
+    - component要素に検査結果責任者を情報をPractitionerへの参照として任意に記述できるように拡張を追加（所見有無と所見の両方に所見記載者を記録していることがあるため、Observationリソースのperformer要素とは別にcomponent要素にも記述できるようにした）
+    - 検査結果を記述するvalueのデータ型として日付型も格納できるよう、valueDateTime要素の記述を可能とした。
+  - JP_Composition_eCheckupGeneral :
+    - Compositionリソース.eventの多重度：1..* → 1..1 (v1.2.1で、PDF仕様書の表は1..1*となっていた。)
+    - Compositionリソース.event.codeの多重度：1..* → 1..1 (v1.2.1で、PDF仕様書の表は1..1*となっていた。)
+    - Compositionリソース.event.code.codingの多重度：1..* → 1..1 (v1.2.1で、PDF仕様書の表は1..1*となっていた。)
+    - section:スライス.code.coding の多重度：1..* → 1..1 (v1.2.1で、PDF仕様書の表は1..1*となっていた。)
+  - JP_Bundle_eCheckupGeneral :
+    - entryに記述できるPractitionerリソースの多重度: 1..2 → 1..* に修正（検査結果の実施責任者、component検査結果の実施責任者として参照されるPractitionerリソースも格納することがあるため）
+  - 実装ガイドのプロファイルツリーのスライス表示の一部を見やすくするため、全スライスに共通の記述をAll slicesのところにまとめず、個々のスライスのところで表示されるように記載方法を変更した。
+
 ### Ver1.2.1 (2024-10-27) <br>
   - Composition.category 報告区分コード : coding の多重度を1..*から1..1に修正（V1.2.0での修正漏れ。PDF版仕様の表2との不整合の解消。）。
   - プロファイル　JP_Patient_eCheckupGeneral: kanjiName-kanaName-donot-contain-ZenkakuKuuhaku制約適用を追加。

@@ -2,8 +2,9 @@ Extension: Composition_dataEnterer
 Id: composition-dataEnterer
 Description: "データ転記者の情報を記述する拡張"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/composition_dataEnterer"
-* ^version = "1.0.0"
 * ^status = #draft
+* ^version = "x.x.x-profile"
+* ^date = "2024-11-10"
 * ^context.type = #element
 * ^context.expression = "Composition"
 * . ^short = "データ転記者のPractitionerRoleへの参照"

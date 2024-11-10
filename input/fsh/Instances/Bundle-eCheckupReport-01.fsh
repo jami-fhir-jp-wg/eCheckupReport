@@ -39,6 +39,10 @@ Description: "Bundle 健診検査結果報告書　サンプル０１"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-12
 * entry[+].fullUrl = "urn:uuid:ff4472f4-9e44-6aa3-bcd6-abb0662e4641"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-13
+
+* entry[+].fullUrl = "urn:uuid:67f3382f-c16d-6b6c-87c5-e98fe8694d0b"
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ComponentPerformer-Exists
+
 * entry[+].fullUrl = "urn:uuid:38cbf2cf-61b7-6738-9d8c-a7b29016c48f"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-14
 * entry[+].fullUrl = "urn:uuid:01b972fc-5183-8fa4-0954-10a7c5f5a36e"

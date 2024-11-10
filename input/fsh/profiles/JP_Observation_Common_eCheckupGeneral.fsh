@@ -6,7 +6,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
 * ^status = #active
 * ^version = "x.x.x-profile"
-* ^date = "2024-01-15"
+* ^date = "2024-11-10"
 //* obeys emc-obs-1 and emc-obs-2 and emc-obs-3 and emc-obs-4 and emc-obs-5
 
 * . ^short = "健診・検診検査結果"
@@ -14,6 +14,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * . ^comment = "健診結果として報告する検査結果、問診結果、すべての特定健診項目の結果を格納するObservationの制約プロファイル"
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
+
 * identifier ^short = "当該検査結果に対して、施設内で割り振られる一意の識別子"
 * identifier ^definition = "この検査項目に割り当てられた一意の識別子。リソースの識別子やシステム的なシーケンスではなく、ビジネスID。"
 * identifier 0..* MS
@@ -46,9 +47,10 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * performer ^comment = "医師の診断項目の診断者を表すPractitionerリソースへの参照"
 
 * value[x] 0..1 MS 
-* value[x] only Quantity or CodeableConcept or string
+* value[x] only Quantity or CodeableConcept or string or dateTime
 * valueQuantity 0..1
 * valueString 0..1
+* valueDateTime 0..1
 * valueCodeableConcept.coding.extension 0..1
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.type = #value
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.path = "url"
@@ -84,6 +86,19 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * component 0..* MS
   * ^short = "対応する所見（解釈など）を記述する項目"
   * ^definition = "所見型の健診項目（「所見の有無」項目）のconponent要素として所見詳細を記述する場合に使用する。" 
+
+  * extension ^slicing.discriminator.type = #value
+  * extension ^slicing.discriminator.path = "url"
+  * extension ^slicing.rules = #open
+  * extension contains $JP_eCS_ObsComponenrPerformer  named componentPerformer 0..1
+
+  * extension[componentPerformer] ^short = "Component検査結果に責任を持つ者の情報（Practitioner）への参照を記述"
+  * extension[componentPerformer] ^definition = "Practitionerへの参照を記述"
+  * extension[componentPerformer].url 1..1
+  * extension[componentPerformer].value[x] ^short = "Practitionerへの参照"
+  * extension[componentPerformer].value[x] ^definition = "Practitionerへの参照"
+  * extension[componentPerformer].value[x] 1..1 MS
+
   * code 1..1 MS
   * value[x] 0..1 MS
   * dataAbsentReason 0..1 MS
