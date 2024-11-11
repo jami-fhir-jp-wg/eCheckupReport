@@ -137,7 +137,7 @@ and    attachment 0..1 MS  // 01995
   * code 1..1 MS
   * code.coding 1..1 
   * code
-    * ^fixedCoding = $section_code_cs#01011 "特定健診検査結果セクション" (exactly)
+    * ^fixedCodeableConcept = $section_code_cs#01011 "特定健診検査結果セクション" (exactly)
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
 * section[specialCheckup_questionnaire]
