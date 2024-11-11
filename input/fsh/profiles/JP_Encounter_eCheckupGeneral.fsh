@@ -2,7 +2,7 @@ Profile:        JP_Encounter_eCheckupGeneral
 Parent:         JP_Encounter
 Id:             JP-Encounter-eCheckupGeneral
 //Title:          "健診結果報告書　Encounterリソース  実施情報"
-Description:    "健診結果報告書　Encounterリソース  実施情報 v1.2"
+Description:    "健診結果報告書　Encounterリソース  実施情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral"
 * ^status = #active
 * ^date = "2024-09-20"

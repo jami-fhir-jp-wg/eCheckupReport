@@ -7,7 +7,7 @@ Profile:        JP_Composition_eCheckupGeneral
 Parent:         Composition
 Id:             JP-Composition-eCheckupGeneral
 //Title:          "健診結果報告書　Compositionリソース　文書構成情報"
-Description:    "健診結果報告書　Compositionリソース　文書構成情報 v1.2"
+Description:    "健診結果報告書　Compositionリソース　文書構成情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * ^status = #active
 * ^version = "x.x.x-profile"
