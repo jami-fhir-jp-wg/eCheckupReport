@@ -5,7 +5,7 @@ Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"
 * status = #final
 * category = $JP_SimpleObservationCategory_CS#laboratory
-* code = $specialCheckup_observations_cs#3B045000002327201 "ALT(GPT))"
+* code = $specialCheckup_observations_cs#3B045000002327201 "ALT(GPT)"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * effectiveDateTime = "2020-04-04"
 * valueQuantity = 16 'U/L' "U/l"
