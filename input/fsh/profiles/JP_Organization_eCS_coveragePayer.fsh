@@ -5,6 +5,7 @@ Description: "健診結果報告書　医療サービスでの保険者または
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS_coveragePayer"
 * ^status = #draft
 * ^version = "x.x.x-profile"
+* ^language = #ja
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
 * text ^short = "本リソースをテキストで表現したものを入れてもよい。"

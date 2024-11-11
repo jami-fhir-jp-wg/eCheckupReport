@@ -16,6 +16,7 @@ Id:   jp-servicerequest-common
 Description:    "JP-ServiceRequest　Commonプロファイル(JP-Core V1.2系)"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common"
 * ^status = #active
+* ^version = "x.x.x-profile"
 * ^date = "2024-09-18"
 * ^publisher = "（一社）日本医療情報学会"
 * ^copyright = "（一社）日本医療情報学会. CC BY-ND 4.0"
@@ -33,7 +34,7 @@ Description:    "JP-ServiceRequest　Commonプロファイル(JP-Core V1.2系)"
 //
 * instantiatesUri ^short = "外部のプロトコール、定義への参照"
 * instantiatesUri ^definition = "このサービスリクエストに部分的、または完全に関わる、外部の管理されたプロトコール、ガイドライン、オーダセットや他の定義へのURL参照"
-* instantiatesUri = "HTMLページ、PDFなど、名前で解決できないURI識別子"
+* instantiatesUri ^comment = "HTMLページ、PDFなど、名前で解決できないURI識別子"
 //
 * basedOn ^short = "リクエストするリソースへの参照"
 * basedOn ^definition = "このリクエストによって実施すべき計画、提案、オーダの詳細（への参照）"

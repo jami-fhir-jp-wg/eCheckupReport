@@ -7,7 +7,7 @@ Description:    "健診結果報告書　Organizationリソース　検診結果
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "x.x.x-profile"
-
+* ^language = #ja
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
 

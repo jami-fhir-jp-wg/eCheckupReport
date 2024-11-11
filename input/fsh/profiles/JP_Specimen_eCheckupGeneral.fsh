@@ -6,5 +6,6 @@ Description:    "健診結果報告書　Specimenリソース 検体情報"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Specimen_eCheckupGeneral"
 * ^status = #active
 * ^version = "x.x.x-profile"
+* ^language = #ja
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS

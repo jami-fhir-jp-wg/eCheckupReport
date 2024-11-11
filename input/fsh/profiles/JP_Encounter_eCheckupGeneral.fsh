@@ -7,7 +7,7 @@ Description:    "健診結果報告書　Encounterリソース  実施情報 v1.
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "x.x.x-profile"
-
+* ^language = #ja
 * status 1..1 MS
 * status = #finished
 * meta.lastUpdated 1.. MS

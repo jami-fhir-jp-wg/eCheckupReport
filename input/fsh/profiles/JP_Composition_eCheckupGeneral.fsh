@@ -12,7 +12,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * ^status = #active
 * ^version = "x.x.x-profile"
 * ^date = "2024-11-10"
-
+* ^language = #ja
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
 

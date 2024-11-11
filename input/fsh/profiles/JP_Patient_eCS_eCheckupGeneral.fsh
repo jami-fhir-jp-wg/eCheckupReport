@@ -31,6 +31,7 @@ Description: "eCS Patientリソース（患者情報）健診結果報告用プ�
 * ^publisher = "（一社）日本医療情報学会"
 * ^copyright = "（一社）日本医療情報学会. CC BY-ND 4.0"
 * ^fhirVersion = #4.0.1
+* ^language = #ja
 //* ^language = #ja
 
 

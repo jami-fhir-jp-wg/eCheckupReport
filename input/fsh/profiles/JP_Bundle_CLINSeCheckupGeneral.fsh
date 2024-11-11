@@ -19,7 +19,7 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 * obeys bundle-entry-JP-Encounter-eCheckupGeneral
 
 * ^url = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral"
-
+* ^language = #ja
 * ^version = "x.x.x-profile"
 * ^date = "2024-11-10"
 * ^status = #active

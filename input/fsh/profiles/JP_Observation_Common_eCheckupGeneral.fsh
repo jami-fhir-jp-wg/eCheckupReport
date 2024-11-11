@@ -7,6 +7,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * ^status = #active
 * ^version = "x.x.x-profile"
 * ^date = "2024-11-10"
+* ^language = #ja
 //* obeys emc-obs-1 and emc-obs-2 and emc-obs-3 and emc-obs-4 and emc-obs-5
 
 * . ^short = "健診・検診検査結果"
