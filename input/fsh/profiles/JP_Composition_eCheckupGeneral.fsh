@@ -135,14 +135,14 @@ and    attachment 0..1 MS  // 01995
 
 * section[specialCheckup_observations]
   * code 1..1 MS
-  * code = $section_code_cs#01011 "特定健診検査結果セクション" (exactly)
   * code.coding 1..1 
+  * code.coding = $section_code_cs#01011 "特定健診検査結果セクション" (exactly)
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
 * section[specialCheckup_questionnaire]
   * code 1..1 MS
-  * code = $section_code_cs#01012 "特定健診問診結果セクション" (exactly)
   * code.coding 1..1 
+  * code.coding = $section_code_cs#01012 "特定健診問診結果セクション" (exactly)
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * section[specialCheckup_additional]
