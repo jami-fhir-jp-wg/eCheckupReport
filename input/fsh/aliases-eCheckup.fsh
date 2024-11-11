@@ -8,7 +8,7 @@ Alias: $jlac10_specimen_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/jlac10-spec
 Alias: $specialCheckup_observations_cs = urn:oid:1.2.392.200119.6.1005  //特定健診項目コード表
 
 // 拡張
-Alias: $JP_eCS_ObsComponenrPerformer = http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/Observation_component_performer
+Alias: $JP_eCS_ObsComponentPerformer = http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/observation-component-performer
 
 // 検診実施機関種別コード
 Alias: $JP_OrganizationCategory_CS = http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code

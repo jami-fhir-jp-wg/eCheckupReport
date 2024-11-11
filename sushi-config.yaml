@@ -10,7 +10,7 @@ title: "健診結果報告FHIR記述仕様　実装ガイド"
 description: "健診結果報告FHIR記述仕様　実装ガイド eCheckupReport Implementation Guide"
 status: active # draft | active | retired | unknown
 version: 1.x.x-temp
-date: 2024-10-27
+date: 2024-11-10
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html 
 copyrightYear: 2023+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -135,6 +135,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Checkup_Fee_Collection_Status
     - http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/composition-clinicaldocument-versionNumber
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/composition_dataEnterer
+    - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/observation-component-performer
     - http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department
     - http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber
     - http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship

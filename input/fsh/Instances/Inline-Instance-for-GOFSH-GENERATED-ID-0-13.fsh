@@ -26,5 +26,5 @@ Usage: #inline
 * valueCodeableConcept = urn:oid:1.2.392.200119.6.2002#1 "所見あり"
 * component.code = $specialCheckup_observations_cs#9A110160800000049 "心電図(所見)"
 * component.valueString = "2度AVブロック、PVC散発"
-* component.extension.url = $JP_eCS_ObsComponenrPerformer
+* component.extension.url = $JP_eCS_ObsComponentPerformer
 * component.extension.valueReference.reference = "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"

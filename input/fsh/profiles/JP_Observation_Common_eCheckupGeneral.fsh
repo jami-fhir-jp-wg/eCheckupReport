@@ -90,7 +90,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
   * extension ^slicing.discriminator.type = #value
   * extension ^slicing.discriminator.path = "url"
   * extension ^slicing.rules = #open
-  * extension contains $JP_eCS_ObsComponenrPerformer  named componentPerformer 0..1
+  * extension contains $JP_eCS_ObsComponentPerformer  named componentPerformer 0..1
 
   * extension[componentPerformer] ^short = "Component検査結果に責任を持つ者の情報（Practitioner）への参照を記述"
   * extension[componentPerformer] ^definition = "Practitionerへの参照を記述"
@@ -101,7 +101,8 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 
   * code 1..1 MS
   * value[x] 0..1 MS
-  * dataAbsentReason 0..1 MS
+  * value[x] only string
+  * valueString 1..1 MS
 
 // 各種制約
 Invariant: emc-obs-1
