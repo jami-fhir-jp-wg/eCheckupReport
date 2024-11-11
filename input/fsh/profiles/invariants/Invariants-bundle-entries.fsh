@@ -39,50 +39,35 @@ Expression:
 Invariant: bundle-entry0-JP-Composition-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentry[0]にCompositionリソース(JP_Composition_eCheckupGeneral)がなければならない。"
-Expression: 
-"(
-    entry[0].resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists()
-)"
+Expression: "entry[0].resource.meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral'))).exists() or entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists()"
 
 Invariant: bundle-entry-JP-Patient-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentryにPatientリソース(JP_Patient_eCheckupGeneral)がなければならない。"
-Expression: 
-"(
-    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral').exists()
-)"
+Expression: "entry.resource.meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral'))).exists() or entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral').exists()"
 
+//http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCheckupGeneral
 Invariant: bundle-entry-JP-Patient-CLINS-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentryにPatientリソース(CLINS JP_Patient_CLINS_eCheckupGeneral)がなければならない。"
-Expression: 
-"(
-    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCheckupGeneral').exists()
-)"
+Expression: "entry.resource.meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCheckupGeneral'))).exists() or entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCheckupGeneral').exists()"
 
 
 Invariant: bundle-entry-JP-OrganizationReporter-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentryにOrganizationリソース(JP_Organization_eCheckupGeneral)がなければならない。"
-Expression: 
-"(
-    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral').exists()
-)"
+Expression: "entry.resource.meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral'))).exists() or entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral').exists()"
+
 
 Invariant: bundle-entry-JP-PractitionerReporter-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentryにPractitionerリソース(JP_Practitioner_eCheckupGeneral)がなければならない。"
-Expression: 
-"(
-    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral').exists()
-)"
+Expression: "entry.resource.meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral'))).exists() or entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral').exists()"
+
 
 
 Invariant: bundle-entry-JP-Encounter-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentryにEncounterリソース(JP_Encounter_eCheckupGeneral)がなければならない。"
-Expression: 
-"(
-    entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral').exists()
-)"
+Expression: "entry.resource.meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral'))).exists() or entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral').exists()"
 
