@@ -11,7 +11,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * ^status = #active
 * ^version = "x.x.x-profile"
-* ^date = "2024-11-10"
+* ^date = "2024-11-14"
 * ^language = #ja
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
@@ -110,10 +110,11 @@ and organization 1..1 MS
 * custodian 0..1
 * custodian only Reference(JP_Organization_eCheckupGeneral)
 
-* event 1.. MS
+* event 1..1 MS
 * event ^short = "健診プログラムサービスコード。coding.systemは 'http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code'を使用する。"  // urn:oid:1.2.392.200119.6.1002
-* event.code 1..* MS
+* event.code 1..1 MS
 * event.code from $checkup_programService_vs
+* event.code.coding 1..1 MS
 
 * section
   //セクションの特性ごとの制約
