@@ -11,6 +11,8 @@
     - Compositionリソース.eventの多重度：1..* → 1..1 (v1.2.1で、PDF仕様書の表は1..1*となっていたのに合わせた。)
     - Compositionリソース.event.codeの多重度：1..* → 1..1 (同上)
     - Compositionリソース.event.code.codingの多重度：1..* → 1..1 (同上)
+  - 以下のProfileにidentifier.systemとidentifier.valueの仕様準拠の制約チェックをConstraintsに追加した。
+    - JP_Bundle_eCheckupGeneral 
 
 ### Ver1.3.0 (2024-11-10) <br>
   - JP_Observation_eCheckupGeneral : 

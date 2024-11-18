@@ -11,6 +11,10 @@ Description: "健診結果報告書 Bundleリソース（電子カルテ情報�
 
 * obeys bundle-CLINS-metaprofile
 //* obeys bundle-entry-JP-Patient-eCheckupGeneral
+
+* obeys valid-system-bundleIdenfifier
+* obeys valid-value-bundleIdenfifier
+
 * obeys bundle-entry-JP-Patient-CLINS-eCheckupGeneral
 
 * obeys bundle-entry0-JP-Composition-eCheckupGeneral
