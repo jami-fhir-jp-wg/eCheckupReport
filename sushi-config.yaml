@@ -5,8 +5,8 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: eCheckupReport
 canonical: http://jpfhir.jp/fhir/eCheckupReport
-name: "健診結果報告FHIR記述仕様　実装ガイド"
-title: "健診結果報告FHIR記述仕様　実装ガイド"
+name: "健診結果報告FHIR記述仕様　実装ガイド v 1.x.x-temp"
+title: "健診結果報告FHIR記述仕様　実装ガイド v 1.x.x-temp"
 description: "健診結果報告FHIR記述仕様　実装ガイド eCheckupReport Implementation Guide"
 status: active # draft | active | retired | unknown
 version: 1.x.x-temp
@@ -36,7 +36,7 @@ dependencies:
 #----------------------------------------
 pages:
   index.md:
-    title: 健診結果報告書HL7&reg; FHIR&reg;記述仕様第1.3版　実装ガイド
+    title: 健診結果報告書HL7FHIR 記述仕様　1.x.x-temp 実装ガイド
   validationGuide.md:
     title: Validationガイド
   history.md:
