@@ -1,11 +1,11 @@
-Invariant: bundle-profile-is-JP-Bundle-eCheckupGeneral
+Invariant: bundle-profile-is-JP-Bundle-eCheckupGeneral1-3-1
 Description: "meta.profileには、指定したプロファイルのURLの記述が存在しなければならない。"
 Severity: #error
 // バージョン記述記号の'|'の位置までの部分文字列、またはmeta.profile全体が指定したURLであるかを調べる。
 Expression: "meta.profile.where($this.substring(0,$this.indexOf('|')) ='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral').exists() or meta.profile.where($this='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral').exists()"
 
-Invariant: bundle-profile-is-JP-Bundle-eCheckupGeneralCorrection
-Description: "R0213:BundleはJP-Bundle-CLINSプロファイルに準拠していなければならない。"
+Invariant: bundle-profile-is-JP-Bundle-eCheckupGeneral
+Description: "R0213:BundleはJP-Bundle-eCheckupGeneralプロファイルに準拠していなければならない。"
 Severity: #error
 //Expression: "meta.profile.where($this.substring(0,63) ='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_CLINS').exists()"
 // バージョン記述記号の'|'の位置までの部分文字列、またはmeta.profile全体が指定したURLであるかを調べる。
