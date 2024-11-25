@@ -2,7 +2,7 @@ Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-1-Composition
 InstanceOf: Composition
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
-* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral|x.x.x-instance"
+//* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral|x.x.x-instance"
 * language = #ja
 * extension[0].url = $composition-clinicaldocument-versionNumber
 * extension[=].valueString = "1.0"

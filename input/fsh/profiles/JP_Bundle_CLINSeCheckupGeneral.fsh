@@ -1,15 +1,22 @@
-Invariant: bundle-CLINS-metaprofile
+Invariant: bundle-profile-is-JP-Bundle-eCheckupGeneral
 Description: "meta.profileには、指定したプロファイルのURLの記述が存在しなければならない。"
 Severity: #error
 // バージョン記述記号の'|'の位置までの部分文字列、またはmeta.profile全体が指定したURLであるかを調べる。
 Expression: "meta.profile.where($this.substring(0,$this.indexOf('|')) ='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral').exists() or meta.profile.where($this='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral').exists()"
+
+Invariant: bundle-profile-is-JP-Bundle-eCheckupGeneralCorrection
+Description: "R0213:BundleはJP-Bundle-CLINSプロファイルに準拠していなければならない。"
+Severity: #error
+//Expression: "meta.profile.where($this.substring(0,63) ='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_CLINS').exists()"
+// バージョン記述記号の'|'の位置までの部分文字列、またはmeta.profile全体が指定したURLであるかを調べる。
+Expression: "meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral'))).exists()  or meta.profile.where($this='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral').exists()"
 
 Profile: JP_Bundle_eCheckupGeneral
 Parent: Bundle
 Id: JP-Bundle-eCheckupGeneral
 Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信と共用)"
 
-* obeys bundle-CLINS-metaprofile
+* obeys bundle-profile-is-JP-Bundle-eCheckupGeneral
 //* obeys bundle-entry-JP-Patient-eCheckupGeneral
 
 * obeys valid-system-bundleIdenfifier
