@@ -32,8 +32,8 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * meta.profile 1.. MS
 
 * obeys composition-profile-is-JP-Composition-eCheckupGeneral
-* obeys composition-profile-is-JP-Composition-eCheckupGeneral-Version
-* obeys composition-profile-is-JP-Composition-eCheckupGeneral-NoVersion
+//* obeys composition-profile-is-JP-Composition-eCheckupGeneral-Version
+//* obeys composition-profile-is-JP-Composition-eCheckupGeneral-NoVersion
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
