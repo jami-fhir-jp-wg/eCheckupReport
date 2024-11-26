@@ -6,7 +6,7 @@ Expression: "meta.profile.where($this = 'http://jpfhir.jp/fhir/eCheckup/Structur
 Invariant: composition-profile-is-JP-Composition-eCheckupGeneral
 Description: "R0213:CompositionはJP_Composition_eCheckupGeneralプロファイルに準拠していなければならない。"
 Severity: #error
-Expression: "meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Composition_eCheckupGeneral'))).exists()  or meta.profile.where($this='http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Composition_eCheckupGeneral').exists()"
+Expression: "meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral'))).exists()  or meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists()"
 
 
 Profile:        JP_Composition_eCheckupGeneral
