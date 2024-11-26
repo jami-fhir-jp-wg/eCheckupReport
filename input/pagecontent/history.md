@@ -6,6 +6,14 @@
     
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。
 
+### Ver1.3.2 (2024-11-２7) <br>
+  - JP_Bundle_eCheckupGeneral :
+    - meta.profileにverisonなしのprofileが記述されているとvalidation時に制約エラーとなっていたのを、Constraintを修正した。
+    - meta.profileにprofile記載のないリソースや適切でないprofileが記述されているリソースがentryにあると、リソースそのものがないという制約エラーが表示されていたのを修正し、適切なmeta.profileのあるリソースが存在しないというエラーメッセージになるようにした。
+  - JP_Composition_eCheckupGeneral :
+    - meta.profileにverisonなしのprofileが記述されているとvalidation時に制約エラーとなっていたのを、Constraintを修正した。
+  - Bundleのデータ実例に、meta.profileにversionありのものとversionなしのものを両方用意した。
+
 ### Ver1.3.1 (2024-11-18) <br>
   - JP_Composition_eCheckupGeneral :
     - Compositionリソース.eventの多重度：1..* → 1..1 (v1.2.1で、PDF仕様書の表は1..1*となっていたのに合わせた。)
