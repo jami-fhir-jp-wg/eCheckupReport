@@ -6,8 +6,17 @@ Expression: "meta.profile.where($this = 'http://jpfhir.jp/fhir/eCheckup/Structur
 Invariant: composition-profile-is-JP-Composition-eCheckupGeneral
 Description: "R0213:CompositionはJP_Composition_eCheckupGeneralプロファイルに準拠していなければならない。"
 Severity: #error
-Expression: "meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral'))).exists()  or meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists()"
+Expression: "(meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral'))).exists())  or (meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists())"
 
+Invariant: composition-profile-is-JP-Composition-eCheckupGeneral-Version
+Description: "JP-Composition-eCheckupGeneral-version"
+Severity: #error
+Expression: "meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral'))).exists()"
+
+Invariant: composition-profile-is-JP-Composition-eCheckupGeneral-NoVersion
+Description: "JP-Composition-eCheckupGeneral-NoVersion"
+Severity: #error
+Expression: "meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists()"
 
 Profile:        JP_Composition_eCheckupGeneral
 Parent:         Composition
@@ -23,6 +32,8 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * meta.profile 1.. MS
 
 * obeys composition-profile-is-JP-Composition-eCheckupGeneral
+* obeys composition-profile-is-JP-Composition-eCheckupGeneral-Version
+* obeys composition-profile-is-JP-Composition-eCheckupGeneral-NoVersion
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
