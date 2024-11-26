@@ -17,6 +17,12 @@ Id: JP-Bundle-eCheckupGeneral
 Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信と共用)"
 
 * obeys bundle-profile-is-JP-Bundle-eCheckupGeneral
+
+* obeys exist-entry0-no-version
+* obeys exist-entry0-with-version
+* obeys  exist-entry0-no-version-first
+* obeys  exist-entry0-with-version-first
+
 //* obeys bundle-entry-JP-Patient-eCheckupGeneral
 
 * obeys valid-system-bundleIdenfifier
