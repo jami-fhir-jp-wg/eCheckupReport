@@ -1,5 +1,5 @@
 Instance: Instance-for-Composition
-InstanceOf: Composition
+InstanceOf: JP_Composition_eCheckupGeneral
 Usage: #example
 Description: "Compositionリソースのサンプル"
 
