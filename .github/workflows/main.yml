@@ -52,7 +52,7 @@ jobs:
       uses: suisei-cn/actions-download-file@v1.4.0
       id: downloadfile1
       with:
-        url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages"
+        url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages.tgz"
         target: .
     - name: Download the file
       uses: suisei-cn/actions-download-file@v1.4.0
