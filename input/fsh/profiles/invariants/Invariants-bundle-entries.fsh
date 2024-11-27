@@ -39,7 +39,9 @@ Expression:
 Invariant: bundle-entry0-JP-Composition-eCheckupGeneral
 Severity: #error
 Description: "bundleリソースを構成するentry[0]にmeta.profileがJP_Composition_eCheckupGeneralであるCompositionリソースがなければならない。"
-Expression: "(entry[0].resource.meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral'))).exists()) or (entry[0].resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists())"
+Expression: "entry[0].resource.meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral'))).exists() or entry[0].resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists()"
+/*Expression: "(entry[0].resource.meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral'))).exists()) or (entry[0].resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists())"
+*/
 
 Invariant: exist-entry0-no-version
 Severity: #error

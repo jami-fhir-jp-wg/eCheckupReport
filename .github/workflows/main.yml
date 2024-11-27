@@ -52,7 +52,7 @@ jobs:
       uses: suisei-cn/actions-download-file@v1.4.0
       id: downloadfile1
       with:
-        url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages_20241117.tgz"
+        url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages"
         target: .
     - name: Download the file
       uses: suisei-cn/actions-download-file@v1.4.0
@@ -63,7 +63,7 @@ jobs:
     
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
-        JPPACKAGECOREtgz: fhir_dotFHIR_packages_20241117.tgz
+        JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
         JPTerminologyCOREdir: jpfhir-terminology.r4#1.2.4-url
         JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.2.4-url.tgz
         JPCOREtgzjp: jp-core.r4-1.1.2-clins.tgz
