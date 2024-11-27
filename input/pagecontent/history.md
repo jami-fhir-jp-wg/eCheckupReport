@@ -11,8 +11,8 @@
     - meta.profileにverisonなしのprofileが記述されているとvalidation時に制約エラーとなっていたのを、Constraintを修正した。
     - meta.profileにprofile記載のないリソースや適切でないprofileが記述されているリソースがentryにあると、リソースそのものがないという制約エラーが表示されていたのを修正し、適切なmeta.profileのあるリソースが存在しないというエラーメッセージになるようにした。
   - JP_Composition_eCheckupGeneral :
-    - meta.profileにverisonなしのprofileが記述されているとvalidation時に制約エラーとなっていたのを、Constraintを修正した。
-  - Bundleのデータ実例に、meta.profileにversionありのものとversionなしのものを両方用意した。
+    - meta.profileにverisonなしのprofileが記述されているとvalidation時に制約エラーとなっていたのを、Constraintを修正してverisonなしでもエラーにならないようにした。
+  - Bundleのデータ作例に、meta.profileにversionありのものとversionなしのものを両方用意した。
 
 ### Ver1.3.1 (2024-11-18) <br>
   - JP_Composition_eCheckupGeneral :
