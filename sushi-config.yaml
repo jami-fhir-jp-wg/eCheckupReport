@@ -3,7 +3,6 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                  │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-
 id: eCheckupReport
 canonical: http://jpfhir.jp/fhir/eCheckupReport
 name: "健診結果報告FHIR記述仕様　実装ガイド v 1.x.x-temp"
