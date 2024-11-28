@@ -83,7 +83,7 @@ Expression: "(entry.resource.meta.profile.where($this.indexOf('|')>0 and ($this.
 
 Invariant: bundle-entry-JP-PractitionerReporter-eCheckupGeneral
 Severity: #error
-Description: "bundleリソースを構成するentryにmeta.profileがJP_Practitioner_eCheckupGeneralであｒｙPractitionerリソースがなければならない。"
+Description: "bundleリソースを構成するentryにmeta.profileがJP_Practitioner_eCheckupGeneralであるPractitionerリソースがなければならない。"
 Expression: "(entry.resource.meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 implies ($this.substring(0,$this.indexOf('|'))='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral'))).exists()) or (entry.resource.meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral').exists())"
 
 
