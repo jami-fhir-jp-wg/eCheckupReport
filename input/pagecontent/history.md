@@ -13,6 +13,7 @@
   - JP_Composition_eCheckupGeneral :
     - meta.profileにverisonなしのprofileが記述されているとvalidation時に制約エラーとなっていたのを、Constraintを修正してverisonなしでもエラーにならないようにした。
   - Bundleのデータ作例に、meta.profileにversionありのものとversionなしのものを両方用意した。
+  - validationガイドでpackageに使用するterminologyをjpfhir-terminology.r4-1.2.3-url.tgzからjpfhir-terminology.r4-1.2.4-url.tgzに更新した。
 
 ### Ver1.3.1 (2024-11-18) <br>
   - JP_Composition_eCheckupGeneral :
