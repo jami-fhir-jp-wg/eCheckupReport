@@ -18,6 +18,20 @@ Description: "JP-Composition-eCheckupGeneral-NoVersion"
 Severity: #error
 Expression: "meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral').exists()"
 
+RuleSet: checkupSlicedProfile(slicePrefix,resultSectionCode,resultSectionName,questSectionCode,questSectionName)
+* section[{slicePrefix}_observations]
+  * code 1..1 MS
+  * code = $section_code_cs#{resultSectionCode} "{resultSectionName}"
+  * code.coding 1..1 
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
+* section[{slicePrefix}_questionnaire]
+  * code 1..1 MS
+  * code = $section_code_cs#{questSectionCode} "{questSectionName}"
+  * code.coding 1..1 
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+
 Profile:        JP_Composition_eCheckupGeneral
 Parent:         Composition
 Id:             JP-Composition-eCheckupGeneral
@@ -145,15 +159,49 @@ and organization 1..1 MS
     specialCheckup_observations 0..1 MS // 01011
 and specialCheckup_questionnaire 0..1 MS  // 01012
 and    specialCheckup_additional 0..1 MS // 01990
+
 and    regionalUnionCheckup_observations 0..1 MS // 01021
 and    regionalUnionCheckup_questionnaire 0..1 MS  // 01022
+
 and    occupationalCheckup_observations 0..1 MS  // 01031
 and    occupationalCheckup_questionnaire 0..1 MS // 01032
+
+and    schoolMemberCheckup_observations 0..1 MS  // 01041
+and    schoolMemberCheckup_questionnaire 0..1 MS // 01042
+
+and    otherMiscCheckup_observations 0..1 MS  // 01071
+and    otherMiscCheckup_questionnaire 0..1 MS // 01072
+
+and    insuredMiscCheckup_observations 0..1 MS  // 01081
+and    insuredMiscCheckup_questionnaire 0..1 MS // 01082
+
 and    generalCheckup_observations 0..1 MS // 01910
 and    generalCheckup_questionnaire 0..1 MS  // 01920
 and    attachment 0..1 MS  // 01995
 
-* section[specialCheckup_observations]
+* insert checkupSlicedProfile(specialCheckup,01011,特定健診検査結果セクション,01012,特定健診問診結果セクション)
+* section[specialCheckup_additional]
+  * code 1..1 MS
+  * code = $section_code_cs#01990 "任意追加項目セクション"
+  * code.coding 1..1  
+  * entry 1..*
+  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+* insert checkupSlicedProfile(regionalUnionCheckup,01021,広域連合保健事業検査結果セクション,01022,広域連合保健事業問診結果セクション)
+* insert checkupSlicedProfile(occupationalCheckup,01031,事業者健診検査結果セクション,01032,事業者健診問診結果セクション)
+* insert checkupSlicedProfile(schoolMemberCheckup,01041,学校職員健診検査結果セクション,01042,学校職員健診問診結果セクション)
+* insert checkupSlicedProfile(otherMiscCheckup,01071,その他健診検査結果セクション,01072,その他健診問診結果セクション)
+* insert checkupSlicedProfile(insuredMiscCheckup,01081,保険者の実施するその他健診検査結果セクション,01082,保険者の実施するその他健診問診結果セクション)
+* insert checkupSlicedProfile(generalCheckup,01910,検査結果セクション,01920,問診結果セクション)
+
+* section[attachment]
+  * code 1..1 MS
+  * code = $section_code_cs#01995 "添付書類セクション"
+  * code.coding 1..1  
+  * entry 1..*
+  * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral or JP_Media_eCheckupGeneral)
+
+
+/** section[specialCheckup_observations]
   * code 1..1 MS
   * code.coding 1..1
   * code = $section_code_cs#01011 "特定健診検査結果セクション"
@@ -165,12 +213,9 @@ and    attachment 0..1 MS  // 01995
   * code = $section_code_cs#01012 "特定健診問診結果セクション" 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
-* section[specialCheckup_additional]
-  * code 1..1 MS
-  * code = $section_code_cs#01990 "任意追加項目セクション"
-  * code.coding 1..1  
-  * entry 1..*
-  * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+  */
+
+/*
 * section[regionalUnionCheckup_observations]
   * code 1..1 MS
   * code = $section_code_cs#01021 "広域連合保健事業検査結果セクション"
@@ -183,6 +228,7 @@ and    attachment 0..1 MS  // 01995
   * code.coding 1..1 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+
 * section[occupationalCheckup_observations]
   * code 1..1 MS
   * code = $section_code_cs#01031 "事業者健診検査結果セクション"
@@ -195,6 +241,7 @@ and    attachment 0..1 MS  // 01995
   * code.coding 1..1 
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
+
 * section[generalCheckup_observations]
   * code 1..1 MS
   * code = $section_code_cs#01910 "検査結果セクション"
@@ -207,13 +254,7 @@ and    attachment 0..1 MS  // 01995
   * code.coding 1..1  
   * entry 1..*
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
-* section[attachment]
-  * code 1..1 MS
-  * code = $section_code_cs#01995 "添付書類セクション"
-  * code.coding 1..1  
-  * entry 1..*
-  * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral or JP_Media_eCheckupGeneral)
-
+  */
 
 // 各種制約
 Invariant: emc-cmp-1
