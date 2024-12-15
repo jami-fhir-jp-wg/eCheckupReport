@@ -10,7 +10,7 @@ title: "健診結果報告FHIR記述仕様　実装ガイド v 1.x.x-temp"
 description: "健診結果報告FHIR記述仕様　実装ガイド eCheckupReport Implementation Guide"
 status: active # draft | active | retired | unknown
 version: 1.x.x-temp
-date: 2024-12-17
+date: 2024-12-16
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html 
 copyrightYear: 2023+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
