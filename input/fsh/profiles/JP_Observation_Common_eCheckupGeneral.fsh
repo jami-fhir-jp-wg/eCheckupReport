@@ -50,8 +50,21 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * value[x] 0..1 MS 
 * value[x] only Quantity or CodeableConcept or string or dateTime
 * valueQuantity 0..1
+* valueQuantity ^short = "検査結果が「数値」の場合、値、単位を設定する。"
+* valueQuantity ^comment = "ー"
+* rvalueQuantity.unit 0..1 MS
+  * insert relative_short_definition("検査結果の単位文字列。")
+* valueQuantity.system 0..1 MS
+  * insert relative_short_definition("検査結果の単位のコード化記述をするコード体系を表すsystem値。マスターに単位コード指定があれば\"http://unitsofmeasure.org\"を記述する。")
+* valueQuantity.code 0..1 MS
+  * insert relative_short_definition("検査結果の単位のコード。マスターに単位コード指定があれば記述する。")
+
 * valueString 0..1
+* valueString ^short = "検査結果値が「文字列」の場合、その文字列を設定する。"
+
 * valueDateTime 0..1
+* valueDateTime ^short = "検査結果値が「日付型」の場合、日付文字列をyyyy-mm-ddの形式で設定する。yyyy-mm-ddの形式で"
+
 * valueCodeableConcept.coding.extension 0..1
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.type = #value
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.path = "url"
@@ -78,8 +91,33 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * referenceRange 0..1
 * referenceRange ^short = "基準値。"
 * referenceRange ^definition = "基準値。下限と上限の両方または一方を記述する。"
+* referenceRange.id ..0
+* referenceRange.extension ..0
+* referenceRange.modifierExtension ..0
+
 * referenceRange.low 0..1
+* referenceRange.low.extension ..0
+* referenceRange.low.value 1..1  MS
+  * insert relative_short_definition("基準値の小さいほうの値")
+* referenceRange.low.unit 0..1 MS
+  * insert relative_short_definition("基準値の単位。検査結果の単位と同じであること。")
+* referenceRange.low.system 0..1 MS
+  * insert relative_short_definition("基準値の単位のコード化記述をするコード体系を表すsystem値。単位コードを記述する場合には\"http://unitsofmeasure.org\"をマスターに単位指定があれば記述する。")
+* referenceRange.low.code 0..1 MS
+  * insert relative_short_definition("基準値の単位のコード。単位コードを記述する場合には、マスターに単位指定があれば記述する。")
+
 * referenceRange.high 0..1
+* referenceRange.high.extension ..0
+* referenceRange.high.value 1..1  MS
+  * insert relative_short_definition("基準値の大きいほうの値")
+* referenceRange.high.unit 0..1 MS
+  * insert relative_short_definition("基準値の単位。検査結果の単位と同じであること。")
+* referenceRange.high.system 0..1 MS
+  * insert relative_short_definition("基準値の単位のコード化記述をするコード体系を表すsystem値。単位コードを記述する場合には\"http://unitsofmeasure.org\"をマスターに単位指定があれば記述する。")
+* referenceRange.high.code 0..1 MS
+  * insert relative_short_definition("基準値の単位のコード。単位コードを記述する場合には、マスターに単位指定があれば記述する。")
+
+* referenceRange.text 0..1 MS
 
 //* hasMember only Reference(JP_Observation_eCheckupGeneral)
 * hasMember 0..0
