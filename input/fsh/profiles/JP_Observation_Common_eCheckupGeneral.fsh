@@ -52,7 +52,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * valueQuantity 0..1
 * valueQuantity ^short = "検査結果が「数値」の場合、値、単位を設定する。"
 * valueQuantity ^comment = "ー"
-* rvalueQuantity.unit 0..1 MS
+* valueQuantity.unit 0..1 MS
   * insert relative_short_definition("検査結果の単位文字列。")
 * valueQuantity.system 0..1 MS
   * insert relative_short_definition("検査結果の単位のコード化記述をするコード体系を表すsystem値。マスターに単位コード指定があれば\"http://unitsofmeasure.org\"を記述する。")
