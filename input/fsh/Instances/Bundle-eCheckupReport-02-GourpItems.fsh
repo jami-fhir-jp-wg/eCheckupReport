@@ -1,11 +1,11 @@
-Instance: Bundle-eCheckupReport-Sample-01-with-VersionOfProfile
+Instance: Bundle-eCheckupReport-Sample-02-GroupItems
 InstanceOf: JP_Bundle_eCheckupGeneral
 Usage: #example
-Description: "Bundle 健診検査結果報告書　サンプル０１ Bundle　ProfileとCompositon Profileにバージョンを付与した例　 心電図をComponentで記述"
+Description: "Bundle 健診検査結果報告書　サンプル０１ 心電図を一連検査グループで記述"
 
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
-* meta.profile[+] = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral|x.x.x-instance"
-* meta.profile[+] = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral|x.x.x-instance"
+//* meta.profile[+] = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral|x.x.x-instance"
+//* meta.profile[+] = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral|x.x.x-instance"
 * language = #ja
 * identifier.system = $JP_BundleIdentifier
 * identifier.value = "1318814790^2024^0123-Referral-203949583949"    //正しい例
@@ -13,7 +13,7 @@ Description: "Bundle 健診検査結果報告書　サンプル０１ Bundle　P
 * type = #document
 * timestamp = "2024-04-05T13:28:17.239+09:00"
 * entry[+].fullUrl = "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-1-Composition-with-Profile-Version
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-1-Composition
 * entry[+].fullUrl = "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-2-Patient
 * entry[+].fullUrl = "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
@@ -40,8 +40,23 @@ Description: "Bundle 健診検査結果報告書　サンプル０１ Bundle　P
 * entry[+].fullUrl = "urn:uuid:ff4472f4-9e44-6aa3-bcd6-abb0662e4641"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-13-PastHistory // 既往歴
 
-* entry[+].fullUrl = "urn:uuid:67f3382f-c16d-6b6c-87c5-e98fe8694d0b"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ComponentPerformer-ECGresult // 心電図(所見の有無) あり、処刑：2度AVブロック、PVC散発
+//* entry[+].fullUrl = "urn:uuid:67f3382f-c16d-6b6c-87c5-e98fe8694d0b"
+//* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ComponentPerformer-ECGresult // 心電図(所見の有無) あり、処刑：2度AVブロック、PVC散発
+
+* entry[+].fullUrl = "urn:uuid:76f5b8cc-05e0-7069-4d4b-b2d9c8947f0f"
+* entry[=].resource = Inline-Instance-for-Obs-ECGGroup
+
+* entry[+].fullUrl = "urn:uuid:bae57d53-2fcb-0e36-ca79-764f008485a3"
+* entry[=].resource = Inline-Instance-for-Obs-ECGimpressionTF
+
+* entry[+].fullUrl = "urn:uuid:5b7ecb63-ccd4-532c-4f24-75e744054782"
+* entry[=].resource = Inline-Instance-for-Obs-ECGimpression
+
+* entry[+].fullUrl = "urn:uuid:8d33956c-68e4-9f03-060a-9ac38ed2540d"
+* entry[=].resource = Inline-Instance-for-Obs-ECGsubjectCategory
+
+* entry[+].fullUrl = "urn:uuid:b52e47ad-ff49-c6bf-19b9-db535af1bc5b"
+* entry[=].resource = Inline-Instance-for-Obs-ECGreason
 
 * entry[+].fullUrl = "urn:uuid:38cbf2cf-61b7-6738-9d8c-a7b29016c48f"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-14-subjectiveSymptom　// 自覚症状　あり
@@ -72,6 +87,11 @@ Description: "Bundle 健診検査結果報告書　サンプル０１ Bundle　P
 * entry[+].fullUrl = "urn:uuid:881e7ffa-4b36-01de-f954-9eff7a7eba24"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-26 // 尿蛋白
 * entry[+].fullUrl = "urn:uuid:55cb9c64-af3d-9763-a3f5-8d14954c36cc"
+
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-26 // 尿蛋白
+* entry[+].fullUrl = "urn:uuid:55cb9c64-af3d-9763-a3f5-8d14954c36cc"
+
+
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-27 // メタボリックシンドローム判定
 * entry[+].fullUrl = "urn:uuid:42b66f41-aafe-1452-1f3d-8fc25dfa1ce3"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-28 // 保健指導レベル

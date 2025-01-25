@@ -1,14 +1,14 @@
-Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-1-Composition
+Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-1-Composition-ECG-GroupItems
 InstanceOf: JP_Composition_eCheckupGeneral
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
-//* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral|x.x.x-instance"
+//* meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral"
 * language = #ja
 * extension[0].url = $composition-clinicaldocument-versionNumber
 * extension[=].valueString = "1.0"
 
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
-* identifier.value = "12345"
+* identifier.value = "12355"
 * status = #final
 * type = $doc-typecodes#53576-5 "検診・健診報告書"
 
@@ -37,7 +37,13 @@ Usage: #inline
 
 * section[=].entry[+] = Reference(urn:uuid:628244db-68cf-abb6-bc9d-2d89bbc2b3ea)
 * section[=].entry[+] = Reference(urn:uuid:ff4472f4-9e44-6aa3-bcd6-abb0662e4641)
-* section[=].entry[+] = Reference(urn:uuid:67f3382f-c16d-6b6c-87c5-e98fe8694d0b)
+//* section[=].entry[+] = Reference(urn:uuid:67f3382f-c16d-6b6c-87c5-e98fe8694d0b)
+
+* section[=].entry[+] = Reference(urn:uuid:76f5b8cc-05e0-7069-4d4b-b2d9c8947f0f)  // Inline-Instance-for-Obs-ECGGroup
+* section[=].entry[+] = Reference(urn:uuid:bae57d53-2fcb-0e36-ca79-764f008485a3)  // Inline-Instance-for-Obs-ECGimpressionTF
+* section[=].entry[+] = Reference(urn:uuid:5b7ecb63-ccd4-532c-4f24-75e744054782)	// Inline-Instance-for-Obs-ECGimpression
+* section[=].entry[+] = Reference(urn:uuid:8d33956c-68e4-9f03-060a-9ac38ed2540d)	// Inline-Instance-for-Obs-ECGsubjectCategory
+* section[=].entry[+] = Reference(urn:uuid:b52e47ad-ff49-c6bf-19b9-db535af1bc5b)	// Inline-Instance-for-Obs-ECGreason
 
 * section[=].entry[+] = Reference(urn:uuid:38cbf2cf-61b7-6738-9d8c-a7b29016c48f)
 * section[=].entry[+] = Reference(urn:uuid:01b972fc-5183-8fa4-0954-10a7c5f5a36e)

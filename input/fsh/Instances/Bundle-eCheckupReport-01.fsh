@@ -1,7 +1,7 @@
 Instance: Bundle-eCheckupReport-Sample-01
 InstanceOf: JP_Bundle_eCheckupGeneral
 Usage: #example
-Description: "Bundle 健診検査結果報告書　サンプル０１"
+Description: "Bundle 健診検査結果報告書　サンプル０１ 心電図をComponentで記述"
 
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 //* meta.profile[+] = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral|x.x.x-instance"
@@ -23,9 +23,9 @@ Description: "Bundle 健診検査結果報告書　サンプル０１"
 * entry[+].fullUrl = "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-5-Encounter
 * entry[+].fullUrl = "urn:uuid:38f45298-ea42-9f15-7fb2-48ed899d3ab6"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-6
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-6-CoverageService
 * entry[+].fullUrl = "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-7
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-7-CoverageInsurance
 * entry[+].fullUrl = "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-8-Insurer
 * entry[+].fullUrl = "urn:uuid:b41c8c97-f3ad-450a-1738-5f2b4c40c68a"
@@ -36,47 +36,47 @@ Description: "Bundle 健診検査結果報告書　サンプル０１"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-11-Obs-BMI
 //
 * entry[+].fullUrl = "urn:uuid:628244db-68cf-abb6-bc9d-2d89bbc2b3ea"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-12
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-12-FukuiReal // 腹囲
 * entry[+].fullUrl = "urn:uuid:ff4472f4-9e44-6aa3-bcd6-abb0662e4641"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-13
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-13-PastHistory // 既往歴
 
 * entry[+].fullUrl = "urn:uuid:67f3382f-c16d-6b6c-87c5-e98fe8694d0b"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ComponentPerformer-Exists
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ComponentPerformer-ECGresult // 心電図(所見の有無) あり、処刑：2度AVブロック、PVC散発
 
 * entry[+].fullUrl = "urn:uuid:38cbf2cf-61b7-6738-9d8c-a7b29016c48f"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-14
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-14-subjectiveSymptom　// 自覚症状　あり
 * entry[+].fullUrl = "urn:uuid:01b972fc-5183-8fa4-0954-10a7c5f5a36e"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-15
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-15-objSymptom // 他覚症状 なし
 * entry[+].fullUrl = "urn:uuid:785fcd39-8c25-4e6d-53bc-a2f8055fd110"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-16-1
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-16-1 // 収縮期血圧(1回目)
 * entry[+].fullUrl = "urn:uuid:f8fffea8-5c47-8ab2-b24a-21cd1e929723"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-16-2
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-16-2 //　収縮期血圧(1回目)
 * entry[+].fullUrl = "urn:uuid:88134c9e-2016-d460-a3c8-417615b0065b"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-17
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-17 // 空腹時中性脂肪(トリグリセリド)
 * entry[+].fullUrl = "urn:uuid:397dd498-07ed-49ce-3e43-2ee1c7db42aa"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-18
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-18 // HDLコレステロール
 * entry[+].fullUrl = "urn:uuid:454c83e8-a534-84b9-f4d6-7257f5dc15de"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-19
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-19 // LDLコレステロール
 * entry[+].fullUrl = "urn:uuid:e0252472-a245-2340-c3a5-a6c30faf7d11"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-20
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-20  // AST(GOT)
 * entry[+].fullUrl = "urn:uuid:a2cefc2b-95d6-4108-dac5-bee1f991608a"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-21
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-21 // ALT(GPT)
 * entry[+].fullUrl = "urn:uuid:d0d3fb12-eacc-c4a2-1762-130b4a65ead2"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-22
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-22 // γ-GT(γ-GTP)
 * entry[+].fullUrl = "urn:uuid:22479301-4726-e239-09d6-257429835c67"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-23
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-23 // HbA1c(NGSP値)
 * entry[+].fullUrl = "urn:uuid:cbb7812a-8f5a-6547-c821-1dc2304d1066"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-24
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-24 // 採血時間(食後)
 * entry[+].fullUrl = "urn:uuid:13e56540-0e37-96f8-c774-31d66fb3efa8"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-25
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-25 // 尿糖
 * entry[+].fullUrl = "urn:uuid:881e7ffa-4b36-01de-f954-9eff7a7eba24"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-26
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-26 // 尿蛋白
 * entry[+].fullUrl = "urn:uuid:55cb9c64-af3d-9763-a3f5-8d14954c36cc"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-27
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-27 // メタボリックシンドローム判定
 * entry[+].fullUrl = "urn:uuid:42b66f41-aafe-1452-1f3d-8fc25dfa1ce3"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-28
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-28 // 保健指導レベル
 * entry[+].fullUrl = "urn:uuid:54eabf03-1de5-d080-aed6-6b6a2e4da269"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-29
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-29 // 医師の診断(判定)
 
 // ここから問診セクション
 * entry[+].fullUrl = "urn:uuid:71fcdecc-1331-9067-f5b2-24d6ba5eecda"

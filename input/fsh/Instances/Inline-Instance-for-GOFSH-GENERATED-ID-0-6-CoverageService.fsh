@@ -1,4 +1,4 @@
-Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-6
+Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-6-CoverageService
 InstanceOf: JP_CoverageService_eCheckupGeneral
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"

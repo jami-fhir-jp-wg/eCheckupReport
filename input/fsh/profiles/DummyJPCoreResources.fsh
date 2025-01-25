@@ -1,7 +1,7 @@
 Profile: JP_ServiceRequest
 Parent:	JP_ServiceRequest_Common
 Id:  JP-ServiceRequest
-Description:    "JP-ServiceRequest　プロファイル = JP-ServiceRequest　Commonプロファイル(JP-Core V1.2系)"
+Description:    "汎用ベースプロファイル　JP-ServiceRequest ＝　Commonプロファイル(JP-Core V1.2系)"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -13,7 +13,7 @@ Description:    "JP-ServiceRequest　プロファイル = JP-ServiceRequest　Co
 Profile: JP_ServiceRequest_Common
 Parent:	ServiceRequest
 Id:   jp-servicerequest-common
-Description:    "JP-ServiceRequest　Commonプロファイル(JP-Core V1.2系)"
+Description:    "汎用ベースプロファイル　JP-ServiceRequest　Commonプロファイル(JP-Core V1.2系)"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common"
 * ^status = #active
 * ^version = "x.x.x-profile"
@@ -180,7 +180,7 @@ Description:    "JP-Specimen　プロファイル"
 Profile:        JP_Observation_Common_eCS
 Parent:			JP_Observation_Common
 Id:             JP-Observation-eCS
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_Observation_Common_eCS"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Observation_Common_eCS"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -196,7 +196,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_DocumentReference_CDAdocument
 Parent:			JP_DocumentReference
 Id:             JP-DocumentReference-CDAdocument
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_DocumentReference_CDAdocument"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DocumentReference_CDAdocument"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -226,7 +226,7 @@ Description:    "JP_DocumentReference　暫定プロファイル"
 Profile:        JP_DocumentReference_eCS
 Parent:			JP_DocumentReference
 Id:             JP-DocumentReference-eCS
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_DocumentReference_eCS"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DocumentReference_eCS"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -257,7 +257,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_Immunization_eCS
 Parent:			JP_Immunization
 Id:             JP-Immunization-eCS
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_Immunization_eCS"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Immunization_eCS"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -294,10 +294,10 @@ Description:    "Derived Profile from JP-Core"
 * meta.lastUpdated 0.. MS
 */
 
-Profile:        JP_Procedure_eCS
+Profile:        
 Parent:			JP_Procedure
 Id:             JP-Procedure-eCS
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_Procedure_eCS"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Procedure_eCS"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -313,7 +313,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_DeviceUseStatement
 Parent:			DeviceUseStatement
 Id:             JP-DeviceUseStatement
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用ベースプロファイル　JP_DeviceUseStatement"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DeviceUseStatement"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -328,7 +328,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_DeviceUseStatement_eCS
 Parent:			JP_DeviceUseStatement
 Id:             JP-DeviceUseStatement-eCS
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_DeviceUseStatement_eCS"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DeviceUseStatement_eCS"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -344,7 +344,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_Device
 Parent:			Device
 Id:             JP-Device
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用ベースプロファイル　JP_Device"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -360,7 +360,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_Device_eCS
 Parent:			JP_Device
 Id:             JP-Device-eCS
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_Device_eCS"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Device_eCS"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -376,7 +376,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_Consent
 Parent:			Consent
 Id:             JP-Consent
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用ベースプロファイル　JP_Consent"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -391,7 +391,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_Consent_eCS
 Parent:			JP_Consent
 Id:             JP-Consent-eCS
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_Consent_eCS"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Consent_eCS"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -406,7 +406,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_ResearchSubject
 Parent:			ResearchSubject
 Id:             JP-ResearchSubject
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用ベースプロファイル　JP_ResearchSubject"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -421,7 +421,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_ResearchSubject_eCS
 Parent:			JP_ResearchSubject
 Id:             JP-ResearchSubject-eCS
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_ResearchSubject_eCS"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_ResearchSubject_eCS"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -436,7 +436,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_ResearchStudy
 Parent:			ResearchStudy
 Id:             JP-ResearchStudy
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用ベースプロファイル　JP_ResearchStudy"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -451,7 +451,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_ResearchStudy_eCS
 Parent:			JP_ResearchStudy
 Id:             JP-ResearchStudy-
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_ResearchStudy_eCS"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_ResearchStudy_eCS"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -466,7 +466,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_RelatedPerson
 Parent:			RelatedPerson
 Id:             JP-RelatedPerson
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用ベースプロファイル　JP_RelatedPerson"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -481,7 +481,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_RelatedPerson_eCS
 Parent:			JP_RelatedPerson
 Id:             JP-RelatedPerson-eCS
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用診療報告用プロファイル　JP_RelatedPerson_eCS"
 * ^url = "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_RelatedPerson_eCS"
 * ^version = "x.x.x-profile"
 * ^status = #active
@@ -496,7 +496,7 @@ Description:    "Derived Profile from JP-Core"
 Profile:        JP_Binary
 Parent:			Binary
 Id:             JP-Binary
-Description:    "Derived Profile from JP-Core"
+Description:    "汎用ベースプロファイル　JP_Binary"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary"
 * ^version = "x.x.x-profile"
 * ^status = #active

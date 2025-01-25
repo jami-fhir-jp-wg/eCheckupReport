@@ -6,7 +6,7 @@ Extension: JP_eCS_ObsComponentPerformer
 Id: jp-ecs-ObsComponentPerformer
 Title: "JP eCS ObsComponentPerformer Extension"
 Description: "ObservationのComponent要素にそのComponent検査結果に責任を持つ者の情報（Practitioner）を記述する拡張"
-* ^url = $JP_eCS_ObsComponentPerformer // http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/observation-component-performer
+* ^url = $JP_eCS_ObsComponentPerformer // 
 * ^status = #active
 * ^version = "x.x.x-profile"
 * ^date = "2024-11-10"
