@@ -44,7 +44,8 @@ Description: "Bundle 健診検査結果報告書　サンプル０１ 心電図�
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ComponentPerformer-ECGresult // 心電図(所見の有無) あり、処刑：2度AVブロック、PVC散発
 
 * entry[+].fullUrl = "urn:uuid:38cbf2cf-61b7-6738-9d8c-a7b29016c48f"
-* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-14-subjectiveSymptom　// 自覚症状　あり
+* entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-14-subjectiveSymptom // 自覚症状　あり
+
 * entry[+].fullUrl = "urn:uuid:01b972fc-5183-8fa4-0954-10a7c5f5a36e"
 * entry[=].resource = Inline-Instance-for-GOFSH-GENERATED-ID-0-15-objSymptom // 他覚症状 なし
 * entry[+].fullUrl = "urn:uuid:785fcd39-8c25-4e6d-53bc-a2f8055fd110"

@@ -294,7 +294,7 @@ Description:    "Derived Profile from JP-Core"
 * meta.lastUpdated 0.. MS
 */
 
-Profile:        
+Profile:        JP_Procedure_eCS
 Parent:			JP_Procedure
 Id:             JP-Procedure-eCS
 Description:    "汎用診療報告用プロファイル　JP_Procedure_eCS"
