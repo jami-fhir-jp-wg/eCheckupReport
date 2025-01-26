@@ -23,9 +23,10 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
   * value 1..1 MS
 * basedOn 0..0
 * partOf 0..0
-* status ^definition = "結果値の状態。"
+* status ^short = "結果値の状態。健診結果報告では検査結果があれば\"fianl\"、なんらかの理由で存在しない場合には \"cancelled\"を設定する。"
+* status ^definition = "結果値の状態。健診結果報告では検査結果があれば\"fianl\"、なんらかの理由で存在しない場合には \"cancelled\"を設定する。"
 * status 1..1 MS
-* status = #final
+// * status = #final
 * category 0..1 MS
   * ^short = "検査項目の区分を表すカテゴリコード"
   * ^definition = "コード体系\"http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS\"から、健診項目にあったカテゴリを指定する。検査項目ごとに適切なカテゴリを設定できないことも多いので、すべて\"exam\"としておいても差し支えない。category自体の記述を省略してもよい。"
@@ -45,9 +46,12 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * performer 0..1 MS 
 * performer ^short = "検査値を確認した責任者。診断者"
 * performer ^definition = "検査値を確認した責任者。検査を実施者として、医師の診断の診断者を表すために使用する。"
-* performer ^comment = "医師の診断項目の診断者を表すPractitionerリソースへの参照"
+* performer ^comment = "医師の診断項目の診断者を表すPractitionerリソースへの参照。"
 
 * value[x] 0..1 MS 
+* value[x] ^short = "検査結果値。検査結果がなんらなの理由で存在しない（検査不能、未実施など）場合には、この要素は存在せず、dataAbsentReasonが必須。"
+* value[x] ^definition = "検査結果値。検査結果がなんらなの理由で存在しない（検査不能、未実施など）場合には、この要素は存在せず、dataAbsentReasonが必須。"
+
 * value[x] only Quantity or CodeableConcept or string or dateTime
 * valueQuantity 0..1
 * valueQuantity ^short = "検査結果が「数値」の場合、値、単位を設定する。"
@@ -73,8 +77,9 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * valueCodeableConcept.coding.extension  ^short = "CO型の順序付きコードを使用する場合に使用する拡張"
 
 * dataAbsentReason 0..1 MS
-* dataAbsentReason ^definition = "検査結果値が欠落している理由。"
+* dataAbsentReason ^definition = "検査結果値が欠落している理由。text子要素に理由を設定する。また特定健診では定められたコード化記述も行うこと。"
 * dataAbsentReason ^comment = "valueの欠落時に使用する。制約「obs-6」に示す通り、valueが存在する場合、当該項目は存在してはならない。未実施：not-performed、測定不能：error"
+* dataAbsentReason.text 1..1 MS
 
 * interpretation 0..1 MS
 * interpretation ^short = "H:High, L:low, N:normal, LX:入力下限以下、HX:入力上限以上"
