@@ -2,8 +2,8 @@ Instance: Instance-for-Obs-ECGimpressionTF
 InstanceOf: JP_Observation_eCheckupGeneral
 Usage: #example
 
-Description: "健診検査結果 心電図(所見の有無) 　　JLAC10=9A110160700000011"
-* note.text =  "健診検査結果 心電図(所見の有無) 　　JLAC10=9A110160700000011"
+Description: "健診検査結果　心電図(所見の有無) 　　JLAC10=9A110160700000011"
+* note.text =  "健診検査結果　心電図(所見の有無) 　　JLAC10=9A110160700000011"
 
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral"

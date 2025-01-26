@@ -14,7 +14,7 @@ Expression: "meta.profile.where($this.indexOf('|')>0 and ($this.indexOf('|')>0 i
 Profile: JP_Bundle_eCheckupGeneral
 Parent: Bundle
 Id: JP-Bundle-eCheckupGeneral
-Description: "健診結果報告書 Bundleリソース（電子カルテ情報共有サービス送信と共用)"
+Description: "健診結果報告書　Bundleリソース（電子カルテ情報共有サービス送信と共用)"
 
 * obeys bundle-profile-is-JP-Bundle-eCheckupGeneral
 

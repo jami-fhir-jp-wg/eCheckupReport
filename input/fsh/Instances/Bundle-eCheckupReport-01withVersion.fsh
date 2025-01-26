@@ -1,7 +1,7 @@
 Instance: Bundle-eCheckupReport-Sample-01-with-VersionOfProfile
 InstanceOf: JP_Bundle_eCheckupGeneral
 Usage: #example
-Description: "Bundle 健診検査結果報告書　サンプル０１ Bundle　ProfileとCompositon Profileにバージョンを付与した例　 心電図をComponentで記述"
+Description: "Bundle 健診検査結果報告書　サンプル０１ 心電図をComponentで記述　Bundle　ProfileとCompositon Profileにバージョンを付与した例"
 
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile[+] = "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral|x.x.x-instance"
