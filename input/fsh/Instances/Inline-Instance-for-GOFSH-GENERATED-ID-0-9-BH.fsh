@@ -1,4 +1,4 @@
-Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-9-Obs-BH
+Instance: Inline-Instance-for-9-Obs-BH
 InstanceOf: JP_Observation_eCheckupGeneral
 Usage: #inline
 

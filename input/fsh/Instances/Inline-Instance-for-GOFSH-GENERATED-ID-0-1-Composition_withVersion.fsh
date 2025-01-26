@@ -1,4 +1,4 @@
-Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-1-Composition-with-Profile-Version
+Instance: Inline-Instance-for-Composition-with-Profile-Version
 InstanceOf: Composition
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"

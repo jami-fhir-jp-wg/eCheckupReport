@@ -1,4 +1,4 @@
-Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-5-Encounter
+Instance: Inline-Instance-for-5-Encounter
 InstanceOf: JP_Encounter_eCheckupGeneral
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"

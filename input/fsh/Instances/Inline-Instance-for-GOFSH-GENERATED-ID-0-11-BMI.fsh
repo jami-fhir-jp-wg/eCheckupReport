@@ -1,4 +1,4 @@
-Instance: Inline-Instance-for-GOFSH-GENERATED-ID-0-11-Obs-BMI
+Instance: Inline-Instance-for-11-Obs-BMI
 InstanceOf: JP_Observation_eCheckupGeneral
 Usage: #inline
 
