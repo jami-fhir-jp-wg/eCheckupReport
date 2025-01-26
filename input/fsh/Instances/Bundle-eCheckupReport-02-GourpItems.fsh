@@ -13,7 +13,7 @@ Description: "Bundle 健診検査結果報告書　サンプル０１ 心電図�
 * type = #document
 * timestamp = "2024-04-05T13:28:17.239+09:00"
 * entry[+].fullUrl = "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d"
-* entry[=].resource = Inline-Instance-for-1-Composition
+* entry[=].resource = Inline-Instance-for-1-Composition-ECG-GroupItems
 * entry[+].fullUrl = "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
 * entry[=].resource = Inline-Instance-for-2-Patient
 * entry[+].fullUrl = "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
@@ -87,10 +87,6 @@ Description: "Bundle 健診検査結果報告書　サンプル０１ 心電図�
 * entry[+].fullUrl = "urn:uuid:881e7ffa-4b36-01de-f954-9eff7a7eba24"
 * entry[=].resource = Inline-Instance-for-26 // 尿蛋白
 * entry[+].fullUrl = "urn:uuid:55cb9c64-af3d-9763-a3f5-8d14954c36cc"
-
-* entry[=].resource = Inline-Instance-for-26 // 尿蛋白
-* entry[+].fullUrl = "urn:uuid:55cb9c64-af3d-9763-a3f5-8d14954c36cc"
-
 
 * entry[=].resource = Inline-Instance-for-27 // メタボリックシンドローム判定
 * entry[+].fullUrl = "urn:uuid:42b66f41-aafe-1452-1f3d-8fc25dfa1ce3"
