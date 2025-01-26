@@ -10,7 +10,7 @@ Parent: JP_Patient_eCheckupGeneral
 // JP_Patient_eCSから派生すると患者姓と名が必須になってしまう。
 Id: jp-Patient-CLINS-eCheckupGeneral
 Title: "JP_Patient_CLINS_eCheckupGeneral"
-Description "健診結果報告書　Patientリソース　患者情報(電子カルテ情報共有サービス対応)"
+Description: "健診結果報告書　Patientリソース　患者情報(電子カルテ情報共有サービス対応)"
 
 // 派生済み　* obeys valid-system-local-patientID
 // 派生済み　* obeys either-KanjiName-KanaName-exist

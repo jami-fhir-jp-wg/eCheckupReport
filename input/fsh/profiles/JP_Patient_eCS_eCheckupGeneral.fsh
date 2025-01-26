@@ -10,7 +10,7 @@ Parent: JP_Patient
 // JP_Patient_eCSから派生すると患者姓と名が必須になってしまう。
 Id: jp-Patient-eCheckupGeneral
 Title: "JP_Patient_eCheckupGeneral"
-Description: "健診結果報告書　Patientリソース　患者情報（姓と名の分離を必要とせず、必須ともしない版）電子カルテ情報共有サービス送信以外で使用
+Description: "健診結果報告書　Patientリソース　患者情報（姓と名の分離を必要とせず、必須ともしない版）電子カルテ情報共有サービス送信以外で使用"
 
 * obeys valid-system-local-patientID
 * obeys either-KanjiName-KanaName-exist
