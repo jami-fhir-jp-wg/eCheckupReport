@@ -197,6 +197,8 @@ Description:    "健診結果報告書　ObservationGroupリソースGroup仕様
 * basedOn 0..0
 * partOf 0..0
 * status ^definition = "結果値の状態。"
+* status ^short = "結果値の状態。健診結果報告でグループ親項目では常に\"fianl\"を設定する。"
+* status ^definition = "結果値の状態。健診結果報告でグループ親項目では常に\"fianl\"を設定する。"
 * status 1..1 MS
 * status = #final
 * category 0..0
