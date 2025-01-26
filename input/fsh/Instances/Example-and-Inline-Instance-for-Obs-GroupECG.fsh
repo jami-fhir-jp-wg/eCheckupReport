@@ -14,19 +14,19 @@ Description: "健診検査結果　心電図グループ 　　JLAC10=9A110"
 * effectiveDateTime = "2020-04-04"
 * hasMember[+].extension[obsGroupRelationship].url = $observationGroupRelationship_extension
 * hasMember[=].extension[obsGroupRelationship].valueCode = #COMP
-* hasMember[=] = Reference(Inline-Instance-for-Obs-ECGimpressionTF)
+* hasMember[=] = Reference(Instance-for-Obs-ECGimpressionTF)
 
 * hasMember[+].extension[obsGroupRelationship].url = $observationGroupRelationship_extension
 * hasMember[=].extension[obsGroupRelationship].valueCode = #COMP
-* hasMember[=] = Reference(Inline-Instance-for-Obs-ECGimpression)
+* hasMember[=] = Reference(Instance-for-Obs-ECGimpression)
 
 * hasMember[+].extension[obsGroupRelationship].url = $observationGroupRelationship_extension
 * hasMember[=].extension[obsGroupRelationship].valueCode = #COMP
-* hasMember[=] = Reference(Inline-Instance-for-Obs-ECGsubjectCategory)
+* hasMember[=] = Reference(Instance-for-Obs-ECGsubjectCategory)
 
 * hasMember[+].extension[obsGroupRelationship].url = $observationGroupRelationship_extension
 * hasMember[=].extension[obsGroupRelationship].valueCode = #RSON
-* hasMember[=] = Reference(Inline-Instance-for-Obs-ECGreason)
+* hasMember[=] = Reference(Instance-for-Obs-ECGreason)
 
 
 Instance: Inline-Instance-for-Obs-ECGGroup
@@ -45,16 +45,16 @@ Description: "健診検査結果　心電図グループ 　　JLAC10=9A110"
 * effectiveDateTime = "2020-04-04"
 * hasMember[+].extension[obsGroupRelationship].url = $observationGroupRelationship_extension
 * hasMember[=].extension[obsGroupRelationship].valueCode = #COMP
-* hasMember[=] = Reference(Instance-for-Obs-ECGimpressionTF)
+* hasMember[=] = Reference(Inline-Instance-for-Obs-ECGimpressionTF)
 
 * hasMember[+].extension[obsGroupRelationship].url = $observationGroupRelationship_extension
 * hasMember[=].extension[obsGroupRelationship].valueCode = #COMP
-* hasMember[=] = Reference(Instance-for-Obs-ECGimpression)
+* hasMember[=] = Reference(Inline-Instance-for-Obs-ECGimpression)
 
 * hasMember[+].extension[obsGroupRelationship].url = $observationGroupRelationship_extension
 * hasMember[=].extension[obsGroupRelationship].valueCode = #COMP
-* hasMember[=] = Reference(Instance-for-Obs-ECGsubjectCategory)
+* hasMember[=] = Reference(Inline-Instance-for-Obs-ECGsubjectCategory)
 
 * hasMember[+].extension[obsGroupRelationship].url = $observationGroupRelationship_extension
 * hasMember[=].extension[obsGroupRelationship].valueCode = #RSON
-* hasMember[=] = Reference(Instance-for-Obs-ECGreason)
+* hasMember[=] = Reference(Inline-Instance-for-Obs-ECGreason)
