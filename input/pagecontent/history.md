@@ -6,6 +6,9 @@
     
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。
 
+### Ver1.5.0 (2025-01-29) バージョン番号の変更なし<br> 
+  - validationガイドで、使用するterminologyをjpfhir-terminology.r4-1.2.4-url.tgzからjpfhir-terminology.r4-1.3.0.tgzに更新した。
+
 ### Ver1.5.0 (2025-01-25) <br>
   - JP_Observation_eCheckupGeneralで以下を修正：
     - Observation.dataAbsentReason.text の多重度を1..1とし、検査結果値がなんらかの理由で存在しない場合には欠損理由文字列を必須とした。関連する要素の説明を追記。

@@ -70,7 +70,7 @@ Validationの具体的手順と、出力の解釈方法について説明する�
 
   - jpfhir-terminology.r4　パッケージ
       
-    - tgz形式 : [https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.2.4-url.tgz](https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.3.0.tgz)
+    - tgz形式 : [https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.3.0.tgz](https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.3.0.tgz)
  　 
   - jp-eCheckupReport.r4　パッケージ
       
@@ -129,7 +129,7 @@ Validation の実行
       -best-practice ignore \
       -tx n/a  \
       -ig [pkgJp]/jp-core.r4-1.1.2-url.tgz  \
-      -ig [pkgJp]/jpfhir-terminology.r4-1.2.4-url.tgz  \
+      -ig [pkgJp]/jpfhir-terminology.r4-1.3.0-url.tgz  \
       -ig [pkgJp]/jp-eCheckupReport.r4-1.x.x-temp.tgz  
         
 ```
