@@ -43,6 +43,7 @@ Description: "健診結果報告書　Bundleリソース（電子カルテ情報
 * . ^short = "健診結果報告書 Bundleリソース （電子カルテ情報共有サービス送信は別プロファイル)"
 * . ^definition = "健診結果報告のための文書 Bundleリソース　（電子カルテ情報共有サービス送信は別プロファイル)"
 
+* meta 1..1
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
   * insert relative_short_definition("準拠しているプロファイルとして次のURLとバージョンを指定する。\"http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral|x.y.z\" を使用する。")
@@ -73,7 +74,7 @@ Bundle.identifier.value : 実装ガイド本文 5情報送信仕様--Bundleリ�
 * entry contains
     composition 1..1 MS  // 文書構成情報
 and patient 1..1 MS  //  受診者情報
-and organization  1.. MS
+and organization  2..* MS
 //and organization/ins 0..* MS
 and practitioner 1..* MS // 必須：作成者、任意：転記者、任意：検査実施者（ObservationやDiagnosticReportのperformer要素から参照される）
 and practitionerRole 0..1 MS // 転記者機関

@@ -39,6 +39,8 @@ Description: "健診結果報告書　Patientリソース　患者情報(電子�
 * . ^comment = "本プロファイルは、患者を識別するidentifierとして、被保険者個人識別子を必須としている。また、name.family, name.given, gender, birthDate, address.text, address.city, address.stateを必須としている。"
 
 
-* meta.profile 1..1 MS
+* meta.profile 1.. MS
   * insert relative_short_definition("準拠しているプロファイルとして次のURLを指定する。http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCS")
+
+* name.extension[nameRepresentationUse].use 1..1 MS
 

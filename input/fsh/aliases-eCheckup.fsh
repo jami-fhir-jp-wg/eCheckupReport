@@ -24,8 +24,9 @@ Alias: $doctype_codes_vs = http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes
 Alias: $section_code_cs = http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code
 Alias: $section_code_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/section-code
 
-Alias: $report_category_cs = urn:oid:2.16.840.1.113883.2.2.1.6.1001 //http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
+//Alias: $report_category_cs = urn:oid:2.16.840.1.113883.2.2.1.6.1001 //http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　このOIDの出所は、https://www.hl7.jp/library/201808KenshinKekkaVer2.0.pdf　p8記載（日本HL7協会）
 //Alias: $report_speccategory_cs = urn:oid:2.16.840.1.113883.2.2.1.6.1001
+Alias: $report_category_cs = urn:oid:1.2.392.200119.6.1001 // 2025.5.10 OIDを日本HL7協会から厚労省系に変更（コード系が異なるため）
 
 Alias: $report_category_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/checkup-report-category
 Alias: $report_speccategory_vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/specialCheckup-report-category

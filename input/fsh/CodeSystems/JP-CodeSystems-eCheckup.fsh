@@ -1092,6 +1092,21 @@ Title: "特定健診　子宮頸部細胞診 (細胞診婦人科材料)(ベセ�
 * #10 "other"
 
 //--------------------------------------------------------------------
+CodeSystem: SpecialCheckup_choice_18110_CS
+Id: specialCheckup-choice-18110-cs
+Description: "特定健診　血清クレアチニン（対象者）結果コード"
+Title: "特定健診　血清クレアチニン（対象者）結果コード"
+* ^url = "urn:oid:1.2.392.200119.6.18110"
+* ^status = #active
+* ^experimental = false
+* ^date = "2025-05-10"
+* ^version = "1"
+* ^content = #complete
+* ^caseSensitive = true
+* #0  "詳細健診以外で実施"
+* #1  "検査結果による血清クレアチニン検査対象者"
+
+//--------------------------------------------------------------------
 CodeSystem: SpecialCheckup_choice_18120_CS
 Id: specialCheckup-choice-18120-cs
 Description: "特定健診　心電図(対象者）コード"
@@ -1298,12 +1313,12 @@ Title: "健診　質問項目　喫煙習慣の有無(後期）結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.19120"
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-09-20"
+* ^date = "2025-05-10"
 * ^version = "1"
 * ^content = #complete
 * ^caseSensitive = true
-* #1 "はい"
-* #2 "いいえ"
+* #1 "吸っている"
+* #2 "吸っていない"
 * #3 "やめた"
 
 

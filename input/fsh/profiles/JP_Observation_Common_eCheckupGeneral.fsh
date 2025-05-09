@@ -13,12 +13,14 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * . ^short = "健診・検診検査結果"
 * . ^definition = "健診・検診の検査結果の格納に使用する。"
 * . ^comment = "健診結果として報告する検査結果、問診結果、すべての特定健診項目の結果を格納するObservationの制約プロファイル"
+* meta 1..1
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
 
 * identifier ^short = "当該検査結果に対して、施設内で割り振られる一意の識別子"
 * identifier ^definition = "この検査項目に割り当てられた一意の識別子。リソースの識別子やシステム的なシーケンスではなく、ビジネスID。"
 * identifier 0..* MS
+  * system 1..1 MS
   * system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
   * value 1..1 MS
 * basedOn 0..0
@@ -69,12 +71,17 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * valueDateTime 0..1
 * valueDateTime ^short = "検査結果値が「日付型」の場合、日付文字列をyyyy-mm-ddの形式で設定する。yyyy-mm-ddの形式で"
 
-* valueCodeableConcept.coding.extension 0..1
+* valueCodeableConcept 0..1
+* valueCodeableConcept.coding 1..1 
+//* valueCodeableConcept.coding.extension 0..*
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.type = #value
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.path = "url"
 * valueCodeableConcept.coding.extension  ^slicing.rules = #open
-* valueCodeableConcept.coding.extension  contains http://hl7.org/fhir/StructureDefinition/ordinalValue named ordinalValue 0..1
+* valueCodeableConcept.coding.extension  contains http://hl7.org/fhir/StructureDefinition/ordinalValue named ordinalValue 1..1
 * valueCodeableConcept.coding.extension  ^short = "CO型の順序付きコードを使用する場合に使用する拡張"
+* valueCodeableConcept.coding.system 1..1 modifierExtension
+* valueCodeableConcept.coding.code 1..1 MS
+* valueCodeableConcept.coding.display 0..1
 
 * dataAbsentReason 0..1 MS
 * dataAbsentReason ^definition = "検査結果値が欠落している理由。text子要素に理由を設定する。また特定健診では定められたコード化記述も行うこと。"
@@ -84,14 +91,16 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * interpretation 0..1 MS
 * interpretation ^short = "H:High, L:low, N:normal, LX:入力下限以下、HX:入力上限以上"
 
-* note 0..1 MS 
+* note 0..* MS 
   * ^short = "自由記載のコメント"
 
 * method 0..1
   * coding.system = "urn:oid:1.2.392.200119.6.1007"
+  * coding.system 1..1 MS
+  * coding.code 1..1 MS
+  * coding.display 0..1 
+
 * specimen 0..1
-  * type = "specimen"
-  * display 1..1
 
 * referenceRange 0..1
 * referenceRange ^short = "基準値。"
@@ -144,10 +153,12 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
   * extension[componentPerformer].value[x] 1..1 MS
 
   * code 1..1 MS
-  * value[x] 0..1 MS
+  * value[x] 1..1 MS
+  * value[x] ^short = "本仕様では、健診結果の「所見の有無」項目に対する「所見の詳細」を記述するために限定して使用しているので、valueString以外のデータ型は使用しない。"
+  * value[x] ^definition = "本仕様では、健診結果の「所見の有無」項目に対する「所見の詳細」を記述するために限定して使用しているので、valueString以外のデータ型は使用しない。"
   * value[x] only string
-  * valueString 1..1 MS
-
+  * valueString 1..1 MS 
+  * dataAbsentReason 0..0 　// 本仕様では、健診結果の「所見の有無」項目に対する「所見の詳細」を記述するために限定して使用しており結果が欠損していることはないものとする
 // 各種制約
 Invariant: emc-obs-1
 Description: "status should be 'final' or 'cancelled'. (status の値は'final'ないし'cancelled'であること。)"

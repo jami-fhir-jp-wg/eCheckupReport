@@ -65,8 +65,8 @@
   - Composition.category 報告区分コード : coding の多重度を1..*から1..1に修正（V1.2.0での修正漏れ。PDF版仕様の表2との不整合の解消。）。
   - プロファイル　JP_Patient_eCheckupGeneral: kanjiName-kanaName-donot-contain-ZenkakuKuuhaku制約適用を追加。
   - プロファイル　JP_Patient_CLINS_eCheckupGeneral: 設定されているvalid-system-insurance-patientIdentifier、valid-value-insurance-patientIdentifierをCLINS仕様と一致させた。
-  - category要素のcoding.system値：特定健診の報告区分コードで使用するOID（1.2.392.200119.6.1001）に統一。
-  - event要素のcoding.system値：特定健診の健診プログラムサービスコードで使用するOID（1.2.392.200119.6.1002）に統一。
+  - category要素のcoding.system値：特定健診の報告区分コードで使用するOID（urn:oid:2.16.840.1.113883.2.2.1.6.1001）に統一。
+  - event要素のcoding.system値：特定健診の健診プログラムサービスコードで使用するOID（urn:oid:1.2.392.200119.6.1002）に統一。
   - 報告区分コード: 特定健診→特定健診等　に修正。
   - 健診プログラムサービスコード: 特定健診→特定健診等　に修正。
   - セクションコード：特定健診→特定健診等　に修正

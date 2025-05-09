@@ -20,16 +20,24 @@ Expression: "meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureD
 
 RuleSet: checkupSlicedProfile(slicePrefix,resultSectionCode,resultSectionName,questSectionCode,questSectionName)
 * section[{slicePrefix}_observations]
+  * title 1..1 MS
   * code 1..1 MS
   * code = $section_code_cs#{resultSectionCode} "{resultSectionName}"
-  * code.coding 1..1 
-  * entry 1..*
+  * code.coding 1..1  MS
+  * code.coding.system 1..1  MS
+  * code.coding.code 1..1  MS
+  * code.coding.display 1..1  MS
+  * entry 1..* MS
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
 * section[{slicePrefix}_questionnaire]
+  * title 1..1 MS
   * code 1..1 MS
   * code = $section_code_cs#{questSectionCode} "{questSectionName}"
-  * code.coding 1..1 
-  * entry 1..*
+  * code.coding 1..1  MS
+  * code.coding.system 1..1  MS
+  * code.coding.code 1..1  MS
+  * code.coding.display 1..1  MS
+  * entry 1..* MS
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 
 Profile:        JP_Composition_eCheckupGeneral
@@ -42,6 +50,8 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * ^version = "x.x.x-profile"
 * ^date = "2024-11-14"
 * ^language = #ja
+
+* meta 1..1
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
 
@@ -124,6 +134,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * date ^definition = "このリソースを作成または最後に編集した日時。ISO8601に準拠し、秒の精度まで記録し、タイムゾーンも付記する。\r\n午前0時を\"24:00\"と記録することはできないため\"00:00\"と記録すること。　\r\n例：\"2020_08_21T12:28:21+09:00\""
 * date 1..1 MS
 
+
 /*
 * author ^slicing.discriminator.type = #profile
 * author ^slicing.discriminator.path = "resolve()"
@@ -137,7 +148,7 @@ and organization 1..1 MS
 * author[practitioner] only Reference(JP_Practitioner_eCheckupGeneral)
 * author[organization] only Reference(JP_Organization_eCheckupGeneral)
 */
-
+* author 2..2
 * author only Reference(JP_Practitioner_eCheckupGeneral or JP_Organization_eCheckupGeneral)
 
 * custodian 0..1
@@ -148,7 +159,20 @@ and organization 1..1 MS
 * event.code 1..1 MS
 * event.code from $checkup_programService_vs
 * event.code.coding 1..1 MS
+* event.period 1..1 MS
+* event.period.start 1..1 MS
+* event.detail 1..1 MS
+* event.detail.reference 1..1 MS
 
+* section 1..3 MS // 最低1個のセクションからなり最大でも3セクションである。
+* section ^ short = "0または1つの検査結果セクション、0または1つの問診結果セクション、0または1つの添付書類セクション"
+* section ^ definition = "0または1つの検査結果セクション、0または1つの問診結果セクション、0または1つの添付書類セクションからなり、少なくとも1つ以上のセクションが存在する必要がある。"
+* section.title 1..1
+* section.code 1..1
+* section.code.coding 1..1
+* section.code.coding.system 1..1
+* section.code.coding.code 1..1
+* section.code.coding.display 1..1
 * section
   //セクションの特性ごとの制約
   * ^slicing.discriminator.type = #pattern
@@ -177,27 +201,34 @@ and    insuredMiscCheckup_questionnaire 0..1 MS // 01082
 
 and    generalCheckup_observations 0..1 MS // 01910
 and    generalCheckup_questionnaire 0..1 MS  // 01920
+
 and    attachment 0..1 MS  // 01995
 
 * insert checkupSlicedProfile(specialCheckup,01011,特定健診検査結果セクション,01012,特定健診問診結果セクション)
 * section[specialCheckup_additional]
+  * title 1..1 MS
   * code 1..1 MS
   * code = $section_code_cs#01990 "任意追加項目セクション"
-  * code.coding 1..1  
-  * entry 1..*
+  * code.system 1..1   MS
+  * code.coding 1..1   MS
+  * code.display 1..1   MS
+  * entry 1..* MS
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * insert checkupSlicedProfile(regionalUnionCheckup,01021,広域連合保健事業検査結果セクション,01022,広域連合保健事業問診結果セクション)
 * insert checkupSlicedProfile(occupationalCheckup,01031,事業者健診検査結果セクション,01032,事業者健診問診結果セクション)
 * insert checkupSlicedProfile(schoolMemberCheckup,01041,学校職員健診検査結果セクション,01042,学校職員健診問診結果セクション)
-* insert checkupSlicedProfile(otherMiscCheckup,01071,その他健診検査結果セクション,01072,その他健診問診結果セクション)
-* insert checkupSlicedProfile(insuredMiscCheckup,01081,保険者の実施するその他健診検査結果セクション,01082,保険者の実施するその他健診問診結果セクション)
+* insert checkupSlicedProfile(otherMiscCheckup,01071,保険者以外が行う特定健診等に相当する健診検査結果セクション,01072,保険者以外が行う特定健診等に相当する健診問診結果セクション)
+* insert checkupSlicedProfile(insuredMiscCheckup,01081,保険者の実施する特定健診等以外の健診検査結果セクション,01082,保険者の実施する特定健診等以外の健診問診結果セクション)
 * insert checkupSlicedProfile(generalCheckup,01910,検査結果セクション,01920,問診結果セクション)
 
 * section[attachment]
+  * title 1..1 MS
   * code 1..1 MS
   * code = $section_code_cs#01995 "添付書類セクション"
-  * code.coding 1..1  
-  * entry 1..*
+  * code.system 1..1   MS
+  * code.coding 1..1   MS
+  * code.display 1..1   MS
+  * entry 1..* MS
   * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral or JP_Media_eCheckupGeneral)
 
 

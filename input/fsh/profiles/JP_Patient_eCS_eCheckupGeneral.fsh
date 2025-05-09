@@ -39,18 +39,20 @@ Description: "健診結果報告書　Patientリソース　患者情報（姓�
 * . ^definition = "患者情報の記述に使用する。電子カルテ情報共有サービス非対応。電子カルテ共有サービス用のプロファイルと比べidentifierをはじめとする制約チェックがなく自由度が高いプロファイル。"
 * . ^comment = "name.textは必須。"
 
+* meta 1..1
 * meta.versionId ^short = "バージョン固有の識別子"
 * meta.versionId ^definition = "バージョン固有の識別子"
 * meta.lastUpdated 1.. MS
 * meta.lastUpdated ^short = "最終更新日"
 * meta.lastUpdated ^definition = "この患者情報の内容がサーバ上で最後に格納または更新された日時、またはこのFHIRリソースが生成された日時"
-* meta.profile 1..1 MS
+* meta.profile 1.. MS
   * insert relative_short_definition("準拠しているプロファイルとして次のURLを指定する。http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCS")
 
 
 * identifier ^short = "保険者・被保険者番号情報、自施設の患者番号など。"
 * identifier ^definition = "保険者・被保険者番号情報(system=\"http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID\")はあれば必須（電子カルテ情報共有サービスでは必須）。被保険者個人識別子の仕様は「被保険者個人識別子」の文字列仕様を参照のこと。それが取得できていない場合や、同時に施設での患者番号も記述したい場合には、自施設の患者番号（system=\"urn:oid:1.2.392.100495.20.3.51.[1+施設番号10桁]\"）とし、その施設での患者番号を記述する。"
-
+* identifier.system 1..1 MS
+* identifier.value 1..1 MS
 
 * name 1.. MS
 * name.text 1.. MS

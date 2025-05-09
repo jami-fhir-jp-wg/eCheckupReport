@@ -87,6 +87,7 @@
 [SpecialCheckup_choice_18080_CS]: CodeSystem-specialCheckup-choice-18080-cs.html
 [SpecialCheckup_choice_18090_CS]: CodeSystem-specialCheckup-choice-18090-cs.html
 [SpecialCheckup_choice_18100_CS]: CodeSystem-specialCheckup-choice-18100-cs.html
+[SpecialCheckup_choice_18110_CS]: CodeSystem-specialCheckup-choice-18110-cs.html
 [SpecialCheckup_choice_18120_CS]: CodeSystem-specialCheckup-choice-18120-cs.html
 [SpecialCheckup_choice_18130_CS]: CodeSystem-specialCheckup-choice-18130-cs.html
 [SpecialCheckup_choice_19010_CS]: CodeSystem-specialCheckup-choice-19010-cs.html
