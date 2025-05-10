@@ -77,9 +77,9 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.type = #value
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.path = "url"
 * valueCodeableConcept.coding.extension  ^slicing.rules = #open
-* valueCodeableConcept.coding.extension  contains http://hl7.org/fhir/StructureDefinition/ordinalValue named ordinalValue 1..1
+* valueCodeableConcept.coding.extension  contains http://hl7.org/fhir/StructureDefinition/ordinalValue named ordinalValue 0..1
 * valueCodeableConcept.coding.extension  ^short = "CO型の順序付きコードを使用する場合に使用する拡張"
-* valueCodeableConcept.coding.system 1..1 modifierExtension
+* valueCodeableConcept.coding.system 1..1 
 * valueCodeableConcept.coding.code 1..1 MS
 * valueCodeableConcept.coding.display 0..1
 

@@ -72,8 +72,8 @@ Description: "健診結果報告書　Patientリソース　患者情報（姓�
   * extension ^slicing.discriminator.type = #value
   * extension ^slicing.discriminator.path = "url"
   * extension ^slicing.rules = #open
-  * extension contains $JP_ptContactPosition  named ptContactPosition 1..1
-* contact.extension[ptContactPosition] 0..1
+  * extension contains $JP_ptContactPosition  named ptContactPosition 0..1
+* contact.extension[ptContactPosition] 1..1
 * contact.relationship 1..1 MS
 * contact.relationship.coding 1..1 MS
 * contact.relationship.coding from  $patient-relationship-vs

@@ -42,6 +42,12 @@ Description: "健診結果報告書　Patientリソース　患者情報(電子�
 * meta.profile 1.. MS
   * insert relative_short_definition("準拠しているプロファイルとして次のURLを指定する。http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCS")
 
+* name.extension ^slicing.discriminator.type = #value
+* name.extension ^slicing.discriminator.path = "url"
+* name.extension ^slicing.rules = #open
+* name.extension contains $iso21090-EN-representation named nameRepresentationUse 0..1
+* name.extension[nameRepresentationUse] ^definition = "名前の表現方法"
+* name.extension[nameRepresentationUse] ^comment = "名前の文字起こし-表現方法（日本の名前など）。"
 * name.extension[nameRepresentationUse].use 1..1 MS
 
 
