@@ -23,8 +23,8 @@ RuleSet: checkupSlicedProfile(slicePrefix,resultSectionCode,resultSectionName,qu
   * title 1..1 MS
   * code 1..1 MS
   * code = $section_code_cs#{resultSectionCode} "{resultSectionName}"
-  * code.coding 1..1  MS
-  * code.coding.system 1..1  MS
+  * code.coding  1..1
+  * code.coding.system 1..1 MS
   * code.coding.code 1..1  MS
   * code.coding.display 1..1  MS
   * entry 1..* MS
@@ -33,8 +33,8 @@ RuleSet: checkupSlicedProfile(slicePrefix,resultSectionCode,resultSectionName,qu
   * title 1..1 MS
   * code 1..1 MS
   * code = $section_code_cs#{questSectionCode} "{questSectionName}"
-  * code.coding 1..1  MS
-  * code.coding.system 1..1  MS
+  * code.coding  1..1
+  * code.coding.system 1..1 MS
   * code.coding.code 1..1  MS
   * code.coding.display 1..1  MS
   * entry 1..* MS
@@ -95,7 +95,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * type ^short = "文書区分コード"
 * type ^definition = "documentタイプのうち文書種別"
 * type MS
-* type.coding 1..1 MS
+* type.coding  1..1
 * type.coding.system = "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes" (exactly)
 * type.coding.system ^definition = "文書区分コードのコード体系を識別するURI。固定値"
 * type.coding.system MS
@@ -111,7 +111,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * category 1..1 MS
   * ^short = "報告区分を表すコードを設定する。"
   * ^definition = "報告区分コードのコード体系を識別するURI。http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category　を使用する。"
-* category.coding 1..1 MS
+* category.coding  1..1
 //* category.coding from $report_mergedcategory_vs (required)
 * category.coding from $report_category_vs
 
@@ -158,7 +158,7 @@ and organization 1..1 MS
 * event ^short = "健診プログラムサービスコード。coding.systemは 'http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code'を使用する。"  // urn:oid:1.2.392.200119.6.1002
 * event.code 1..1 MS
 * event.code from $checkup_programService_vs
-* event.code.coding 1..1 MS
+* event.code.coding  1..1
 * event.period 1..1 MS
 * event.period.start 1..1 MS
 * event.detail 1..1 MS
@@ -170,7 +170,7 @@ and organization 1..1 MS
 * section.title 1..1
 * section.code 1..1
 * section.code.coding 1..1
-* section.code.coding.system 1..1
+* section.code.coding.system 1..1 MS
 * section.code.coding.code 1..1
 * section.code.coding.display 1..1
 * section
@@ -209,9 +209,10 @@ and    attachment 0..1 MS  // 01995
   * title 1..1 MS
   * code 1..1 MS
   * code = $section_code_cs#01990 "任意追加項目セクション"
-  * code.system 1..1   MS
-  * code.coding 1..1   MS
-  * code.display 1..1   MS
+  * code.coding  1..1
+  * code.coding.system 1..1 MS
+  * code.coding.code 1..1   MS
+  * code.coding.display 1..1   MS
   * entry 1..* MS
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral)
 * insert checkupSlicedProfile(regionalUnionCheckup,01021,広域連合保健事業検査結果セクション,01022,広域連合保健事業問診結果セクション)
@@ -225,8 +226,8 @@ and    attachment 0..1 MS  // 01995
   * title 1..1 MS
   * code 1..1 MS
   * code = $section_code_cs#01995 "添付書類セクション"
-  * code.system 1..1   MS
-  * code.coding 1..1   MS
+  * code.system 1..1 MS
+  * code.coding  1..1
   * code.display 1..1   MS
   * entry 1..* MS
   * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral or JP_Media_eCheckupGeneral)

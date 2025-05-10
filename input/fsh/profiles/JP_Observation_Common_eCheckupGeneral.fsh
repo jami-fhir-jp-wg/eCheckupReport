@@ -20,7 +20,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * identifier ^short = "当該検査結果に対して、施設内で割り振られる一意の識別子"
 * identifier ^definition = "この検査項目に割り当てられた一意の識別子。リソースの識別子やシステム的なシーケンスではなく、ビジネスID。"
 * identifier 0..* MS
-  * system 1..1 MS
+  *.system 1..1 MS MS
   * system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
   * value 1..1 MS
 * basedOn 0..0
@@ -72,14 +72,14 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * valueDateTime ^short = "検査結果値が「日付型」の場合、日付文字列をyyyy-mm-ddの形式で設定する。yyyy-mm-ddの形式で"
 
 * valueCodeableConcept 0..1
-* valueCodeableConcept.coding 1..1 
+* valueCodeableConcept.coding  1..1
 //* valueCodeableConcept.coding.extension 0..*
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.type = #value
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.path = "url"
 * valueCodeableConcept.coding.extension  ^slicing.rules = #open
 * valueCodeableConcept.coding.extension  contains http://hl7.org/fhir/StructureDefinition/ordinalValue named ordinalValue 0..1
 * valueCodeableConcept.coding.extension  ^short = "CO型の順序付きコードを使用する場合に使用する拡張"
-* valueCodeableConcept.coding.system 1..1 
+* valueCodeableConcept.coding.system 1..1 MS 
 * valueCodeableConcept.coding.code 1..1 MS
 * valueCodeableConcept.coding.display 0..1
 
@@ -158,7 +158,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
   * value[x] ^definition = "本仕様では、健診結果の「所見の有無」項目に対する「所見の詳細」を記述するために限定して使用しているので、valueString以外のデータ型は使用しない。"
   * value[x] only string
   * valueString 1..1 MS 
-  * dataAbsentReason 0..0 　// 本仕様では、健診結果の「所見の有無」項目に対する「所見の詳細」を記述するために限定して使用しており結果が欠損していることはないものとする
+  * dataAbsentReason 0..0 // 本仕様では、健診結果の「所見の有無」項目に対する「所見の詳細」を記述するために限定して使用しており結果が欠損していることはないものとする
 // 各種制約
 Invariant: emc-obs-1
 Description: "status should be 'final' or 'cancelled'. (status の値は'final'ないし'cancelled'であること。)"

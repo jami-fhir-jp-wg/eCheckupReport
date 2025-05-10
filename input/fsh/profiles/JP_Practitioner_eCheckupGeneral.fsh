@@ -8,5 +8,9 @@ Description:    "健診結果報告書　Practitionerリソース　検診結果
 * ^status = #active
 * ^version = "x.x.x-profile"
 * ^language = #ja
+
+* meta  1..1
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
+
+* name 1..1 MS

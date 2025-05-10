@@ -75,7 +75,7 @@ Description: "健診結果報告書　Patientリソース　患者情報（姓�
   * extension contains $JP_ptContactPosition  named ptContactPosition 0..1
 * contact.extension[ptContactPosition] 1..1
 * contact.relationship 1..1 MS
-* contact.relationship.coding 1..1 MS
+* contact.relationship.coding  1..1
 * contact.relationship.coding from  $patient-relationship-vs
 * contact.relationship.coding.system 1..1 MS
 * contact.relationship.coding.code 1..1 MS

@@ -7,6 +7,8 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * ^status = #active
 * ^version = "x.x.x-profile"
 * ^language = #ja
+
+* meta 1..1
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
 
@@ -44,7 +46,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * type ^short = "保険種別コード"
 * type 1.. MS
 * type from $JAMI_InsuranceMajorCategory_VS
-* type.coding 1..1 MS
+* type.coding  1..1
 * type.coding.system 1.. MS
 * type.coding.system = $JAMI_InsuranceMajorCategory_CS (exactly)
 * type.coding.system ^short = "保険種別コード体系を識別するURI"
@@ -93,7 +95,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * payor 1..1 MS
 * payor ^short = "保険者情報"
 * payor ^definition = "保険者を表すOrganizationリソースへの参照"
-* payor only Reference(JP_OrganizationInsurer_eCheckupGeneral)
+* payor only Reference(JP_OrganizationInsurer_eCheckupGeneral or JP_Organization_eCS_coveragePayer or JP_Patient_CLINS_eCheckupGeneral or JP_Patient_eCheckupGeneral or JP_Patient_eCS or JP_Patient)
 * payor.reference ^short = "保険者を表すOrganizationリソースのfullUrl要素に指定されるUUIDを指定"
 * payor.reference ^definition = "Bundleリソースに記述される保険者を表すOrganizationリソースのfullUrl要素に指定されるUUIDを指定。"
 * payor.reference MS
@@ -112,9 +114,24 @@ Description:    "健診結果報告書　Coverageリソース  受診券等サ�
 * ^url = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageService_eCheckupGeneral"
 * ^status = #active
 * ^version = "x.x.x-profile"
+* meta 1..1
+* meta.lastUpdated 1.. MS
+* meta.profile 1.. MS
+
 * status = #active
 * type ^short = "受診券情報を表す固定ID system='urn:oid:1.2.392.200119.6.208' code='1'"
 * type = urn:oid:1.2.392.200119.6.208#1
+* type 1.. MS
+* type.coding  1..1
+* type.coding.system 1.. MS
+* type.coding.system ^short = "受診券の券面種別コード体系を識別するURI"
+* type.coding.system ^definition = "受診券の券面種別コード体系を識別するURI urn:oid:1.2.392.200119.6.208"
+* type.coding.code ^short = "受診券情報であることを表すコード"
+* type.coding.code ^definition = "受診券情報であることを表すコード（固定値）1"
+* type.coding.code 1.. MS
+* type.coding.userSelected ..0
+* type.text ..0
+
 * subscriberId 1..1 MS  // 受診券番号文字列
 * subscriberId ^short = "受診券番号"
 * beneficiary only Reference(JP_Patient_eCheckupGeneral)

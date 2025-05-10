@@ -16,19 +16,19 @@ Description:    "健診結果報告書　Organizationリソース　検診結果
 * extension[prefectureNo] 0..1
 * extension[prefectureNo].url 1..1
 * extension[prefectureNo].valueCoding 1..1
-* extension[prefectureNo].valueCoding.system 1..1
+* extension[prefectureNo].valueCoding.system 1..1 MS
 * extension[prefectureNo].valueCoding.code 1..1 MS
 
 * extension[organizationCategory] 0..1
 * extension[organizationCategory].url 1..1
 * extension[organizationCategory].valueCoding 1..1
-* extension[organizationCategory].valueCoding.system 1..1
+* extension[organizationCategory].valueCoding.system 1..1 MS
 * extension[organizationCategory].valueCoding.code 1..1 MS
 
 * extension[organizationNo] 0..1
 * extension[organizationNo].url 1..1
 * extension[organizationNo].valueIdentifier 1..1
-* extension[organizationNo].valueIdentifier.system 1..1
+* extension[organizationNo].valueIdentifier.system 1..1 MS
 * extension[organizationNo].valueIdentifier.value 1..1 MS
 
 * extension ^slicing.discriminator.type = #value
@@ -61,7 +61,7 @@ Description:    "健診結果報告書　Organizationリソース　検診結果
 
 * name 1..1 MS
 * telecom 0..* 
-* telecom.system 1..1
+* telecom.system 1..1 MS
 * telecom.value 1..1 MS
 
 * address 0..1 MS

@@ -6,6 +6,8 @@ Description: "健診結果報告書　医療サービスでの保険者または
 * ^status = #draft
 * ^version = "x.x.x-profile"
 * ^language = #ja
+
+* meta 1..1
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
 * text ^short = "本リソースをテキストで表現したものを入れてもよい。"
@@ -44,17 +46,18 @@ Description: "健診結果報告書　医療サービスでの保険者または
 * identifier[publicPayer].assigner ..0
 * active ..0
 * type 1..1 MS
-* type.coding 1..1 MS
+* type.coding  1..1
 * type.coding.system = $organization-type (exactly)
 * type.coding.system ^short = "施設種別コードのコード体系を識別するURI"
 * type.coding.system ^definition = "施設種別コードのコード体系を識別するURI。固定値。"
-* type.coding.system MS
+* type.coding.system 1..1 MS
 * type.coding.code ^short = "施設種別コード"
 * type.coding.code ^definition = "費用負担者が保険者の場合は\"ins\"。それ以外の場合は、公費負担者の場合には、その他を意味する \"other\"を指定。"
+* type.coding.code 1..1 MS
 * type.coding.code = #ins (exactly)
 * name ^short = "保険者、公費受給者の名称文字列"
 * name ^definition = "保険者、公費受給者の名称文字列。"
-* name MS
+* name1..1 MS
 * alias ..0
 * telecom ..0
 * address ..0
