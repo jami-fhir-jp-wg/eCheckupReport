@@ -26,7 +26,7 @@ Description: "健診結果報告書　医療サービスでの保険者または
 * identifier[insurerNumber].system = $JP_IdSystemInsurerNumber (exactly)
 * identifier[insurerNumber].value ^short = "保険者番号"
 * identifier[insurerNumber].value ^definition = "保険者番号を半角数字で８ケタ以内の文字列で記述する。"
-* identifier[insurerNumber].value MS
+* identifier[insurerNumber].value 1..1 MS
 * identifier[insurerNumber].period ..0
 * identifier[insurerNumber].assigner ..0
 * identifier contains publicPayer 0..1  MS
