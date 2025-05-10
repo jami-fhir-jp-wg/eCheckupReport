@@ -9,6 +9,11 @@ Alias: $specialCheckup_observations_cs = urn:oid:1.2.392.200119.6.1005  //特定
 
 // 拡張
 Alias: $JP_eCS_ObsComponentPerformer = http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/observation-component-performer
+Alias: $JP_ptContactPosition = http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Patient_Contact_Position
+
+// 
+Alias: $patient-relationship-cs = urn:oid:2.16.840.1.113883.2.2.1.6.5006
+Alias: $patient-relationship-vs = http://jpfhir.jp/fhir/eCheckup/ValueSet/patient-relationship-code
 
 // 検診実施機関種別コード
 Alias: $JP_OrganizationCategory_CS = http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code

@@ -44,3 +44,4 @@ Description: "健診結果報告書　Patientリソース　患者情報(電子�
 
 * name.extension[nameRepresentationUse].use 1..1 MS
 
+
