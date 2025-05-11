@@ -20,7 +20,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * identifier ^short = "当該検査結果に対して、施設内で割り振られる一意の識別子"
 * identifier ^definition = "この検査項目に割り当てられた一意の識別子。リソースの識別子やシステム的なシーケンスではなく、ビジネスID。"
 * identifier 0..* MS
-  *.system 1..1 MS MS
+  * system 1..1 MS 
   * system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
   * value 1..1 MS
 * basedOn 0..0

@@ -57,7 +57,7 @@ Description: "健診結果報告書　医療サービスでの保険者または
 * type.coding.code = #ins (exactly)
 * name ^short = "保険者、公費受給者の名称文字列"
 * name ^definition = "保険者、公費受給者の名称文字列。"
-* name1..1 MS
+* name 1..1 MS
 * alias ..0
 * telecom ..0
 * address ..0

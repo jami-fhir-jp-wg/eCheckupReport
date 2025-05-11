@@ -98,7 +98,7 @@ Description:    "健診結果報告書　Compositionリソース　文書構成�
 * type.coding  1..1
 * type.coding.system = "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes" (exactly)
 * type.coding.system ^definition = "文書区分コードのコード体系を識別するURI。固定値"
-* type.coding.system MS
+* type.coding.system 1..1 MS
 * type.coding.version
 * type.coding.code 1.. MS
 * type.coding.code = #53576-5 (exactly)
@@ -226,9 +226,10 @@ and    attachment 0..1 MS  // 01995
   * title 1..1 MS
   * code 1..1 MS
   * code = $section_code_cs#01995 "添付書類セクション"
-  * code.system 1..1 MS
   * code.coding  1..1
-  * code.display 1..1   MS
+  * code.coding.system 1..1 MS
+  * code.coding.code 1..1 MS
+  * code.coding.display 1..1   MS
   * entry 1..* MS
   * entry only Reference(JP_DocumentReference_eCheckupGeneral or JP_DiagnosticReport_eCheckupGeneral or JP_Media_eCheckupGeneral)
 

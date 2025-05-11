@@ -13,5 +13,3 @@ Description:    "健診結果報告書　PractitionerRoleリソース　文書�
 * meta.profile 1.. MS
 * practitioner only Reference(JP_Practitioner_eCheckupGeneral)
 * organization only Reference(JP_Organization_eCheckupGeneral)
-
-* name 1..1 MS

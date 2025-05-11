@@ -95,7 +95,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * payor 1..1 MS
 * payor ^short = "保険者情報"
 * payor ^definition = "保険者を表すOrganizationリソースへの参照"
-* payor only Reference(JP_OrganizationInsurer_eCheckupGeneral or JP_Organization_eCS_coveragePayer or JP_Patient_CLINS_eCheckupGeneral or JP_Patient_eCheckupGeneral or JP_Patient_eCS or JP_Patient)
+* payor only Reference(JP_OrganizationInsurer_eCheckupGeneral or JP_Organization_eCS_coveragePayer or JP_Patient_CLINS_eCheckupGeneral or JP_Patient_eCheckupGeneral or JP_Patient)
 * payor.reference ^short = "保険者を表すOrganizationリソースのfullUrl要素に指定されるUUIDを指定"
 * payor.reference ^definition = "Bundleリソースに記述される保険者を表すOrganizationリソースのfullUrl要素に指定されるUUIDを指定。"
 * payor.reference MS

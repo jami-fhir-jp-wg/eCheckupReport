@@ -27,8 +27,8 @@ Description:    "健診結果報告書　Organizationリソース 保険者組�
 * identifier[insurerNumber].period ..0
 * identifier[insurerNumber].assigner ..0
 
-* identifier contains publicPayer 0..0
+* identifier[publicPayer] 0..0
 
 * name ^short = "保険者の名称文字列"
 * name ^definition = "保険者の名称文字列。"
-* name1..1 MS
+* name 1..1 MS
