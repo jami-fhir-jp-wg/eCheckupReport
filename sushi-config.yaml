@@ -147,6 +147,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code
     - http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-programService-code
+    - urn:oid:2.16.840.1.113883.2.2.1.6.5006
     - urn:oid:1.2.392.200119.6.208
     - urn:oid:1.2.392.200119.6.1002
     - http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes

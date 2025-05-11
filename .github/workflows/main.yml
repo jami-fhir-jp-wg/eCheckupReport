@@ -117,7 +117,7 @@ jobs:
         mkdir -p input-cache
         mv ./publisher.jar ./input-cache
         unset DISPLAY
-        java -Xmx4G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini  -tx n/a
+        java -Xmx4G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini
 
     - name: replace url of html files referring simplifier.net package
       run:  |
