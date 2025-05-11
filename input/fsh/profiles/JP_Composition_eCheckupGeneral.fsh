@@ -219,7 +219,7 @@ and    attachment 0..1 MS  // 01995
 * insert checkupSlicedProfile(occupationalCheckup,01031,事業者健診検査結果セクション,01032,事業者健診問診結果セクション)
 * insert checkupSlicedProfile(schoolMemberCheckup,01041,学校職員健診検査結果セクション,01042,学校職員健診問診結果セクション)
 * insert checkupSlicedProfile(otherMiscCheckup,01071,保険者以外が行う特定健診等に相当する健診検査結果セクション,01072,保険者以外が行う特定健診等に相当する健診問診結果セクション)
-* insert checkupSlicedProfile(insuredMiscCheckup,01081,保険者の実施する特定健診等以外の健診検査結果セクション,01082,保険者の実施する特定健診等以外の健診問診結果セクション)
+* insert checkupSlicedProfile(insuredMiscCheckup,01081,保険者が実施する特定健診等以外の健診検査結果セクション,01082,保険者が実施する特定健診等以外の健診問診結果セクション)
 * insert checkupSlicedProfile(generalCheckup,01910,検査結果セクション,01920,問診結果セクション)
 
 * section[attachment]
