@@ -13,4 +13,4 @@ Description:    "健診結果報告書　Practitionerリソース　検診結果
 * meta.lastUpdated 1.. MS
 * meta.profile 1.. MS
 
-* name 1..1 MS
+* name 1.. MS
