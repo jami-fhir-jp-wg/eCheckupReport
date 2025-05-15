@@ -29,7 +29,7 @@ Description: "Compositionリソースのサンプル"
 * event.period.start = "2024-04-05"
 * event.period.end = "2024-04-05"
 * event.detail = Reference(urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad)
-* section[0].title = "健診セクション"
+* section[0].title = "特定健診検査結果セクション"
 * section[=].code = $section_code_cs#01011 "特定健診検査結果セクション"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>身長 162.3 cm</li><li>体重 65.5 kg</li><li>BMI 24.9 kg/m2</li><li>腹囲 70 cm</li><li>メタボリックシンドローム判定 非該当</li><li>保健指導レベル なし</li></ul></div>"
