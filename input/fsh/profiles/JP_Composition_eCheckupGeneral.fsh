@@ -173,14 +173,14 @@ and organization 1..1 MS
 * section 1..3 MS // 最低1個のセクションからなり最大でも3セクションである。
 * section ^short = "0または1つの検査結果セクション、0または1つの問診結果セクション、0または1つの添付書類セクション"
 * section ^definition = "0または1つの検査結果セクション、0または1つの問診結果セクション、0または1つの添付書類セクションからなり、少なくとも1つ以上のセクションが存在する必要がある。"
-
+/*
 * section.title 1..1
 * section.code 1..1
 * section.code.coding 1..1
 * section.code.coding.system 1..1 MS
 * section.code.coding.code 1..1
 * section.code.coding.display 1..1
-
+*/
 * section
   //セクションの特性ごとの制約
   * ^slicing.discriminator.type = #pattern
