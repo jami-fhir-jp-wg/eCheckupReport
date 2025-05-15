@@ -23,7 +23,7 @@ RuleSet: checkupSlicedProfile(slicePrefix,resultSectionCode,resultSectionName,qu
   * title 1..1 MS
     * ^short = "健診検査結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
     * ^definition = "健診検査結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
-  * title = {resultSectionName} (exactly)
+  * title = "{resultSectionName}" (exactly)
   * code 1..1 MS
   * code = $section_code_cs#{resultSectionCode} "{resultSectionName}"
   * code.coding  1..1
@@ -36,7 +36,7 @@ RuleSet: checkupSlicedProfile(slicePrefix,resultSectionCode,resultSectionName,qu
   * title 1..1 MS
     * ^short = "健診問診結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
     * ^definition = "健診問診結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
-  * title = {resultSectionName} (exactly)
+  * title = "{resultSectionName}" (exactly)
   * code 1..1 MS
   * code = $section_code_cs#{questSectionCode} "{questSectionName}"
   * code.coding  1..1
