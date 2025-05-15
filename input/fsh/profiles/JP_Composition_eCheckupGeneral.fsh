@@ -21,8 +21,8 @@ Expression: "meta.profile.where($this='http://jpfhir.jp/fhir/eCheckup/StructureD
 RuleSet: checkupSlicedProfile(slicePrefix,resultSectionCode,resultSectionName,questSectionCode,questSectionName)
 * section[{slicePrefix}_observations]
   * title 1..1 MS
-  * title ^ short = "健診検査結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
-  * title ^ definition = "健診検査結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
+    * ^short = "健診検査結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
+    * ^definition = "健診検査結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
   * title = {resultSectionName} (exactly)
   * code 1..1 MS
   * code = $section_code_cs#{resultSectionCode} "{resultSectionName}"
@@ -34,8 +34,8 @@ RuleSet: checkupSlicedProfile(slicePrefix,resultSectionCode,resultSectionName,qu
   * entry only Reference(JP_Observation_eCheckupGeneral or JP_ObservationGroup_eCheckupGeneral or JP_CoverageInsurance_eCheckupGeneral or JP_CoverageService_eCheckupGeneral)
 * section[{slicePrefix}_questionnaire]
   * title 1..1 MS
-  * title ^ short = "健診問診結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
-  * title ^ definition = "健診問診結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
+    * ^short = "健診問診結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
+    * ^definition = "健診問診結果のセクションタイトル。各健診制度ごとに定められた固定値を設定する。"
   * title = {resultSectionName} (exactly)
   * code 1..1 MS
   * code = $section_code_cs#{questSectionCode} "{questSectionName}"
