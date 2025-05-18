@@ -14,8 +14,9 @@ Description: "健診結果報告書　Patientリソース　患者情報(電子�
 
 // 派生済み　* obeys valid-system-local-patientID
 // 派生済み　* obeys either-KanjiName-KanaName-exist
-* obeys valid-system-insurance-patientIdentifier   // 2024.10.19　制約チェックを修正（CLINSと一致させた）
+* obeys valid-system-insurance-patientIdentifier   // 2025.5.19　制約チェックを修正（CLINSと一致させた）
 * obeys valid-value-insurance-patientIdentifier  // 2024.10.19　制約チェックを修正（CLINSと一致させた）
+* obeys valid-value-publicPayer-patientIdentifier // 2025.5.19　制約チェックを修正（CLINSと一致させた）
 
 //* obeys institurionNumber
 
