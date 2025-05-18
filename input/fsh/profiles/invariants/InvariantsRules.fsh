@@ -24,7 +24,7 @@ Severity: #error
 Expression: "(identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.51.').count()=1 and (identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.51.')).system.substring(31,1) = '1' and (identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.51.')).system.substring(32).matches('^[0-4][0-9][1-3][0-9]{7}$')) or (identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.51.').empty())"
 
 
-Invariant: valid-system-local-patientID-with-institutionNumber　//未使用
+Invariant: valid-system-local-patientID-with-institutionNumber //未使用
 Description: "R1011:施設患者IDを記述する場合には、identifier.systemは、'urn:oid:1.2.392.100495.20.3.51.[1+施設番号10桁]'であり、かつその施設番号10桁はextension[eCS_InstitutionNumber].valueIdentifier.value値と一致しなければならない。"
 Severity: #error
 Expression: "(identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.51.').count()=1 and (identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.51.')).system.substring(31,11) = '1' + extension('http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber').value.ofType(Identifier).value) or (identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.51.').empty())"
@@ -57,26 +57,26 @@ Severity: #error
 Expression: "value.ofType(Identifier).value.matches('[0-4][0-9][1-3][0-9]{7}')"
 
 
-Invariant: valid-system-local-doctorID 　//未使用
+Invariant: valid-system-local-doctorID   //未使用
 Description: "R1090:施設医師IDを記述する場合には、identifier.systemは、'urn:oid:1.2.392.100495.20.3.41.[1+施設番号10桁]'でなければならない。"
 Severity: #error
 Expression: "(identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.41.').count()=1 and (identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.41.')).system.substring(31,1) = '1' and (identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.41.')).system.substring(32).matches('^[0-4][0-9][1-3][0-9]{7}$')) or (identifier.where(system.substring(0,31) = 'urn:oid:1.2.392.100495.20.3.41.').empty())"
 
 // R2011-  アレルギー・薬剤アレルギー等関係チェック
-Invariant: warning-medication-allergy　//未使用
+Invariant: warning-medication-allergy //未使用
 Description: "注意喚起：R2011:薬剤アレルギー等情報として本リソース種別を使用するのであれば、category要素は\"medication\"で、criticality要素は\"high\"を設定しなければならない。このままcriticality要素が\"high\"以外で差し支えなければ修正不要。"
 Severity: #warning
 Expression: "(category.where($this='medication').exists() and criticality='high') or (category.where($this='medication').exists()).not()"
 
 
 // R2012  薬剤アレルギー等で「YJまたは一般名医薬品コード」を使用すること（電子カルテ情報交換サービスの場合）
-Invariant: valid-contraIndication-code　//未使用
+Invariant: valid-contraIndication-code //未使用
 Description: "R2012:薬剤アレルギー等情報としてcategory要素は\"medication\"で、criticality要素は\"high\"の場合には、code要素はYJまたは一般名医薬品コードでなければならない。それ以外の（薬剤アレルギー等でない）場合にはJFAGYコードを使用すること。"
 Severity: #error
 Expression: "(category.where($this='medication').exists() and criticality='high' and (code.coding.where(system = 'http://capstandard.jp/iyaku.info/CodeSystem/YJ-code').count()=1 or code.coding.where(system = 'urn:oid:1.2.392.100495.20.1.81').count()=1)) or (category.where($this='medication').count()=0 or criticality!='high')"
 
 // R2013  アレルギーではJFAGYを使用すること（電子カルテ情報交換サービスの場合）
-Invariant: valid-allergy-code　//未使用
+Invariant: valid-allergy-code //未使用
 Description: "R2013:薬剤アレルギー等でないアレルギーの場合にはJFAGYコードを使用すること。"
 Severity: #error
 Expression: "(category.where($this='medication').count()=1 and criticality='high') or ((category.where($this='medication').count()=0 or criticality!='high') and (code.coding.where(system = 'http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS').count()=1 or  code.coding.where(system = 'http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyNonFoodNonMedicationAllergen_CS').count()=1 or code.coding.where(system = 'http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyMedicationAllergen_CS').count()=1))"
