@@ -11,7 +11,7 @@ on:
   pull_request:
     branches: [ develop1.0-forV1.6.0 ]
 env:
-  release_version : 1.6.0-pre20250515a
+  release_version : 1.6.0-pre20250519a
 jobs:
   turn1:
     runs-on: ubuntu-latest
