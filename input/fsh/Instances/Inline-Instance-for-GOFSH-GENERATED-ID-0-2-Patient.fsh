@@ -33,5 +33,5 @@ Usage: #inline
 
 * contact.extension[ptContactPosition].valueString = "課長"
 * contact.relationship.coding = $patient-relationship-cs#1000 "勤務先"
-* contact.organization =  Reference(Inline-Instance-for-4-Organization)
+* contact.organization =  Reference(urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407)
 * contact.period.start = "2020-01-01"
