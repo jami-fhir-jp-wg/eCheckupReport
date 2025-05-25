@@ -1,9 +1,24 @@
 //--------------------------------------------------------------------
+// 添付文書フォーマットコード	DocumentReference.format ValueSet
+//	添付文書のフォーマット(例：CDA R2形式）を示すValueSet
+//--------------------------------------------------------------------
+ValueSet: ECheckup_valueSet_attachementFormat
+Id: eCheckup-valueSet-attachementFormat
+Description: "添付文書フォーマットコードvalueSet"
+Title: "添付文書フォーマットコードvalueSet"
+* ^url = "http://jpfhir.jp/fhir/eCheckup/ValueSet/attachement-format"
+* ^version = "1"
+* ^experimental = false
+* include codes from system $attachement-format
+//* #cdar2_hc08_v08	"CDA R2形式特定健診"
+//* #cdar2_jahis_18007	"JAHIS 健康診断報告書規格"
+
+//--------------------------------------------------------------------
 // 結果報告実施機関種別コードValueSet
 // $JP_OrganizationCategory_VS = http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
 //--------------------------------------------------------------------
-ValueSet: ECheckup_codeSystem_organizationCategory_VS
-Id: eCheckup-codeSystem-organizationCategory-vs
+ValueSet: ECheckup_valueSet_organizationCategory_VS
+Id: eCheckup-valueSet-organizationCategory-vs
 Title: "結果報告実施機関種別コード ValueSet"
 Description: "結果報告実施機関コード ValueSet"
 * ^url = $JP_OrganizationCategory_VS
@@ -231,3 +246,5 @@ Description: "厚労省電子処方CDA規格別表11 保険種別コード Value
 //* #6 "自費"
 //* #7 "後期高齢者"
 //* #8 "公費"
+
+

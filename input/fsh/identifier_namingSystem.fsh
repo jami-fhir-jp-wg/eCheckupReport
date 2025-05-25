@@ -84,6 +84,6 @@ Usage: #definition
 * date = "2025-05-25"
 * kind = #identifier
 * description = "JP_specimen_NamingSystem"
-* uniqueId[+].type = #other
+* uniqueId[+].type = #uri
 * uniqueId[=].value = "specimen"
 
