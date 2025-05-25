@@ -11,5 +11,7 @@ Description: "健診検査結果　身長　162.3 cm 　　JLAC10=9N001000000000
 * category = $JP_SimpleObservationCategory_CS#body-measurement
 * code = $specialCheckup_observations_cs#9N001000000000001 "身長"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+* performer = Reference(urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba)
 * effectiveDateTime = "2020-04-04"
+
 * valueQuantity = 162.3 'cm' "cm"

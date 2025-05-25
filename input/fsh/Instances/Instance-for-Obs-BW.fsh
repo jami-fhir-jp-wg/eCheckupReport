@@ -11,5 +11,7 @@ Description: "健診検査結果　体重　65.5 cm 　　JLAC10=9N0060000000000
 * category = $JP_SimpleObservationCategory_CS#body-measurement
 * code = $specialCheckup_observations_cs#9N006000000000001 "体重"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+* performer = Reference(urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba)
 * effectiveDateTime = "2020-04-04"
+
 * valueQuantity = 65.5 'kg' "kg"

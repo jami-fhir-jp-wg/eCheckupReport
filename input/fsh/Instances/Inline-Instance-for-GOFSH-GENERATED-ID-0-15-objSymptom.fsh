@@ -6,6 +6,7 @@ Usage: #inline
 * status = #final
 * category = $JP_SimpleObservationCategory_CS#exam
 * code = $specialCheckup_observations_cs#9N066000000000011 "他覚症状"
+* performer = Reference(urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba)
 * effectiveDateTime = "2020-04-04"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * valueCodeableConcept = urn:oid:1.2.392.200119.6.2001#2 "特記すべきことなし"

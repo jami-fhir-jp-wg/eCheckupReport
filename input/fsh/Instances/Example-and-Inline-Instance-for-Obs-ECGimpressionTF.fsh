@@ -11,7 +11,9 @@ Description: "健診検査結果　心電図(所見の有無) 　　JLAC10=9A110
 * category = $JP_SimpleObservationCategory_CS#exam
 * code = $specialCheckup_observations_cs#9A110160700000011 "心電図(所見の有無)"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+* performer = Reference(urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba)
 * effectiveDateTime = "2020-04-04"
+
 * valueCodeableConcept.coding.system = "urn:oid:1.2.392.200119.6.2002"
 * valueCodeableConcept.coding.code = #1
 * valueCodeableConcept.coding.display = "所見あり"
@@ -30,7 +32,9 @@ Description: "健診検査結果　心電図所見の有無 　　JLAC10=9A11016
 * category = $JP_SimpleObservationCategory_CS#exam
 * code = $specialCheckup_observations_cs#9A110160700000011 "心電図(所見の有無)"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+* performer = Reference(urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba)
 * effectiveDateTime = "2020-04-04"
+
 * valueCodeableConcept.coding.system = "urn:oid:1.2.392.200119.6.2002"
 * valueCodeableConcept.coding.code = #1
 * valueCodeableConcept.coding.display = "所見あり"

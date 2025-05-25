@@ -11,5 +11,7 @@ Description: "健診検査結果　BMI　24.9 cm 　　JLAC10=9N011000000000001"
 * category = $JP_SimpleObservationCategory_CS#body-measurement
 * code = $specialCheckup_observations_cs#9N011000000000001 "BMI"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+* performer = Reference(urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba)
 * effectiveDateTime = "2020-04-04"
+
 * valueQuantity = 24.9 'kg/m2' "kg/m2"

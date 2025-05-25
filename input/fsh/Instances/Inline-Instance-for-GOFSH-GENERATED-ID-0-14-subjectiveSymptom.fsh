@@ -7,6 +7,7 @@ Usage: #inline
 * category = $JP_SimpleObservationCategory_CS#exam
 * code = $specialCheckup_observations_cs#9N061000000000011 "自覚症状"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+* performer = Reference(urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba)
 * effectiveDateTime = "2020-04-04"
 * valueCodeableConcept = urn:oid:1.2.392.200119.6.2001#1 "特記すべきことあり"
 * component.code = $specialCheckup_observations_cs#9N061160800000049 "自覚症状(所見)"
