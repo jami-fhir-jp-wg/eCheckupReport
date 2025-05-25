@@ -8,6 +8,12 @@
 
 ### Ver1.5.0-20250522 (2025-05-22) 1.6.0向け準備公開版<br> 
   - validationガイドで、使用するterminologyをjpfhir-terminology.r4-1.3.0.tgzからjpfhir-terminology.r4-1.4.0.tgzに更新した。
+  - 特定健診　血清クレアチニン（対象者）結果コードのCodeSystemを追加した。
+  - HL7JP_Patient_Relationship_CS(urn:oid:2.16.840.1.113883.2.2.1.6.5006) およびValueSetに職場関係情報コードを追加した。
+  - JP_eCS_Department: 拡張が記述できるcontextにOrganizationリソースを追加した。
+  - JP_Composition_eCheckupGeneralなど各リソース: 要素の多重度についてPDF版仕様書と整合性をとって明記した。
+  - JP_Organization_eCheckupGeneral: 都道府県番号、医療機関区分、医療機関番号、診療科情報をextensionで記述できるようにした。
+  - JP_Patient_CLINS_eCheckupGeneral: 生活保護受給者番号情報を記述できるようにした。
 
 ### Ver1.5.0 (2025-01-29) 2025-02-07 バージョン番号の変更なし<br> 
   - 含まれているCodeSystemのうち、以下のURLのCodeSystemのコードdisplay値にミススペルやコード定義不良があったので修正した。
