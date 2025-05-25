@@ -32,7 +32,7 @@ Usage: #inline
 * address.country = "JP"
 
 * contact.extension[ptContactPosition].valueString = "課長"
-* contact.relationship.coding $patient-relationship-cs#1000 "勤務先"
+* contact.relationship.coding = $patient-relationship-cs#1000 "勤務先"
 * contact.organization 1..1 MS
 * contact.organization.reference = Reference(Inline-Instance-for-4-Organization)
 * contact.period.start = "2020-01-01"
