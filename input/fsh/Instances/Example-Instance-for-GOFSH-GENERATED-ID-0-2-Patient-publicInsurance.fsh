@@ -9,7 +9,7 @@ Usage: #example
 //* identifier[+].system = "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID"
 //* identifier[=].value = "00012345:あいう:３８７４７６:01"
 * identifier[+].system = $JP_PublicPayer_memberID
-* identifier[=].value = "999123456::１２３４５６７:"
+* identifier[=].value = "99123456::１２３４５６７:"
 
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #IDE
@@ -32,3 +32,4 @@ Usage: #example
 
 * address.postalCode = "123-4567"
 * address.country = "JP"
+

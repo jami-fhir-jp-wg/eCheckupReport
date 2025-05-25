@@ -39,9 +39,9 @@ Description:    "健診結果報告書　Organizationリソース　検診結果
     JP_eCS_Department named department ..1
 
 * extension[department] 0.. MS
-* extension[department] ^short = "診療科情報"
-* extension[department] ^definition = "診療科情報。コード化する場合にはSS-MIX2診療科コードを使用する。"
-* extension[department] ^comment = "診療科だけでなく、医療機関の部署も記述しても差し支えない。ただし支部や分院のように別の組織ではあるが階層関係がある場合には、別のOrganizationリソースで記述し、そのpartOf要素に上位の機関のリソースを参照するようにすること。"
+* extension[department] ^short = "診療科情報,所属部署"
+* extension[department] ^definition = "診療科情報,所属部署。医療機関内の診療科をコード化する場合にはSS-MIX2診療科コードを使用する。"
+* extension[department] ^comment = "診療科だけでなく、所属部署も記述しても差し支えない。ただし支部や分院のように別の組織ではあるが階層関係がある場合には、別のOrganizationリソースで記述し、そのpartOf要素に上位の機関のリソースを参照するようにすること。"
 * extension[department].valueCodeableConcept 1.. MS
 * extension[department].valueCodeableConcept.text 1..1 MS
 
