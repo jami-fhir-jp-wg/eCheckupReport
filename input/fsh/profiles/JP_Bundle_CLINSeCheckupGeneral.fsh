@@ -120,7 +120,7 @@ and documentReference 0..* MS // 添付文書情報
 * entry[organization].resource only  Organization
 //
 * entry[organization] ^slicing.discriminator.type = #profile
-* entry[organization] ^slicing.discriminator.path = "resource"
+* entry[organization] ^slicing.discriminator.path = "resource.resolve()"
 * entry[organization] ^slicing.rules = #closed
 * entry[organization] contains org 0.. MS and ins 0.. MS
 * entry[organization][org].resource only JP_Organization_eCheckupGeneral
