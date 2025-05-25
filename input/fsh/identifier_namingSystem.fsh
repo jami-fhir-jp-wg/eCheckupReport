@@ -20,6 +20,18 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 
+Instance: jp-local-patient-identifier-root
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_local_patient-identifier_root_NamingSystem"
+* status = #active
+* date = "2025-05-25"
+* kind = #root
+* description = "JP_local_patient-identifier_root_NamingSystem"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.200119.6.102"
+
+
 Instance: jp-local-patient-identifier-11311234567
 InstanceOf: NamingSystem
 Usage: #definition
