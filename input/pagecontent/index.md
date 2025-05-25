@@ -76,14 +76,17 @@ table th {
 </style>
 
 
-# 健診結果報告書HL7 FHIR記述仕様第1.3版　実装ガイド
+# 健診結果報告書HL7 FHIR記述仕様　実装ガイド
 
 ## 本実装ガイドの位置づけ
-この実装ガイドは、HL7 FHIR（以下、単に「FHIR 」という）に準拠した健康診断結果報告書の記述仕様第1.3版の実装ガイドである。
+この実装ガイドは、HL7 FHIR（以下、単に「FHIR 」という）に準拠した健康診断結果報告書の記述仕様の実装ガイドである。
+
+  - [実装ガイドプロファイル](https://jpfhir.jp/fhir/eCheckup/ig20250522/artifacts.html)
 
 仕様については、以下のPDF版またはHTMLページを参照のこと。
 
-  - [健康診断結果報告書 HL7FHIR 記述仕様(PDF版)](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf)
+  - [健康診断結果報告書 HL7FHIR 記述仕様(PDF版)v1.5](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf)
+  - [健康診断結果報告書 HL7FHIR 記述仕様(PDF版)v1.5-20250522（v1.6公開準備版） ](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v150_20250522.pdf)
  
 
 ## 仕様・実装ガイド策定
