@@ -46,15 +46,15 @@ Expression: "(identifier.where(system = 'http://jpfhir.jp/fhir/clins/Idsystem/JP
 // [^:^\\\\s^　]{7}　の意味は、半角コロンでない文字、または半角空白でない文字、または全角空白でない文字、のいずれかが７文字　という意味。
 
 // R1021-  施設IDチェック
-Invariant: valid-value-institutionNumber
-Description: "R1021:医療機関番号　extension[eCS_InstitutionNumber].valueIdentifier.value値は、２桁都道府県番号、１桁医療機関区分(1|2|3)、７桁保険医療機関番号の連結１０桁とする。"
-Severity: #error
-Expression: "extension('http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber').value.ofType(Identifier).value.matches('[0-4][0-9][1-3][0-9]{7}')"
+//Invariant: valid-value-institutionNumber
+//Description: "R1021:医療機関番号　extension[eCS_InstitutionNumber].valueIdentifier.value値は、２桁都道府県番号、１桁医療機関区分(1|2|3)、７桁保険医療機関番号の連結１０桁とする。"
+//Severity: #error
+//Expression: "extension('http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber').value.ofType(Identifier).value.matches('[0-4][0-9][1-3][0-9]{7}')"
 
 Invariant: valid-value-institutionNumberExtension
 Description: "施設番号　valueIdentifier.value値は、２桁都道府県番号、１桁医療機関区分(1|2|3)、７桁保険医療機関番号の連結１０桁とする。"
 Severity: #error
-Expression: "value.ofType(Identifier).value.matches('[0-4][0-9][1-3][0-9]{7}')"
+Expression: "value.ofType(Identifier).value.matches('^[0-4][0-9][1-3][0-9]{7}$')"
 
 
 Invariant: valid-system-local-doctorID   //未使用
