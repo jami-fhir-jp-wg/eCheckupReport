@@ -23,7 +23,7 @@ Usage: #definition
 Instance: jp-local-patient-identifier-root
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "JP_local_patient-identifier_root_NamingSystem"
+* name = "JP_local_patient_identifier_root_NamingSystem"
 * status = #active
 * date = "2025-05-25"
 * kind = #root
@@ -32,10 +32,10 @@ Usage: #definition
 * uniqueId[=].value = "urn:oid:1.2.392.200119.6.102"
 
 
-Instance: jp-local-patient-identifier-11311234567
+Instance: -identifier-11311234567
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "JP_local_patient-identifier_11311234567_NamingSystem"
+* name = "JP_local_patient_identifier_11311234567_NamingSystem"
 * status = #active
 * date = "2025-05-25"
 * kind = #identifier
