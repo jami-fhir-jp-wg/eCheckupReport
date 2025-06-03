@@ -3,7 +3,7 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                  │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: eCheckupReport
+id: eCheckupReport　#このidがsushiで生成されるImplementationGuide-<id>.jsonの<id＞となる。
 canonical: http://jpfhir.jp/fhir/eCheckupReport
 name: "JP_eCheckup_FHIR_IG"
 title: "健診結果報告FHIR記述仕様　実装ガイド v 1.x.x-temp"
@@ -25,10 +25,10 @@ copyright:  （一社）日本HL7協会、（一社）日本医療情報学会.�
 jurisdiction: 'urn:iso:std:iso:3166-2#JP'
 dependencies:
   jp-core.r4:
-    uri: http://jpfhir.jp/fhir/core/ImplementationGuide/
+    uri: http://jpfhir.jp/fhir/core
     version: 1.1.2-clins
   jpfhir-terminology.r4:
-    uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide/
+    uri: http://jpfhir.jp/fhir/jpfhir-terminology
     version: current
 #----------------------------------------
 # ページタイトル名称設定
