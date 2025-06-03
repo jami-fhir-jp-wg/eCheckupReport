@@ -28,12 +28,12 @@ jurisdiction:
     code: JP
     display: Japan
 dependencies:
-  jp-core.r4:
-    uri: "http://jpfhir.jp/fhir/core/ImplementationGuide/jpfhir.jp.core
-    version: 1.1.2-clins
-  jpfhir-terminology.r4:
-    uri: http://jpfhir.jp/fhir/core/jp-fhir-terminology/ImplementationGuide/jp-fhir-terminology
-    version: current
+  jp-core.r4: 1.1.2-clins
+#    uri: http://jpfhir.jp/fhir/core/ImplementationGuide/jpfhir.jp.core
+#    version: 1.1.2-clins
+  jpfhir-terminology.r4: current
+#    uri: http://jpfhir.jp/fhir/core/jp-fhir-terminology/ImplementationGuide/jp-fhir-terminology
+#    version: current
 #----------------------------------------
 # ページタイトル名称設定
 #----------------------------------------
