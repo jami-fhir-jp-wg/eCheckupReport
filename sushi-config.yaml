@@ -23,7 +23,10 @@ publisher:
   url: http://jpfhir.jp
   email: office@hlfhir.jp
 copyright:  （一社）日本HL7協会、（一社）日本医療情報学会.　CC(Creative Commons) BY-ND 4.0
-jurisdiction: 'urn:iso:std:iso:3166-2#JP'
+jurisdiction:
+  - system: urn:iso:std:iso:3166
+    code: JP
+    display: Japan
 dependencies:
   jp-core.r4:
     uri: http://jpfhir.jp/fhir/core
