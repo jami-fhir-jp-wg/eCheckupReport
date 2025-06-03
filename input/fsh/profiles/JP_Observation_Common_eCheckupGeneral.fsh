@@ -55,7 +55,7 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * value[x] ^definition = "検査結果値。検査結果がなんらなの理由で存在しない（検査不能、未実施など）場合には、この要素は存在せず、dataAbsentReasonが必須。"
 
 * value[x] only Quantity or CodeableConcept or string or dateTime
-* valueQuantity 0..1
+* valueQuantity 0..1 MS
 * valueQuantity ^short = "検査結果が「数値」の場合、値、単位を設定する。"
 * valueQuantity ^comment = "ー"
 * valueQuantity.unit 0..1 MS
@@ -65,13 +65,13 @@ Description:    "健診結果報告書　Observationリソース　検査結果�
 * valueQuantity.code 0..1 MS
   * insert relative_short_definition("検査結果の単位のコード。マスターに単位コード指定があれば記述する。")
 
-* valueString 0..1
+* valueString 0..1 MS
 * valueString ^short = "検査結果値が「文字列」の場合、その文字列を設定する。"
 
-* valueDateTime 0..1
+* valueDateTime 0..1 MS
 * valueDateTime ^short = "検査結果値が「日付型」の場合、日付文字列をyyyy-mm-ddの形式で設定する。yyyy-mm-ddの形式で"
 
-* valueCodeableConcept 0..1
+* valueCodeableConcept 0..1 MS
 * valueCodeableConcept.coding  1..1
 //* valueCodeableConcept.coding.extension 0..*
 * valueCodeableConcept.coding.extension  ^slicing.discriminator.type = #value

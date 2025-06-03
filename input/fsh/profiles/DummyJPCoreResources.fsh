@@ -196,6 +196,7 @@ Title:  "汎用診療情報報告: JP_Observation_Common_eCS"
 
 * meta.lastUpdated 0.. MS
 
+/*
 Profile:        JP_DocumentReference_CDAdocument
 Parent:			JP_DocumentReference
 Id:             JP-DocumentReference-CDAdocument
@@ -209,9 +210,8 @@ Title: "汎用診療情報報告: JP_DocumentReference_CDAdocument"
 * ^copyright = "（一社）日本医療情報学会. CC BY-ND 4.0"
 * ^fhirVersion = #4.0.1
 //* ^language = #ja
-
 * meta.lastUpdated 0.. MS
-
+*/
 /*
 Profile:        JP_DocumentReference
 Parent:			DocumentReference
@@ -349,7 +349,7 @@ Title: "汎用診療情報報告: JP_DeviceUseStatement_eCS"
 
 * meta.lastUpdated 0.. MS
 
-
+/*
 Profile:        JP_Device
 Parent:			Device
 Id:             JP-Device
@@ -365,7 +365,7 @@ Title: "汎用ベース: JP_Device"
 //* ^language = #ja
 
 * meta.lastUpdated 0.. MS
-
+*/
 
 Profile:        JP_Device_eCS
 Parent:			JP_Device
@@ -383,7 +383,7 @@ Title: "汎用診療情報報告: JP_Device_eCS"
 
 * meta.lastUpdated 0.. MS
 
-
+/*
 Profile:        JP_Consent
 Parent:			Consent
 Id:             JP-Consent
@@ -399,6 +399,7 @@ Title: "汎用ベース: JP_Consent"
 //* ^language = #ja
 
 * meta.lastUpdated 0.. MS
+*/
 
 Profile:        JP_Consent_eCS
 Parent:			JP_Consent
@@ -413,9 +414,9 @@ Title: "汎用診療情報報告: JP_Consent_eCS"
 * ^copyright = "（一社）日本医療情報学会. CC BY-ND 4.0"
 * ^fhirVersion = #4.0.1
 //* ^language = #ja
-
 * meta.lastUpdated 0.. MS
 
+/*
 Profile:        JP_ResearchSubject
 Parent:			ResearchSubject
 Id:             JP-ResearchSubject
@@ -431,6 +432,7 @@ Title: "汎用ベース: JP_ResearchSubject"
 //* ^language = #ja
 
 * meta.lastUpdated 0.. MS
+*/
 
 Profile:        JP_ResearchSubject_eCS
 Parent:			JP_ResearchSubject
@@ -448,6 +450,7 @@ Title: "汎用診療情報報告: JP_ResearchSubject_eCS"
 
 * meta.lastUpdated 0.. MS
 
+/*
 Profile:        JP_ResearchStudy
 Parent:			ResearchStudy
 Id:             JP-ResearchStudy
@@ -463,6 +466,7 @@ Title: "汎用ベース: JP_ResearchStudy"
 //* ^language = #ja
 
 * meta.lastUpdated 0.. MS
+*/
 
 Profile:        JP_ResearchStudy_eCS
 Parent:			JP_ResearchStudy
@@ -480,6 +484,7 @@ Title: "汎用診療情報報告: JP_ResearchStudy_eCS"
 
 * meta.lastUpdated 0.. MS
 
+/*
 Profile:        JP_RelatedPerson
 Parent:			RelatedPerson
 Id:             JP-RelatedPerson
@@ -495,6 +500,7 @@ Title: "汎用ベース: JP_RelatedPerson"
 //* ^language = #ja
 
 * meta.lastUpdated 0.. MS
+*/
 
 Profile:        JP_RelatedPerson_eCS
 Parent:			JP_RelatedPerson
@@ -512,6 +518,7 @@ Title: "汎用診療情報報告: JP_RelatedPerson_eCS"
 
 * meta.lastUpdated 0.. MS
 
+/*
 Profile:        JP_Binary
 Parent:			Binary
 Id:             JP-Binary
@@ -527,3 +534,4 @@ Title: "汎用ベース: JP_Binary"
 //* ^language = #ja
 
 * meta.lastUpdated 0.. MS
+*/
