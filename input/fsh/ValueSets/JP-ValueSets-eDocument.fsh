@@ -8,7 +8,7 @@ Description: "健診結果　文書区分コード ValueSet"
 Title: "健診結果　文書区分コード ValueSet"
 * ^url = $doctype_codes_vs
 * ^experimental = false
-* ^version = "1"
+* ^version = "1.0.0"
 * include codes from system $doctype_codes_cs
 
 

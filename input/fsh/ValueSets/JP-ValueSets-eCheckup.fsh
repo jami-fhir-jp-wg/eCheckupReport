@@ -7,7 +7,7 @@ Id: eCheckup-valueSet-attachementFormat
 Description: "添付文書フォーマットコードvalueSet"
 Title: "添付文書フォーマットコードvalueSet"
 * ^url = "http://jpfhir.jp/fhir/eCheckup/ValueSet/attachement-format"
-* ^version = "1"
+* ^version = "1.0.0"
 * ^experimental = false
 * include codes from system $attachement-format
 //* #cdar2_hc08_v08	"CDA R2形式特定健診"
@@ -23,7 +23,7 @@ Title: "結果報告実施機関種別コード ValueSet"
 Description: "結果報告実施機関コード ValueSet"
 * ^url = $JP_OrganizationCategory_VS
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * ^experimental = false
 * include codes from system $JP_OrganizationCategory_CS
 
@@ -37,7 +37,7 @@ Title: "健診結果　健診項目コード ValueSet"
 * ^url = $JP_ObservationCode_eCheckupGeneral_vs
 * ^experimental = false
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * include codes from system $JP_ObservationLabResultCode_CS  // JLAC10
 * include codes from system $specialCheckup_observations_cs // 特定健診項目
 //* include codes from system urn:oid:1.2.392.200119.6.1005 // 特定健診項目
@@ -54,7 +54,7 @@ Title: "健診プログラムサービスコード ValueSet"
 * ^url = $checkup_programService_vs
 * ^experimental = false
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * include codes from system $checkup_programService_cs
 
 /*
@@ -79,7 +79,7 @@ Title: "健診結果　報告区分コード ValueSet"
 * ^experimental = false
 * ^url = $report_category_vs
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * $report_category_cs#10   //"特定健診"
 * $report_category_cs#41   //"事業者健診"
 * $report_category_cs#42   //"自治体検診"
@@ -99,7 +99,7 @@ Title: "健診結果　報告区分コード(特定健診制度) ValueSet"
 * ^url = $report_speccategory_vs
 * ^experimental = false
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * $report_speccategory_cs#10   //"特定健診"
 * $report_speccategory_cs#40   //"健診結果報告"
 * $report_speccategory_cs#90   //"その他検診"
@@ -112,9 +112,9 @@ Title: "健診結果　報告区分コード(特定健診とそれ以外の統�
 * ^url = $report_mergedcategory_vs
 * ^experimental = false
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 //* include codes from valueset $report_speccategory_vs
 * include codes from valueset $report_category_vs
 
@@ -145,7 +145,7 @@ Description: "受診形態区分"
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * include codes from system $checkup_encounter_type_cs
 
 //--------------------------------------------------------------------
@@ -160,7 +160,7 @@ Description: "受診区分"
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * include codes from system $encounter_cateogry_cs
 
 
@@ -176,7 +176,7 @@ Description: "健診結果セクションコード ValueSet"
 Title: "健診結果セクションコード ValueSet"
 * ^url = $section_code_vs
 * ^experimental = false
-* ^version = "1"
+* ^version = "1.0.0"
 //* #01910	"健診結果セクション"
 * include codes from system $section_code_cs
 
@@ -189,7 +189,7 @@ Title: "健診一連検査グループコードの関連コードValueSet"
 Description: "健診一連検査グループコードの関連コードValueSet"
 * ^url = $observationGroupRelationship_codes_vs //http://jpfhir.jp/fhir/eCheckup/ValueSet/observationGroupRelationship-codes
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
 * include codes from system $observationGroupRelationship_codes_cs
@@ -206,7 +206,7 @@ Title: "健診一連検査グループコード ValueSet"
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * include codes from system $observationGroup_codes_cs
 
 /*
@@ -235,7 +235,7 @@ Description: "厚労省電子処方CDA規格別表11 保険種別コード Value
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-09-20"
-* ^version = "1"
+* ^version = "1.0.0"
 * include codes from system $JAMI_InsuranceMajorCategory_CS
 
 //* #1 "医保"

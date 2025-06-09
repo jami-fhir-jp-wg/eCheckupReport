@@ -9,7 +9,7 @@ Description: "職場関係情報コード ValueSet"
 Title: "職場関係情報コード ValueSet"
 * ^url = $patient-relationship-vs
 * ^experimental = false
-* ^version = "1"
+* ^version = "1.0.0"
 * include codes from system $patient-relationship-cs
 // * #1000 "勤務先"
 // * #1010 "事業場"
