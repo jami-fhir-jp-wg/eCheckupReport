@@ -236,3 +236,4 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/observation-code
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/patient-relationship-code
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Patient_Contact_Position
+    - http://jpfhir.jp/fhir/eCheckup/ValueSet/attachement-format
