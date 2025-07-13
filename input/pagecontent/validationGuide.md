@@ -63,6 +63,7 @@ Validationの具体的手順と、出力の解釈方法について説明する�
 #####  jp検証パッケージを [pkgJp] 直下にダウンロードする。
 
 以下の３つのパッケージをOS種別にかかわらずダウンロードしする。(Windowsの場合も拡張子tgzのファイル）。ダウンロード後の解凍はしない。なお、ファイル名中のr4-x.x.xのバージョン番号部分はダウンロード時期により異なる。
+- jpfhir-terminology.r4-x.y.z.tgz のx.y.zの部分は、使用する時点で公開されている最新のバージョン文字列（例えば1.5.0など）に置き変えること。
 
   - jp-core.r4　パッケージ
 
@@ -70,7 +71,7 @@ Validationの具体的手順と、出力の解釈方法について説明する�
 
   - jpfhir-terminology.r4　パッケージ
       
-    - tgz形式 : [https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.4.0.tgz](https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.4.0.tgz)
+    - tgz形式 : [https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-x.y.ztgz](https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-x.y.z.tgz)
  　 
   - jp-eCheckupReport.r4　パッケージ
       
@@ -129,7 +130,7 @@ Validation の実行
       -best-practice ignore \
       -tx n/a  \
       -ig [pkgJp]/jp-core.r4-1.1.2-clins.tgz  \
-      -ig [pkgJp]/jpfhir-terminology.r4-1.4.0.tgz  \
+      -ig [pkgJp]/jpfhir-terminology.r4-x.y.z.tgz  \
       -ig [pkgJp]/jp-eCheckupReport.r4-1.x.x-temp.tgz  
         
 ```
@@ -155,7 +156,7 @@ Validationコマンドのパラメータ説明
   - -best-practice ignore : FHIR基底仕様においてベストプラクティスとされる推奨事項に違反している場合の警告を出さないオプション。
   - -tx n/a ：　外部のTerminologyServer を参照しないよう設定するオプション。ここでの手順では、パッケージ [jpfhir-terminology-1.x.x]をロードしてローカルに配置しているので、外部のTerminologyServerへの参照は必要がない。また異なるバージョンのものが自動的に利用されないようにこのオプションは必須。
   - -ig [pkgJp]/jp-core.r4-1.1.2-clins.tgz : jp-core.r4 v1.1.2-clins のパッケージ。必須。これがないとjp-coreを参照する際にエラーになる。
-  - -ig [pkgJp]/jpfhir-terminology-1.4.0.tgz ： jp-core.r4、jp-clinsから参照されるterminologyのパッケージ。必須。これがないと日本版CodeSystemやValueSetを参照する際にエラーになる。このパッケージには、JLAC10、医薬品マスター、標準病名マスター、ICD10分類コード表なども含まれるので、定期的に適切なバージョンへのアプデートが必要である。
+  - -ig [pkgJp]/jpfhir-terminology-x.y.z.tgz ： jp-core.r4、jp-clinsから参照されるterminologyのパッケージ。必須。これがないと日本版CodeSystemやValueSetを参照する際にエラーになる。このパッケージには、JLAC10、医薬品マスター、標準病名マスター、ICD10分類コード表なども含まれるので、定期的に適切なバージョンへのアプデートが必要である。
   - -ig [pkgJp]/jp-eCheckupReport.r4-1.x.x-temp.tgz : ３文書のひとつである、健診結果報告書仕様に従ったBundleリソースのValidationのためのプロファイル等を格納したパッケージ。必須。
 
 

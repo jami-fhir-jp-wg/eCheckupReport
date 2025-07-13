@@ -8,6 +8,7 @@
 
 ### Ver1.6.0 (2025-06-11)
   - Ver1.5.0-20250522 (2025-05-22) 1.6.0向け準備公開版 2025.6.3追記版をv1.6.0としてリリース
+  - Validationの説明で使用するjpfhir-terminology.r4　パッケージのバージョンを特定のバージョンに依存しない記載に更新した。
 
 ### Ver1.5.0-20250522 (2025-05-22) 1.6.0向け準備公開版 2025.6.3追記
   - 施設番号10桁チェックの制約ルールで10桁以上でもエラーにならない場合があるのを修正（2025.6.3）<br> 
@@ -16,8 +17,15 @@
   - HL7JP_Patient_Relationship_CS(urn:oid:2.16.840.1.113883.2.2.1.6.5006) およびValueSetに職場関係情報コードを追加した。
   - JP_eCS_Department: 拡張が記述できるcontextにOrganizationリソースを追加した。
   - JP_Composition_eCheckupGeneralなど各リソース: 要素の多重度についてPDF版仕様書と整合性をとって明記した。
+  - JP-Composition-eCheckupGeneral: 各セクションの名称の固定値を設定した。  
   - JP_Organization_eCheckupGeneral: 都道府県番号、医療機関区分、医療機関番号、診療科情報をextensionで記述できるようにした。
   - JP_Patient_CLINS_eCheckupGeneral: 生活保護受給者番号情報を記述できるようにした。
+  - JP-Observation-eCheckupGeneral: MustSupport定義変更。
+    - Observation.value[x]:valueQuantity（なし→あり）
+    - Observation.value[x]:valueString（なし→あり）
+    - Observation.value[x]:valueDateTime（なし→あり）
+    - Observation.value[x]:valueCodeableConcept（なし→あり）
+  - 拡張Patient_Contact_Position　を定義。
 
 ### Ver1.5.0 (2025-01-29) 2025-02-07 バージョン番号の変更なし<br> 
   - 含まれているCodeSystemのうち、以下のURLのCodeSystemのコードdisplay値にミススペルやコード定義不良があったので修正した。

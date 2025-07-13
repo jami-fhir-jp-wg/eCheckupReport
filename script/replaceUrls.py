@@ -19,8 +19,8 @@ with open(sys.argv[1], "r") as f:
 #            print(line, end="")
 #            m1 = re.finditer('https:\/\/simplifier\.net\/resolve\?scope=(.*?)(&.*?canonical=)',line)
 #            m2 = re.finditer('https:\/\/simplifier\.net\/resolve\?canonical=(.*?)(&.*?scope=.*?)"',line)
-            m1 = re.finditer('https://simplifier\.net/resolve\?scope=(.*?)(&.*?canonical=)',line)
-            m2 = re.finditer('https://simplifier\.net/resolve\?canonical=(.*?)(&.*?scope=.*?)"',line)
+            m1 = re.finditer('https://simplifier.net/resolve?scope=(.*?)(&.*?canonical=)',line)
+            m2 = re.finditer('https://simplifier.net/resolve?canonical=(.*?)(&.*?scope=.*?)"',line)
             if m1 :
                 for mm in m1:
 #                    print("mm1=",mm.group(1))
