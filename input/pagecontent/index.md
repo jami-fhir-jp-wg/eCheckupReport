@@ -81,18 +81,19 @@ table th {
 ## 本実装ガイドの位置づけ
 この実装ガイドは、HL7 FHIR（以下、単に「FHIR 」という）に準拠した健康診断結果報告書の記述仕様の実装ガイドである。
 
-  - [実装ガイドプロファイル](https://jpfhir.jp/fhir/eCheckup/ig20250522/artifacts.html)
+  - [実装ガイドプロファイル](https://jpfhir.jp/fhir/eCheckup/igv1/artifacts.html)
 
 仕様については、以下のPDF版またはHTMLページを参照のこと。
 
   - [健康診断結果報告書 HL7FHIR 記述仕様(PDF版)v1.6](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf)
  
 
-## 仕様・実装ガイド策定
-令和２年度厚生労働科学特別研究事業「診療情報提供書,  退院時サマリー等の電子化医療文書の相互運用性確保のための標準規格の開発研究」研究班 (研究代表：大江和彦（東京大学）)<br>
-令和３年(2021)度厚生労働科学研究費補助金事業「検診情報と栄養情報の標準的なデータ項目・様式・交換方式をFHIR準拠仕様として開発する研究」研究班 (研究代表：大江和彦（東京大学）)<br>
-日本医療情報学会NeXEHRS課題研究会、HL7FHIR 日本実装検討WGでの検討結果を反映している。<br>
-https://std.jpfhir.jp/<br>
+## 仕様・実装ガイド策定 謝辞
+  - <span style="color: black; font-size: 80%;">令和２年度厚生労働科学特別研究事業「診療情報提供書,  退院時サマリー等の電子化医療文書の相互運用性確保のための標準規格の開発研究」研究班 (研究代表：大江和彦（東京大学）)<a href="https://mhlw-grants.niph.go.jp/project/145722">☞</a></span>
+  - <span style="color: black; font-size: 80%;">令和３年(2021)度厚生労働科学研究費補助金事業「検診情報と栄養情報の標準的なデータ項目・様式・交換方式をFHIR準拠仕様として開発する研究」研究班 (研究代表：大江和彦（東京大学）)</a></span>
+  - <span style="color: black; font-size: 80%;">日本医療情報学会NeXEHRS研究会「FHIR日本実装検討WG」<a href="https://jpfhir.jp/">☞</a></span>
+  - <span style="color: black; font-size: 80%;">日本医療情報学会標準策定・維持管理部会<a href="https://www.jami.jp/jamistd/standards-development/">☞</a></span>
+  
 Authorized by （一社）日本HL7協会 for Ver.1.0<br>
 
 *以下余白*
