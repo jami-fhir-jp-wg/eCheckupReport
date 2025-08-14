@@ -263,6 +263,7 @@ Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 Alias: $JAMI_InsuranceMajorCategory_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuranceMajorCategory   // urn:oid:1.2.392.100495.20.2.61
 Alias: $JAMI_InsuredPersonCategory_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuredPersonCategory    //　urn:oid:1.2.392.100495.20.2.62
 Alias: $JAMI_InsuranceMajorCategory_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/InsuranceMajorCategory   // urn:oid:1.2.392.100495.20.2.61
+Alias: $JAMI_InsuranceMajorCategory_eCheckupGeneral_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/InsuranceMajorCategory_eCheckupGeneral   // urn:oid:1.2.392.100495.20.2.61
 Alias: $JAMI_InsuredPersonCategory_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/InsuredPersonCategory    //　urn:oid:1.2.392.100495.20.2.62
 
 Alias: $JP_IdSystemInsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber // urn:oid:1.2.392.100495.20.3.61
