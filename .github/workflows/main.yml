@@ -2,16 +2,16 @@ name: Ohe-Develp and  Dispatch
 on:
   push:
     branches: 
-      - v1.6.0
+      - v1.7.0pre
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
       - 'custom-template/**'
       - '.github/workflows/main.yml'
   pull_request:
-    branches: [ v1.6.0 ]
+    branches: [ v1.7.0pre]
 env:
-  release_version : 1.6.0
+  release_version : 1.7.0pre
 jobs:
   turn1:
     runs-on: ubuntu-latest
