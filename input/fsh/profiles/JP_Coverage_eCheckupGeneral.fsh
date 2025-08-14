@@ -38,8 +38,17 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * extension[insuredPersonSubNumber].value[x] ^short = "個人単位被保険者番号（枝番)"
 * extension[insuredPersonSubNumber].value[x] ^definition = "被保険者証記号・番号に対する個人単位被保険者番号（枝番）。「オンライン又は光ディスク等による請求に係る記録条件仕様（医科用）」に従い、桁数が2桁に満たない場合は、先頭に\"0\"を記録し2桁で記録する。\r\n最大２バイトで数字半角文字。\r\n電子資格確認を行った場合は、資格確認時にオンライン資格確認等システムから通知した枝番を記録する。健康保険被保険者証、受給資格者票及び国民健康保険被保険者証等による資格確認を行った場合は、当該証の「枝番」欄の番号を記録する。\r\n 「枝番」が２桁に満たない場合は、先頭に“0”を記録し、２桁で記録する。\r\n被保険者証等に「枝番」が記載されていない場合は、記録を省略しても差し支えない。保険者が後期高齢者医療である場合又は負担者種別が公費負担医療であ場合は、記録を省略する。"
 * identifier 0..1 MS
+  * ^short = "この保険情報の一意の識別子"
+  * ^definition = "保険情報の一意の識別子として、ここでは電子カルテ情報共有サービスでの被保険者個人識別子と同じ値を同じ仕様で設定する。"
+  * ^comment = "被保険者個人識別子の仕様は、identifier.system要素、identifier.value要素のそれぞれcomment記述を参照のこと。"
+  * system 1..1 MS
+    * ^short = "被保険者個人識別子を規定するsystem URL（http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID）"
+    * ^definition = "被保険者個人識別子を規定するsystem URL（http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID）"
+    * ^comment = "被保険者個人識別子を規定するsystem URL。電子カルテ情報共有サービスでの被保険者個人識別子におけるsystem値（http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID）と同じ。"
   * value 1..1 MS
-    * ^short = "被保険者個人識別子を設定する。仕様は電子カルテ情報共有サービスの被保険者個人識別子の仕様を参照のこと。"
+    * ^short = "被保険者個人識別子を設定する。"
+    * ^definition = "被保険者個人識別子を設定する。仕様はcomment記述を参照。"
+    * ^comment = "被保険者個人識別子は、以下の通りとする（https://jpfhir.jp/fhir/eCS/ig/StructureDefinition-JP-Patient-eCS.html#%E8%A2%AB%E4%BF%9D%E9%99%BA%E8%80%85%E5%80%8B%E4%BA%BA%E8%AD%98%E5%88%A5%E5%AD%90%E3%81%AE%E6%A0%BC%E7%B4%8D）。"
 * status = #active (exactly)
 * status ^short = "リソースインスタンスのステータス"
 * status ^definition = "リソースインスタンスのステータス。固定値active。真に有効な保険かどうかは意味しない。"
@@ -50,9 +59,9 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * type.coding.system 1.. MS
 * type.coding.system = $JAMI_InsuranceMajorCategory_CS (exactly)
 * type.coding.system ^short = "保険種別コード体系を識別するURI"
-* type.coding.system ^definition = "保険種別コード　厚生労働省電子処方箋 CDA 記述仕様第１版　別表１１のOIDを使用する。"
+* type.coding.system ^definition = "保険種別コード　厚生労働省電子処方箋 CDA 記述仕様第１版　別表１１のOIDに対応するURL（http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuranceMajorCategory）を使用する。"
 * type.coding.code ^short = "保険種別コード"
-* type.coding.code ^definition = "保険種別コード　厚生労働省電子処方箋 CDA 記述仕様第１版　別表１１のコード表に従う。8以外を使用する。\r\n1 医保\r2 国保\r3 労災\r4 自賠責\r5 公害\r6 自費\r7 後期高齢者\r8 公費"
+* type.coding.code ^definition = "保険種別コード　厚生労働省電子処方箋 CDA 記述仕様第１版　別表１１のコード表から、右記を使用する。\r\n1 医保\r2 国保\r6 自費\r7 後期高齢者\r8 公費"
 * type.coding.code 1.. MS
 * type.coding.userSelected ..0
 * type.text ..0
@@ -87,10 +96,10 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * period ^definition = "保険証の有効期間。保険証に明示的に記載がある場合、かつ、医療機関がその情報を把握している場合のみ記録する。"
 * period MS
 * period.start ^short = "保険証の有効期間の開始日"
-* period.start ^definition = "保険証の有効期間の開始日。資格取得日。ISO8601に準拠してyyyy_mm_dd形式で指定する。"
+* period.start ^definition = "保険証の有効期間の開始日。資格取得日。ISO8601に準拠してyyyy-mm-dd形式で指定する。"
 * period.start MS
 * period.end ^short = "保険証の有効期間の終了日"
-* period.end ^definition = "保険証の有効期間の終了日。資格喪失日。ISO8601に準拠してyyyy_mm_dd形式で指定する。"
+* period.end ^definition = "保険証の有効期間の終了日。資格喪失日。ISO8601に準拠してyyyy-mm-dd形式で指定する。"
 * period.end MS
 * payor 1..1 MS
 * payor ^short = "保険者情報"

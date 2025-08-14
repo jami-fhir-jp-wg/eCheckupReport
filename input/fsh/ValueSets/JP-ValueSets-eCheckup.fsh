@@ -238,13 +238,19 @@ Description: "厚労省電子処方CDA規格別表11 保険種別コード Value
 * ^version = "1.0.0"
 * include codes from system $JAMI_InsuranceMajorCategory_CS
 
-//* #1 "医保"
-//* #2 "国保"
-//* #3 "労災"
-//* #4 "自賠責"
-//* #5 "公害"
-//* #6 "自費"
-//* #7 "後期高齢者"
-//* #8 "公費"
 
+ValueSet: MHLW_valueSet_ePreCDA_insuranceCategory_tbl11_eCheckupGeneral
+Id: mhlw-valueSet-eprecda-insurancecategory-tbl11-eCheckupGeneral
+Title: "MHLW 厚労省電子処方CDA規格別表11 保険種別コードのうち健診区分 ValueSet"
+Description: "厚労省電子処方CDA規格別表11 保険種別コードのうち健診区分 ValueSet"
+* ^url = $JAMI_InsuranceMajorCategory_eCheckupGeneral_VS
+* ^status = #active
+* ^experimental = false
+* ^date = "2024-09-20"
+* ^version = "1.0.0"
 
+* $JAMI_InsuranceMajorCategory_CS#1 "医保"
+* $JAMI_InsuranceMajorCategory_CS#2 "国保"
+* $JAMI_InsuranceMajorCategory_CS#6 "自費"
+* $JAMI_InsuranceMajorCategory_CS#7 "後期高齢者"
+* $JAMI_InsuranceMajorCategory_CS#8 "公費"

@@ -46,7 +46,7 @@ Description: "健診結果報告書　Patientリソース　患者情報（姓�
 * meta.lastUpdated ^short = "最終更新日"
 * meta.lastUpdated ^definition = "この患者情報の内容がサーバ上で最後に格納または更新された日時、またはこのFHIRリソースが生成された日時"
 * meta.profile 1.. MS
-  * insert relative_short_definition("準拠しているプロファイルとして次のURLを指定する。http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCS")
+  * insert relative_short_definition("準拠しているプロファイルとして次のURLを指定する。http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral")
 
 
 * identifier ^short = "保険者・被保険者番号情報、自施設の患者番号など。"
