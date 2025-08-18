@@ -37,7 +37,7 @@ def main():
     with open(input_file, encoding="utf-8") as f:
         html = f.read()
 
-    converted_html = rewrite_simplifier_links(html)
+    converted_html = rewrite_simplifier_links(html).replace('fhir/core/','fhir/core/1.1.2-url/')
     sys.stdout.write(converted_html)
 
 if __name__ == "__main__":
