@@ -30,15 +30,18 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * identifier 0..1 MS
   * ^short = "この保険情報(生活保護受給者情報)の一意の識別子"
   * ^definition = "保険情報(生活保護受給者情報)の一意の識別子として、ここでは電子カルテ情報共有サービスでの被保険者個人識別子(生活保護受給者識別子)と同じ値を同じ仕様で設定する。type(保険種別コード)要素が'自費'の場合には、このidentifierは記述しない。"
-  * ^comment = ""
+  * ^comment = "　"
+  * ^requirement = "　"
   * system 1..1 MS
     * ^short = "被保険者個人識別子(生活保護受給者識別子)を規定するsystem URL"
     * ^definition = "被保険者個人識別子(生活保護受給者識別子)を規定するsystem URL"
     * ^comment = "電子カルテ情報共有サービスでの被保険者個人識別子(生活保護受給者識別子)におけるsystem値と同じ。"
+    * ^requirement = "　"
   * value 1..1 MS
     * ^short = "被保険者個人識別子(生活保護受給者識別子)を設定する。"
     * ^definition = "被保険者個人識別子(生活保護受給者識別子)を設定する。仕様は電子カルテ情報共有サービスでの被保険者個人識別子(生活保護受給者識別子)を参照のこと。"
-    * ^comment = ""
+    * ^comment = "　"
+    * ^requirement = "　"
 //
 * status = #active (exactly)
 * status ^short = "リソースインスタンスのステータス"
