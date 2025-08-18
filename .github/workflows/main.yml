@@ -12,7 +12,7 @@ on:
     branches: [ v1.7.0pre]
 env:
   release_version : 1.7.0
-  version_date : -pre20250815
+  version_date : -pre20250818
 jobs:
   turn1:
     runs-on: ubuntu-latest
@@ -98,6 +98,7 @@ jobs:
         find input/fsh/Instances -type f -name '*.fsh' -exec sed -ibak "s/x.x.x-instance/${{ env.release_version }}/g" {} \;
 
         sed 's/1.x.x-temp/${{ env.release_version }}/g' sushi-config.yaml > sushi-config-temp.yaml
+        sed -i 's/@buildDateXXX-temp/${{ env.version_date }}/g' sushi-config-temp.yaml
         mv sushi-config-temp.yaml sushi-config.yaml
 
         sed 's/.r4-1.x.x-temp/.r4-${{ env.release_version }}/g' input/pagecontent/validationGuide.md > input/pagecontent/validationGuide-temp.md

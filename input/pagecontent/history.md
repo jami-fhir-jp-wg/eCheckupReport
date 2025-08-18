@@ -6,6 +6,29 @@
     
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。
 
+### Ver.1.7.0-pre20250818（非公開）
+  - No.1 CoverageInsuranceリソースのtypeに関する説明文の修正
+    - JP_CoverageInsurance_eCheckupGeneralのcoding.codeの説明を1 医保、2 国保、6 自費、7 後期高齢者、8 公費のいずれかとする記載に修正。
+    - ValueSet: MHLW_valueSet_ePreCDA_insuranceCategory_tbl11_eCheckupGeneral として1 医保、2 国保、6 自費、7 後期高齢者、8 公費からなるValueSetを新たに定義し、type要素（保険種別コード）がこのValueSetからだけ使用できるようプロファイルに追加記述。
+    - PDF版仕様書の該当部分の記載を併せて修正。
+  - No.2 Coverage.periodのdateTime型に係る説明文の修正
+    - JP_CoverageInsurance_eCheckupGeneralのperiod.start, period.endの説明の日付フォーマットの誤記を修正（yyyy_mm_dd → yyyy-mm-dd）。
+  - No.3 Coverage.identifierの記述方法の変更
+    - JP_CoverageInsurance_eCheckupGeneral
+      - 3つのextensionで被保険者記号、番号、枝番を記述することを可能としていたが、これを記述しないことに変更。
+      - identifierで、被保険者個人識別子(または生活保護受給者識別子)を記述することとした。
+      - subscriberIdで被保険者情報を記述することとしていたが、これを記述しないことに変更。
+      - dependentで枝番を記述することとしていたが、これを記述しないことに変更。
+    - 受診券等サービス情報　JP_CoverageService_eCheckupGeneral
+      - 3つのextensionで被保険者記号、番号、枝番を記述することを可能としていたが、これを記述しないことに変更。
+      - identifierの記述を不要とした。
+  - No.4　Patient(CLINS_eCheckupGeneral)におけるmeta.profileの修正。
+    - meta.profileの説明文中の誤記載を'http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral'に修正。
+  - No.5 Patient(JP_Patient_CLINS_eCheckupGeneral)におけるmeta.profileの修正。
+    - meta.profileの説明文中の誤記載を'http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCheckupGeneral'に修正。
+  - サンプルデータでの保険情報の修正
+    - 上記No.3に合わせてJP_CoverageInsurance_eCheckupGeneral準拠のサンプルデータを修正。
+
 ### Ver1.6.0 (2025-06-11)
   - Ver1.5.0-20250522 (2025-05-22) 1.6.0向け準備公開版 2025.6.3追記版をv1.6.0としてリリース
   - Validationの説明で使用するjpfhir-terminology.r4　パッケージのバージョンを特定のバージョンに依存しない記載に更新した。

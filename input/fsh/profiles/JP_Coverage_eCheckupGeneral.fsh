@@ -45,7 +45,7 @@ Description:    "健診結果報告書　Coverageリソース  保険情報"
 * status ^definition = "リソースインスタンスのステータス。固定値active。真に有効な保険かどうかは意味しない。"
 * type ^short = "保険種別コード"
 * type 1.. MS
-* type from $JAMI_InsuranceMajorCategory_VS
+* type from $JAMI_InsuranceMajorCategory_eCheckupGeneral_VS
 * type.coding  1..1
 * type.coding.system 1.. MS
 * type.coding.system = $JAMI_InsuranceMajorCategory_CS (exactly)
