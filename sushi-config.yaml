@@ -237,3 +237,5 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/patient-relationship-code
     - http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Patient_Contact_Position
     - http://jpfhir.jp/fhir/eCheckup/ValueSet/attachement-format
+    - http://jpfhir.jp/fhir/core/mhlw/ValueSet/InsuranceMajorCategory_eCheckupGeneral
+    
