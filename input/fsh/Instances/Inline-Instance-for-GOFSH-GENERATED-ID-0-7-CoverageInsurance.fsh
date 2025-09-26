@@ -4,7 +4,8 @@ Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageInsurance_eCheckupGeneral"
 * identifier.system = "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID"
-* identifier.value = "00012345:あいう:１８７:05"
+* identifier[=].value = "00012345:あいう:３８７４７６:01"
+
 * status = #active
 * type = $JAMI_InsuranceMajorCategory_CS#1
 * beneficiary = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)

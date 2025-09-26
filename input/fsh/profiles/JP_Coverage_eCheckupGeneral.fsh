@@ -150,7 +150,22 @@ Description:    "健診結果報告書　Coverageリソース  受診券等サ�
 * extension[insuredPersonSubNumber] ^definition = "JP Coreでは被保険者証等「枝番」情報であるが、ここではidentifer要素に被保険者個人識別子(または生活保護受給者識別子)を記述するため使用しない。"
 * extension[insuredPersonSubNumber] ^comment = "使用しない。"
 
-* identifier 0..0
+* identifier 0..1 MS
+  * ^short = "この保険情報(または生活保護受給者情報)の一意の識別子"
+  * ^definition = "保険情報(または生活保護受給者情報)の一意の識別子として、ここでは電子カルテ情報共有サービスでの被保険者個人識別子(または生活保護受給者識別子)と同じ値を同じ仕様で設定する。type(保険種別コード)要素が'自費'の場合には、このidentifierは記述しない。"
+  * ^comment = "電子カルテ情報共有サービスでの被保険者個人識別子(または生活保護受給者識別子)と同じ値を同じ仕様で設定する"
+  * ^requirements = "仕様は電子カルテ情報共有サービスの被保険者個人識別子(または生活保護受給者識別子)仕様を参照のこと。"
+  * system 1..1 MS
+    * ^short = "被保険者個人識別子(または生活保護受給者識別子)を規定するsystem URL"
+    * ^definition = "被保険者個人識別子(または生活保護受給者識別子)を規定するsystem URL"
+    * ^comment = "電子カルテ情報共有サービスでの被保険者個人識別子(または生活保護受給者識別子)におけるsystem値と同じ。"
+    * ^requirements = "電子カルテ情報共有サービスの被保険者個人識別子(または生活保護受給者識別子)仕様を参照のこと。被保険者個人識別子、生活保護受給者識別子とで使用すべきsystem値が異なるので注意。"
+  * value 1..1 MS
+    * ^short = "被保険者個人識別子(または生活保護受給者識別子)を設定する。"
+    * ^definition = "被保険者個人識別子(または生活保護受給者識別子)を設定する。仕様は電子カルテ情報共有サービスでの被保険者個人識別子(または生活保護受給者識別子)を参照のこと。"
+    * ^comment = "電子カルテ情報共有サービスでの被保険者個人識別子(または生活保護受給者識別子)と同じ値を同じ仕様で設定する"
+    * ^requirements = "仕様は電子カルテ情報共有サービスの被保険者個人識別子(または生活保護受給者識別子)仕様を参照のこと。"
+
 * status = #active
 * type ^short = "受診券情報を表す固定ID system='urn:oid:1.2.392.200119.6.208' code='1'"
 * type = urn:oid:1.2.392.200119.6.208#1
@@ -165,6 +180,9 @@ Description:    "健診結果報告書　Coverageリソース  受診券等サ�
 * type.coding.userSelected ..0
 * type.text ..0
 
+* policyHolder ..0
+* subscriber ..0
+
 * subscriberId 1..1 MS  // 受診券番号文字列
 * subscriberId ^short = "受診券番号"
 * subscriberId ^definition = "受診券番号"
@@ -174,6 +192,8 @@ Description:    "健診結果報告書　Coverageリソース  受診券等サ�
   * ^short = "この保険で給付される受診者情報（Patientリソース）へのリテラル参照。"
   * reference 1..1 MS
     * ^short = "PatientリソースのfullUrl要素に指定されるUUIDを指定。"
+
+* dependent ..0
 * period ^short = "受診券の有効期間"
   * start 0..1 MS
   * end 0..1 MS
@@ -181,4 +201,10 @@ Description:    "健診結果報告書　Coverageリソース  受診券等サ�
   * ^short = "受診券の発行者である費用負担者（保険者）情報"
   * ^definition = "受診券の発行者である費用負担者（保険者）情報。Organizationリソースへの参照"
 * payor only Reference(JP_OrganizationInsurer_eCheckupGeneral)
+* class ..0
+* order ..0
+* network ..0
+* costToBeneficiary ..0
+* subrogation ..0
+* contract ..0
 

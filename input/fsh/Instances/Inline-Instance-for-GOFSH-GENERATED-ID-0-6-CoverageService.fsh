@@ -3,6 +3,8 @@ InstanceOf: JP_CoverageService_eCheckupGeneral
 Usage: #inline
 * meta.lastUpdated = "2024-04-05T13:28:17.239+09:00"
 * meta.profile = "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageService_eCheckupGeneral"
+* identifier.system = "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID"
+* identifier[=].value = "00012345:あいう:３８７４７６:01"
 * status = #active
 * type = urn:oid:1.2.392.200119.6.208#1
 * subscriberId = "24100000123"
