@@ -12,7 +12,7 @@ on:
     branches: [ v1.7.0pre]
 env:
   release_version : 1.7.0
-  version_date : -pre20250818
+  version_date : -pre20250926
 jobs:
   turn1:
     runs-on: ubuntu-latest

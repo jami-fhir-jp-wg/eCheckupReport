@@ -6,6 +6,12 @@
     
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。
 
+### Ver.1.7.0-pre20250926
+  - 受診券等サービス情報　JP_CoverageService_eCheckupGeneral
+    - 3つのextensionで被保険者記号、番号、枝番を記述することを可能としていたが、これを記述しないことに変更。
+    - identifierで、被保険者個人識別子(または生活保護受給者識別子)だけを記述することとした。
+    - dependentで枝番を記述することとしていたが、これを記述しないことに変更。
+    - 受診券に不要な、policyHoldder, subscriber,class,order,network,costToBeneficiary,subrogation,contractの各要素の多重度を0..0に変更した。
 ### Ver.1.7.0-pre20250818（非公開）
   - No.1 CoverageInsuranceリソースのtypeに関する説明文の修正
     - JP_CoverageInsurance_eCheckupGeneralのcoding.codeの説明を1 医保、2 国保、6 自費、7 後期高齢者、8 公費のいずれかとする記載に修正。
