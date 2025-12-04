@@ -188,7 +188,7 @@ Id: eCheckup-valueSet-observationGroupRelationship
 Title: "健診一連検査グループコードの関連コードValueSet"
 Description: "健診一連検査グループコードの関連コードValueSet"
 * ^url = $observationGroupRelationship_codes_vs //http://jpfhir.jp/fhir/eCheckup/ValueSet/observationGroupRelationship-codes
-* ^date = "2024-09-20"
+* ^date = "2025-12-04"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
