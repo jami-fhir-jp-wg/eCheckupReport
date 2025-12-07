@@ -8,6 +8,8 @@ Title: "職場分類コード"
 * ^status = #active
 * ^date = "2025-05-10"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true

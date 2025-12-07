@@ -9,6 +9,8 @@ Description: "結果報告実施機関コード"
 * ^url = $JP_OrganizationCategory_CS // http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^status = #active
 * ^experimental = false
 * ^content = #complete
@@ -30,6 +32,8 @@ Description: "受診券券面種別コード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = false
 * #1   "受診券"
@@ -49,6 +53,8 @@ Title: "健診結果報告区分コード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = false
 
@@ -85,6 +91,8 @@ Title: "健診結果報告区分コード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = false
 * #10   "特定健診"
@@ -106,6 +114,8 @@ Title: "健診プログラムサービスコード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = false
 * #000 "不明"
@@ -134,6 +144,8 @@ Title: "健診結果セクションコード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = false
 * #01010    "特定健診・問診結果セクション"
@@ -179,6 +191,8 @@ Title: "受診区分"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #checkup	"健診"
@@ -193,6 +207,8 @@ Description: "受診形態区分(個別受診・集合受診)"
 Title: "受診形態区分(個別受診・集合受診）分"
 * ^url = $checkup_encounter_type_cs
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -211,6 +227,8 @@ Title: "添付文書フォーマットコード"
 * ^url = $attachement-format
 * ^valueSet = "http://jpfhir.jp/fhir/eCheckup/ValueSet/attachement-format"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^status = #active
 * ^experimental = false
 * ^content = #complete
@@ -228,6 +246,8 @@ Description: "健診一連検査グループコードの関連コード"
 * ^url = $observationGroupRelationship_codes_cs //http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroupRelationship-codes
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^status = #active
 * ^experimental = false
 * ^content = #complete
@@ -241,14 +261,16 @@ Description: "健診一連検査グループコードの関連コード"
 //--------------------------------------------------------------------
 CodeSystem: ECheckup_codeSystem_observationGroup
 Id: eCheckup-codeSystem-observationGroup
-Description: "健診一連検査グループコード サンプル一部"
-Title: "健診一連検査グループコード サンプル一部"
+Description: "健診一連検査グループコード"
+Title: "健診一連検査グループコード"
 * ^url = $observationGroup_codes_cs
 // * ^valueSet = $observationGroup_codes_vs
 * ^status = #active
 * ^experimental = false
 * ^date = "2025-12-04"
 * ^version = "1.1.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true 
 * #2A020   "貧血検査"   //2024-09-20 2A000から修正
@@ -288,6 +310,8 @@ Title: "特定健診検査項目コード第４期"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -627,6 +651,8 @@ Title: "健診検査項目コードJLAC10ベース"
 * ^status = #active
 * ^date = "2024-09-29"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -869,6 +895,8 @@ Title: "特定健診検査方法コード　一部仮修正コード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1A01010000    "試験紙法(機械読み取り)"
@@ -966,6 +994,8 @@ Title: "特定健診　メタボリックシンドローム判定コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -983,6 +1013,8 @@ Title: "特定健診　咀嚼結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1000,6 +1032,8 @@ Title: "特定健診　食べ方3(間食)結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1016,6 +1050,8 @@ Title: "特定健診　情報提供の方法コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1032,6 +1068,8 @@ Title: "特定健診　初回面接実施結果コード"
 * ^status = #active
 * ^experimental = false
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "健診1週間以内に初回面接実施"
@@ -1045,6 +1083,8 @@ Title: "特定健診　眼底検査(Wong-Mitchell分類）結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1062,6 +1102,8 @@ Title: "特定健診　眼底検査(改変Davis分類）結果コード"
 * ^status = #active
 * ^experimental = false
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "網膜症なし"
@@ -1079,6 +1121,8 @@ Title: "特定健診　子宮頸部細胞診 (細胞診婦人科材料)(ベセ�
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "NILM"
@@ -1102,6 +1146,8 @@ Title: "特定健診　血清クレアチニン（対象者）結果コード"
 * ^experimental = false
 * ^date = "2025-05-10"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #0  "詳細健診以外で実施"
@@ -1117,6 +1163,8 @@ Title: "特定健診　心電図(対象者）コード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #0
@@ -1133,6 +1181,8 @@ Title: "特定健診　眼底検査(対象者）コード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #0
@@ -1148,6 +1198,8 @@ Title: "健診　質問項目　健康状態(後期）結果コード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "よい"
@@ -1166,6 +1218,8 @@ Title: "健診　質問項目　生活満足感の有無(後期）結果コー�
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "満足"
@@ -1184,6 +1238,8 @@ Title: "健診　質問項目　１日３食習慣の有無(後期）結果コ�
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "はい"
@@ -1197,6 +1253,8 @@ Title: "健診　質問項目　固形物の食べにくさ有無(後期）結�
 * ^url = "urn:oid:1.2.392.200119.6.19040"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1213,6 +1271,8 @@ Title: "健診　質問項目　むせることの有無(後期）結果コー�
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "はい"
@@ -1227,6 +1287,8 @@ Title: "健診　質問項目　６カ月間体重減少の有無(後期）結�
 * ^status = #active
 * ^experimental = false
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "はい"
@@ -1240,6 +1302,8 @@ Title: "健診　質問項目　歩く速度の遅延(後期）結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.19070"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1254,6 +1318,8 @@ Title: "健診　質問項目　転倒履歴(後期）結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.19080"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1270,6 +1336,8 @@ Title: "健診　質問項目　運動頻度(後期）結果コード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "はい"
@@ -1285,6 +1353,8 @@ Title: "健診　質問項目　物忘れ指摘(後期）結果コード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "はい"
@@ -1299,6 +1369,8 @@ Title: "健診　質問項目　今日の日付認識(後期）結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.19110"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1316,6 +1388,8 @@ Title: "健診　質問項目　喫煙習慣の有無(後期）結果コード"
 * ^experimental = false
 * ^date = "2025-05-10"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "吸っている"
@@ -1331,6 +1405,8 @@ Title: "健診　質問項目　外出頻度(後期）結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.19130"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1347,6 +1423,8 @@ Title: "健診　質問項目　家族友人の有無(後期）結果コード"
 * ^experimental = false
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^content = #complete
 * ^caseSensitive = true
 * #1 "はい"
@@ -1361,6 +1439,8 @@ Title: "健診　質問項目　相談相手の有無(後期）結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.19150"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1378,6 +1458,8 @@ Title: "特定健診　特記初見有無コード(既往歴,自覚症状,他覚
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1393,6 +1475,8 @@ Title: "特定健診　所見有無コード(各検査)"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1410,6 +1494,8 @@ Title: "特定健診　はい・いいえコード(質問項目)"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1427,6 +1513,8 @@ Title: "特定健診　質問項目　食べ方1(早食い等)結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1444,6 +1532,8 @@ Title: "特定健診　質問項目　生活習慣の改善意志　結果コー
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1462,6 +1552,8 @@ Title: "生活機能問診1-8　0:はい・1:いいえ 結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1477,6 +1569,8 @@ Title: "生活機能問診9-25　1:はい・0:いいえ 結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.2009"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1492,6 +1586,8 @@ Title: "特定健診　1：陽性、2：陰性　コード(定性検査項目)"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1506,6 +1602,8 @@ Title: "特定健診　尿定性検査結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.2102"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1529,6 +1627,8 @@ Title: "特定健診　HCV抗体(力価)結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1545,6 +1645,8 @@ Title: "特定健診　眼底検査(キースワグナー分類)結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.2110"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1564,6 +1666,8 @@ Title: "特定健診　眼底検査(シェイエ分類:H)結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1582,6 +1686,8 @@ Title: "特定健診　眼底検査(シェイエ分類:S)結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1600,6 +1706,8 @@ Title: "特定健診　眼底検査(SCOTT分類)結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.2113"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1624,6 +1732,8 @@ Title: "血液型(ABO)　結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1650,6 +1760,8 @@ Title: "血液型(Rh)　結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1670,6 +1782,8 @@ Title: "子宮頸部細胞診 (細胞診婦人科材料)(日母分類)　結果�
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1690,6 +1804,8 @@ Title: "子宮体部細胞診 (細胞診婦人科材料)　結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.2122"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1706,6 +1822,8 @@ Title: "喀痰細胞診検査　結果コード"
 * ^url = "urn:oid:1.2.392.200119.6.2130"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1724,6 +1842,8 @@ Title: "喀痰検査(ガフキー号数)  　結果コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1749,6 +1869,8 @@ Title: "胸部C・X線検査(がん検診)  　判定コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1768,6 +1890,8 @@ Title: "医師の診断(がん検診)   　健診判定コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1783,6 +1907,8 @@ Title: "C型肝炎ウイルス検診の判定コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1799,6 +1925,8 @@ Title: "C型肝炎ウイルス検診の判定コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1814,6 +1942,8 @@ Title: "聴力(検査方法）方法コード"
 * ^url = "urn:oid:1.2.392.200119.6.2301"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1829,6 +1959,8 @@ Title: "特定健診　保険者再確認(服薬)　コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1844,6 +1976,8 @@ Title: "特定健診　飲酒頻度　コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1865,6 +1999,8 @@ Title: "特定健診　飲酒量　コード"
 * ^url = "urn:oid:1.2.392.200119.6.24050"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1883,6 +2019,8 @@ Title: "特定健診　喫煙習慣　コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1898,6 +2036,8 @@ Title: "特定健診　検査未実施の理由　コード"
 * ^url = "urn:oid:1.2.392.200119.6.24080"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1913,6 +2053,8 @@ Title: "生活機能評価の結果1　コード"
 * ^url = "urn:oid:1.2.392.200119.6.2501"
 * ^status = #active
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1929,6 +2071,8 @@ Title: "生活機能評価の結果2　コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
@@ -1948,6 +2092,8 @@ Title: "特定健診　保健指導レベル　コード"
 * ^status = #active
 * ^date = "2024-09-20"
 * ^version = "1.0.0"
+* ^language = #ja
+
 * ^experimental = false
 * ^content = #complete
 * ^caseSensitive = true
