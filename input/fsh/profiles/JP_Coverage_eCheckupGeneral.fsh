@@ -183,11 +183,11 @@ Description:    "健診結果報告書　Coverageリソース  受診券等サ�
 * policyHolder ..0
 * subscriber ..0
 
-* subscriberId 1..1 MS  // 受診券番号文字列
-* subscriberId ^short = "受診券番号"
-* subscriberId ^definition = "受診券番号"
-* subscriberId ^comment = "受診券番号"
-
+* subscriberId 1..1 MS  // 受診券整理番号文字列
+* subscriberId ^short = "受診券整理番号"
+* subscriberId ^definition = "受診券整理番号"
+* subscriberId ^comment = "受診券整理番号"
+  * ^requirements = "11桁の受診券整理番号を記述する。"
 * beneficiary only Reference(JP_Patient_eCheckupGeneral)
   * ^short = "この保険で給付される受診者情報（Patientリソース）へのリテラル参照。"
   * reference 1..1 MS
