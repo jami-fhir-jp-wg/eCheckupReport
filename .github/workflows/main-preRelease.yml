@@ -4,15 +4,15 @@ on:
     branches: 
       - v1.7.0pre
     paths:
-      - 'sushi-config.yaml'
+      - 'sushi-config-preRelease.yaml'
       - 'input/**'
       - 'custom-template/**'
-      - '.github/workflows/main.yml'
+      - '.github/workflows/main-preRelease.yml'
   pull_request:
     branches: [ v1.7.0pre]
 env:
   release_version : 1.7.0
-  version_date : -pre20251210
+  version_date : -preR1
 jobs:
   turn1:
     runs-on: ubuntu-latest
@@ -98,9 +98,11 @@ jobs:
     - name: Use datetime in a script
       run: echo "The current datetime is ${{ env.CURRENT_DATETIME }}"
 
-    - name: replace head-caution to dummy
+    - name: replace sushi-config.yaml
       run: |
-        cp custom-template/includes/head-caution-dev-dummy custom-template/includes/head-caution-dev.html
+        cp custom-template/includes/head-caution-dev custom-template/includes/head-caution-dev.html
+        cp custom-template/includes/fragment-resourceTable.clins.html_開発警告を上部に表示する custom-template/includes/fragment-resourceTable.html
+        cp sushi-config-preRelease sushi-config.yaml
 
     - name: apply the version of sushi-config.yaml
       run: |
@@ -118,10 +120,12 @@ jobs:
         mv input/pagecontent/index-temp.md input/pagecontent/index.md
 
         cd forPackageRelease
-        sed 's/1.x.x-temp/${{ env.release_version }}/g' package-diff.json >package-diff-temp.json
-        sed 's/1.x.x-temp/${{ env.release_version }}/g' package-snap.json >package-snap-temp.json
-        mv package-diff-temp.json package-diff.json
-        mv package-snap-temp.json package-snap.json
+        sed 's/1.x.x-temp/${{ env.release_version }}/g' package-diff.json >package-diff-temp3.json
+        sed 's/1.x.x-temp/${{ env.release_version }}/g' package-snap.json >package-snap-temp3.json
+        sed 's/"description": "/"description": "${{ env.CURRENT_DATETIME }}UTC_/g' package-diff-temp3.json > package-diff-temp4.json
+        sed 's/"description": "/"description": "${{ env.CURRENT_DATETIME }}UTC_/g' package-snap-temp3.json > package-snap-temp4.json
+        mv package-diff-temp4.json package-diff.json
+        mv package-snap-temp4.json package-snap.json
         cd ..
 
     - name: Run IG Publisher
@@ -146,15 +150,15 @@ jobs:
         cd ..
     - name: prepare gtz files for upload to remote site
       run: | 
-        tar czf output.tgz output
+        tar czf output${{ env.version_date }}.tgz output
 
     - name:  create differential package 
       run: | 
         cd fsh-generated
         mv resources package
-        cp ../forPackageRelease/package-diff.json package/package.json
-        tar czf jp-eCheckupReport-package-diff.tgz package
-        cp jp-eCheckupReport-package-diff.tgz ../forPackageRelease/jp-eCheckupReport.r4-${{ env.release_version }}${{ env.version_date }}.tgz
+        cp ../forPackageRelease/package-diff${{ env.version_date }}.json package/package.json
+        tar czf jp-eCheckupReport-package-diff${{ env.version_date }}.tgz package
+        cp jp-eCheckupReport-package-diff${{ env.version_date }}.tgz ../forPackageRelease/jp-eCheckupReport.r4-${{ env.release_version }}${{ env.version_date }}.tgz
         
     - name: generate snapshot package using sushi -s command       
       run: |
@@ -163,11 +167,11 @@ jobs:
         mv fsh-generated fsh-generated-snap
         mkdir -p forPackageRelease/snapshot/package/
         cp fsh-generated-snap/resources/*.json forPackageRelease/snapshot/package/
-        cp forPackageRelease/package-snap.json forPackageRelease/snapshot/package/package.json
+        cp forPackageRelease/package-snap${{ env.version_date }}.json forPackageRelease/snapshot/package/package.json
         cd forPackageRelease/snapshot
-        tar czf jp-eCheckupReport-package-snap.tgz package
+        tar czf jp-eCheckupReport-package-snap${{ env.version_date }}.tgz package
         cd ..
-        cp snapshot/jp-eCheckupReport-package-snap.tgz jp-eCheckupReport.r4-${{ env.release_version }}${{ env.version_date }}-snap.tgz
+        cp snapshot/jp-eCheckupReport-package-snap${{ env.version_date }}.tgz jp-eCheckupReport.r4-${{ env.release_version }}${{ env.version_date }}-snap.tgz
         cd ..
 
     - name: ssh key generate

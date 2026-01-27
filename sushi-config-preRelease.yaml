@@ -7,10 +7,10 @@
 id: eCheckupReport
 canonical: http://jpfhir.jp/fhir/eCheckupReport
 name: "JP_eCheckup_FHIR_IG"
-title: "健診結果報告FHIR記述仕様　実装ガイド v 1.x.x-temp"
-description: "健診結果報告FHIR記述仕様　実装ガイド eCheckupReport Implementation Guide"
+title: "健診結果報告FHIR記述仕様　実装ガイド v1.x.x-temp@buildDateXXX-temp"
+description: "健診結果報告FHIR記述仕様　実装ガイド eCheckupReport Implementation Guide v1.x.x-temp@buildDateXXX-temp"
 status: active # draft | active | retired | unknown
-version: 1.x.x-temp
+version: 1.x.x-temp@buildDateXXX-temp
 date: 2025-01-27
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html 
 copyrightYear: 2023+
