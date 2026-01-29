@@ -75,7 +75,7 @@ Validationの具体的手順と、出力の解釈方法について説明する�
  　 
   - jp-eCheckupReport.r4　パッケージ
       
-    - tgz形式 : [https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.x.x-temp.tgz](https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.x.x-temp.tgz)
+    - tgz形式 : [https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.x.x-temp@buildDateXXX-temp.tgz](https://jpfhir.jp/fhir/eCheckup/jp-eCheckupReport.r4-1.x.x-temp@buildDateXXX-temp.tgz)
 
 #####  検証対象となる json形式のファイルをひとつ以上、[targets] 直下に配置する。
 
@@ -131,7 +131,7 @@ Validation の実行
       -tx n/a  \
       -ig [pkgJp]/jp-core.r4-1.1.2-clins.tgz  \
       -ig [pkgJp]/jpfhir-terminology.r4-x.y.z.tgz  \
-      -ig [pkgJp]/jp-eCheckupReport.r4-1.x.x-temp.tgz  
+      -ig [pkgJp]/jp-eCheckupReport.r4-1.x.x-temp@buildDateXXX-temp.tgz  
         
 ```
 
@@ -157,6 +157,6 @@ Validationコマンドのパラメータ説明
   - -tx n/a ：　外部のTerminologyServer を参照しないよう設定するオプション。ここでの手順では、パッケージ [jpfhir-terminology-1.x.x]をロードしてローカルに配置しているので、外部のTerminologyServerへの参照は必要がない。また異なるバージョンのものが自動的に利用されないようにこのオプションは必須。
   - -ig [pkgJp]/jp-core.r4-1.1.2-clins.tgz : jp-core.r4 v1.1.2-clins のパッケージ。必須。これがないとjp-coreを参照する際にエラーになる。
   - -ig [pkgJp]/jpfhir-terminology-x.y.z.tgz ： jp-core.r4、jp-clinsから参照されるterminologyのパッケージ。必須。これがないと日本版CodeSystemやValueSetを参照する際にエラーになる。このパッケージには、JLAC10、医薬品マスター、標準病名マスター、ICD10分類コード表なども含まれるので、定期的に適切なバージョンへのアプデートが必要である。
-  - -ig [pkgJp]/jp-eCheckupReport.r4-1.x.x-temp.tgz : ３文書のひとつである、健診結果報告書仕様に従ったBundleリソースのValidationのためのプロファイル等を格納したパッケージ。必須。
+  - -ig [pkgJp]/jp-eCheckupReport.r4-1.x.x-temp@buildDateXXX-temp.tgz : ３文書のひとつである、健診結果報告書仕様に従ったBundleリソースのValidationのためのプロファイル等を格納したパッケージ。必須。
 
 
