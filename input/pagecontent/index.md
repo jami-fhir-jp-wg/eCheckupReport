@@ -85,7 +85,7 @@ table th {
 
 仕様については、以下のPDF版またはHTMLページを参照のこと。
 
-  - [健康診断結果報告書 HL7FHIR 記述仕様(PDF版)v1.6](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf)
+  - [健康診断結果報告書 HL7FHIR 記述仕様(PDF版)v1.7](https://std.jpfhir.jp/stddoc/eCheckupFHIR_v1x.pdf)
  
 
 ## 仕様・実装ガイド策定 謝辞
