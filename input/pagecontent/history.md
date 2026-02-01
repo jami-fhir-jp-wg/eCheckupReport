@@ -7,19 +7,8 @@
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。
 
 ### Ver.1.7.0-preR1 (20251210,20260127)
-  - 健診一連検査グループコード（ECheckup_codeSystem_observationGroup CodeSystem）に、コード6A010 "喀痰検査"を追加し、既存のコード7A030の表示名を"喀痰検査"から"喀痰検査・肺がん検診"に変更。
-  - 健診結果報告書のCoverageリソース 受診券等サービス情報プロファイルJP_CoverageService_eCheckupGeneral のsubscriberId要素の説明を受診券整理番号に統一し、11桁の受診券整理番号を記述することを明記した。
-
-### Ver.1.7.0-pre20250926（非公開）
-  - 受診券等サービス情報　JP_CoverageService_eCheckupGeneral
-    - 3つのextensionで被保険者記号、番号、枝番を記述することを可能としていたが、これを記述しないことに変更。
-    - identifierで、被保険者個人識別子(または生活保護受給者識別子)だけを記述することとした。
-    - dependentで枝番を記述することとしていたが、これを記述しないことに変更。
-    - 受診券に不要な、policyHoldder, subscriber,class,order,network,costToBeneficiary,subrogation,contractの各要素の多重度を0..0に変更した。
-
-### Ver.1.7.0-pre20250818（非公開）
-  - No.1 CoverageInsuranceリソースのtypeに関する説明文の修正
-    - JP_CoverageInsurance_eCheckupGeneralのcoding.codeの説明を1 医保、2 国保、6 自費、7 後期高齢者、8 公費のいずれかとする記載に修正。
+  - No.1 CoverageInsuranceを表すCoverageリソースのtypeに関する説明文の修正
+    - JP_CoverageInsurance_eCheckupGeneralのtype.coding.codeの説明を1 医保、2 国保、6 自費、7 後期高齢者、8 公費のいずれかとする記載に修正(公費を追加)。
     - ValueSet: MHLW_valueSet_ePreCDA_insuranceCategory_tbl11_eCheckupGeneral として1 医保、2 国保、6 自費、7 後期高齢者、8 公費からなるValueSetを新たに定義し、type要素（保険種別コード）がこのValueSetからだけ使用できるようプロファイルに追加記述。
     - PDF版仕様書の該当部分の記載を併せて修正。
   - No.2 Coverage.periodのdateTime型に係る説明文の修正
@@ -33,10 +22,14 @@
     - 受診券等サービス情報　JP_CoverageService_eCheckupGeneral
       - 3つのextensionで被保険者記号、番号、枝番を記述することを可能としていたが、これを記述しないことに変更。
       - identifierの記述を不要とした。
-  - No.4　Patient(CLINS_eCheckupGeneral)におけるmeta.profileの修正。
+      - dependentで枝番を記述することとしていたが、これを記述しないことに変更。
+      - 受診券に不要な、policyHoldder, subscriber,class,order,network,costToBeneficiary,subrogation,contractの各要素の多重度を0..0に変更した。
+      - Coverageリソース 受診券等サービス情報プロファイルJP_CoverageService_eCheckupGeneral のsubscriberId要素の説明を受診券整理番号に統一し、11桁の受診券整理番号を記述することを明記した。
+    - No.4　Patient(CLINS_eCheckupGeneral)におけるmeta.profileの修正。
     - meta.profileの説明文中の誤記載を'http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Patient_eCheckupGeneral'に修正。
   - No.5 Patient(JP_Patient_CLINS_eCheckupGeneral)におけるmeta.profileの修正。
     - meta.profileの説明文中の誤記載を'http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCheckupGeneral'に修正。
+  - 健診一連検査グループコード（ECheckup_codeSystem_observationGroup CodeSystem）に、コード6A010 "喀痰検査"を追加し、既存のコード7A030の表示名を"喀痰検査"から"喀痰検査・肺がん検診"に変更。
   - サンプルデータでの保険情報の修正
     - 上記No.3に合わせてJP_CoverageInsurance_eCheckupGeneral準拠のサンプルデータを修正。
 
