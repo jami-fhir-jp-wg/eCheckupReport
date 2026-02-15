@@ -61,13 +61,20 @@ jobs:
       with:
         url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-2.0.0-2025.12test.tgz"
         target: .    
+
+    - name: Download the file
+      uses: suisei-cn/actions-download-file@v1.4.0
+      id: downloadfile3
+      with:
+        url: "https://jpfhir.jp/fhir/core/1.1.2-clins/jp-core.r4-1.1.2-clins-snap.tgz"
+        target: .
     
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
         JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
         JPTerminologyCOREdir: jpfhir-terminology.r4#2.0.0
         JPTerminologyCOREPtgz: jpfhir-terminology.r4-2.0.0-2025.12test.tgz
-        JPCOREtgzjp: jp-core.r4-1.1.2-clins.tgz
+        JPCOREtgzjp: jp-core.r4-1.1.2-clins-snap.tgz
         JPCOREdir: jp-core.r4#1.1.2-clins
       run: |
         ls -l .
