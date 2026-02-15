@@ -6,6 +6,9 @@
     
     トップページの日付が更新されているのにバージョン番号の変更がない場合には、上記のような内容の変更に関わらない修正があったことを示す。
 
+### Ver.1.7.0
+  - Ver.1.7.0-preR1をVer.1.7.0にして正式公開。
+
 ### Ver.1.7.0-preR1 (20251210,20260127)
   - No.1 CoverageInsuranceを表すCoverageリソースのtypeに関する説明文の修正
     - JP_CoverageInsurance_eCheckupGeneralのtype.coding.codeの説明を1 医保、2 国保、6 自費、7 後期高齢者、8 公費のいずれかとする記載に修正(公費を追加)。

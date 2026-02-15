@@ -2,17 +2,17 @@ name: main-yaml
 on:
   push:
     branches: 
-      - v1.7.0pre
+      - V1.7.0
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
       - 'custom-template/**'
       - '.github/workflows/main.yml'
   pull_request:
-    branches: [ v1.7.0pre]
+    branches: [ V1.7.0]
 env:
   release_version : 1.7.0
-  version_date : -pre20251210
+  version_date : 
 jobs:
   turn1:
     runs-on: ubuntu-latest

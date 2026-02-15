@@ -81,7 +81,7 @@ table th {
 ## 本実装ガイドの位置づけ
 この実装ガイドは、HL7 FHIR（以下、単に「FHIR 」という）に準拠した健康診断結果報告書の記述仕様の実装ガイドである。
 
-  - [実装ガイドプロファイル](https://jpfhir.jp/fhir/eCheckup/igv170-preR1/artifacts.html)
+  - [実装ガイドプロファイル](https://jpfhir.jp/fhir/eCheckup/igv1/artifacts.html)
 
 仕様については、以下のPDF版またはHTMLページを参照のこと。
 
