@@ -84,6 +84,7 @@ jobs:
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
         mkdir -p /home/runner/.fhir/work
         mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/$JPTerminologyCOREPtgz
+        mv $JPCOREtgzjp /home/runner/.fhir/work/
         cd /home/runner/.fhir
         tar xzf $JPPACKAGECOREtgz
         ls -l /home/runner/.fhir
@@ -92,7 +93,6 @@ jobs:
         cd /home/runner/.fhir
         mkdir -p packages/$JPTerminologyCOREdir
         mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
-        mv /home/runner/work/eCheckupReport/eCheckupReport/packages_snapshot/$JPCOREtgzjp /home/runner/.fhir/work/
         cd /home/runner/.fhir/work
         tar xzf $JPCOREtgzjp
         mkdir -p /home/runner/.fhir/packages/$JPCOREdir
